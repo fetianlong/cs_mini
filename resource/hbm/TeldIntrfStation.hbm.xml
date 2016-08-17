@@ -1,0 +1,64 @@
+<!DOCTYPE hibernate-mapping PUBLIC 
+    "-//Hibernate/Hibernate Mapping DTD 3.0//EN"
+    "http://hibernate.sourceforge.net/hibernate-mapping-3.0.dtd">
+ <hibernate-mapping>
+ 	<class name="com.dearho.cs.teldintrf.pojo.TeldIntrfStation" table="teld_intrf_station">
+		<id name="id" type="java.lang.String">
+            <column name="ID" length="32" />
+            <generator class="uuid.hex" />
+        </id>
+        <property name="staCode" type="string">
+        	<column name="staCode" />
+        </property>
+        <property name="staName" type="string">
+        	<column name="staName" />
+        </property>
+        <property name="staType" type="string">
+        	<column name="staType" />
+        </property>
+        <property name="staOpstate" type="string">
+        	<column name="staOpstate" />
+        </property>
+        <property name="province" type="string">
+        	<column name="province" />
+        </property>
+        <property name="city" type="string">
+        	<column name="city" />
+        </property>
+        <property name="region" type="string">
+        	<column name="region" />
+        </property>
+        <property name="staAddress" type="string">
+        	<column name="staAddress" />
+        </property>
+        <property name="lng" type="java.math.BigDecimal">
+        	<column name="lng" />
+        </property>
+        <property name="lat" type="java.math.BigDecimal">
+        	<column name="lat" />
+        </property>
+        <property name="price" type="java.math.BigDecimal">
+        	<column name="price" />
+        </property>
+        <property name="acNum" type="integer">
+        	<column name="acNum" />
+        </property>
+        <property name="dcNum" type="integer">
+        	<column name="dcNum" />
+        </property>
+        <property name="acableNum" type="integer">
+        	<column name="acableNum" />
+        </property>
+        <property name="dcableNum" type="integer">
+        	<column name="dcableNum" />
+        </property>
+        
+         <property name="createTime" type="java.util.Date">
+        	<column name="createTime"  />
+        </property>
+         <property name="updateTime" type="java.util.Date">
+        	<column name="updateTime" />
+        </property>
+	</class>
+ 
+ </hibernate-mapping>

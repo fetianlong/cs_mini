@@ -1,0 +1,54 @@
+<!DOCTYPE hibernate-mapping PUBLIC 
+    "-//Hibernate/Hibernate Mapping DTD 3.0//EN"
+    "http://hibernate.sourceforge.net/hibernate-mapping-3.0.dtd">
+<hibernate-mapping>
+	<class name="com.dearho.cs.account.pojo.RechargeRecord" table="acc_recharge_record">
+		<id name="id" type="java.lang.String">
+            <column name="id" length="32" />
+             <generator class="uuid.hex" />
+        </id>
+        <property name="rechargeAmount" type="java.lang.Double">
+            <column name="recharge_amount"   />
+        </property>
+        <property name="rechargeCardId" type="java.lang.String">
+            <column name="recharge_card_id"   />
+        </property>
+        <property name="subscriberId" type="java.lang.String">
+            <column name="subscriber_id" />
+        </property>
+         <property name="subscriberPhoneNo" type="java.lang.String">
+            <column name="subscriber_phone_no" />
+        </property>
+         <property name="subscriberName" type="java.lang.String">
+            <column name="subscriber_name" />
+        </property>
+         <property name="operatorId" type="java.lang.String">
+            <column name="operator_id" />
+        </property>
+        <property name="operatorName" type="java.lang.String">
+            <column name="operator_name" />
+        </property>
+         <property name="createTime" type="java.util.Date">
+            <column name="create_time" />
+        </property>
+        <property name="type" type="java.lang.Integer">
+            <column name="type" />
+        </property>
+        <property name="payType" type="java.lang.String">
+            <column name="pay_type" />
+        </property>
+         <property name="remark" type="java.lang.String">
+            <column name="remark" />
+        </property>
+        <property name="ts" type="java.util.Date">
+            <column name="ts" />
+        </property>
+         
+	</class>
+	
+	
+	
+	
+	
+	
+</hibernate-mapping>

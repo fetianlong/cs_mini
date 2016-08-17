@@ -1,0 +1,74 @@
+@charset "utf-8";
+/* CSS Document */
+
+body {
+	margin-top: 20px;
+}
+
+body.Registered {
+	background: url(../images/register/successbackgrund.jpg) no-repeat top center;
+	background-size: cover;
+}
+
+.GetYanzheng {
+	cursor: pointer;
+	background-color: #404958;
+	border-color: #404958;
+	color: #FFF;
+}
+
+.GetYanzheng.disabled {
+	cursor: not-allowed;
+	background-color: #bdc3c7;
+	border-color: #bdc3c7;
+}
+
+.FileID {
+	border: solid 1px #e7e7e7;
+}
+
+form .fa {
+	color: #aaaaaa;
+	margin: 20px;
+}
+
+.RegisteredImg {
+	margin-bottom: 100px;
+}
+
+.SubmitButton {
+	margin-top: 20px;
+	margin-bottom: 20px;
+}
+
+body.Registered .BottomButton a {
+	text-decoration: none;
+}
+
+body.Registered .BottomButton .Tips {
+	color: #fe9c3b;
+	font-size: 12px;
+	line-height: 18px;
+	padding: 0 10px;
+}
+
+body.Registered .SuccessTip {
+	text-align: center;
+	margin-top: 43%;
+}
+
+body.Registered .SuccessTip span {
+	background: #71c9bb;
+	color: #FFF;
+	font-size: 14px;
+	line-height: 20px;
+	padding: 0 10px;
+	border-radius: 20px;
+}
+
+body.Registered h3 {
+	font-weight: normal;
+	text-align: center;
+	color: #396a62;
+	margin: 10px 0;
+}

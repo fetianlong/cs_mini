@@ -1,0 +1,47 @@
+<!DOCTYPE hibernate-mapping PUBLIC 
+    "-//Hibernate/Hibernate Mapping DTD 3.0//EN"
+    "http://hibernate.sourceforge.net/hibernate-mapping-3.0.dtd">
+<hibernate-mapping>
+	<class name="com.dearho.cs.sys.pojo.BusinessFlow" table="s_business_flow">
+		<id name="id" type="java.lang.String">
+            <column name="ID" length="32" />
+            <generator class="uuid.hex" />
+        </id>
+        <property name="confirmId" type="java.lang.String">
+            <column name="confirm_id" length="32" />
+        </property>
+        <property name="businessId" type="java.lang.String">
+            <column name="business_id" length="32"  />
+        </property>
+         <property name="businessType" type="java.lang.Integer">
+            <column name="business_type" />
+        </property>
+        <property name="applicantId" type="java.lang.String">
+            <column name="applicant_id" length="32" />
+        </property>
+         <property name="applyTime" type="java.util.Date">
+            <column name="apply_time" />
+        </property>
+		 <property name="reviewerId" type="java.lang.String">
+            <column name="reviewer_id" length="32" />
+        </property>
+        <property name="reviewTime" type="java.util.Date">
+            <column name="review_time" />
+        </property>
+        <property name="result" type="java.lang.Integer">
+            <column name="result" />
+        </property>
+          <property name="resultDesc" type="java.lang.String">
+            <column name="result_desc" length="510"/>
+        </property>
+         <property name="ts" type="java.util.Date">
+            <column name="ts" />
+        </property>
+	</class>
+	
+	
+	
+	
+	
+	
+</hibernate-mapping>

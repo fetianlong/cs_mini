@@ -1,0 +1,53 @@
+@charset "utf-8";
+/* CSS Document */
+
+.MainContent {
+	padding: 50px 0;
+	background: #f2f1f1;
+}
+
+.MainContent>.container {
+	background: #FFF;
+	padding-top: 50px;
+	padding-bottom: 50px;
+}
+
+.MainContent label {
+	font-size: 16px;
+	color: #383838;
+}
+
+.MainContent .btn {
+	background: #56c796;
+	color: #FFF;
+}
+
+.MainContent .btn:hover {
+	color: #FFF;
+	background: #56c796;
+}
+
+.MainContent .help-block {
+	font-size: 14px;
+	color: #fb3636;
+}
+
+.MainContent .help-block .fa {
+	margin-right: 5px;
+}
+
+.MainContent .TitleImg {
+	margin-bottom: 50px;
+}
+
+.MainContent .checkbox {
+	margin-bottom: 30px;
+}
+
+.MainContent .checkbox label {
+	color: #666666;
+}
+
+.MainContent .checkbox label a {
+	color: #4bd3a5;
+}

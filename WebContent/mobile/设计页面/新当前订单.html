@@ -1,0 +1,229 @@
+<!doctype html>
+<html lang="zh-CN">
+<head>
+<meta charset="utf-8">
+<title>当前订单</title>
+
+<link rel=stylesheet href="../common/js/bootstrap/css/bootstrap.min.css">
+<link rel=stylesheet href="../common/js/fontawesome/css/font-awesome.min.css">
+<link rel=stylesheet href="../common/js/flatui/dist/css/flat-ui.min.css">
+<script src="../common/js/jquery.min.js"></script>
+<script src="../common/js/bootstrap/js/bootstrap.min.js"></script>
+<script src="../common/js/flatui/dist/js/flat-ui.min.js"></script>
+<script src="../common/js/main.js"></script>
+<link rel=stylesheet href="../common/css/main.css">
+<meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1, user-scalable=no">
+<meta http-equiv="X-UA-Compatible" content="IE=edge">
+<meta name="renderer" content="webkit">
+
+
+
+<link rel=stylesheet href="../common/css/ordernow2.css">
+
+</head>
+
+<body>
+<div class="container">
+	<div class="row">
+    	<div class="col-md-4 col-md-offset-4 StateBlock">
+        	<div class="StateImgBlock" style="background-image: url(../common/images/times2/40.png)"><!--外圈刻度，每5一张图，0到100-->
+            	<div class="StateCircleBlock">
+                	<div class="StateFlowingBlock" style="background-position-y: 20px"><!--水波纹偏移，y轴差120。例如100%，则为-20-->
+                    	<div class="StateNumBlock">
+                        	50<span>%</span>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <p class="XuhangBlock">预计续航里程：<span class="Number">200<span class="Danwei">KM</span></span></p>
+    	</div>
+    </div>
+    
+    <div class="row">
+    	<div class="col-md-4 col-md-offset-4 FeiyongBlock">
+        	<p>当前费用：<i class="fa fa-jpy"></i><span class="Number">200</span></p>
+        </div>
+    </div>
+    
+    <div class="row">
+    	<div class="col-md-4 col-md-offset-4 LinkBlock">
+        	<ul>
+            	<li>
+                	<button class="btn" ontouchstart="">
+                        <img class="img-responsive center-block" src="../common/images/ordernow/OpenDoor.png">
+                        <p>开车门</p>
+                        <small>open the door</small>
+                    </button>
+                </li>
+                <li>
+                	<button class="btn" ontouchstart="">
+                        <img class="img-responsive center-block" src="../common/images/ordernow/LockDoor.png">
+                        <p>锁车门</p>
+                        <small>lock the door</small>
+                    </button>
+                </li>
+                <li>
+                	<button class="btn" ontouchstart="">
+                        <img class="img-responsive center-block" src="../common/images/ordernow/Dingdan.png">
+                        <p>订单详情</p>
+                        <small>order illustration</small>
+                    </button>
+                </li>
+                <li>
+                	<button class="btn" ontouchstart="">
+                        <img class="img-responsive center-block" src="../common/images/ordernow/Service.png">
+                        <p>呼叫客服</p>
+                        <small>calling customer</small>
+                    </button>
+                </li>
+                <li>
+                	<button class="btn" ontouchstart="">
+                        <img class="img-responsive center-block" src="../common/images/ordernow/Charge.png">
+                        <p>补电</p>
+                        <small>battery charging</small>
+                    </button>
+                </li>
+                <li>
+                	<button class="btn" ontouchstart="">
+                        <img class="img-responsive center-block" src="../common/images/ordernow/BackCar.png">
+                        <p>还车</p>
+                        <small>repay the car</small>
+                    </button>
+                </li>
+                <div class="clearfix"></div>
+            </ul>
+        </div>
+    </div>
+    
+    <div class="row">
+    	<div class="col-md-4 col-md-offset-4 OrderBlock">
+        	<div class="panel-group" id="accordion" role="tablist" aria-multiselectable="true">
+              <div class="panel panel-default">
+                <div class="panel-heading" role="tab" id="Order1">
+                  <div class="panel-title">
+                    <a role="button" data-toggle="collapse" data-parent="#accordion" href="#OrderDetail1" aria-expanded="true" aria-controls="OrderDetail1">
+                      <div class="row">
+                      	<div class="col-xs-4 OrderState">
+                        	<p>日租<span class="label label-default">已超时</span></p>
+                        </div>
+                        <div class="col-xs-5 OrderTime">
+                        	<p><span class="label label-default">起</span>2015-01-18 16:15</p>
+                            <p><span class="label label-default">终</span>2015-01-19 16:15</p>
+                        </div>
+                        <div class="col-xs-3 OrderPrice">
+                        	<p><i class="fa fa-jpy"></i>2.00</p>
+                        </div>
+                      </div>
+                    </a>
+                  </div>
+                </div>
+                <div id="OrderDetail1" class="panel-collapse collapse" role="tabpanel" aria-labelledby="Order1">
+                  <div class="panel-body">
+                    <table>
+                    	<tbody>
+                        	<tr>
+                            	<th>项目1</th>
+                                <td>说明文字说明文字说明文字说明文字说明文字说明文字说明文字说明文字说明文字</td>
+                            </tr>
+                            <tr>
+                            	<th>项目2</th>
+                                <td>说明文字说明文字说明文字说明文字说明文字说明文字说明文字说明文字说明文字</td>
+                            </tr>
+                            <tr>
+                            	<th>项目3</th>
+                                <td>说明文字说明文字说明文字说明文字说明文字说明文字说明文字说明文字说明文字</td>
+                            </tr>
+                        </tbody>
+                    </table>
+                  </div>
+                </div>
+              </div>
+              
+              <div class="panel panel-default">
+                <div class="panel-heading" role="tab" id="Order2">
+                  <h4 class="panel-title">
+                    <a class="collapsed" role="button" data-toggle="collapse" data-parent="#accordion" href="#OrderDetail2" aria-expanded="false" aria-controls="OrderDetail2">
+                      <div class="row">
+                      	<div class="col-xs-4 OrderState">
+                        	<p>超时罚单<span class="label label-warning">进行中</span></p>
+                        </div>
+                        <div class="col-xs-5 OrderTime">
+                        	<p><span class="label label-default">起</span>2015-01-18 16:15</p>
+                            <p><span class="label label-default">终</span>2015-01-19 16:15</p>
+                        </div>
+                        <div class="col-xs-3 OrderPrice">
+                        	<p>计费中</p>
+                        </div>
+                      </div>
+                    </a>
+                  </h4>
+                </div>
+                <div id="OrderDetail2" class="panel-collapse collapse" role="tabpanel" aria-labelledby="Order2">
+                  <div class="panel-body">
+                    <table>
+                    	<tbody>
+                        	<tr>
+                            	<th>项目1</th>
+                                <td>说明文字说明文字说明文字说明文字说明文字说明文字说明文字说明文字说明文字</td>
+                            </tr>
+                            <tr>
+                            	<th>项目2</th>
+                                <td>说明文字说明文字说明文字说明文字说明文字说明文字说明文字说明文字说明文字</td>
+                            </tr>
+                            <tr>
+                            	<th>项目3</th>
+                                <td>说明文字说明文字说明文字说明文字说明文字说明文字说明文字说明文字说明文字</td>
+                            </tr>
+                        </tbody>
+                    </table>
+                  </div>
+                </div>
+              </div>
+              
+              <div class="panel panel-default">
+                <div class="panel-heading" role="tab" id="Order3">
+                  <h4 class="panel-title">
+                    <a class="collapsed" role="button" data-toggle="collapse" data-parent="#accordion" href="#OrderDetail3" aria-expanded="false" aria-controls="OrderDetail3">
+                      <div class="row">
+                      	<div class="col-xs-4 OrderState">
+                        	<p>日租<span class="label label-default">已超时</span></p>
+                        </div>
+                        <div class="col-xs-5 OrderTime">
+                        	<p><span class="label label-default">起</span>2015-01-18 16:15</p>
+                            <p><span class="label label-default">终</span>2015-01-19 16:15</p>
+                        </div>
+                        <div class="col-xs-3 OrderPrice">
+                        	<p><i class="fa fa-jpy"></i>2.00</p>
+                        </div>
+                      </div>
+                    </a>
+                  </h4>
+                </div>
+                <div id="OrderDetail3" class="panel-collapse collapse" role="tabpanel" aria-labelledby="Order3">
+                  <div class="panel-body">
+                    <table>
+                    	<tbody>
+                        	<tr>
+                            	<th>项目1</th>
+                                <td>说明文字说明文字说明文字说明文字说明文字说明文字说明文字说明文字说明文字</td>
+                            </tr>
+                            <tr>
+                            	<th>项目2</th>
+                                <td>说明文字说明文字说明文字说明文字说明文字说明文字说明文字说明文字说明文字</td>
+                            </tr>
+                            <tr>
+                            	<th>项目3</th>
+                                <td>说明文字说明文字说明文字说明文字说明文字说明文字说明文字说明文字说明文字</td>
+                            </tr>
+                        </tbody>
+                    </table>
+                  </div>
+                </div>
+              </div>
+            </div>
+        </div>
+    </div>
+	
+</div>
+</body>
+</html>

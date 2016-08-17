@@ -1,0 +1,129 @@
+.css-month, .css-month .hideYear{
+  display: none;
+  position: absolute;
+  z-index:99999;
+ 	background: #fff;
+ 	width:153px;
+	padding:4px;
+  border:1px solid #D7DCE6;
+  text-align:center;
+  font-family:georgia, times new roman,serif;
+	font-size:12px;
+  line-height:2em;
+  -webkit-touch-callout: none;
+	-webkit-user-select: none;
+	-khtml-user-select: none;
+	-moz-user-select: none;
+	-ms-user-select: none;
+	user-select: none;
+}
+.lv_month {
+	height: 22px;
+	line-height: 20px;
+	padding: 0 40px 0 2px;
+	width: 75px;
+	cursor: pointer;
+	background: url(../images/month.png) #fff right center no-repeat;
+	border: 1px solid #DDD;
+	margin-right: 10px;
+}
+.css-month .prev, .css-month .next{
+	float:left;
+	display: block;
+	top: 6px;
+	width: 19px;
+	height: 19px;
+	background: url(../images/calebg.png) no-repeat;
+	cursor:pointer;	
+}
+.css-month .prev {
+	left: 0px
+}
+.css-month .next {
+	float:right;
+	background-position: -66px 0
+}
+.css-month .title{
+	float:left;
+	width: 115px;
+	height: 25px;
+	text-align:center;
+	cursor: pointer;
+	font-weight:bold;
+}
+.css-month ul{
+	float: left;
+	width:153px;
+	border:1px solid #D7DCE6;
+	border-width:1px 0 0 1px;
+	margin:0px;
+	padding:0px;
+}
+.css-month ul li{
+	float:left;
+	width:50px;
+	list-style: none;
+	border:1px solid #D7DCE6;
+	border-width:0 1px 1px 0;
+	line-height:1.8em;
+	cursor:pointer;
+}
+.css-month ul li:hover{
+	background-color: #f0f0f0;
+}
+.css-month .current{
+	background-color: #ffc;
+}
+.css-month .disabled {
+	color: #CCC !important;
+	cursor: default ;
+	text-decoration: line-through;
+}
+.css-month .btnClear,.css-month .btnClose,.css-month .btnMonth{
+	float:right;
+	cursor:pointer;
+	padding-top:4px;
+}
+.css-month .btnClear span,.css-month .btnClose span,.css-month .btnMonth span{
+	border:1px solid #D7DCE6;
+	padding:1px 5px 2px 5px;
+	margin:4px 0px 0px 4px;
+	background-color: #f0f0f0;
+}
+.css-month .clear{
+	clear:both;
+	height:0px;
+	line-height:0px;
+}
+.css-month .hYearClose,.css-month .hPrev,.css-month .hNext{
+	cursor:pointer;
+}
+.css-month .hYearClose{
+	margin:0px 20px 0px 20px;
+}
+.css-month .hideYear{
+ 	width:90px;
+}
+.css-month .hideYear ul{
+	float: left;
+	width:90px;
+	margin:0px;
+	padding:0px;
+	border:none;
+}
+.css-month .hideYear ul li{
+	font-size:12px;
+	float:left;
+	width:45px;
+	list-style: none;
+	border:none;
+	line-height:1.8em;
+	cursor:pointer;
+}
+.css-month .inYear{
+	width:45px;
+	border:1px solid #fff;
+	font-family:georgia, times new roman,serif;
+	font-size:12px;
+	text-align:center;
+}

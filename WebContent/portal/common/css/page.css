@@ -1,0 +1,37 @@
+.a_style {
+    float: right;
+    height: 18px;
+    line-height: 18px;
+    margin-right: 10px;
+}
+.a_style li {
+    float: left;
+    list-style: outside none none;
+}
+.a_style a {
+    color: #1fbba6;
+    display: block;
+    font-family: "Î¢ÈíÒ²ºÚ";
+    font-weight: bold;
+    margin-left: 5px;
+    text-decoration: none;
+}
+.a_style a.qw {
+    background-color: #f7b52d;
+    border: 1px solid #f7b52d;
+    color: #fff;
+    display: block;
+    height: 18px;
+    margin-left: 5px;
+    margin-right: 10px;
+    text-align: center;
+    width: 37px;
+}
+.a_style li input {
+    border: 1px solid #ccc;
+    color: #333;
+    height: 18px;
+    margin-left: 10px;
+    text-align: center;
+    width: 23px;
+}

@@ -1,0 +1,219 @@
+@charset "utf-8";
+/* CSS Document */
+
+body {
+	font-family: "Segoe UI", "Lucida Grande", Helvetica, Arial, "微软雅黑", "Microsoft YaHei", FreeSans, Arimo, "Droid Sans","wenquanyi micro hei","Hiragino Sans GB", "Hiragino Sans GB W3", Arial, sans-serif;
+}
+
+a {
+	text-decoration: none;
+	color: #333333;	
+	transition: all 0.2s linear;
+	-webkit-transition: all 0.2s linear;
+	-moz-transition: all 0.2s linear;
+	-o-transition: all 0.2s linear;
+}
+
+a:link, a:visited {
+	color: #333333;
+	text-decoration: none;
+}
+	
+a:hover, a:active {
+	color: #000;
+	text-decoration: none;
+}
+
+.Header {
+	box-shadow: 0 1px 3px #ccc;
+	position: fixed;
+	top: 0;
+	left: 0;
+	width: 100%;
+	z-index: 1000;
+}
+
+.Header .SmallLogoImg {
+	max-width: 116px;
+}
+
+.Header .TopNavBar {
+	background: #FFF;
+	border-bottom: solid 1px #a9a9a9;
+	min-height: 42px;
+}
+
+.Header .TopNavBar {
+	font-size: 16px;
+}
+
+.Header .NavBarBlock {
+	background: #FFF;
+	background: rgba(255,255,255,0.8);
+}
+
+.Header .navbar-text {
+	line-height: 42px;
+	margin-top: 0;
+	margin-bottom: 0;
+}
+
+.Header .TopNavBar .fa {
+	color: #4bd3a5;
+	margin-right: 5px;
+}
+
+.Header .TopNavBar .LoginUl li {
+	display: inline-block;
+}
+
+.Header .TopNavBar .btn {
+	padding: 2px 5px;
+	text-decoration: none;
+}
+
+.Header .TopNavBar .RegButton {
+	border-color: #f98b15;
+	color: #f98b15;
+}
+
+.Header .TopNavBar .RegButton:hover {
+	background: #f98b15;
+	color: #FFF;
+}
+
+.Header .MyCenter {
+	margin-right: 10px;
+	color: #FFF;
+}
+
+.Header .WelcomeLabel {
+	font-size: 14px;
+}
+
+.HeaderBlock {
+	margin-top: 10px;
+	margin-bottom: 10px;
+}
+
+.MainNavBar {
+	font-size: 20px;
+	margin-top: 20px;
+}
+
+.MainNavBar li a {
+	color: #4f4f4d;
+	text-decoration: none;
+	background: none;
+	border-bottom: solid 2px transparent;
+}
+
+.MainNavBar li a:hover {
+	background: none;
+	border-bottom-color: #4bd3a5;
+}
+
+.MainNavBar li.active a {
+	background: none;
+	border-bottom-color: #4bd3a5;
+}
+
+.MainContent {
+	margin-top: 157px;
+}
+
+.Footer {
+	background: #575656;
+	padding: 60px 0;
+	color: #aba9a9;
+	text-align: center;
+	font-weight: bold;
+}
+
+.SinglePageCaption {
+	color: #807d7d;
+	padding-bottom: 10px;
+	border-bottom: solid 1px #959494;
+	margin-bottom: 30px;
+	margin-top: 5px;
+}
+
+.ChangePage ul {
+	list-style: none;
+	margin: 0;
+	padding: 0;
+}
+
+.ChangePage ul li {
+	display: inline-block;
+	list-style: 0;
+	text-align: center;
+	color: #FFF;
+	font-size: 16px;
+	line-height: 32px;
+	width: 32px;
+	height: 32px;
+	background: #c9cacb;
+	margin: 2px;
+}
+
+.ChangePage ul li.active {
+	background: #56c594;
+}
+
+.ChangePage ul li a {
+	display: block;
+	color: #FFF;
+	cursor: pointer;
+}
+
+.ChangePage ul li span {
+	cursor: not-allowed;
+}
+
+.ChangePage ul li:hover a {
+	background: #56c594;
+}
+
+@media  (max-width: 1200px) {
+.MainNavBar {
+	font-size: 16px;
+}
+}
+
+@media  (max-width: 992px) {
+.MainNavBar {
+	font-size: 14px;
+}
+
+.MainNavBar li a {
+	padding: 0;
+}
+
+.LogoImg {
+	width: 200px;
+}
+
+.MainContent {
+	margin-top: 128px;
+}
+}
+
+@media  (max-width: 768px) {
+.HeaderBlock {
+	margin-bottom: 0;
+}
+
+.MainNavBar {
+	margin-top: 0;
+}
+
+.MainNavBar li {
+	float: left;
+	width: 25%;
+}
+
+.MainContent {
+	margin-top: 80px;
+}
+}

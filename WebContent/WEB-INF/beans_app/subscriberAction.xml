@@ -1,0 +1,36 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<beans xmlns="http://www.springframework.org/schema/beans"
+	xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+	xsi:schemaLocation="http://www.springframework.org/schema/beans http://www.springframework.org/schema/beans/spring-beans-2.0.xsd">
+	
+	
+	<bean id="appAccountAction" class="com.dearho.cs.appinterface.subscriber.AppAccountAction" scope="prototype">
+		<property name="accountService" ref="accountService" />
+		<property name="rechargeCardService" ref="rechargeCardService"/>
+		<property name="subscriberService" ref="subscriberService" />
+		<property name="subscriberLoginRecordService" ref="subscriberLoginRecordService"></property>
+		<property name="smsCodeService" ref="smsCodeService"></property>
+		<!-- <property name="accountTradeRecordService" ref="accountTradeRecordService" /> -->
+		<property name="payService" ref="payService" />
+		
+		<!-- property name="refundService" ref="refundService"/> -->
+		<property name="wechatUserInfoService" ref="wechatUserInfoService"/>
+	<!-- 	<property name="subscriberService" ref="subscriberService" /> -->
+	</bean>
+	
+	<bean id="appSubscriberFromAction" class="com.dearho.cs.appinterface.subscriber.AppSubscriberAction" scope="prototype">
+											
+		<property name="subscriberService" ref="subscriberService" />
+		<property name="wechatUserInfoService" ref="wechatUserInfoService" />
+		<property name="smsCodeService" ref="smsCodeService"/>
+	</bean>
+	
+	<bean id="appUserAction" class="com.dearho.cs.appinterface.subscriber.AppUserAction" scope="prototype">
+		<property name="subscriberService" ref="subscriberService" />
+		<property name="smsCodeService" ref="smsCodeService" />
+		<property name="subscriberLoginRecordService" ref="subscriberLoginRecordService"/>
+		<property name="wechatUserInfoService" ref="wechatUserInfoService"/>
+		<property name="branchDotService" ref="branchDotService"/>
+	</bean>
+	
+</beans>

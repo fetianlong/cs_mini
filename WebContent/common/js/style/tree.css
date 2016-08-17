@@ -1,0 +1,40 @@
+body {
+	font-family:"宋体",arial;margin:0; padding:0; background: #FFF; font-size:12px;	
+/*
+	scrollbar-highlight-color: #fff;
+	scrollbar-3dlight-color: #1A76B7;
+	scrollbar-shadow-color: #1A76B7;
+	scrollbar-face-color: #40b2f3;
+	scrollbar-arrow-color:  #fff;
+	scrollbar-track-color: #e0e0e0;
+	scrollbar-darkshadow-color: #FFFFFF; 
+*/	
+}
+
+div,form,img,ul,ol,li,dl,dt,dd {margin: 0; padding: 0; border: 0;	}
+.clear { clear: both; font-size: 0px; visibility: hidden; width: 0px; height: 0px}
+#layoutTable{margin-left:5px;}
+/*主版列表*/
+#treeList dt{ height:18px; line-height:18px; padding-left:10px;float:left;overflow:hidden;}
+#treeList dd{ height:18px; line-height:18px; overflow:hidden; }
+#treeList .dd1{background: url(images/t2.gif) no-repeat left top; padding-left:28px; }
+#treeList .dd11{background: url(images/t21.gif) no-repeat left top; padding-left:28px; }
+#treeList .dd12{background: url(images/t22.gif) no-repeat left top; padding-left:28px; }
+#treeList .dd2{background: url(images/t1.gif) no-repeat left top; padding-left:44px;}
+#treeList .dd21{background: url(images/t11.gif) no-repeat left top; padding-left:44px;}
+#treeList .dd6{background: url(images/t6.gif) no-repeat left top; padding-left:44px;}
+#treeList .dd61{background: url(images/t61.gif) no-repeat left top; padding-left:44px;}
+#treeList dl{overflow:hidden; margin-left:2px;}
+#treeList .off{background:url(images/t3.gif) no-repeat left top;cursor:pointer;}
+#treeList .on{background: url(images/t4.gif) no-repeat left top;cursor:pointer;}
+#treeList a, #treeList a:visited, #treeList a:hover {
+	color:#535353;
+	text-decoration:none;
+}
+
+.closeDD{display:none;}
+.openDD{display:block;}
+
+#treeList a.focusOn{color:red;}
+#treeList a.focusOff{color:#535353;}
+#treeList .dd1On{color:red;}

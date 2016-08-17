@@ -1,0 +1,6 @@
+<%@ page language="java" contentType="text/html; charset=UTF-8"
+    pageEncoding="UTF-8"%>
+<%String path = request.getContextPath(); %>
+<%@page import="java.util.Date"%>
+<%@  taglib prefix="ww" uri="webwork"%>
+<%String siteName="华泰租车"; %>

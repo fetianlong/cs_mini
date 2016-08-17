@@ -1,0 +1,168 @@
+@charset "utf-8";
+/* CSS Document */
+
+.MainContent {
+	margin-top: 50px;
+	padding-left: 10px;
+	padding-right: 10px;
+}
+
+.CarInfoBlock {
+	margin-bottom: 10px;
+}
+
+.CarInfoBlock .CarImg {
+	max-width: 60%;
+}
+
+.CarInfoBlock .CarInfo {
+	margin: 0;
+	margin-bottom: 8px;
+	font-size: 16px;
+	line-height: 1;
+	color: #545454;
+}
+
+.CarInfoBlock .CarInfo .Type {
+	margin-right: 20px;
+}
+
+.CarInfoBlock p {
+	font-size: 12px;
+	line-height: 16px;
+	margin: 0;
+	margin-bottom: 2px;
+	color: #858585;
+}
+
+.CarInfoBlock p i {
+	color: #64cfe9;
+	margin-right: 5px;
+	font-size: 8px;
+}
+
+.SelectBlock {
+	margin-bottom: 10px;
+}
+
+.SelectBlock .OneBlock {
+	position: relative;
+	background: #FFF;
+	box-shadow: 0 0 30px #e9e8e8;
+	border-radius: 3px;
+	padding-top: 30px;
+	height: 120px;
+	cursor: pointer;
+	border: solid 1px transparent;
+}
+
+.SelectBlock .OneBlock .SelectImg {
+	height: 30px;
+	width: 30px;
+	margin-right: 5px;
+	margin-bottom: 5px;
+	vertical-align: middle;
+}
+
+.SelectBlock .OneBlock h3 {
+	font-size: 18px;
+	line-height: 1;
+	vertical-align: middle;
+}
+
+.SelectBlock .OneBlock .Tips {
+	position: absolute;
+	bottom: 10px;
+	left: 0;
+	width: 90%;
+	padding: 0 5px;
+	margin: 0;
+	font-size: 6px;
+	line-height: 12px;
+	color: #a7a7a7;
+}
+
+.SelectBlock .OneBlock .DaySelect {
+	font-size: 16px;
+	line-height: 16px;
+	color: #979797;
+}
+
+.SelectBlock .OneBlock .DaySelect .DayInput {
+	font-size: 12px;
+	line-height: 16px;
+	text-align: center;
+	width: 2em;
+	border: none;
+	border-top: solid 1px #d3d3d3;
+	border-bottom: solid 1px #d3d3d3;
+	margin: 0 5px;
+	color: #979797;
+	-webkit-appearance: none;
+}
+
+.SelectBlock .OneBlock .DaySelect .DayInput::-webkit-outer-spin-button,
+.SelectBlock .OneBlock .DaySelect .DayInput::-webkit-inner-spin-button {
+    -webkit-appearance: none !important;
+    margin: 0;
+}
+
+.SelectBlock .OneBlock .DaySelect span {
+	margin-left: 5px;
+}
+
+.SelectBlock .OneBlock .DaySelect .SelectButton {
+	color: #6ecbed;
+	cursor: pointer;
+}
+
+.SelectBlock .OneBlock.Selected {
+	border-color: #6ecbed;
+}
+
+.SelectBlock .OneBlock.Selected h3 {
+	color: #6ecbed;
+}
+
+.SelectBlock .OneBlock.Selected .Tips {
+	color: #6ecbed;
+}
+
+.SelectBlock .OneBlock.Selected .DaySelect {
+	color: #6ecbed;
+}
+
+.SelectBlock .OneBlock.Selected .DaySelect .DayInput {
+	color: #6ecbed;
+	border-color: #6ecbed;
+}
+
+.CarTips {
+	font-size: 12px;
+	line-height: 20px;
+	color: #afb0b0;
+	text-align: center;
+	margin-top: 50px;
+	margin-bottom: 5px;
+}
+
+.SubmitButton {
+	background: #FFF;
+	border: none;
+	border-radius: 3px;
+	box-shadow: 0 0 30px #e9e8e8;
+	color: #555656;
+	margin-bottom: 20px;
+}
+
+.BackCarLink {
+	color: #f7bd0e;
+	float: right;
+	font-size: 12px;
+	margin-bottom: 20px;
+}
+
+.BackCarLink:link, .BackCarLink:visited, .BackCarLink:hover, .BackCarLink:active {
+	color: #f7bd0e;
+	text-decoration: none;
+}

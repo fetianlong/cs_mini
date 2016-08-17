@@ -1,0 +1,59 @@
+@charset "utf-8";
+/* CSS Document */
+
+.MainContent {
+	margin-top: 10px;
+}
+
+.CostBlock button, .CostBlock button:hover, .CostBlock button:focus {
+	background: #FFF;
+	color: #64cfe9;
+	border-color: #64cfe9;
+	padding: 0;
+	text-shadow: none;
+}
+
+.CostBlock button.Selected {
+	background: #64cfe9;
+	color: #FFF;
+}
+
+.OtherBlock .OtherInput {
+	border-radius: 0 !important;
+	border: none !important;
+	border-bottom: solid 1px #e5e5e5 !important;
+}
+
+.PaySelectBlock button {
+	background: #FFF;
+	color: #525252;
+	border-color: #64cfe9;
+	padding: 0;
+	position: relative;
+}
+
+.PaySelectBlock .WechatButton .uk-icon-wechat {
+	color: #3cb034;
+	margin-right: 3px;
+}
+
+.PaySelectBlock .WechatButton .SelectBorder {
+	position: absolute;
+	right: 0;
+	bottom: 0;
+	color: #FFF;
+	border-left: solid 22px transparent;
+	border-bottom: solid 22px #64cfe9;
+	z-index: 1;
+}
+
+.PaySelectBlock .WechatButton .SelectedIcon {
+	position: absolute;
+	right: 1px;
+	bottom: 1px;
+	font-size: 8px;
+	line-height: 10px;
+	color: #FFF;
+	z-index: 2;
+	text-shadow: none;
+}

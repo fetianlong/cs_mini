@@ -1,0 +1,133 @@
+@charset "utf-8";
+/* CSS Document */
+
+body {
+	font-family: "Segoe UI", "Lucida Grande", Helvetica, Arial, "微软雅黑", "Microsoft YaHei", FreeSans, Arimo, "Droid Sans","wenquanyi micro hei","Hiragino Sans GB", "Hiragino Sans GB W3", Arial, sans-serif; background:#E0E6E9; font-size:12px;
+}
+
+.MainContent { 
+	background:url(../images/login/bg_img.jpg) center top no-repeat;
+	 width:100%; height:742px;
+}
+.hertexte { padding:100px 0; font-size:45px; color:#ffffff;}
+.Border { width:100%; height:100%;
+	background:url(../images/login/coninbg.png) center no-repeat 100%; 
+	background: #ffffff;
+	background: rgba(0,0,0,0.4);
+}
+.form-group {
+    margin-bottom: 10px;
+}
+.Loading {
+	position: fixed;
+	width: 100%;
+	height: 100%;
+	left: 0;
+	top: 0;
+	color: #FFF;
+	background: #000;
+	background: rgba(0,0,0,0.8);
+	text-align: center;
+	z-index: 10000;
+}
+
+.Loading .fa {
+	margin-top: 25%;
+	color: #FFF;
+}
+
+.LogoImg {
+	margin-bottom: 50px;
+}
+
+.LoginBlock {
+	padding: 20px 100px 20px 0px; 
+}
+
+.Footer {
+	position: fixed;
+	left: 0;
+	bottom: 0;
+	width: 100%;
+	background: #f1f1f1;
+	padding: 50px 0;
+	color: #222222;
+	text-align: center;
+	font-weight: bold;
+}
+
+.SignBlock {
+	text-align: center;
+}
+
+.SignBlock>.row>div {
+	background: none;
+}
+
+.SignBlock>.row>div .fa {
+	display: block;
+	padding-top: 45px;
+	padding-bottom: 45px;
+	color: #FFF;
+	
+}
+
+.LoginBlock .input-group-addon {
+	border-radius: 0; padding:0;border: 0;
+	color: #FFF;
+}
+
+.LoginBlock input[type="text"], .LoginBlock input[type="password"] {
+	height: 36px;
+	border-radius: 0;  border:0;
+	border-color: #ffffff;
+}
+
+.LoginBlock .YanzhengInput {
+	padding-right: 0; padding-top:0;
+}
+
+.LoginBlock input.UserName, .LoginBlock input.Password {
+	border-left: none;
+}
+
+.LoginBlock .has-error input.UserName, .LoginBlock .has-error input.Password, .LoginBlock .has-error input.Yanzheng {
+	border: solid 1px #ffffff;
+}
+
+.LoginBlock .form-control-feedback {
+	display: none;
+}
+
+.LoginBlock .has-error .form-control-feedback {
+	display: block;
+}
+
+.LoginBlock .SubmitButton {
+	background: #0097D4;
+	color: #FFF;
+	border-radius: 0;
+}
+
+.LoginBlock .SavePassword {
+	color: #333;
+	margin-bottom: 0;
+}
+
+.Tips {
+	color: #f43535; font-size:12px;
+	background: #fbe2e2;
+	border: solid 1px #f43535;
+	padding: 0 5px;
+}
+
+.LoginBlock .Tips .fa {
+	margin-right: 4px;
+}
+
+.has-error .form-control {
+    border-color: #ffffff;}
+	
+.label {
+    line-height:none;
+}

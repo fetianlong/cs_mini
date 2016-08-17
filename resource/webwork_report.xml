@@ -1,0 +1,29 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE xwork PUBLIC "-//Apache Struts//XWork 1.1.1//EN" 
+"http://struts.apache.org/dtds/xwork-1.1.1.dtd">
+<xwork>
+	<package name="report" extends="webwork-default" namespace="/report">
+		<default-interceptor-ref name="defaultStack"/>
+		
+		<global-results>
+			<result name="timeout" type="dispatcher">
+                <param name="location">error.jsp</param>
+            </result>
+            <result name="illegal" type="dispatcher">
+                <param name="location">error.jsp</param>
+            </result>
+		</global-results>
+	
+   		<action name="indexDataShow" class="indexDataShowAction">
+			<result name="success" type="dispatcher">
+                <param name="location">/resultjson.jsp</param>
+            </result>
+			<result name="error" type="dispatcher">
+                <param name="location">/resultjson.jsp</param>
+            </result>
+			<interceptor-ref name="defaultStack"/>
+		</action>
+		
+	</package>
+	
+</xwork>

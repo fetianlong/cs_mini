@@ -1,0 +1,100 @@
+<!doctype html>
+<html>
+<head>
+<meta charset="utf-8">
+<title>后台登陆 - 电老虎租车后台管理系统</title>
+
+<link rel="stylesheet" href="../common/js/bootstrap/css/bootstrap.min.css">
+<link rel="stylesheet" href="../common/js/fontawesome/css/font-awesome.min.css">
+<link rel="stylesheet" href="../common/js/flatui/dist/css/flat-ui.min.css">
+<link rel="stylesheet" href="../common/css/main.css">
+<link rel="stylesheet" href="../common/css/login.css">
+<script src="../common/js/jquery.min.js"></script>
+<script src="../common/js/bootstrap/js/bootstrap.min.js"></script>
+<script src="../common/js/flatui/dist/js/flat-ui.js"></script>
+<!--[if lt IE 9]>
+<script src="../common/js/html5.min.js"></script>
+<script src="../common/js/respond.min.js"></script>
+<![endif]-->
+
+<meta http-equiv="X-UA-Compatible" content="IE=edge">
+<meta name="renderer" content="webkit">
+<meta name="viewport" content="width=device-width, initial-scale=0.8, maximum-scale=0.8, user-scalable=no">
+<meta name="robots" content="noarchive">
+<meta name="robots" content="nofollow">
+<script>
+$(function(){
+	$(".RememberPW").radiocheck();
+	$(".RememberPW").on('change.radiocheck', function() {
+		alert($(this).context.checked);
+	});
+});
+</script>
+</head>
+
+<body>
+<div class="container LoginBlock">
+	<div class="col-md-6 col-md-offset-3">
+		<div class="Border">
+			<div class="TitleBlock">
+				<img class="FloatImg" src="../common/images/login/floatlogo.png">
+				<h2>电老虎后台管理系统</h2>
+				<h4>绿色出行&nbsp;低碳环保</h4>
+			</div>
+			<div class="row">
+				<div class="col-md-10 col-md-offset-1 Login">
+					<form class="form-horizontal">
+					  <div class="form-group">
+					  	<label for="user" class="col-sm-3 control-label">用户名</label>
+						<div class="col-sm-8">
+							<div class="input-group">
+								<div class="input-group-addon"><i class="fa fa-user"></i></div>
+								<input type="text" class="form-control" id="user">
+							</div>
+						</div>
+					  </div>
+					  <div class="form-group">
+					  	<label for="password" class="col-sm-3 control-label">密码</label>
+						<div class="col-sm-8">
+							<div class="input-group">
+								<div class="input-group-addon"><i class="fa fa-lock"></i></div>
+								<input type="password" class="form-control" id="password">
+							</div>
+						</div>
+					  </div>
+					  <div class="form-group">
+					  	<label for="yanzheng" class="col-sm-3 control-label">验证码</label>
+						<div class="col-sm-4">
+						  <input type="text" class="form-control" id="yanzheng">
+						</div>
+						<div class="col-sm-4">
+							<img class="img-responsive center-block YanzhengImg" src="../common/images/login/yanzhengma.png">
+						</div>
+					  </div>
+					  <div class="form-group">
+						<div class="col-sm-5 col-sm-offset-3">
+						  <button type="submit" class="btn btn-primary SubmitButton btn-block">登录</button>
+						</div>
+						<div class="col-sm-4">
+							<div class="checkbox">
+								<label>
+								  <input type="checkbox" class="RememberPW" checked>记住密码
+								</label>
+							  </div>
+						</div>
+					  </div>
+					  
+					  <p class="help-block text-center"><i class="fa fa-info-circle"></i>错误提示</p>
+					</form>
+				</div>
+			</div>
+		</div>
+	</div>
+</div>
+<div class="FooterLabel text-center">
+	 <p>北京分时共享科技有限公司 Version 1.0.0 </p>
+</div>
+
+
+</body>
+</html>

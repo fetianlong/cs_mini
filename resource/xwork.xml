@@ -1,0 +1,59 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE xwork PUBLIC "-//Apache Struts//XWork 1.1.1//EN" 
+"http://struts.apache.org/dtds/xwork-1.1.1.dtd">
+<xwork>
+	<include file="webwork_default.xml"/>
+	<include file="webwork_sys.xml"/>
+	<!-- 车辆管理 配置文件 -->
+	<include file="webwork_carManage.xml"/>
+	<!-- 银联 -->
+	<include file="webwork_pay.xml"/>
+	<!-- 资源监控 配置文件 -->
+	<include file="webwork_resmonitor.xml"/>
+	
+	<!-- 会员 -->
+	<include file="webwork_subscriber.xml"/>
+	<include file="webwork_subscriberConfirm.xml"/>
+	<include file="webwork_account.xml"/>
+	
+	<!-- 运营相关的配置文件 -->
+<!-- 	<include file="webwork_operation.xml" /> -->
+	<include file="webwork_feestrategy.xml" /> 
+	
+	<!-- 订单相关的 -->
+	
+	<include file="webwork_orders.xml"/>
+	
+	<!-- 网点 -->
+	<include file="webwork_place.xml"/>
+	
+	<!-- 充电-->
+	<include file="webwork_charge.xml"/>
+	
+	<!-- 车务 -->
+	<include file="webwork_carservice.xml"/>
+	
+	<!-- 报表 -->
+	<include file="webwork_report.xml"/>
+	
+
+	  <!-- 微信端 -->
+	  <include file="webwork_subscriber_mobile.xml"/>
+	  
+	  <!-- 特来电 -->
+	  <include file="webwork_teldIntrf.xml"/>
+	   
+	   <!--  投诉建议 -->
+	   <include file="webwork_advice.xml"/>
+	  
+	  <!-- APP 对外接口 START-->	 
+	  
+	  <!-- 订单相关 --> 
+	  <include file="webwork_app/app_orders.xml"/>
+	  <!-- 预定车辆相关 --> 
+	  <include file="webwork_app/webwork_app_bookcar.xml"/>
+	  <include file="webwork_app/webwork_app_account.xml"/>
+	  <include file="webwork_app/webwork_app_subscriber.xml"/>
+	  <include file="webwork_app/webwork_app_sys.xml"/>
+	  <!-- APP 对外接口 END-->	 
+</xwork>

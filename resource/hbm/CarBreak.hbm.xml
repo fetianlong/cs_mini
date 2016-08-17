@@ -1,0 +1,81 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!DOCTYPE hibernate-mapping PUBLIC "-//Hibernate/Hibernate Mapping DTD 3.0//EN"
+"http://www.hibernate.org/dtd/hibernate-mapping-3.0.dtd">
+
+<hibernate-mapping>
+    
+    <class name="com.dearho.cs.carservice.pojo.CarBreak" table="c_car_break" catalog="carsharing_mini">
+        
+        <id name="id" type="string">
+            <column name="id" length="32" />
+            <generator class="uuid.hex" />
+        </id>
+        <property name="subscriberId" type="java.lang.String">
+            <column name="subscriber_id" length="32" />
+        </property>
+        
+        <property name="subscriberName" type="java.lang.String">
+            <column name="subscriber_name" length="200" />
+        </property>
+        
+        <property name="orderId" type="java.lang.String">
+            <column name="order_id" length="32" />
+        </property>
+        
+        <property name="orderNumber" type="java.lang.String">
+            <column name="order_number" length="32" />
+        </property>
+        
+        <property name="carId" type="java.lang.String">
+            <column name="car_id" length="32" />
+        </property>
+        <property name="carNumber" type="java.lang.String">
+            <column name="car_number" length="20" />
+        </property>
+        <property name="breakTypeFacade" type="java.lang.Integer">
+            <column name="break_type_facade">
+                <comment>损坏类型 车辆外观损坏 默认为0,1为损坏</comment>
+            </column>
+        </property>
+        <property name="breakTypeTyre" type="java.lang.Integer">
+            <column name="break_type_tyre">
+                <comment>损坏类型，轮胎损坏，默认为0，损坏为1</comment>
+            </column>
+        </property>
+        <property name="breakTypeDecoration" type="java.lang.Integer">
+            <column name="break_type_decoration">
+                <comment>损坏类别，内饰损坏</comment>
+            </column>
+        </property>
+        <property name="breakTypeGlass" type="java.lang.Integer">
+            <column name="break_type_glass">
+                <comment>损坏上报，玻璃破损 默认为0 损坏为1</comment>
+            </column>
+        </property>
+        <property name="breakTypeOther" type="java.lang.Integer">
+            <column name="break_type_other">
+                <comment>车损上报，其他损坏，默认为0，损坏为1</comment>
+            </column>
+        </property>
+        <property name="breakTypeOdor" type="java.lang.Integer">
+            <column name="break_type_odor">
+                <comment>车损上报，内饰异味默认为0 ，损坏为1</comment>
+            </column>
+        </property>
+        <property name="breakDesc" type="java.lang.String">
+            <column name="break_desc" length="65535">
+                <comment>损坏描述</comment>
+            </column>
+        </property>
+        <property name="breakImg" type="java.lang.String">
+            <column name="break_img" length="65535">
+                <comment>以"|"分割</comment>
+            </column>
+        </property>
+        <property name="ts" type="java.util.Date">
+            <column name="ts">
+                <comment>添加时间</comment>
+            </column>
+        </property>
+    </class>
+</hibernate-mapping>

@@ -1,0 +1,160 @@
+<!--公共头部开始-->
+<!doctype html>
+<html>
+<head>
+<meta charset="utf-8">
+<link rel=stylesheet href="../common/js/uikit/css/uikit.almost-flat.min.css">
+<script src="../common/js/jquery-1.12.1.min.js"></script>
+<script src="../common/js/uikit/js/uikit.min.js"></script>
+<script src="../common/js/main.js"></script>
+<link rel=stylesheet href="../common/css/main.css">
+<meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1, user-scalable=no">
+<meta http-equiv="X-UA-Compatible" content="IE=edge">
+<meta name="renderer" content="webkit">
+<!--公共头部结束-->
+
+<title>当前订单</title>
+<link rel=stylesheet href="../common/js/uikit/css/components/accordion.almost-flat.css">
+<script src="../common/js/uikit/js/components/accordion.min.js"></script>
+<link rel=stylesheet href="../common/css/currentorders.css">
+<script>
+$(function(){
+	$(".MenuBlock").css("bottom", 0-$(".MenuBlock .MenuButton").innerHeight());
+	$(".MenuBlock .Arrow").click(function(e) {
+		if ($(".MenuBlock").css("bottom") == "0px"){
+			$(".MenuBlock").animate({bottom: 0-$(".MenuBlock .MenuButton").innerHeight()}, 200, "linear", function(e){
+				$(".MenuBlock .Arrow i").removeClass("uk-icon-chevron-down");
+				$(".MenuBlock .Arrow i").addClass("uk-icon-chevron-up");
+			});
+		} else {
+			$(".MenuBlock").animate({bottom: 0}, 200, "linear", function(e){
+				$(".MenuBlock .Arrow i").removeClass("uk-icon-chevron-up");
+				$(".MenuBlock .Arrow i").addClass("uk-icon-chevron-down");
+			});
+			
+		};
+    });
+});
+</script>
+
+</head>
+
+<body>
+<!--微信客户端公用头部-->
+<div class="uk-container uk-container-center uk-text-center WechatHeader">
+	<div class="uk-grid uk-grid-collapse">
+        <div class="uk-width-1-6">
+            <a class="HeaderButton uk-float-left" href="#"><i class="uk-icon-user"></i></a>
+        </div>
+        <div class="uk-width-4-6">
+            <p class="PageCaption"></p>
+        </div>
+        <div class="uk-width-1-6">
+            <a class="HeaderButton uk-float-right" href="#"><i class="uk-icon-phone"></i></a>
+        </div>
+    </div>
+</div>
+
+<div class="uk-container uk-container-center MainContent">
+    <div class="InfoBlock">
+    	<div class="CircleBG"></div>
+        <div class="uk-grid uk-grid-collapse InfoBorder">
+        	<div class="uk-width-1-2 LeftBlock">
+            	<p class="KM"><span class="Number">197</span><span class="Unit">KM</span>续航</p>
+                <p class="Dianliang"><span class="Number">90</span><span class="Unit">%</span>剩余电量</p>
+                <img class="LineImg" src="../common/images/currentorders/line.jpg">
+            </div>
+            <div class="uk-width-1-2 RightBlock">
+            	<p class="Money"><span class="Unit"><i class="uk-icon-rmb"></i></span><span class="Number">90</span></p>
+                <p class="Label">当前费用</p>
+            </div>
+        </div>
+        <a class="DingdanDetail" href="#">订单详情<i class="uk-icon-angle-double-right"></i></a>
+    </div>
+    
+    <div class="uk-accordion ListBlock" data-uk-accordion>
+    	<div class="OneBlock">
+            <div class="uk-accordion-title TitleBlock">
+                <div class="uk-grid uk-grid-collapse">
+                    <div class="uk-width-1-5 Type">时租</div>
+                    <div class="uk-width-3-5 Cost">
+                        费用小计：<i class="uk-icon-rmb"></i><span>320</span>
+                    </div>
+                    <div class="uk-width-1-5 State">
+                        <span class="uk-badge uk-badge-success uk-badge-notification">已完成</span>
+                    </div>
+                </div>
+            </div>
+            <div class="uk-accordion-content ContentBlock">
+                <ul class="uk-list">
+                    <li><span>开始时间：</span>2016-03-13 9:00</li>
+                    <li><span>剩余时长：</span>56min</li>
+                    <li><span>里程费用：</span>100km (100元)</li>
+                </ul>
+            </div>
+        </div>
+    
+        
+        <div class="OneBlock">
+            <div class="uk-accordion-title TitleBlock">
+                <div class="uk-grid uk-grid-collapse">
+                    <div class="uk-width-1-5 Type">时租</div>
+                    <div class="uk-width-3-5 Cost">
+                        费用小计：<i class="uk-icon-rmb"></i><span>320</span>
+                    </div>
+                    <div class="uk-width-1-5 State">
+                        <span class="uk-badge uk-badge-warning uk-badge-notification">进行中</span>
+                    </div>
+                </div>
+            </div>
+            <div class="uk-accordion-content ContentBlock">
+                <ul class="uk-list">
+                    <li><span>开始时间：</span>2016-03-13 9:00</li>
+                    <li><span>剩余时长：</span>56min</li>
+                    <li><span>里程费用：</span>100km (100元)</li>
+                </ul>
+            </div>
+        </div>
+        <div class="OneBlock">
+            <div class="uk-accordion-title TitleBlock">
+                <div class="uk-grid uk-grid-collapse">
+                    <div class="uk-width-1-5 Type">日租</div>
+                    <div class="uk-width-3-5 Cost">
+                        费用小计：<i class="uk-icon-rmb"></i><span>320</span>
+                    </div>
+                    <div class="uk-width-1-5 State">
+                        <span class="uk-badge uk-badge-danger uk-badge-notification">超时中</span>
+                    </div>
+                </div>
+            </div>
+            <div class="uk-accordion-content ContentBlock">
+                <ul class="uk-list">
+                    <li><span>开始时间：</span>2016-03-13 9:00</li>
+                    <li><span>剩余时长：</span>56min</li>
+                    <li><span>里程费用：</span>100km (100元)</li>
+                </ul>
+            </div>
+        </div>
+    </div>
+</div>
+
+<div class="MenuBlock">
+	<div class="Arrow"><i class="uk-icon-chevron-up"></i></div>
+	<img class="MenuImg" src="../common/images/currentorders/menu.png">
+    <div class="uk-grid uk-grid-width-1-2 uk-text-center MenuButton">
+        <div>
+            <button class="uk-button"><img src="../common/images/currentorders/key.png"><p>开车门</p></button>
+        </div>
+        <div>
+            <button class="uk-button"><img src="../common/images/currentorders/lock.png"><p>锁车门</p></button>
+        </div>
+        <div>
+            <button class="uk-button"><img src="../common/images/currentorders/light.png"><p>补电</p></button>
+        </div>
+        <div>
+            <button class="uk-button"><img src="../common/images/currentorders/backcar.png"><p>还车</p></button>
+        </div>
+    </div>
+</div>
+</body>
+</html>

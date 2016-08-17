@@ -1,0 +1,98 @@
+<!DOCTYPE hibernate-mapping PUBLIC 
+    "-//Hibernate/Hibernate Mapping DTD 3.0//EN"
+    "http://hibernate.sourceforge.net/hibernate-mapping-3.0.dtd">
+ 
+<hibernate-mapping>
+	<class name="com.dearho.cs.orders.pojo.Orders" table="ORD_ORDERS">
+		<id name="id" type="java.lang.String">
+            <column name="ID" length="32" />
+            <generator class="uuid.hex" />
+        </id>
+        <property name="ordersNo" type="java.lang.String">
+        	<column name="orders_no" length="64" />
+        </property>
+        <property name="ordersTime" type="java.util.Date">
+        	<column name="orders_time"  />
+        </property>
+        <property name="carId" type="java.lang.String">
+        	<column name="car_id" length="32"  />
+        </property>
+        <property name="beginTime" type="java.util.Date">
+        	<column name="begin_time" />
+        </property>
+        <property name="beginSiteId" type="java.lang.String">
+        	<column name="begin_site_id" length="32" />
+        </property>
+        <property name="ordersBackTime" type="java.util.Date">
+        	<column name="orders_back_time" />
+        </property>
+        <property name="ordersBackSiteId" type="java.lang.String">
+        	<column name="orders_back_site_id" length="32" />
+        </property>
+        <property name="endTime" type="java.util.Date">
+        	<column name="end_time"  />
+        </property>
+        
+        <property name="endSiteId" type="java.lang.String">
+        	<column name="end_site_id" length="32" />
+        </property>
+        
+        <property name="ordersDuration" type="java.lang.Integer">
+        	<column name="orders_duration" />
+        </property>
+        <property name="totalFee" type="java.math.BigDecimal">
+        	<column name="total_fee" />
+        </property>
+        
+        <property name="state" type="java.lang.String">
+        	<column name="state" length="32" />
+        </property>
+        
+        <property name="memberId" type="java.lang.String">
+        	<column name="member_id" length="32" />
+        </property>
+        <property name="createDate" type="java.util.Date">
+        	<column name="create_date" />
+        </property>
+        <property name="source" type="java.lang.String">
+        	<column name="source" length="64" />
+        </property>
+        <property name="isAbnormity" type="java.lang.Integer">
+        	<column name="is_abnormity" />
+        </property>
+        <property name="isAppraise" type="java.lang.Integer">
+        	<column name="is_appraise" />
+        </property>
+        <property name="payStyle" type="java.lang.String">
+        	<column name="pay_style" length="12"></column>
+        </property>
+        <property name="ordersEndOperater" type="java.lang.String">
+        	<column name="orders_end_operater" length="32" />
+        </property>
+        <property name="operateDate" type="java.util.Date">
+        	<column name="operate_date" />
+        </property>
+        <property name="isBill">
+        	<column name="is_bill" />
+        </property>
+        <property name="billId" type="java.lang.String">
+        	<column name="bill_id" length="32" />
+        </property>
+         <property name="channel" type="java.lang.Integer">
+        	<column name="channel" />
+        </property>
+        <property name="ts" type="java.util.Date">
+        	<column name="ts" />
+        </property>
+        <property name="runningDetailNo" type="java.lang.String">
+        	<column name="running_detail_no" />
+        </property>
+        <property name="firstDetailNo" type="java.lang.String">
+        	<column name="first_detail_no" />
+        </property>
+         <property name="isOpenBill" type="java.lang.Integer">
+        	<column name="is_open_bill" />
+        </property>
+        
+	</class>
+</hibernate-mapping>

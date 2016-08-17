@@ -1,0 +1,66 @@
+<!DOCTYPE hibernate-mapping PUBLIC 
+    "-//Hibernate/Hibernate Mapping DTD 3.0//EN"
+    "http://hibernate.sourceforge.net/hibernate-mapping-3.0.dtd">
+<hibernate-mapping>
+	<class name="com.dearho.cs.subscriber.pojo.SubscriberCall" table="sub_call">
+		<id name="id" type="java.lang.String">
+            <column name="id" length="32" />
+            <generator class="uuid.hex" />
+        </id>
+      
+       <property name="callPhoneNo" type="java.lang.String">
+            <column name="call_phone_no" length="32" />
+        </property>
+         <property name="subscriberId" type="java.lang.String">
+            <column name="subscriber_id"/>
+        </property>
+        
+         <property name="callName" type="java.lang.String">
+            <column name="call_name" length="32" />
+        </property>
+         <property name="callTime" type="java.util.Date">
+            <column name="call_time" />
+        </property>
+         <property name="type" type="java.lang.Integer">
+            <column name="type" />
+        </property>
+         <property name="title" type="java.lang.String">
+            <column name="title" length="510" />
+        </property>
+         <property name="content" type="java.lang.String">
+            <column name="content" />
+        </property>
+         <property name="level" type="java.lang.Integer">
+            <column name="level" />
+        </property>
+         <property name="callDuration" type="java.lang.Long">
+            <column name="call_duration" />
+        </property>
+           <property name="acceptOperatorId" type="java.lang.String">
+            <column name="accept_operator_id" length="32" />
+        </property>
+         <property name="acceptOperatorName" type="java.lang.String">
+            <column name="accept_operator_name" length="32" />
+        </property>
+        <property name="state" type="java.lang.Integer">
+            <column name="state" />
+        </property>
+         <property name="operatorId" type="java.lang.String">
+            <column name="operator_id" length="32" />
+        </property>
+        <property name="operatorName" type="java.lang.String">
+            <column name="operator_name" length="32" />
+        </property>
+         
+         <property name="resultDesc" type="java.lang.String">
+            <column name="result_desc"  />
+        </property>
+         <property name="resultTime" type="java.util.Date">
+            <column name="result_time" />
+        </property>
+         <property name="ts" type="java.util.Date">
+            <column name="ts" not-null="true"/>
+        </property> 
+	</class>
+	
+</hibernate-mapping>

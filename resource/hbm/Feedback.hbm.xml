@@ -1,0 +1,54 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!DOCTYPE hibernate-mapping PUBLIC "-//Hibernate/Hibernate Mapping DTD 3.0//EN"
+"http://www.hibernate.org/dtd/hibernate-mapping-3.0.dtd">
+
+<hibernate-mapping>
+    
+    <class name="com.dearho.cs.advice.pojo.Feedback" table="C_FEEDBACK" >
+        
+        <id name="id" type="string">
+            <column name="id" length="32" />
+            <generator class="uuid.hex" />
+        </id>
+        <property name="subscriberId" type="java.lang.String">
+            <column name="subscriber_id" length="32" >
+            	<comment>会员id</comment>
+            </column>
+        </property>
+        
+        <property name="contactType" type="java.lang.String">
+            <column name="contact_type" length="32" >
+            	<comment>联系方式</comment>
+            </column>
+        </property>
+        
+        <property name="feedbackDesc" type="java.lang.String">
+            <column name="feedback_desc" length="65535">
+            	<comment>意见反馈</comment>
+            </column>
+        </property>
+      
+        <property name="feedbackImg" type="java.lang.String">
+            <column name="feedback_img" length="65535">
+            	<comment>投诉照片 ：以|分割</comment>
+            </column>
+        </property>
+        <property name="state" type="java.lang.String">
+            <column name="state" length="32">
+            	<comment> 投诉状态 1表示已处理，0表示未处理</comment>
+            </column>
+        </property>
+        <property name="comment" type="java.lang.String">
+            <column name="comment" length="65535" >
+            	<comment>处理备注</comment>
+            </column>
+        </property>
+        
+        <property name="ts" type="java.util.Date">
+            <column name="ts">
+            	<comment>创建时间</comment>
+            </column>
+        </property>
+        
+    </class>
+</hibernate-mapping>

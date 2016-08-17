@@ -1,0 +1,105 @@
+<!doctype html>
+<html>
+<head>
+<meta charset="utf-8">
+<title>华泰租车后台登录管理系统</title>
+
+<link rel="stylesheet" href="../common/js/bootstrap/css/bootstrap.min.css">
+<link rel="stylesheet" href="../common/js/fontawesome/css/font-awesome.min.css">
+<link rel="stylesheet" href="../common/js/flatui/dist/css/flat-ui.min.css">
+<link rel="stylesheet" href="../common/css/login1.css">
+<script src="../common/js/jquery.min.js"></script>
+<script src="../common/js/bootstrap/js/bootstrap.min.js"></script>
+<script src="../common/js/flatui/dist/js/flat-ui.js"></script>
+<!--[if lt IE 9]>
+<script src="../common/js/html5.min.js"></script>
+<script src="../common/js/respond.min.js"></script>
+<![endif]-->
+
+<meta http-equiv="X-UA-Compatible" content="IE=edge">
+<meta name="renderer" content="webkit">
+<meta name="viewport" content="width=device-width, initial-scale=0.8, maximum-scale=0.8, user-scalable=no">
+<meta name="robots" content="noarchive">
+<meta name="robots" content="nofollow">
+<script>
+$(function(){
+	$(".RememberPW").radiocheck();
+	$(".RememberPW").on('change.radiocheck', function() {
+		alert($(this).context.checked);
+	});
+});
+</script>
+</head>
+
+<body>
+<div class="MainContent">
+   <div class="container">
+	<div class="row">
+		<div class="col-xs-12">
+			<div class="hertexte">华泰租车后台登录</div>
+			<div class="Border">
+				<div class="col-md-8 col-sm-7 hidden-xs SignBlock">
+					<div class="row">
+						<div class="col-md-3 col-sm-4">
+							
+						</div>
+						<div class="col-md-3 col-md-offset-3 col-sm-4 col-sm-offset-2">
+							
+						</div>
+					</div>
+					<div class="row">
+						<div class="col-md-3 col-md-offset-3 col-sm-4 col-sm-offset-2">
+							
+						</div>
+						<div class="col-md-3 col-md-offset-3 col-sm-4 col-sm-offset-2">
+							
+						</div>
+					</div>
+				</div>
+				<div class="col-md-4 col-sm-4 LoginBlock">
+					<form>
+						<div class="form-group has-feedback UsernameCheck has-error">
+							<div class="input-group">
+								<div class="input-group-addon"><img src="../common/images/login/bg_04.png"></div>
+								<input type="text" class="form-control UserName" id="username" placeholder="用户名">
+								<span class="form-control-feedback"><img src="../common/images/login/dd_06.png"></span>
+							</div>
+						</div>
+						<div class="form-group has-feedback PasswordCheck has-error">
+							<div class="input-group">
+								<div class="input-group-addon"><img src="../common/images/login/bg_05.png"></div>
+								<input type="password" class="form-control Password" id="password" placeholder="密码">
+								<span class="form-control-feedback"><img src="../common/images/login/dd_06.png"></span>
+							</div>
+						</div>
+						<div class="form-group has-feedback YanzhengCheck has-error">
+							<div class="row">
+								<div class="col-xs-5 YanzhengInput">
+									<input type="text" class="form-control Yanzheng" id="username" placeholder="验证码">
+								<span class="form-control-feedback"><img src="../common/images/login/dd_06.png"></span>
+								</div>
+								<div class="col-xs-6">
+									<img src="images/yzmimg.jpg">
+								</div>
+							</div>
+						</div>
+						<p class="Tips"><i class="fa fa-times-circle"></i>用户名或密码输入错误，请重新输入</p>
+						<button type="submit" class="btn btn-block SubmitButton">登录</button>
+						<div class="checkbox SavePassword">
+							<label>
+								<input type="checkbox"> 记住密码
+							</label>
+						</div>
+					</form>
+				</div>
+				<div class="clearfix"></div>
+			</div>
+		</div>
+	</div>
+  </div>
+</div>
+<div class="Footer">
+	<p>Copyright  2016 华泰汽车集团</p>
+</div>
+</body>
+</html>

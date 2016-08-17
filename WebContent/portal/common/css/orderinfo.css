@@ -1,0 +1,39 @@
+@charset "utf-8";
+/* CSS Document */
+
+.OrderInfoPage .Border {
+	background: #f2f1f1;
+	padding: 10px 20px;
+}
+
+.OrderInfoPage p {
+	margin-bottom: 0;
+	font-size: 16px;
+	line-height: 26px;
+}
+
+.OrderInfoPage {
+	color: #8d8c8c;
+}
+
+.OrderInfoPage .Caption {
+	border-bottom: solid 1px #e5e5e5;
+	margin-bottom: 10px;
+}
+
+.OrderInfoPage>.row {
+	margin-bottom: 20px;
+}
+
+.OrderInfoPage h4 {
+	margin: 0;
+	line-height: 1.8;
+}
+
+.OrderInfoPage .OrderInfo .Border>.row {
+	margin-bottom: 20px;
+}
+
+.OrderInfoPage .OrderInfo .Border>.row:first-of-type {
+	margin-bottom: 0;
+}

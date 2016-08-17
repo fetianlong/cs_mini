@@ -1,0 +1,170 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE xwork PUBLIC "-//Apache Struts//XWork 1.1.1//EN" 
+"http://struts.apache.org/dtds/xwork-1.1.1.dtd">
+<xwork>
+	<package name="/app/account" extends="webwork-default" namespace="/app/account">
+		<default-interceptor-ref name="defaultStack"/>
+		
+		<global-results>
+			<result name="timeout" type="dispatcher">
+                <param name="location">/error.jsp</param>
+            </result>
+            <result name="illegal" type="dispatcher">
+                <param name="location">/error.jsp</param>
+            </result>
+            <result name="error" type="dispatcher">
+                <param name="location">/resultjson.jsp</param>
+            </result>
+		</global-results>
+	
+		<action name="appLogin" class="appAccountAction"  method="appLogin" >
+			<result name="success" >
+                <param name="location">/resultjson.jsp</param>
+            </result>
+		</action>
+		<action name="sendLoginCode" class="appAccountAction"  method="sendLoginCode" >
+			<result name="success" >
+                <param name="location">/resultjson.jsp</param>
+            </result>
+		</action>
+		<action name="isNewPhoneNo" class="appAccountAction"  method="isNewPhoneNo" >
+			<result name="success" >
+                <param name="location">/resultjson.jsp</param>
+            </result>
+		</action>
+		<!-- 登录注册   end -->
+		
+	
+		<!-- 充值start -->
+		<action name="searchRechargeList" class="appAccountAction"  method="searchRechargeList" >
+			<result name="success" >
+                <param name="location">/resultjson.jsp</param>
+            </result>
+		</action>
+		
+		<action name="rechargeCheck" class="appAccountAction"  method="rechargeCheck" >
+			<result name="success" >
+                <param name="location">/resultjson.jsp</param>
+            </result>
+		</action>
+		
+		<action name="recharge" class="appAccountAction"  method="recharge" >
+			<result name="success" >
+                <param name="location">/resultjson.jsp</param>
+            </result>
+            <result name="wx_pay_success" >
+                <param name="location">/resultjson.jsp</param>
+            </result>
+            
+            
+		</action>
+		<!-- 充值end -->
+		
+		<!-- 退款 start-->
+		<action name="applyRefund" class="appAccountAction"  method="applyRefund" >
+			<result name="success" >
+                <param name="location">/resultjson.jsp</param>
+            </result>
+		</action>
+		
+		<action name="applyRefundCheck" class="appAccountAction"  method="applyRefundCheck" >
+			<result name="success" >
+                <param name="location">/resultjson.jsp</param>
+            </result>
+		</action>
+		<!-- 退款 end-->
+		
+		<!-- 微信号解绑 start-->
+		<action name="wechatUnbinding" class="appAccountAction"  method="wechatUnbinding" >
+			<result name="success" >
+                <param name="location">/resultjson.jsp</param>
+            </result>
+		</action>
+		<!-- 微信号解绑 end-->
+		
+		
+		<!-- 微信号绑定 start-->
+		<action name="wechatBinding" class="appAccountAction"  method="wechatBinding" >
+			<result name="success" >
+                <param name="location">/resultjson.jsp</param>
+            </result>
+		</action>
+		<!-- 微信号绑定 end-->
+		
+		
+		
+		
+		
+		<!-- 账号登录  -->
+		<action name="acountLogin" class="appUserAction"  method="acountLogin" >
+			<result name="success" >
+                <param name="location">/resultjson.jsp</param>
+            </result>
+		</action>
+		<!-- 手机短信登录   -->
+		<action name="mobileCodeLogin" class="appUserAction"  method="mobileCodeLogin" >
+			<result name="success" >
+                <param name="location">/resultjson.jsp</param>
+            </result>
+		</action>
+		<!-- token失效 -->
+		<action name="isnotoken" class="appUserAction"  method="isnotoken" >
+			<result name="success" >
+                <param name="location">/resultjson.jsp</param>
+            </result>
+		</action>
+		<!-- 获取个人资料信息 -->
+		<action name="appSubsinfo" class="appUserAction"  method="appSubsinfo" >
+			<result name="success" >
+                <param name="location">/resultjson.jsp</param>
+            </result>
+		</action>
+		<action name="appSubsinfo11" class="appUserAction"  method="appSubsinfo11" >
+			<result name="success" >
+                <param name="location">/resultjson.jsp</param>
+            </result>
+		</action>
+		<!-- 修改密码 -->
+		<action name="upSubspwd" class="appUserAction"  method="upSubspwd" >
+			<result name="success" >
+                <param name="location">/resultjson.jsp</param>
+            </result>
+		</action>
+		<!-- 发送短信 验证码 -->
+		<action name="sendCode" class="appUserAction"  method="sendCode" >
+			<result name="success" >
+                <param name="location">/resultjson.jsp</param>
+            </result>
+		</action>
+		<!-- 修改手机号 -->
+		<action name="upphoneno" class="appUserAction"  method="upphoneno" >
+			<result name="success" >
+                <param name="location">/resultjson.jsp</param>
+            </result>
+		</action>
+		<!-- 实名认证 -->
+		<action name="appregLH" class="appUserAction"  method="appregLH" >
+			<result name="success" >
+                <param name="location">/resultjson.jsp</param>
+            </result>
+            <interceptor-ref name="uploadStack"/>
+		</action>
+		<!-- 获取当前用户一定距离以内的网点-->
+		<action name="appbranchdots" class="appUserAction"  method="appbranchdots" >
+			<result name="success" >
+                <param name="location">/resultjson.jsp</param>
+            </result>
+            <interceptor-ref name="uploadStack"/>
+		</action>
+	
+		
+		
+		
+		
+	
+		
+		
+	</package>
+	
+	
+</xwork>

@@ -1,0 +1,67 @@
+<!DOCTYPE hibernate-mapping PUBLIC 
+    "-//Hibernate/Hibernate Mapping DTD 3.0//EN"
+    "http://hibernate.sourceforge.net/hibernate-mapping-3.0.dtd">
+ 
+<hibernate-mapping>
+	<class name="com.dearho.cs.charge.pojo.ChargeStation" table="c_charge_station">
+		<id name="id" type="string">
+            <column name="id" length="32" />
+            <generator class="uuid.hex" />
+        </id>
+        <property name="code" type="string">
+        	<column name="code"  />
+        </property>
+         <property name="name" type="string">
+        	<column name="name"  />
+        </property>
+        <property name="address" type="string">
+        	<column name="address"  />
+        </property>
+        <property name="lat" type="double">
+        	<column name="lat"  />
+        </property>
+        <property name="lng" type="double">
+        	<column name="lng"  />
+        </property>
+        <property name="manufacturer" type="string">
+        	<column name="manufacturer"  />
+        </property>
+        
+        <property name="staType" type="string">
+        	<column name="sta_type"  />
+        </property>
+        <property name="staOpstate" type="string">
+        	<column name="sta_opstate"  />
+        </property>
+        <property name="price" type="java.math.BigDecimal">
+        	<column name="price"  />
+        </property>
+        <property name="acNum" type="integer">
+        	<column name="ac_num"  />
+        </property>
+        <property name="dcNum" type="integer">
+        	<column name="dc_num"  />
+        </property>
+        <property name="acableNum" type="integer">
+        	<column name="acable_num"  />
+        </property>
+        <property name="dcableNum" type="integer">
+        	<column name="dcable_num"  />
+        </property>
+        
+        
+        <property name="creatorId" type="string">
+        	<column name="creator_id" length="32" />
+        </property>
+        <property name="createTime" type="java.util.Date">
+        	<column name="create_time" />
+        </property>
+        <property name="updateTime" type="java.util.Date">
+        	<column name="update_time" />
+        </property>
+        <property name="ts" type="java.util.Date">
+        	<column name="ts" />
+        </property>
+       
+	</class>
+</hibernate-mapping>

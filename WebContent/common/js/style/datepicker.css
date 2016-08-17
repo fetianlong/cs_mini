@@ -1,0 +1,167 @@
+.css-date, .css-date .hideMonth, .css-date .hideYear{
+  display: none;
+  position: absolute;
+  z-index:999;
+ 	background: #fff;
+ 	width:212px;
+	padding:4px;
+  border:1px solid #D7DCE6;
+  text-align:center;
+  font-family:georgia, times new roman,serif;
+	font-size:12px;
+  line-height:2em;
+	-webkit-touch-callout: none;
+	-webkit-user-select: none;
+	-khtml-user-select: none;
+	-moz-user-select: none;
+	-ms-user-select: none;
+	user-select: none;
+}
+.lv_calendar {
+	height: 22px;
+	line-height: 20px;
+	padding: 0 40px 0 2px;
+	width: 75px;
+	cursor: pointer;
+	background: url(../images/calendar.png) #fff right center no-repeat;
+	border: 1px solid #DDD;
+	margin-right: 10px;
+}
+.lv_calendar_time {
+	height: 22px;
+	line-height: 20px;
+	padding: 0 40px 0 2px;
+	width: 120px;
+	cursor: pointer;
+	background: url(../images/calendar.png) #fff right center no-repeat;
+	border: 1px solid #DDD;
+}
+.css-date .prev,.css-date .prev_year,.css-date .next,.css-date .next_year{
+	float:left;
+	display: block;
+	top: 6px;
+	width: 19px;
+	height: 19px;
+	background: url(../images/calebg.png) no-repeat;
+	cursor: pointer;
+}
+.css-date .prev,.css-date .prev_year  {
+	left: 23px;
+	background-position: -22px 0
+}
+.css-date .next,.css-date .next_year  {
+	right: 23px;
+	background-position: -44px 0
+}
+
+.css-date .month,.css-date .year{
+	float:left;
+	width: 51px;
+	height: 25px;
+	text-align:center;
+	cursor: pointer;
+}
+.css-date .month{
+	margin-left:0px;
+}
+.css-date ul{
+	float: left;
+	width:210px;
+	margin:0px;
+	padding:0px;
+}
+.css-date .week{
+	border:1px solid #D7DCE6;
+	border-width:1px 0 1px 0;
+	background-color:#E5F7FE;
+}
+.css-date ul li{
+	font-size:12px;
+	float:left;
+	width:30px;
+	list-style: none;
+	border-width:0 1px 1px 0;
+	line-height:1.8em;
+}
+.css-date .date li:hover{
+	cursor:pointer;
+	background-color: #f0f0f0;
+}
+.css-date .current{
+	background-color: #3399CC;
+	color:#fff;
+}
+.css-date .today{
+	background-color: #FAEF91;
+}
+.css-date .currday{
+	background-color: #3399CC;
+	color:#fff;
+}
+.css-date .other{
+	color: #ccc;
+}
+.css-date .week_end{
+	color: red;
+}
+.css-date .disabled {
+	color: #ccc;
+	cursor: default ;
+	text-decoration: line-through;
+}
+.css-date .selTime{
+	float:left;
+	padding-top:4px;
+}
+.css-date .selTime select{
+	margin-right:2px;
+	width :40px;
+	border:1px solid #D7DCE6;
+}
+.css-date .btnClear,.css-date .btnOk, .btnClose,.css-date .btnToday{
+	float:right;
+	cursor:pointer;
+	padding-top:4px;
+}
+.css-date .btnClear span,.css-date .btnOk span, .btnClose span,.css-date .btnToday span{
+	border:1px solid #D7DCE6;
+	padding:1px 5px 2px 5px;
+	margin:4px 0px 0px 4px;
+	background-color: #f0f0f0;
+}
+.css-date .clear{
+	clear:both;
+	height:0px;
+	line-height:0px;
+}
+.css-date .hMonthClose,.css-date .hYearClose,.css-date .hPrev,.css-date .hNext{
+	cursor:pointer;
+}
+.css-date .hYearClose{
+	margin:0px 20px 0px 20px;
+}
+.css-date .hideMonth,.css-date .hideYear{
+ 	width:90px;
+}
+.css-date .hideMonth ul,.css-date .hideYear ul{
+	float: left;
+	width:90px;
+	margin:0px;
+	padding:0px;
+}
+.css-date .hideMonth ul li,.css-date .hideYear ul li{
+	font-size:12px;
+	float:left;
+	width:45px;
+	list-style: none;
+	border-width:0 1px 1px 0;
+	line-height:1.8em;
+	cursor:pointer;
+}
+.css-date .inYear{
+	width:45px;
+	border:1px solid #fff;
+	font-family:georgia, times new roman,serif;
+	font-size:12px;
+	text-align:center;
+}

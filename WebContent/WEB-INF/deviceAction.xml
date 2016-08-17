@@ -1,0 +1,61 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<beans xmlns="http://www.springframework.org/schema/beans"
+	xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+	xsi:schemaLocation="http://www.springframework.org/schema/beans http://www.springframework.org/schema/beans/spring-beans-2.0.xsd">
+	
+	<bean id="deviceSearchAction" class="com.dearho.cs.device.action.DeviceSearchAction" scope="prototype">
+		<property name="deviceService" ref="deviceService"  />
+		<property name="companyService" ref="companyService"  />
+		<property name="deviceBindingService" ref="deviceBindingService"  />
+		
+	</bean>
+	<bean id="deviceGetAction" class="com.dearho.cs.device.action.DeviceGetAction" scope="prototype">
+		<property name="deviceService" ref="deviceService"  />
+		<property name="companyService" ref="companyService"  />
+	</bean>
+	<bean id="deviceAddAction" class="com.dearho.cs.device.action.DeviceAddAction">
+		<property name="deviceService" ref="deviceService"  />
+	</bean>
+	<bean id="deviceDeleteAction" class="com.dearho.cs.device.action.DeviceDeleteAction">
+		<property name="deviceService" ref="deviceService"  />
+		<property name="deviceBindingService" ref="deviceBindingService" />
+	</bean>
+	
+	<bean id="deviceUpdateAction" class="com.dearho.cs.device.action.DeviceUpdateAction">
+		<property name="deviceService" ref="deviceService"  />
+	</bean>
+	<bean id="deviceSocketAction" class="com.dearho.cs.device.action.DeviceSocketAction">
+		<property name="carLocationService" ref="carLocationService"  />
+		<property name="deviceBindingService" ref="deviceBindingService"  />
+		<property name="carRealtimeStateService" ref="carRealtimeStateService"  />
+	</bean>
+	<bean id="deviceChangeIpPortAction" class="com.dearho.cs.device.action.DeviceChangeIpPortAction">
+	</bean>
+	
+	
+	
+	<bean id="deviceBindingAddAction" class="com.dearho.cs.device.action.DeviceBindingAddAction" scope="prototype">
+		<property name="deviceBindingService" ref="deviceBindingService"  />
+		<property name="deviceService" ref="deviceService"  />
+		<property name="carService" ref="carService"  />
+	</bean>
+	<bean id="deviceBindingSearchAction" class="com.dearho.cs.device.action.DeviceBindingSearchAction" scope="prototype">
+		<property name="deviceBindingService" ref="deviceBindingService"  />
+		<property name="companyService" ref="companyService"  />
+	</bean>
+	<bean id="deviceBindingGetAction" class="com.dearho.cs.device.action.DeviceBindingGetAction">
+		<property name="deviceBindingService" ref="deviceBindingService"  />
+		<property name="companyService" ref="companyService"  />
+	</bean>
+	<bean id="deviceBindingUpdateAction" class="com.dearho.cs.device.action.DeviceBindingUpdateAction">
+		<property name="deviceBindingService" ref="deviceBindingService"  />
+		<property name="deviceService" ref="deviceService"  />
+		<property name="carService" ref="carService"  />
+	</bean>
+	<bean id="deviceBindingDeleteAction" class="com.dearho.cs.device.action.DeviceBindingDeleteAction">
+		<property name="deviceBindingService" ref="deviceBindingService"  />
+	</bean>
+	<bean id="deviceBindingUnbindAction" class="com.dearho.cs.device.action.DeviceBindingUnbindAction">
+		<property name="deviceBindingService" ref="deviceBindingService"  />
+	</bean>
+</beans>

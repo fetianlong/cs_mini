@@ -1,0 +1,30 @@
+<!DOCTYPE hibernate-mapping PUBLIC 
+    "-//Hibernate/Hibernate Mapping DTD 3.0//EN"
+    "http://hibernate.sourceforge.net/hibernate-mapping-3.0.dtd">
+<hibernate-mapping>
+	<class name="com.dearho.cs.sys.pojo.SMSCode" table="s_sms_code">
+		<id name="id" type="java.lang.String">
+            <column name="id" length="32" />
+            <generator class="uuid.hex" />
+        </id>
+        <property name="type" type="java.lang.String">
+            <column name="type"  />
+        </property>
+        <property name="channel" type="java.lang.Integer">
+            <column name="channel" />
+        </property>
+        <property name="phoneNo" type="java.lang.String">
+            <column name="phone_no"  />
+        </property>
+        <property name="code" type="java.lang.String">
+            <column name="code"  />
+        </property>
+         <property name="message" type="java.lang.String">
+            <column name="message"  />
+        </property>
+
+        <property name="ts" type="java.util.Date">
+       		<column name="ts"/>
+       	</property>
+	</class>
+</hibernate-mapping>

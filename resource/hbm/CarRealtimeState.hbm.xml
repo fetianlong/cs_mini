@@ -1,0 +1,86 @@
+<!DOCTYPE hibernate-mapping PUBLIC 
+    "-//Hibernate/Hibernate Mapping DTD 3.0//EN"
+    "http://hibernate.sourceforge.net/hibernate-mapping-3.0.dtd">
+<hibernate-mapping>
+	<class name="com.dearho.cs.resmonitor.pojo.CarRealtimeState" table="c_realtime_state">
+		<id name="id" type="java.lang.String">
+            <column name="ID" length="32" />
+        </id>
+        <property name="speed" type="java.lang.Double">
+            <column name="speed" length="12"  />
+        </property>
+        <property name="lat" type="java.lang.Double">
+            <column name="lat" length="12" />
+        </property>
+        <property name="lng" type="java.lang.Double">
+            <column name="lng" length="12" />
+        </property>
+        <property name="trackTime" type="java.util.Date">
+            <column name="track_time" />
+        </property>
+        <property name="totalVoltage" type="java.lang.Double">
+            <column name="total_voltage" length="12" />
+        </property>
+        <property name="totalCurrent" type="java.lang.Double">
+            <column name="total_current" length="12" />
+        </property>
+        <property name="SOC" type="java.lang.Double">
+            <column name="SOC" length="12" />
+        </property>
+        <property name="currentMileage" type="java.lang.Double">
+            <column name="current_mileage" length="12" />
+        </property>
+        <property name="currentGear" type="java.lang.String">
+            <column name="current_gear" length="64" />
+        </property>
+        <property name="throttleTrip" type="java.lang.Double">
+            <column name="throttle_trip" length="12" />
+        </property>
+        
+        <property name="brakeTrip" type="java.lang.Double">
+            <column name="brake_trip" length="12" />
+        </property>
+        <property name="motorSpeed" type="java.lang.Integer">
+            <column name="motor_speed" />
+        </property>
+        <property name="motorTemperature" type="java.lang.Double">
+            <column name="motor_temperature" length="12" />
+        </property>
+        <property name="motorCurrent" type="java.lang.Double">
+            <column name="motor_current" length="12" />
+        </property>
+        <property name="OBDTime" type="java.util.Date">
+            <column name="OBD_time" />
+        </property>
+        
+        <property name="state" type="java.lang.Integer">
+            <column name="state" />
+        </property>
+        <property name="stateTime" type="java.util.Date">
+            <column name="state_time" />
+        </property>
+<!--         <property name="bizState" type="java.lang.Integer"> -->
+<!--             <column name="biz_state" /> -->
+<!--         </property> -->
+<!--         <property name="bizStateTime" type="java.util.Date"> -->
+<!--             <column name="biz_state_time" /> -->
+<!--         </property> -->
+        
+        <property name="ts" type="java.util.Date">
+            <column name="ts" />
+        </property>
+        <property name="lifeMileage" type="java.lang.Double">
+            <column name="life_mileage" length="12" />
+        </property>
+        <property name="batteryPower" type="java.lang.Double">
+            <column name="battery_power" length="12" />
+        </property>
+        
+        <property name="outTimperature" type="double">
+            <column name="out_timperature"  />
+        </property>
+        <property name="corneringLampFlag" type="string">
+            <column name="cornering_Lamp_Flag"  />
+        </property>
+	</class>
+</hibernate-mapping>

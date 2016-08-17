@@ -1,0 +1,54 @@
+<!DOCTYPE hibernate-mapping PUBLIC 
+    "-//Hibernate/Hibernate Mapping DTD 3.0//EN"
+    "http://hibernate.sourceforge.net/hibernate-mapping-3.0.dtd">
+<hibernate-mapping>
+	<class name="com.dearho.cs.account.pojo.RechargeCard" table="acc_recharge_card">
+		<id name="id" type="java.lang.String">
+            <column name="id" length="32" />
+             <generator class="uuid.hex" />
+        </id>
+        <property name="name" type="java.lang.String">
+            <column name="name"   />
+        </property>
+        <property name="showName" type="java.lang.String">
+            <column name="show_name"   />
+        </property>
+        <property name="startValidTime" type="java.util.Date">
+            <column name="start_valid_time" />
+        </property>
+         <property name="endValidTime" type="java.util.Date">
+            <column name="end_valid_time" />
+        </property>
+         <property name="isValid" type="java.lang.Integer">
+            <column name="is_valid" />
+        </property>
+         <property name="amount" type="java.lang.Double">
+            <column name="amount" />
+        </property>
+        <property name="channel" type="java.lang.String">
+            <column name="channel" />
+        </property>
+         <property name="sortField" type="java.lang.Integer">
+            <column name="sort_field" />
+        </property>
+         <property name="creatorId" type="java.lang.String">
+            <column name="creator_id" length="32"/>
+        </property>
+        <property name="creatorName" type="java.lang.String">
+            <column name="creator_name" length="32"/>
+        </property>
+        <property name="createTime" type="java.util.Date">
+            <column name="create_time" />
+        </property> 
+        <property name="ts" type="java.util.Date">
+            <column name="ts" />
+        </property>
+         
+	</class>
+	
+	
+	
+	
+	
+	
+</hibernate-mapping>

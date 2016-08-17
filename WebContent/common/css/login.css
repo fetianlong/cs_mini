@@ -1,0 +1,36 @@
+@charset "utf-8";
+/* CSS Document */
+
+*{ margin:0px; padding:0px;}
+.fl { float:left;}
+.fr { float:right;}
+.cb { clear:both;}
+img { border:none}
+li { list-style:none;}
+ 
+body { margin:0px; padding:0px; width:100%; }
+
+.login { width:734px; height:470px; margin:0 auto; margin-top:170px;position:relative; background-color:#FFF; border-radius:5px; box-shadow:0px 7px 7px #333;}
+.login img.logo { position:absolute; top:-151px; left:253px;}
+.congtent { width:528px; margin:100px 0px 0px 102px; position:relative;}
+.con { width:528px; height:53px; line-height:53px; border:2px solid #c9f2e4; border-radius:5px; margin-bottom:30px;}
+.con .user_img { width:38px; height:45px; margin-top:5px; background:url(images/login/small.png) no-repeat 0px 0px; display:block; border-right:1px solid #ccc; padding-right:10px; margin-left:10px;}
+.con .user { width:435px; height:51px; height:51px; margin-left:10px; border:none; font-size:18px; outline:none;  }
+.con .psd_img { width:38px; height:45px; margin-top:5px; background:url(images/login/small.png) no-repeat 0px -45px; display:block; border-right:1px solid #ccc; padding-right:6px; margin-left:14px;}
+
+.con2 {width:528px; height:53px; position:relative; margin-bottom:34px;}
+.yzm { width:223px; height:53px; line-height:53px;*line-height:53px; border:2px solid #c9f2e4; border-radius:5px; font-size:18px;   outline:none; padding-left:10px; }
+.yzm_img { margin:3px 0px 0px 15px;}
+.jzmm { position:absolute;  top:0px; right:0px;}
+
+.jzmm span { font-size:14px;}
+.submit { width:528px; height:45px; line-height:45px; text-align:center; font-size:30px; color:#FFF;  background-color:#4bd3a5; border-radius:5px; font-family:"微软雅黑"; cursor:pointer;  box-shadow:0px 4px 3px #418c72;}
+.submit span {letter-spacing:50px;}
+
+.mc { position:absolute; right:25px; bottom:20px; font-family:"微软雅黑"; color:#333;}
+.error {color: #E56C0A !important;}
+.wenz { width:528px; text-align:center; font-size:16px; color:#F00;}
+.ts { position:absolute; right:50px;}
+
+
+

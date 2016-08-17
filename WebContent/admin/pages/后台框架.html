@@ -1,0 +1,353 @@
+<!doctype html>
+<html>
+<head>
+<meta charset="utf-8">
+<title>首页 - 电老虎租车后台管理系统</title>
+
+<link rel="stylesheet" href="../common/js/bootstrap/css/bootstrap.min.css">
+<link rel="stylesheet" href="../common/js/fontawesome/css/font-awesome.min.css">
+<link rel="stylesheet" href="../common/js/datetimepicker/datetimepicker.min.css">
+<link rel="stylesheet" href="../common/css/main.css">
+<script src="../common/js/jquery.min.js"></script>
+<script src="../common/js/bootstrap/js/bootstrap.min.js"></script>
+<script src="../common/js/datetimepicker/datetimepicker.min.js"></script>
+<script src="../common/js/datetimepicker/datetimepicker.zh-CN.js"></script>
+<!--[if lt IE 9]>
+<script src="../common/js/html5.min.js"></script>
+<script src="../common/js/respond.min.js"></script>
+<![endif]-->
+
+<meta http-equiv="X-UA-Compatible" content="IE=edge">
+<meta name="renderer" content="webkit">
+<meta name="viewport" content="width=device-width, initial-scale=0.8, maximum-scale=0.8, user-scalable=no">
+<meta name="robots" content="noarchive">
+<meta name="robots" content="nofollow">
+<script>
+$(function(){
+	$("body").css("height", $(window).height());
+	$(window).resize(function(e) {
+		$("body").css("height", $(window).height());
+	});
+	
+	/*左侧菜单控制*/
+	$(".MainMenuUl>li>a").click(function(e) {
+		$(".MainMenuUl .DirectionArrow").removeClass("fa-rotate-270");
+		if (typeof($(this).attr("href")) == "undefined" || $(this).attr("href") == "#"){
+			if ($(this).parent("li").hasClass("active")){
+				if ($(this).parent("li").find("ul").css("display")=="none"){
+					$(this).parent("li").find("ul").slideDown(200);
+					$(this).find(".DirectionArrow").addClass("fa-rotate-270");
+				} else {
+					$(this).parent("li").find("ul").slideUp(200);
+					$(".MainMenuUl .DirectionArrow").removeClass("fa-rotate-270");
+				};
+			} else {
+				$(".MainMenuUl li").removeClass("active");
+				$(this).parent("li").addClass("active");
+				$(".MainMenuUl li ul").slideUp(200);
+				$(this).find(".DirectionArrow").addClass("fa-rotate-270");
+				$(this).parent("li").find("ul").slideDown(200);
+			};
+		} else {
+			if ($(".RightBlock .NavBarBlock .NavBarTabs li[tags='tab_" + $(this).attr("id") + "'] a").length == 0){
+				OpenTabs($(this));
+			};
+			$(".RightBlock .NavBarBlock .NavBarTabs li[tags='tab_" + $(this).attr("id") + "'] a").tab("show");
+			$(".MainMenuUl li").removeClass("active");
+			$(this).parent("li").addClass("active");
+			$(".LeftBlock .MainMenuBlock .MainMenuUl .RightFa").hide();
+			$(this).parents("li").find(".MenuLink .RightFa").show();
+			return false;
+		};
+	});
+	
+	$(".MainMenuUl>li>ul>li").on('click', "a", function(e) {
+		$(".MainMenuUl>li").removeClass("active");
+		$(".MainMenuUl>li>ul>li").removeClass("active");
+		$(this).parents("li").addClass("active");
+		$(".MenuLink .RightFa").hide();
+		$(this).parents("li").find(".MenuLink .RightFa").show();
+		if ($(".RightBlock .NavBarBlock .NavBarTabs li[tags='tab_" + $(this).attr("id") + "'] a").length == 0){
+			OpenTabs($(this));
+		};
+		$(".RightBlock .NavBarBlock .NavBarTabs li[tags='tab_" + $(this).attr("id") + "'] a").tab("show");
+		return false;
+	});
+	
+	function OpenTabs(AObject){
+		$(".RightBlock .NavBarBlock .NavBarTabs").append('<li role="presentation" tags="tab_' + AObject.attr("id") + '"><a href="#tab_' + AObject.attr("id") + '" aria-controls="tab_' + AObject.attr("id") + '" role="tab" data-toggle="tab">' + AObject.find("span.LinkLabel").html() + '</a><i class="fa fa-times"></i></li>');/*缺已打开处理*/
+		$(".RightBlock .ContentBlock").append('<div role="tabpanel" id="tab_' + AObject.attr("id") + '" class="tab-pane fade"><iframe src="' + AObject.attr("href") + '"></iframe></div>');
+	};
+	
+	/*首页时间选择*/
+	$("#home .TimeSelect").datetimepicker({
+		language: 'zh-CN',
+		todayHighlight: 'true',
+		todayBtn: 'linked',
+		minView: 0,
+		autoclose: true,
+		minuteStep: 5
+	});
+	
+	/*控制页签删减*/
+	$(".NavBarBlock").on("click", ".fa", function(e) {
+		$(this).parent("li").remove();
+		$(".ContentBlock #" + $(this).parent("li").find("a").attr("aria-controls")).remove();
+		$(".RightBlock .NavBarBlock .NavBarTabs li:last a").tab("show");
+		LeftMenuArrow($(".RightBlock .NavBarBlock .NavBarTabs li:last a"));
+	});
+	
+	/*左侧菜单显隐*/
+	$(".HideMenuButton").click(function(e) {
+		$(".LeftBlock").toggle();
+		if ($(".LeftBlock").css("display")=="none"){
+			$(".RightBlock").css("width", "100%");
+		} else {
+			$(".RightBlock").css("width", "80%");
+		};
+	});
+	
+	$(".RightBlock .NavBarBlock .NavBarTabs").on("click", "li a", function(){
+		LeftMenuArrow($(this));
+	});
+
+	/*切换Tab时控制左侧菜单展开效果*/
+	function LeftMenuArrow(Link){
+		ID = Link.parent("li").attr("tags").replace(/^tab_/, "");
+		$(".LeftBlock .MainMenuBlock .MainMenuUl li").removeClass("active");
+		$(".LeftBlock .MainMenuBlock .MainMenuUl .RightFa").hide();
+		if (ID != "index"){
+			$(".LeftBlock .MainMenuBlock .MainMenuUl #" + ID).parents("li").addClass("active");
+			if ($(".LeftBlock .MainMenuBlock .MainMenuUl #" + ID).hasClass("MenuLink")){
+				$(".LeftBlock .MainMenuBlock .MainMenuUl #" + ID).find(".RightFa").show();
+			} else {
+				$(".LeftBlock .MainMenuBlock .MainMenuUl #" + ID).closest("ul").closest("li").find("a .RightFa").show();
+				if ($(".LeftBlock .MainMenuBlock .MainMenuUl #" + ID).closest("ul").css("display") == "none"){
+					$(".MainMenuUl .DirectionArrow").removeClass("fa-rotate-270");
+					$(".LeftBlock .MainMenuBlock .MainMenuUl>li>ul").slideUp(200);	
+					$(".LeftBlock .MainMenuBlock .MainMenuUl #" + ID).closest("ul").slideDown(200);
+					$(".LeftBlock .MainMenuBlock .MainMenuUl #" + ID).closest("ul").closest("li").find(".DirectionArrow").addClass("fa-rotate-270");
+				};
+			};
+		} else {
+			$(".MainMenuUl .DirectionArrow").removeClass("fa-rotate-270");
+			$(".LeftBlock .MainMenuBlock .MainMenuUl>li>ul").slideUp(200);	
+		};
+	};
+});
+</script>
+</head>
+
+<body>
+<!--左侧主导航菜单-->
+<div class="LeftBlock">
+	<div class="UserInfoBlock text-center">
+		<!--点击头像弹出模态框，修改data-target即可-->
+		<button type="button" class="UserPhoto center-block" data-toggle="modal" data-target="#myModal">
+			<img class="center-block" src="../common/images/main/default.png">
+			<p>更换头像</p>
+		</button>
+		<p class="UserName"><span>刘松</span>|<span>北京</span></p>
+		<p class="UserLastTime">上次登录：<span>2015/8/17 14:41</span></p>
+	</div>
+	<div class="MainMenuBlock">
+		<ul class="MainMenuUl">
+			<li><a class="MenuLink MenuImg1" href="#123" id="ddqcjkpt"><span class="MenuImg"></span><span class="LinkLabel">资源监控管理</span><i class="fa fa-caret-left fa-2x RightFa"></i></a>
+			</li>
+			<li><a class="MenuLink MenuImg2"><span class="MenuImg"></span>场地设备管理<i class="fa fa-caret-left fa-2x RightFa"></i><i class="fa fa-angle-left DirectionArrow"></i></a>
+				<ul>
+					<li><a class="SubMenuLink" href="#12323" id="ddqcjkpt23"><i class="fa fa-caret-right"></i><span class="LinkLabel">网点管理</span></a></li>
+					<li><a class="SubMenuLink" href="#323"><i class="fa fa-caret-right"></i><span class="LinkLabel">停车场管理</span></a></li>
+					<li><a class="SubMenuLink" href="#233313"><i class="fa fa-caret-right"></i><span class="LinkLabel">停车场车辆绑定管理</span></a></li>
+					<li><a class="SubMenuLink" href="#23131232"><i class="fa fa-caret-right"></i><span class="LinkLabel">充电桩管理</span></a></li>
+				</ul>
+			</li>
+			<li><a class="MenuLink MenuImg3"><span class="MenuImg"></span>会员中心管理<i class="fa fa-caret-left fa-2x RightFa"></i><i class="fa fa-angle-left DirectionArrow"></i></a>
+				<ul>
+					<li><a class="SubMenuLink" href="#"><i class="fa fa-caret-right"></i><span>前台登录</span></a></li>
+					<li><a class="SubMenuLink" href="#"><i class="fa fa-caret-right"></i><span>用户注册</span></a></li>
+					<li><a class="SubMenuLink" href="#"><i class="fa fa-caret-right"></i><span>会员管理</span></a></li>
+					<li><a class="SubMenuLink" href="#"><i class="fa fa-caret-right"></i><span>账户管理</span></a></li>
+					<li><a class="SubMenuLink" href="#"><i class="fa fa-caret-right"></i><span>退款申请管理</span></a></li>
+					<li><a class="SubMenuLink" href="#"><i class="fa fa-caret-right"></i><span>会员审核管理</span></a></li>
+				</ul>
+			</li>
+			<li><a class="MenuLink MenuImg4"><span class="MenuImg"></span>车辆管理<i class="fa fa-caret-left fa-2x RightFa"></i><i class="fa fa-angle-left DirectionArrow"></i></a>
+				<ul>
+					<li><a class="SubMenuLink" href="#"><i class="fa fa-caret-right"></i><span>车型管理</span></a></li>
+					<li><a class="SubMenuLink" href="#"><i class="fa fa-caret-right"></i><span>车辆管理</span></a></li>
+					<li><a class="SubMenuLink" href="#"><i class="fa fa-caret-right"></i><span>车机管理</span></a></li>
+					<li><a class="SubMenuLink" href="#"><i class="fa fa-caret-right"></i><span>车机绑定管理</span></a></li>
+				</ul>
+			</li>
+			<li><a class="MenuLink MenuImg5"><span class="MenuImg"></span>车务管理<i class="fa fa-caret-left fa-2x RightFa"></i><i class="fa fa-angle-left DirectionArrow"></i></a>
+				<ul>
+					<li><a class="SubMenuLink" href="#"><i class="fa fa-caret-right"></i><span>车辆违章管理</span></a></li>
+					<li><a class="SubMenuLink" href="#"><i class="fa fa-caret-right"></i><span>车辆事故管理</span></a></li>
+					<li><a class="SubMenuLink" href="#"><i class="fa fa-caret-right"></i><span>车辆保养管理</span></a></li>
+					<li><a class="SubMenuLink" href="#"><i class="fa fa-caret-right"></i><span>车辆维修管理</span></a></li>
+					<li><a class="SubMenuLink" href="#"><i class="fa fa-caret-right"></i><span>车辆保险管理</span></a></li>
+					<li><a class="SubMenuLink" href="#"><i class="fa fa-caret-right"></i><span>停车场巡检</span></a></li>
+					<li><a class="SubMenuLink" href="#"><i class="fa fa-caret-right"></i><span>车辆巡检</span></a></li>
+					<li><a class="SubMenuLink" href="#"><i class="fa fa-caret-right"></i><span>充电桩巡检</span></a></li>
+				</ul>
+			</li>
+			<li><a class="MenuLink MenuImg6"><span class="MenuImg"></span>订单管理<i class="fa fa-caret-left fa-2x RightFa"></i><i class="fa fa-angle-left DirectionArrow"></i></a>
+				<ul>
+					<li><a class="SubMenuLink" href="#"><i class="fa fa-caret-right"></i><span>订单管理</span></a></li>
+					<li><a class="SubMenuLink" href="#"><i class="fa fa-caret-right"></i><span>评论管理</span></a></li>
+				</ul>
+			</li>
+			<li><a class="MenuLink MenuImg7"><span class="MenuImg"></span>运营规则<i class="fa fa-caret-left fa-2x RightFa"></i><i class="fa fa-angle-left DirectionArrow"></i></a>
+				<ul>
+					<li><a class="SubMenuLink" href="#"><i class="fa fa-caret-right"></i><span>车辆组管理</span></a></li>
+					<li><a class="SubMenuLink" href="#"><i class="fa fa-caret-right"></i><span>计费规则管理</span></a></li>
+					<li><a class="SubMenuLink" href="#"><i class="fa fa-caret-right"></i><span>预订车辆</span></a></li>
+				</ul>
+			</li>
+			<li><a class="MenuLink MenuImg8"><span class="MenuImg"></span>呼叫中心<i class="fa fa-caret-left fa-2x RightFa"></i><i class="fa fa-angle-left DirectionArrow"></i></a>
+				<ul>
+					<li><a class="SubMenuLink" href="#"><i class="fa fa-caret-right"></i><span>会员来电管理</span></a></li>
+					<li><a class="SubMenuLink" href="#"><i class="fa fa-caret-right"></i><span>会员关怀管理</span></a></li>
+				</ul>
+			</li>
+			<li><a class="MenuLink MenuImg9"><span class="MenuImg"></span>系统管理平台<i class="fa fa-caret-left fa-2x RightFa"></i><i class="fa fa-angle-left DirectionArrow"></i></a>
+				<ul>
+					<li><a class="SubMenuLink" href="#"><i class="fa fa-caret-right"></i><span>参数管理</span></a></li>
+					<li><a class="SubMenuLink" href="#"><i class="fa fa-caret-right"></i><span>数据字典</span></a></li>
+				</ul>
+			</li>
+		</ul>
+	</div>
+</div>
+
+<!--右侧内容-->
+<div class="RightBlock">
+	<!--头部-->
+	<div class="Header">
+		<div class="pull-left HideMenuBlock">
+			<button class="btn HideMenuButton"><i class="fa fa-align-justify fa-lg"></i></button>
+		</div>
+		<div class="pull-left SearchBlock">
+			<div class="Search">
+				<form class="form-inline">
+					<input type="text" placeholder="搜索……">
+					<button type="submit" class="btn"><i class="fa fa-search"></i></button>
+				</form>
+			</div>
+		</div>
+		<div class="pull-right ExitBlock">
+			<button class="ExitButton"><i class="fa fa-power-off fa-lg"></i></button>
+		</div>
+		<div class="pull-right MessageBlock">
+			<span>1</span>
+			<button class="MessageButton"><i class="fa fa-envelope fa-lg"></i></button>
+		</div>
+		<div class="clearfix"></div>
+	</div>
+
+	<!--Tab切换页签，添加页签直接新加个li即可，格式与已有保持统一-->
+	<div class="NavBarBlock">
+		<ul class="NavBarTabs" role="tablist">
+			<li role="presentation" tags="tab_index" class="active"><a href="#home" aria-controls="home" role="tab" data-toggle="tab">首页</a><i class="fa fa-times"></i></li>
+		</ul>
+	</div>
+	
+	<!--内容页，若想添加一个新页签内容请参见页签2格式写法-->
+	<div class="tab-content ContentBlock">
+		<div role="tabpanel" id="home" class="tab-pane fade in active">
+			<div class="row HomeButton">
+				<div class="col-sm-3">
+					<a href="#" class="ShouyeButton">
+						<i class="fa fa-home fa-4x"></i>
+						<h3>首页</h3>
+						<p>查看首页<i class="fa fa-arrow-circle-o-right pull-right"></i></p>
+					</a>
+				</div>
+				<div class="col-sm-3">
+					<a href="#" class="ShezhiButton">
+						<i class="fa fa-cogs fa-4x"></i>
+						<h3>个人中心设置</h3>
+						<p>设置内容<i class="fa fa-arrow-circle-o-right pull-right"></i></p>
+					</a>
+				</div>
+				<div class="col-sm-3">
+					<a href="#" class="CaiwuButton">
+						<span class="fa-stack fa-2x">
+						<i class="fa fa-circle fa-stack-2x"></i>
+						<i class="fa fa-usd fa-stack-1x"></i>
+						</span>
+						<h3>财务管理</h3>
+						<p>财务数据<i class="fa fa-arrow-circle-o-right pull-right"></i></p>
+					</a>
+				</div>
+				<div class="col-sm-3">
+					<a href="#" class="ShujuButton">
+						<i class="fa fa-bar-chart fa-4x"></i>
+						<h3>数据维护</h3>
+						<p>数据的更改<i class="fa fa-arrow-circle-o-right pull-right"></i></p>
+					</a>
+				</div>
+			</div>
+			
+			<div class="row TubiaoBlock">
+				<div class="col-sm-6">
+					<div class="Border">
+						<div class="Caption">图表标题1</div>
+						<div class="TubiaoContent">
+							<p>示意内容</p>
+						</div>
+					</div>
+				</div>
+			</div>
+			
+			<div class="row QicheSearch">
+				<div class="col-md-12">
+					<div class="Border">
+						<form class="form-inline">
+							<div class="form-group">
+								<label for="chepai">车牌号：</label>
+								<input type="text" class="form-control" id="chepai">
+							</div>
+							<div class="form-group">
+								<label for="city">城市：</label>
+								<select class="form-control">
+								  <option>北京</option>
+								  <option>杭州</option>
+								  <option>青岛</option>
+								  <option>济南</option>
+								  <option>天津</option>
+								</select>
+							</div>
+							<div class="form-group">
+								<label for="cartype">车型：</label>
+								<select class="form-control">
+								  <option>车型1</option>
+								  <option>车型2</option>
+								</select>
+							</div>
+							<div class="form-group">
+								<label for="wangdian">网点：</label>
+								<select class="form-control">
+								  <option>网点1</option>
+								  <option>网点2</option>
+								</select>
+							</div>
+							<div class="form-group">
+								<label for="riqifanwei">日期范围：</label>
+								<input type="text" class="form-control TimeSelect" id="riqi1">
+								-
+								<input type="text" class="form-control TimeSelect" id="riqi2">
+							</div>
+							<button type="submit" class="btn SubmitButton">查询</button>
+						</form>
+					</div>
+				</div>
+			</div>
+		</div>
+		
+		
+	</div>
+</div>
+</body>
+</html>

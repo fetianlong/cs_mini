@@ -1,0 +1,116 @@
+<!doctype html>
+<html lang="zh-CN">
+<head>
+<meta charset="utf-8">
+<title>车辆预定</title>
+
+<link rel=stylesheet href="../common/js/bootstrap/css/bootstrap.min.css">
+<link rel=stylesheet href="../common/js/fontawesome/css/font-awesome.min.css">
+<link rel=stylesheet href="../common/js/flatui/dist/css/flat-ui.min.css">
+<script src="../common/js/jquery.min.js"></script>
+<script src="../common/js/bootstrap/js/bootstrap.min.js"></script>
+<script src="../common/js/flatui/dist/js/flat-ui.min.js"></script>
+<script src="../common/js/main.js"></script>
+<link rel=stylesheet href="../common/css/main.css">
+<meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1, user-scalable=no">
+<meta http-equiv="X-UA-Compatible" content="IE=edge">
+<meta name="renderer" content="webkit">
+
+
+<script src="../common/js/datetimepicker/datetimepicker.min.js"></script>
+<script src="../common/js/datetimepicker/datetimepicker.zh-CN.js"></script>
+<link rel="stylesheet" href="../common/js/datetimepicker/datetimepicker.min.css">
+<link rel=stylesheet href="../common/css/bookingcar.css">
+
+<script>
+$(function(){
+	var StartDate = new Date();
+	Date.prototype.DateAdd = function(strInterval, Number) {  
+		var dtTmp = this; 
+		switch (strInterval) {  
+			case 's' :return new Date(Date.parse(dtTmp) + (1000 * Number)); 
+			case 'n' :return new Date(Date.parse(dtTmp) + (60000 * Number)); 
+			case 'h' :return new Date(Date.parse(dtTmp) + (3600000 * Number)); 
+			case 'd' :return new Date(Date.parse(dtTmp) + (86400000 * Number)); 
+			case 'w' :return new Date(Date.parse(dtTmp) + ((86400000 * 7) * Number)); 
+			case 'q' :return new Date(dtTmp.getFullYear(), (dtTmp.getMonth()) + Number*3, dtTmp.getDate(), dtTmp.getHours(), dtTmp.getMinutes(), dtTmp.getSeconds()); 
+			case 'm' :return new Date(dtTmp.getFullYear(), (dtTmp.getMonth()) + Number, dtTmp.getDate(), dtTmp.getHours(), dtTmp.getMinutes(), dtTmp.getSeconds()); 
+			case 'y' :return new Date((dtTmp.getFullYear() + Number), dtTmp.getMonth(), dtTmp.getDate(), dtTmp.getHours(), dtTmp.getMinutes(), dtTmp.getSeconds()); 
+		}
+	};
+	
+	var EndDate = StartDate.DateAdd("s", 1200);
+	
+	$(".Quche").datetimepicker({
+		language: 'zh-CN',
+		format: 'yyyy-mm-dd hh:ii',
+		todayHighlight: 'true',
+		minView: 0,
+		autoclose: true,
+		minuteStep: 5,
+		startDate: StartDate,
+		endDate: EndDate,
+		startView: 0
+	});
+	
+	$('.Huanche').datetimepicker({
+		language: 'zh-CN',
+		format: 'yyyy-mm-dd hh:ii',
+		todayHighlight: 'true',
+		todayBtn: 'linked',
+		minView: 0,
+		autoclose: true,
+		minuteStep: 5,
+		startDate: EndDate
+	}).on('changeDate',function(ev){
+		
+	});
+	
+	$(".QucheButton").click(function(e) {
+		$(".Quche").datetimepicker("show");
+	});
+	
+	$(".HuancheButton").click(function(e) {
+		$(".Huanche").datetimepicker("show");
+	});
+});
+</script>
+
+</head>
+
+<body class="Yuding1">
+<div class="container-fluid">
+  <div class="row">
+    <div class="col-md-4 col-md-offset-4">
+		<img class="img-responsive center-block CarImg" src="../common/images/bookingcar/DefaultCar.jpg">
+		<form>
+			<div class="form-group">
+				<label for="getCarTime">取车时间</label>
+				<div class="input-group">
+					<input type="text" class="form-control SelectTime Quche" id="getCarTime">
+					<div class="input-group-addon QucheButton"><i class="fa fa-calendar-plus-o"></i></div>
+				</div>
+			</div>
+			<div class="form-group">
+				<label for="backCarTime">预计还车时间</label>
+				<div class="input-group">
+					<input type="text" class="form-control SelectTime Huanche" id="backCarTime">
+					<div class="input-group-addon HuancheButton"><i class="fa fa-calendar-check-o"></i></div>
+				</div>
+			</div>
+			<div class="YuguBlock">
+				<p class="text-right">费用预估：<span>90.00</span></p>
+			</div>
+			<p class="text-center Tips">请在预定取车时间20分钟之内取车，逾期订单将自动取消</p>
+			<div class="BottomButton">
+				<div class="col-xs-8 col-xs-offset-2">
+					<button type="submit" class="btn btn-embossed btn-primary btn-block">下一步</button>
+				</div>
+			</div>
+		</form>
+	</div>
+  </div>
+</div>
+
+</body>
+</html>

@@ -1,0 +1,69 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<beans xmlns="http://www.springframework.org/schema/beans"
+	xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+	xsi:schemaLocation="http://www.springframework.org/schema/beans http://www.springframework.org/schema/beans/spring-beans-2.0.xsd">
+	<bean id="carSearchAction" class="com.dearho.cs.car.action.CarSearchAction" scope="prototype">
+		<property name="carService" ref="carService"  />
+		<property name="carVehicleModelService" ref="carVehicleModelService"  />
+		<property name="parkingPatrolService" ref="parkingPatrolService"  />
+		<property name="carDotBindingService" ref="carDotBindingService" />
+		<property name="branchDotService" ref="branchDotService" />
+	</bean>
+	<bean id="carGetAction" class="com.dearho.cs.car.action.CarGetAction" scope="prototype">
+		<property name="carService" ref="carService" />
+		<property name="carVehicleModelService" ref="carVehicleModelService" />
+		<property name="carDotBindingService" ref="carDotBindingService" />
+		<property name="branchDotService" ref="branchDotService" />
+	</bean>
+	<bean id="carAddAction" class="com.dearho.cs.car.action.CarAddAction" scope="prototype">
+		<property name="carService" ref="carService" />
+		<property name="carRealtimeStateService" ref="carRealtimeStateService"  />
+		<property name="carDotBindingService" ref="carDotBindingService"  />
+	</bean>
+	
+	<bean id="carDeleteAction" class="com.dearho.cs.car.action.CarDeleteAction" scope="prototype">
+		<property name="carService" ref="carService" />
+		<property name="deviceBindingService" ref="deviceBindingService" />
+	</bean>
+	
+	<bean id="carUpdateAction" class="com.dearho.cs.car.action.CarUpdateAction" scope="prototype">
+		<property name="carService" ref="carService" />
+		<property name="operateLogService" ref="operateLogService" />
+		<property name="carDotBindingService" ref="carDotBindingService" />
+	</bean>
+	
+	
+	<bean id="carVehicleModelSearchAction" class="com.dearho.cs.car.action.CarVehicleModelSearchAction" scope="prototype">
+		<property name="carVehicleModelService" ref="carVehicleModelService"  />
+		<property name="strategyBaseService" ref="strategyBaseService"  />
+	</bean>
+	<bean id="carVehicleModelGetAction" class="com.dearho.cs.car.action.CarVehicleModelGetAction" scope="prototype">
+		<property name="carVehicleModelService" ref="carVehicleModelService"  />
+		<property name="strategyBaseService" ref="strategyBaseService"  />
+	</bean>
+	<bean id="carVehicleModelAddAction" class="com.dearho.cs.car.action.CarVehicleModelAddAction" scope="prototype">
+		<property name="carVehicleModelService" ref="carVehicleModelService"  />
+	</bean>
+	<bean id="carVehicleModelUpdateAction" class="com.dearho.cs.car.action.CarVehicleModelUpdateAction" scope="prototype">
+		<property name="carVehicleModelService" ref="carVehicleModelService"  />
+	</bean>
+	<bean id="carVehicleModelDeleteAction" class="com.dearho.cs.car.action.CarVehicleModelDeleteAction" scope="prototype">
+		<property name="carVehicleModelService" ref="carVehicleModelService"  />
+		<property name="carService" ref="carService" />
+	</bean>
+	
+	<bean id="carOnlineManageAction" class="com.dearho.cs.car.action.CarOnlineManageAction" scope="prototype">
+		<property name="carService" ref="carService"  />
+		<property name="carVehicleModelService" ref="carVehicleModelService"  />
+		<property name="systemOperateLogService" ref="systemOperateLogService"  />
+	</bean>
+	
+	<!-- 损坏上报 -->
+	<bean id="carbreakAction" class="com.dearho.cs.carservice.action.CarBreakAction" scope="prototype">
+		<property name="carBreakService" ref="carBreakService"  />
+	</bean>
+	<!-- 车辆评价 -->
+	<bean id="carCommonAction" class="com.dearho.cs.carservice.action.common.CarCommonAction" scope="prototype">
+		<property name="carCommonService" ref="carCommonService"  />
+	</bean>
+</beans>

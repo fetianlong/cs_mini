@@ -1,0 +1,50 @@
+@charset "utf-8";
+/* CSS Document */
+
+body {
+	margin-top: 20px;
+}
+
+table td {
+	text-align: center;
+	vertical-align: middle !important;
+	background: #dcdcdc;
+	border: none !important;
+	font-size: 18px;
+	line-height: 30px !important;
+}
+
+table tr td:first-of-type {
+	background: #f2f1f1;
+}
+
+table tr td:last-of-type {
+	background: #f2f1f1;
+}
+
+table tr:nth-of-type(2) td:last-of-type {
+	background: #dcdcdc;
+}
+
+table tr:nth-of-type(-n+2) td {
+	font-size: 14px;
+	color: #39c191;
+}
+
+table tr:first-of-type td:nth-of-type(2) {
+	font-size: 16px;
+}
+
+table tr td:first-of-type {
+	font-size: 14px;
+}
+
+table tr td span {
+	display: inline-block;
+	font-size: 10px;
+	margin: 0 1px;
+}
+
+p {
+	font-size: 12px;
+}

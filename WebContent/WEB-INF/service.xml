@@ -1,0 +1,381 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<beans xmlns="http://www.springframework.org/schema/beans"
+	xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+	xmlns:aop="http://www.springframework.org/schema/aop"
+	xmlns:tx="http://www.springframework.org/schema/tx"
+	xsi:schemaLocation="http://www.springframework.org/schema/beans 
+	http://www.springframework.org/schema/beans/spring-beans.xsd 
+	http://www.springframework.org/schema/aop
+	http://www.springframework.org/schema/aop/spring-aop.xsd
+	http://www.springframework.org/schema/tx 
+	http://www.springframework.org/schema/tx/spring-tx.xsd">
+	
+	<!-- 系统管理 start -->
+	<bean id="userService" class="com.dearho.cs.sys.service.impl.UserServiceImpl">
+		<property name="userDAO" ref="userDAO"/>
+	</bean>
+	
+	<bean id="menuService" class="com.dearho.cs.sys.service.impl.MenuServiceImpl">
+		<property name="menuDAO" ref="menuDAO"/>
+	</bean>
+	<bean id="groupService" class="com.dearho.cs.sys.service.impl.GroupServiceImpl">
+		<property name="groupDAO" ref="groupDAO"/>
+		<property name="menuDAO" ref="menuDAO"/>
+		<property name="groupMenuDAO" ref="groupMenuDAO"/>
+		
+	</bean>
+	
+	<bean id="functionService" class="com.dearho.cs.sys.service.impl.FunctionServiceImpl">
+		<property name="functionDao" ref="functionDao" />
+	</bean>
+	<bean id="roleService" class="com.dearho.cs.sys.service.impl.RoleServiceImpl">
+		<property name="roleDAO" ref="roleDAO"/>
+	</bean>
+	
+	<bean id="configService" class="com.dearho.cs.sys.service.impl.ConfigServiceImpl">
+		<property name="configDAO" ref="configDAO"/>
+	</bean>
+	
+	<bean id="dictService" class="com.dearho.cs.sys.service.impl.DictServiceImpl">
+		<property name="dictDAO" ref="dictDAO"/>
+		<property name="dictGroupDAO" ref="dictGroupDAO"/>
+	</bean>
+	
+	<bean id="dictGroupService" class="com.dearho.cs.sys.service.impl.DictGroupServiceImpl">
+		<property name="dictGroupDAO" ref="dictGroupDAO"/>
+	</bean>
+	
+	<bean id="areaService" class="com.dearho.cs.sys.service.impl.AreaServiceImpl">
+		<property name="areaDAO" ref="areaDAO"/>
+	</bean>
+	
+	<bean id="companyService" class="com.dearho.cs.sys.service.impl.CompanyServiceImpl">
+		<property name="companyDAO" ref="companyDAO"/>
+	</bean>
+	
+	<bean id="operateLogService" class="com.dearho.cs.sys.service.impl.OperateLogServiceImpl">
+		<property name="operateLogDAO" ref="operateLogDAO"/>
+	</bean>
+	
+	
+	<!-- 系统管理 end -->
+	
+	<!-- carService -->
+	<bean id="carService" class="com.dearho.cs.car.service.impl.CarServiceImpl">
+		<property name="carDao" ref="carDao" />
+		<property name="carRealtimeStateService" ref="carRealtimeStateService" />
+	</bean>
+	<bean id="deviceService" class="com.dearho.cs.device.service.impl.DeviceServiceImpl">
+		<property name="deviceDao" ref="deviceDao" />
+	</bean>
+	<bean id="deviceBindingService" class="com.dearho.cs.device.service.impl.DeviceBindingServiceImpl">
+		<property name="deviceBindingDao" ref="deviceBindingDao" />
+		<property name="carDao" ref="carDao" />
+		<property name="deviceDao" ref="deviceDao" />
+	</bean>
+	<bean id="carVehicleModelService" class="com.dearho.cs.car.service.impl.CarVehicleModelServiceImpl">
+		<property name="carVehicleModelDao" ref="carVehicleModelDao" />
+	</bean>
+	
+
+	<bean id="carRealtimeStateService" class="com.dearho.cs.resmonitor.service.impl.CarRealtimeStateServiceImpl">
+		<property name="carRealtimeStateDao" ref="carRealtimeStateDAO"/>
+	</bean>
+	
+	<bean id="carLocationService" class="com.dearho.cs.resmonitor.service.impl.CarLocationImpl">
+		<property name="carLocationDAO" ref="carLocationDAO"/>
+	</bean>
+	
+	<!-- 会员 start -->
+	<bean id="subscriberService" class="com.dearho.cs.subscriber.service.impl.SubscriberServiceImpl">
+		<property name="subscriberDao" ref="subscriberDao"/>
+		<property name="accountDao" ref="accountDao"/>
+		<property name="businessFlowDAO" ref="businessFlowDAO"/>
+		<property name="subscriberConfirmDao" ref="subscriberConfirmDao"/>
+		<property name="smsCodeService" ref="smsCodeService"/>
+		
+	</bean>
+	<bean id="subscriberConfirmService" class="com.dearho.cs.subscriber.service.impl.SubscriberConfirmServiceImpl">
+		<property name="subscriberDao" ref="subscriberDao"/>
+		<property name="subscriberConfirmDao" ref="subscriberConfirmDao"/>
+		<property name="businessFlowDAO" ref="businessFlowDAO"/>
+		<property name="accountDao" ref="accountDao"/>
+		<property name="informDao" ref="informDao"/>
+		<property name="informRecordDao" ref="informRecordDao"/>
+	</bean>
+	
+	<bean id="subscriberLoginRecordService" class="com.dearho.cs.subscriber.service.impl.SubscriberLoginRecordServiceImpl">
+		<property name="subscriberLoginRecordDao" ref="subscriberLoginRecordDao"/>		
+	</bean>
+	<!-- 会员 end -->
+	
+	
+	<!-- 充值卡start -->
+	<bean id="rechargeCardService" class="com.dearho.cs.account.service.impl.RechargeCardServiceImpl">
+		<property name="rechargeCardDao" ref="rechargeCardDao"/>	
+	</bean>
+	
+	<!-- 充值卡end -->
+	
+	<!-- 充值记录start -->
+	<bean id="rechargeRecordService" class="com.dearho.cs.account.service.impl.RechargeRecordServiceImpl">
+			<property name="rechargeRecordDao" ref="rechargeRecordDao"/>		
+	</bean>
+	<!-- 充值记录end -->
+	
+	
+	<!-- 会员账户 start -->
+	<bean id="accountService" class="com.dearho.cs.account.service.impl.AccountServiceImpl">
+		<property name="accountDao" ref="accountDao"/>
+		<property name="accountTradeRecordDao" ref="accountTradeRecordDao"/>
+		<property name="accountTradeRecordDetailDao" ref="accountTradeRecordDetailDao"></property>
+		<property name="businessFlowDAO" ref="businessFlowDAO"/>
+		<property name="subscriberDao" ref="subscriberDao"/>
+		<property name="subscriberConfirmDao" ref="subscriberConfirmDao"/>
+		<property name="ordersService" ref="ordersService"/>
+		<property name="rechargeCardService" ref="rechargeCardService"/>
+		<property name="accountCardInstanceDao" ref="accountCardInstanceDao"/>
+		<property name="accountPaymentAccountDao" ref="accountPaymentAccountDao"/>
+		<property name="rechargeRecordDao" ref="rechargeRecordDao"/>
+	</bean>
+	<bean id="accountTradeRecordService" class="com.dearho.cs.account.service.impl.AccountTradeRecordServiceImpl">
+		<property name="accountTradeRecordDao" ref="accountTradeRecordDao"/>
+		<property name="accountTradeRecordDetailDao" ref="accountTradeRecordDetailDao"/>
+	</bean>
+	<bean id="accountCardInstanceService" class="com.dearho.cs.account.service.impl.AccountCardInstanceServiceImpl">
+		<property name="accountCardInstanceDao" ref="accountCardInstanceDao"/>
+	</bean>
+	<!-- 会员账户 end -->
+	
+	
+	<!-- 呼叫中心start -->
+	<bean id="subscriberCallService" class="com.dearho.cs.subscriber.service.impl.SubscriberCallServiceImpl">
+		<property name="subscriberCallDao" ref="subscriberCallDao"/>
+		
+	</bean>
+	
+
+	<!-- 呼叫中心end -->
+	
+	
+	<!-- 场地设备 start -->
+	<bean id="chargeStationService" class="com.dearho.cs.charge.service.impl.ChargeStationServiceImpl">
+		<property name="chargeStationDAO" ref="chargeStationDAO"/>
+	</bean>
+	<!-- 场地设备 end -->
+	
+	<!-- 订单相关的service -->
+	<bean id="ordersService" class="com.dearho.cs.orders.service.impl.OrdersServiceImpl">
+		<property name="ordersDao" ref="ordersDao"/>
+		<property name="carDao" ref="carDao"/>
+		<property name="ordersBillDao" ref="ordersBillDao"/>
+		<property name="carService" ref="carService"/>
+		<property name="accountService" ref="accountService"/>
+		<property name="ordersDetailService" ref="ordersDetailService"/>
+		<property name="subscriberService" ref="subscriberService"/>
+		<property name="strategyBaseService" ref="strategyBaseService"/>
+		<property name="carDotBindingService" ref="carDotBindingService"/>
+		<property name="accountTradeRecordDetailDao" ref="accountTradeRecordDetailDao"/>
+		<property name="accountTradeRecordDao" ref="accountTradeRecordDao"/>
+	</bean>
+	
+	<bean id="ordersDetailService" class="com.dearho.cs.orders.service.impl.OrdersDetailServiceImpl">
+		<property name="ordersDetailDao" ref="ordersDetailDao"/>
+		<property name="ordersService" ref="ordersService"/>
+		<property name="subscriberService" ref="subscriberService"/>
+		<property name="accountTradeRecordDetailDao" ref="accountTradeRecordDetailDao"/>
+		<property name="accountTradeRecordDao" ref="accountTradeRecordDao"/>
+	</bean>
+	
+	<bean id="ticketsService" class="com.dearho.cs.orders.service.impl.TicketsServiceImpl">
+		<property name="ticketsDao" ref="ticketsDao"/>
+	</bean>
+	
+	<bean id="ordersBillService" class="com.dearho.cs.orders.service.impl.OrdersBillServiceImpl">
+		<property name="ordersBillDao" ref="ordersBillDao"/>
+	</bean>
+	<bean id="ordersCommentService" class="com.dearho.cs.orders.service.impl.OrdersCommentServiceImpl">
+		<property name="ordersCommentDao" ref="ordersCommentDao"/>
+	</bean>
+	<bean id="chargingLogService" class="com.dearho.cs.orders.service.impl.ChargingLogServiceImpl">
+		<property name="chargingLogDao" ref="chargingLogDao"/>
+	</bean>
+	<!-- 网点管理 start -->
+	<bean id="branchDotService" class="com.dearho.cs.place.service.impl.BranchDotServiceImpl">
+		<property name="branchDotDAO" ref="branchDotDAO"/>
+		<property name="carVehicleModelService" ref="carVehicleModelService"/>
+		<property name="carRealtimeStateService" ref="carRealtimeStateService"/>
+		<property name="carService" ref="carService"/>
+	</bean>
+	
+	<bean id="carDotBindingService" class="com.dearho.cs.place.service.impl.CarDotBindingServiceImpl">
+		<property name="carDotBindingDao" ref="carDotBindingDao"/>
+		<property name="carVehicleModelDao" ref="carVehicleModelDao"/>
+	</bean>
+	<!-- 网点管理 end -->
+	
+	
+	<!-- 车务 -->
+	<bean id="carAccidentService" class="com.dearho.cs.carservice.service.impl.CarAccidentServiceImpl">
+		<property name="carAccidentDAO" ref="carAccidentDAO"/>
+	</bean>
+	<bean id="carMaintenanceService" class="com.dearho.cs.carservice.service.impl.CarMaintenanceServiceImpl">
+		<property name="carMaintenanceDAO" ref="carMaintenanceDAO"/>
+	</bean>
+	<bean id="carViolationService" class="com.dearho.cs.carservice.service.impl.CarViolationServiceImpl">
+		<property name="carViolationDAO" ref="carViolationDAO"/>
+	</bean>
+	<bean id="carInsuranceService" class="com.dearho.cs.carservice.service.impl.CarInsuranceServiceImpl">
+		<property name="carInsuranceDAO" ref="carInsuranceDAO"/>
+	</bean>
+	<bean id="carRepairService" class="com.dearho.cs.carservice.service.impl.CarRepairServiceImpl">
+		<property name="carRepairDAO" ref="carRepairDAO"/>
+	</bean>
+	<bean id="parkingPatrolService" class="com.dearho.cs.carservice.service.impl.ParkingPatrolServiceImpl">
+		<property name="parkingPatrolDAO" ref="parkingPatrolDAO"/>
+	</bean>
+	<bean id="carPatrolService" class="com.dearho.cs.carservice.service.impl.CarPatrolServiceImpl">
+		<property name="carPatrolDAO" ref="carPatrolDAO"/>
+	</bean>
+	<!-- 车务end -->
+	
+	<bean id="indexDataShowService" class="com.dearho.cs.report.service.impl.IndexDataShowServiceImpl">
+		<property name="indexDataShowDAO" ref="indexDataShowDAO"/>
+	</bean>
+	
+	<bean id="subscriberPhoneChangeService" class="com.dearho.cs.subscriber.service.impl.SubscriberPhoneChangeServiceImpl">
+		<property name="subscriberPhoneChangeDao" ref="subscriberPhoneChangeDao"/>
+	</bean>
+	
+	<bean id="wechatTokenInfoService" class="com.dearho.cs.wechat.service.impl.WechatTokenInfoServiceImpl">
+		<property name="wechatTokenInfoDao" ref="wechatTokenInfoDao"/>
+	</bean>
+	
+	<bean id="wechatUserInfoService" class="com.dearho.cs.wechat.service.impl.WechatUserInfoServiceImpl">
+		<property name="wechatUserInfoDao" ref="wechatUserInfoDao"/>
+		<property name="subscriberDao" ref="subscriberDao"/>
+	</bean>
+	
+	<bean id="smsRecordService" class="com.dearho.cs.sys.service.impl.SMSRecordServiceImpl">
+		<property name="smsRecordDao" ref="smsRecordDao"/>
+	</bean>
+	<bean id="smsCodeService" class="com.dearho.cs.sys.service.impl.SMSCodeServiceImpl">
+		<property name="smsCodeDao" ref="smsCodeDao"/>
+	</bean>
+	
+	<!-- 计价策略start -->
+	<bean id="strategyBaseService" class="com.dearho.cs.feestrategy.service.impl.StrategyBaseServiceImpl">
+		<property name="strategyBaseDAO" ref="strategyBaseDAO"/>
+		<property name="subscriberService" ref="subscriberService"/>
+		<property name="carVehicleModelService" ref="carVehicleModelService"/>
+		<property name="deviceBindingService" ref="deviceBindingService"/>
+		<property name="carLocationService" ref="carLocationService"/>
+	</bean>
+	
+	<!-- 计价策略end -->
+	
+	<!-- 接口日志 start -->
+	<bean id="interfaceMessageLogService" class="com.dearho.cs.account.service.impl.InterfaceMessageLogServiceImpl">
+		<property name="interfaceMessageLogDao" ref="interfaceMessageLogDao"/>
+	</bean>
+	<!-- <bean id="payServiceBase" class="com.dearho.cs.account.pojo.PayServiceBase">
+		<property name="accountCardInstanceService" ref="accountCardInstanceService"/>
+	</bean> -->
+	<bean id="payService" class="com.dearho.cs.account.service.impl.PayServiceImpl">
+		<property name="accountDao" ref="accountDao"/>
+		<property name="accountCardInstanceDao" ref="accountCardInstanceDao"/>
+		<property name="accountTradeRecordDao" ref="accountTradeRecordDao"></property>
+		<property name="accountTradeRecordDetailDao" ref="accountTradeRecordDetailDao"></property>
+		<property name="rechargeCardService" ref="rechargeCardService"></property>
+		<property name="subscriberDao" ref="subscriberDao"></property>
+		<property name="accountPaymentAccountDao" ref="accountPaymentAccountDao"/>
+		<property name="ordersDetailService" ref="ordersDetailService"/>
+	</bean>
+	
+	<bean id="orderPayService" class="com.dearho.cs.account.service.impl.OrderPayServiceImpl">
+		<property name="accountDao" ref="accountDao"/>
+		<property name="accountCardInstanceDao" ref="accountCardInstanceDao"/>
+		<property name="accountTradeRecordDao" ref="accountTradeRecordDao"></property>
+		<property name="accountTradeRecordDetailDao" ref="accountTradeRecordDetailDao"></property>
+		<property name="rechargeCardService" ref="rechargeCardService"></property>
+		<property name="subscriberDao" ref="subscriberDao"></property>
+		<property name="accountPaymentAccountDao" ref="accountPaymentAccountDao"/>
+		<property name="ordersDetailService" ref="ordersDetailService"/>
+		<property name="ordersService" ref="ordersService"/>
+	</bean>
+	
+	<bean id="refundService" class="com.dearho.cs.account.service.impl.RefundServiceImpl">
+		<property name="accountDao" ref="accountDao"/>
+		<property name="accountCardInstanceDao" ref="accountCardInstanceDao"/>
+		<property name="accountTradeRecordDao" ref="accountTradeRecordDao"></property>
+		<property name="accountTradeRecordDetailDao" ref="accountTradeRecordDetailDao"></property>
+		
+		<property name="subscriberDao" ref="subscriberDao"></property>
+		<property name="accountPaymentAccountDao" ref="accountPaymentAccountDao"/>
+		<property name="ordersDetailService" ref="ordersDetailService"/>
+		<property name="ordersService" ref="ordersService"/>
+		<property name="subscriberConfirmDao" ref="subscriberConfirmDao"/>
+		<property name="businessFlowDAO" ref="businessFlowDAO"/>
+		
+	</bean>
+	
+	
+	
+	
+	
+	<!-- 接口日志 end -->
+	
+	<!-- 特来电充电站start -->
+	<bean id="teldIntrfStationService" class="com.dearho.cs.teldintrf.service.impl.TeldIntrfStationServiceImpl">
+		<property name="teldIntrfStationDAO" ref="teldIntrfStationDAO"/>
+	</bean>
+	<bean id="teldIntrfPileService" class="com.dearho.cs.teldintrf.service.impl.TeldIntrfPileServiceImpl">
+		<property name="teldIntrfPileDAO" ref="teldIntrfPileDAO"/>
+	</bean>
+	<!-- 特来电充电站end -->
+	
+	
+	<!-- 统计start -->
+	<bean id="statisticsService" class="com.dearho.cs.sys.service.impl.StatisticsServiceImpl">
+		<property name="statisticsDao" ref="statisticsDao"/>
+	</bean>
+	<!--  统计end -->
+	
+	<!-- 日志记录start -->
+	<bean id="systemOperateLogService" class="com.dearho.cs.sys.service.impl.SystemOperateLogServiceImpl">
+		<property name="systemOperateLogDAO" ref="systemOperateLogDAO"/>
+	</bean>
+	<!--  日志记录end -->
+	
+	<!-- 损坏上报 -->
+	<bean id="carBreakService" class="com.dearho.cs.carservice.service.impl.CarBreakServiceImpl">
+		<property name="carBreakDao" ref="carBreakDao"/>
+	</bean>
+	
+	<!-- 车辆评价 -->
+	<bean id="carCommonService" class="com.dearho.cs.carservice.service.impl.CarCommonServiceImpl">
+		<property name="carCommonDao" ref="carCommonDao"/>
+	</bean>
+	
+	<!-- 一键投诉 -->
+	<bean id="feedbackService" class="com.dearho.cs.advice.service.impl.FeedbackServiceImpl">
+		<property name="feedbackDao" ref="feedbackDao"/>
+	</bean>
+	
+	<!-- 催我建点 -->
+	<bean id="hotDotService" class="com.dearho.cs.advice.service.impl.HotDotServiceImpl">
+		<property name="hotDotDAO" ref="hotDotDAO"/>
+		<property name="subscriberService" ref="subscriberService"/>
+	</bean>
+	
+	<!-- 系统通知 -->
+	<bean id="informService" class="com.dearho.cs.advice.service.impl.InformServiceImpl">
+		<property name="informDao" ref="informDao"/>
+		<property name="informRecordDao" ref="informRecordDao"/>
+	</bean>
+	<bean id="informRecordService" class="com.dearho.cs.advice.service.impl.InformRecordServiceImpl">
+		<property name="informDao" ref="informDao"/>
+		<property name="informRecordDao" ref="informRecordDao"/>
+	</bean>
+	
+</beans>

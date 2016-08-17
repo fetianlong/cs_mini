@@ -1,0 +1,59 @@
+<!DOCTYPE hibernate-mapping PUBLIC 
+    "-//Hibernate/Hibernate Mapping DTD 3.0//EN"
+    "http://hibernate.sourceforge.net/hibernate-mapping-3.0.dtd">
+ 
+<hibernate-mapping>
+	<class name="com.dearho.cs.sys.pojo.Company" table="s_company">
+		<id name="id" type="java.lang.String">
+            <column name="ID" length="32" />
+            <generator class="uuid.hex" />
+        </id>
+        <property name="code" type="string">
+       		<column name="code" />
+       	</property>
+       	<property name="name" type="string">
+       		<column name="name" />
+       	</property>
+       	<property name="address" type="string">
+       		<column name="address" />
+       	</property>
+       	<property name="bizScope" type="string">
+       		<column name="biz_scope" />
+       	</property>
+       	<property name="chairman" type="string">
+       		<column name="chairman" />
+       	</property>
+       	<property name="telephone" type="string">
+       		<column name="telephone" />
+       	</property>
+       	<property name="linkman" type="string">
+       		<column name="linkman" />
+       	</property>
+       	<property name="linkmanTelephone" type="string">
+       		<column name="linkman_telephone" />
+       	</property>
+       	<property name="serviceStart" type="java.util.Date">
+       		<column name="service_start" />
+       	</property>
+       	<property name="serviceEnd" type="java.util.Date">
+       		<column name="service_end" />
+       	</property>
+       	<property name="bizType" type="string">
+       		<column name="biz_type" />
+       	</property>
+       	
+       	
+       	<property name="creatorId" type="java.lang.String">
+       		<column name="creator_id" length="32" />
+       	</property>
+       	<property name="createTime" type="java.util.Date">
+       		<column name="create_time" />
+       	</property>
+       	<property name="updateTime" type="java.util.Date">
+       		<column name="update_time" />
+       	</property>
+       	<property name="ts" type="java.util.Date">
+       		<column name="ts"/>
+       	</property>
+	</class>
+</hibernate-mapping>

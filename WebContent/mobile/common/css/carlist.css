@@ -1,0 +1,186 @@
+@charset "utf-8";
+/* CSS Document */
+
+body {
+	background: #eee;
+}
+
+.ListUl {
+	padding: 0;
+	margin: 0;
+	list-style: none;
+}
+
+.ListUl li {
+	padding: 10px 0;
+	margin: 5px 0;
+	list-style: none;
+	background: #FFF;
+	border-top: solid 1px #e5e5e5;
+	border-bottom: solid 1px #e5e5e5;
+}
+
+.ListUl li a {
+	display: block;
+}
+
+.ListUl li a>div {
+	padding-left: 5px;
+	padding-right: 5px;
+}
+
+.ListUl li .CarImg img {
+	max-height: 40px;
+}
+
+.ListUl li .CarImg p {
+	font-size: 12px;
+	text-align: center;
+	background: #e5e5e5;
+	color: #414a59;
+	margin: 0;
+	padding: 0;
+	line-height: 24px;
+}
+
+.ListUl li .CarInfo {
+	padding-left: 5px;
+	padding-right: 5px;
+}
+
+.ListUl li .CarInfo .row {
+	margin-left: 0;
+	margin-right: 0;
+}
+
+.ListUl li .CarInfo .row div[class^="col-xs-"] {
+	padding-left: 0;
+	padding-right: 0;
+}
+
+.ListUl li .CarInfo p {
+	margin-bottom: 0;
+	font-size: 12px;
+	color: #b8b8b8;
+	line-height: 16px;
+}
+
+.ListUl li .CarInfo .DianliangBlock {
+	font-size: 12px;
+	color: #b8b8b8;
+	line-height: 16px;
+	margin: 0;
+}
+
+.ListUl li .CarInfo .DianliangBlock .DianliangLabel {
+	width: 40px;
+}
+
+.ListUl li .CarInfo .DianliangBlock div[class^="col-"] {
+	padding-left: 0;
+	padding-right: 0;
+}
+
+.ListUl li .CarInfo .DianliangBlock .progress {
+	margin-bottom: 0;
+	margin-top: 2px;
+}
+
+.ListUl li .CarInfo .DianliangBlock .progress .progress-bar {
+	width: 10%;
+}
+
+.ListUl li .CarInfo .DianliangBlock .progress.Progress1 .progress-bar {
+	background: #db5565;
+}
+
+.ListUl li .CarInfo .DianliangBlock .progress.Progress2 .progress-bar {
+	background: #f4ad49;
+}
+
+.ListUl li .CarInfo .DianliangBlock .progress.Progress3 .progress-bar {
+	background: #4bd3a5;
+}
+
+.ListUl li .CarInfo .DianliangBlock .Dianliang {
+	padding-left: 5px !important;
+}
+
+.ListUl li .CarInfo .CarName {
+	font-size: 16px;
+	line-height: 20px;
+	color: #414a59;
+}
+
+.ListUl li .CarInfo .CarName .Fenge {
+	margin: 0 3px;
+}
+
+.ListUl li .CarInfo .Name {
+	margin-bottom: 10px;
+}
+
+.ListUl li .CarInfo .TypeTip {
+	margin-bottom: 2px;
+}
+
+.ListUl li .CarInfo .TypeTip span {
+	font-size: 12px;
+	display: inline-block;
+	line-height: 18px;
+	background: #CCC;
+	padding: 0 3px;
+	margin-right: 3px;
+	color: #FFF;
+}
+
+.ListUl li .CarInfo .TypeTip span.CarType {
+	background: #4bd3a5;
+}
+
+.ListUl li .CarInfo .TypeTip span.Shi {
+	background: #fa6800;
+}
+
+.ListUl li .CarInfo .TypeTip span.Ri {
+	background: #fcad3c;
+}
+
+.ListUl li .CarInfo .TypeTip span.Yue {
+	background: #7ace1d;
+}
+
+.ListUl li .CarInfo .TypeTip span.Nian {
+	background: #4eb7f3;
+}
+
+.ListUl li .CarInfo p.CarName .CarType {
+	color: #4bd3a5;
+}
+
+.ListUl li .CarPrice {
+	margin-top: 0;
+	padding-left: 2px;
+	padding-right: 2px;
+}
+
+.ListUl li .CarPrice p {
+	color: #f4ad49;
+	font-size: 22px;
+	line-height: 18px;
+	font-style: italic;
+	text-align: center;
+	margin-bottom: 5px;
+}
+
+.ListUl li .CarPrice p span {
+	display: inline-block;
+	font-size: 10px;
+	line-height: 14px;
+	margin: 0;
+	font-style: normal;
+	margin-left: 2px;
+}
+
+
+

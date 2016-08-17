@@ -1,0 +1,60 @@
+<!DOCTYPE hibernate-mapping PUBLIC 
+    "-//Hibernate/Hibernate Mapping DTD 3.0//EN"
+    "http://hibernate.sourceforge.net/hibernate-mapping-3.0.dtd">
+ 
+<hibernate-mapping>
+	<class name="com.dearho.cs.car.pojo.Car" table="C_CAR">
+		<id name="id" type="string">
+            <column name="ID" length="32" />
+            <generator class="uuid.hex" />
+        </id>
+        <property name="vehiclePlateId" type="string">
+        	<column name="VEHICLE_PLATE_ID"  length="64" not-null="true" />
+        </property>
+        <property name="nickName" type="string">
+        	<column name="NICK_NAME" length="64" />
+        </property>
+        <property name="vin" type="string">
+        	<column name="VIN" length="64" not-null="true" />
+        </property>
+        <property name="modelId" type="string">
+        	<column name="model_id" length="12" not-null="true" />
+        </property>
+         <property name="isAd" type="java.lang.Integer">
+        	<column name="is_ad" />
+        </property>
+        <property name="color" type="string">
+        	<column name="COLOR" length="64"  />
+        </property>
+        <property name="operationCity" type="string">
+        	<column name="OPERATION_CITY" length="64" />
+        </property>
+        <property name="creatorId" type="string">
+        	<column name="CREATOR_ID" length="32" />
+        </property>
+        <property name="createDate" type="java.util.Date">
+        	<column name="CREATE_DATE" />
+        </property>
+        <property name="ts" type="java.util.Date">
+        	<column name="TS" />
+        </property>
+        
+         <property name="bizState" type="string">
+        	<column name="biz_state" length="32" />
+        </property>
+        
+        <property name="engineNumber" type="string">
+        	<column name="engine_Number" />
+        </property>
+        <property name="drivingLicenseNumber" type="string">
+        	<column name="driving_License_Number"  />
+        </property>
+        <property name="buyTime" type="java.util.Date">
+        	<column name="buy_Time" />
+        </property>
+        <property name="buyPlace" type="string">
+        	<column name="buy_Place" />
+        </property>
+        
+	</class>
+</hibernate-mapping>

@@ -1,0 +1,59 @@
+<!DOCTYPE hibernate-mapping PUBLIC 
+    "-//Hibernate/Hibernate Mapping DTD 3.0//EN"
+    "http://hibernate.sourceforge.net/hibernate-mapping-3.0.dtd">
+<hibernate-mapping>
+	<class name="com.dearho.cs.account.pojo.AccountTradeRecord" table="acc_trade_record_list">
+		<id name="id" type="java.lang.String">
+            <column name="id" length="32" />
+            <generator class="uuid.hex" />
+        </id>
+        <property name="subscriberId" type="java.lang.String">
+            <column name="subscriber_id"  length="32" />
+        </property>
+        <property name="type" type="java.lang.Integer">
+            <column name="type" />
+        </property>
+         <property name="payChannel" type="java.lang.Integer">
+            <column name="pay_channel" />
+        </property>
+         <property name="payType" type="java.lang.Integer">
+            <column name="pay_type" />
+        </property>
+        <property name="result" type="java.lang.Integer">
+            <column name="result" />
+        </property>
+         <property name="amount" type="java.lang.Double">
+            <column name="amount" />
+        </property>
+        <property name="remainingAmount" type="java.lang.Double">
+            <column name="remaining_amount" />
+        </property>
+         <property name="bizId" type="java.lang.String">
+            <column name="biz_id" length="32"/>
+        </property>
+        <property name="tradeOrderNo" type="java.lang.String">
+            <column name="trade_order_no" length="32"/>
+        </property>
+        <property name="isPresetCard" type="java.lang.Integer">
+            <column name="is_preset_card" length="32"/>
+        </property>
+        <property name="subOrderId" type="java.lang.String">
+            <column name="sub_orderId" length="32"/>
+        </property>
+         <property name="description" type="java.lang.String">
+            <column name="description" length="255"/>
+        </property>
+         <property name="tradeTime" type="java.util.Date">
+            <column name="trade_time" />
+        </property>
+         <property name="isAutoClear" type="java.lang.Integer">
+            <column name="is_auto_clear" />
+        </property>
+        <property name="orderIndex" type="java.lang.Integer">
+            <column name="order_index" />
+        </property>
+        <property name="ts" type="java.util.Date">
+            <column name="ts" />
+        </property>
+	</class>
+</hibernate-mapping>

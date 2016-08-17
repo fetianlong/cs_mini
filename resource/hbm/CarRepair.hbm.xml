@@ -1,0 +1,79 @@
+<!DOCTYPE hibernate-mapping PUBLIC 
+    "-//Hibernate/Hibernate Mapping DTD 3.0//EN"
+    "http://hibernate.sourceforge.net/hibernate-mapping-3.0.dtd">
+ 
+<hibernate-mapping>
+	<class name="com.dearho.cs.carservice.pojo.CarRepair" table="c_vehicle_repair">
+		<id name="id" type="string">
+            <column name="id" length="32" />
+            <generator class="uuid.hex" />
+        </id>
+        <property name="code" type="string">
+        	<column name="code"  />
+        </property>
+        <property name="city" type="string">
+        	<column name="city"  />
+        </property>
+        <property name="orderId" type="string">
+        	<column name="order_id"  />
+        </property>
+        <property name="memberId" type="string">
+        	<column name="send_repair_mid"  />
+        </property>
+        <property name="memberName" type="string">
+        	<column name="member_Name"  />
+        </property>
+        <property name="carId" type="string">
+        	<column name="car_id"  />
+        </property>
+        
+        <property name="repairAddress" type="string">
+        	<column name="repair_Address"  />
+        </property>
+        <property name="sendTime" type="java.util.Date">
+        	<column name="send_Time"  />
+        </property>
+        <property name="outTime" type="java.util.Date">
+        	<column name="out_Time"  />
+        </property>
+        <property name="repairOrderCode" type="string">
+        	<column name="repair_Order_Code"  />
+        </property>
+        <property name="repairDesc" type="string">
+        	<column name="repair_Desc"  />
+        </property>
+        <property name="repairFee" type="double">
+        	<column name="repair_Fee"  />
+        </property>
+        <property name="isSettled" type="integer">
+        	<column name="is_Settled"  />
+        </property>
+        <property name="settleTime" type="java.util.Date">
+        	<column name="settle_Time"  />
+        </property>
+        <property name="status" type="string">
+        	<column name="status"  />
+        </property>
+        
+        
+        <property name="remark" type="string">
+        	<column name="remark"  />
+        </property>
+        <property name="isDiscard" type="integer">
+        	<column name="is_discard"  />
+        </property>
+        <property name="creatorId" type="string">
+        	<column name="creator_id" length="32" />
+        </property>
+        <property name="createTime" type="java.util.Date">
+        	<column name="create_time" />
+        </property>
+        <property name="updateTime" type="java.util.Date">
+        	<column name="update_time" />
+        </property>
+        <property name="ts" type="java.util.Date">
+        	<column name="ts" />
+        </property>
+        
+	</class>
+</hibernate-mapping>

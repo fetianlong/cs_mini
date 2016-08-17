@@ -1,0 +1,21 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<beans xmlns="http://www.springframework.org/schema/beans"
+	xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+	xsi:schemaLocation="http://www.springframework.org/schema/beans http://www.springframework.org/schema/beans/spring-beans-2.0.xsd">
+	
+	<!-- 一键投诉 -->
+	<bean id="feedbackAction" class="com.dearho.cs.advice.action.FeedbackAction" scope="prototype">
+		<property name="feedbackService" ref="feedbackService"  />
+	</bean>
+	<!-- 催我建点 -->
+	<bean id="hotDotAction" class="com.dearho.cs.advice.action.HotDotAction" scope="prototype">
+		<property name="hotDotService" ref="hotDotService"  />
+	</bean>
+	
+	<!-- 系统通知-->
+	<bean id="informAction" class="com.dearho.cs.advice.action.InformAction" scope="prototype">
+		<property name="informService" ref="informService"  />
+		<property name="subscriberService" ref="subscriberService"  />
+		<property name="informRecordService" ref="informRecordService"  />
+	</bean>
+</beans>

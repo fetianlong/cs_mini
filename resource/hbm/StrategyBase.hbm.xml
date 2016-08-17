@@ -1,0 +1,62 @@
+<!DOCTYPE hibernate-mapping PUBLIC 
+    "-//Hibernate/Hibernate Mapping DTD 3.0//EN"
+    "http://hibernate.sourceforge.net/hibernate-mapping-3.0.dtd">
+<hibernate-mapping>
+	<class name="com.dearho.cs.feestrategy.pojo.StrategyBase" table="sty_strategy_base">
+		<id name="id" type="string">
+            <column name="id" length="32" />
+            <generator class="uuid.hex" />
+        </id>
+        <property name="name" type="string">
+            <column name="name" />
+        </property>
+        <property name="type" type="string">
+            <column name="type" />
+        </property>
+        <property name="basePrice" type="java.math.BigDecimal">
+            <column name="base_Price" />
+        </property>
+        <property name="kmPrice" type="java.math.BigDecimal">
+            <column name="km_Price" />
+        </property>
+        <property name="timelyFeeUnit" type="string">
+            <column name="timely_Fee_Unit" />
+        </property>
+        <property name="timelyFeeLong" type="integer">
+            <column name="timely_Fee_Long" />
+        </property>
+        <property name="timeBeforeGet" type="integer">
+            <column name="time_Before_Get" />
+        </property>
+        <property name="minConsumption" type="java.math.BigDecimal">
+            <column name="min_Consumption" />
+        </property>
+        <property name="maxConsumption" type="java.math.BigDecimal">
+            <column name="max_Consumption" />
+        </property>
+        <property name="overtimePenalty" type="java.math.BigDecimal">
+            <column name="overtime_Penalty" />
+        </property>
+        
+        <property name="isUsed" type="integer">
+            <column name="is_used" />
+        </property>
+        
+        <property name="isPrepaidPay" type="integer">
+            <column name="is_Prepaid_Pay" />
+        </property>
+        
+        
+        <property name="createTime" type="java.util.Date">
+            <column name="create_Time" />
+        </property>
+        <property name="creator" type="string">
+            <column name="creator" />
+        </property>
+        <property name="updateTime" type="java.util.Date">
+            <column name="update_Time" />
+        </property>
+        
+	</class>
+	
+</hibernate-mapping>

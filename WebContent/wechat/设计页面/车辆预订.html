@@ -1,0 +1,153 @@
+<!--公共头部开始-->
+<!doctype html>
+<html>
+<head>
+<meta charset="utf-8">
+<link rel=stylesheet href="../common/js/uikit/css/uikit.almost-flat.min.css">
+<script src="../common/js/jquery-1.12.1.min.js"></script>
+<script src="../common/js/uikit/js/uikit.min.js"></script>
+<script src="../common/js/main.js"></script>
+<link rel=stylesheet href="../common/css/main.css">
+<meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1, user-scalable=no">
+<meta http-equiv="X-UA-Compatible" content="IE=edge">
+<meta name="renderer" content="webkit">
+<!--公共头部结束-->
+
+<title>车辆预订</title>
+<link rel=stylesheet href="../common/css/bookcar.css">
+<script>
+$(function(){
+	$(".MainContent .MapBlock .Map").height($(window).height());
+	$(window).resize(function(){
+	   $(".MainContent .MapBlock .Map").height($(window).height());
+	});
+	<!--默认显示地图页面，隐藏网点列表页面-->
+	$(".WangdianListBlock").addClass("uk-hidden");
+	<!--地图、列表切换-->
+	$(".ChangeMapButton").click(function(e) {
+        if ($(".WangdianListBlock").hasClass("uk-hidden")){
+			$(".WangdianListBlock").removeClass("uk-hidden");
+			$(".MapBlock").addClass("uk-hidden");
+			$(".WechatHeader").hide();
+		} else {
+			$(".WangdianListBlock").addClass("uk-hidden");
+			$(".MapBlock").removeClass("uk-hidden");
+			$(".WechatHeader").show();
+		};
+		return false;
+    });
+	
+	<!--点击【立即用车】弹出推荐车辆示意代码，请按需修改-->
+	$(".MapBlock .UseCarButton").click(function(e) {
+        $(".TuijianBlock").removeClass("uk-hidden");
+		$(".MapBottomButton").addClass("uk-hidden");
+    });
+	
+	<!--关闭推荐车辆框-->
+	$(".TuijianBlock").click(function(e) {
+		str = e.target.className;
+		if (str.indexOf("TuijianBlock") > 0){
+			$(".TuijianBlock").addClass("uk-hidden");
+			$(".MapBottomButton").removeClass("uk-hidden");
+		};
+    });
+});
+</script>
+
+</head>
+
+<body>
+<!--微信客户端顶部两个角按钮，不是每个页面都有，我们认为一级页面有，二级页面不必有。提成公共代码。-->
+<div class="uk-container uk-container-center uk-text-center WechatHeader">
+	<div class="uk-grid uk-grid-collapse">
+        <div class="uk-width-1-6">
+            <a class="HeaderButton uk-float-left" href="#"><i class="uk-icon-user"></i></a>
+        </div>
+        <div class="uk-width-4-6">
+            <p class="PageCaption"></p>
+        </div>
+        <div class="uk-width-1-6">
+            <a class="HeaderButton uk-float-right" href="#"><i class="uk-icon-phone"></i></a>
+        </div>
+    </div>
+</div>
+
+<div class="MainContent">
+	<!--地图显示-->
+	<div class="MapBlock">
+    	<!--地图-->
+    	<div class="Map"></div>
+        <div class="uk-container uk-container-center MapBottomButton">
+        	<div class="uk-grid">
+                <div class="uk-width-2-3 uk-container-center">
+                    <button class="uk-button uk-button-large uk-width-1-1 UseCarButton" type="button">立即用车</button>
+                </div>
+            </div>
+        </div>
+        <!--推荐车辆-->
+        <div class="uk-height-1-1 uk-vertical-align TuijianBlock uk-hidden">
+        	<!--<div class="CloseBlock"></div>-->
+        	<div class="uk-vertical-align-middle TuijianWindow uk-animation-slide-bottom">
+            	<img class="uk-align-center CarImg" src="../common/images/bookcar/defaultcar.jpg">
+                <h4 class="CarName">北汽EV200</h4>
+                <p class="Position"><i class="uk-icon-circle"></i>力宝广场停车场</p>
+                <p><span class="Dianliang">电量：<span>50</span>%</span><span class="Price">10元/天</span></p>
+                <div class="uk-container uk-container-center UseButtonBlock">
+                	<div class="uk-grid uk-grid-small">
+                        <div class="uk-width-1-2">
+                            <button class="uk-button uk-button-large uk-width-1-1 UseButton" type="button">确认用车</button>
+                        </div>
+                        <div class="uk-width-1-2">
+                            <button class="uk-button uk-button-large uk-width-1-1 UseButton" type="button">更多车辆</button>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <button class="uk-button uk-button-primary ChangeMapButton" type="button"><i class="uk-icon-exchange"></i></button>
+    </div>
+    
+    <!--网点列表显示-->
+    <div class="uk-container uk-container-center WangdianListBlock uk-hidden">
+    	<ul class="uk-list uk-list-space ListUl">
+        	<li>
+            	<div class="uk-grid uk-grid-collapse">
+                	<div class="uk-width-3-4">
+                    	<h4 class="Name uk-margin-left uk-margin-top">京沪工业园胜普张经网点</h4>
+                        <p class="Address uk-margin-left uk-margin-bottom"><span class="Distance"><i class="uk-icon-map-marker"></i>10km</span>苏州市相城区福临路</p>
+                    </div>
+                    <div class="uk-width-1-4">
+                    	<button class="uk-button uk-width-1-1 uk-button-primary ChakanButton">查看<br><span>5辆</span></button>
+                    </div>
+                </div>
+            </li>
+            
+            <!--无脑死循环li即可-->
+            <li>
+            	<div class="uk-grid uk-grid-collapse">
+                	<div class="uk-width-3-4">
+                    	<h4 class="Name uk-margin-left uk-margin-top">京沪工业园胜普张经网点</h4>
+                        <p class="Address uk-margin-left uk-margin-bottom"><span class="Distance"><i class="uk-icon-map-marker"></i>10km</span>苏州市相城区福临路</p>
+                    </div>
+                    <div class="uk-width-1-4">
+                    	<button class="uk-button uk-width-1-1 uk-button-primary ChakanButton">查看<br><span>5辆</span></button>
+                    </div>
+                </div>
+            </li>
+            <li>
+            	<div class="uk-grid uk-grid-collapse">
+                	<div class="uk-width-3-4">
+                    	<h4 class="Name uk-margin-left uk-margin-top">京沪工业园胜普张经网点</h4>
+                        <p class="Address uk-margin-left uk-margin-bottom"><span class="Distance"><i class="uk-icon-map-marker"></i>10km</span>苏州市相城区福临路</p>
+                    </div>
+                    <div class="uk-width-1-4">
+                    	<button class="uk-button uk-width-1-1 uk-button-primary ChakanButton">查看<br><span>5辆</span></button>
+                    </div>
+                </div>
+            </li>
+        </ul>
+        <button class="uk-button uk-button-primary ChangeMapButton" type="button"><i class="uk-icon-exchange"></i></button>
+    </div>
+</div>
+</body>
+</html>

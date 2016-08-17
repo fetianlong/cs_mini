@@ -1,0 +1,45 @@
+@charset "utf-8";
+/* CSS Document */
+
+.MainContent {
+	padding: 50px 0;
+	background: #f2f1f1;
+}
+
+.MainContent>.container {
+	background: #FFF;
+	padding-top: 50px;
+	padding-bottom: 50px;
+}
+
+.MainContent .TitleImg {
+	margin-bottom: 50px;
+}
+
+.MainContent h1 {
+	color: #4bd3a5;
+}
+
+.MainContent h1 img {
+	margin-right: 5px;
+}
+
+.MainContent .Fenge {
+	margin: 40px auto;
+}
+
+.MainContent p {
+	font-size: 14px;
+	color: #fb3636;
+}
+
+.MainContent .EnterButton {
+	background: #4ad3a5;
+	color: #FFF;
+	border-radius: 0;
+	margin: 30px auto;
+}
+
+.MainContent .EnterButton:hover {
+	color: #FFF;
+}

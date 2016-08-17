@@ -1,0 +1,202 @@
+@charset "utf-8";
+/* CSS Document */
+
+.MainContent .SinglePageCaption span {
+	font-size: 14px;
+}
+
+.MainContent .SinglePageCaption .btn .fa {
+	margin-left: 5px;
+}
+
+.BankImg {
+	height: 36px;
+	background: url("../images/cardprove/bank.png") no-repeat ;
+	border: solid 1px #d5d4d4;
+}
+
+.ICBC {
+	background-position: 0px -576px;
+}
+
+.CCB {
+  background-position: 0px -144px;
+}
+
+.ABC {
+  background-position: 0px -0px;
+}
+
+.PSBC {
+  background-position: 0px -684px;
+}
+
+.COMM {
+  background-position: 0px -396px;
+}
+
+.CMB {
+  background-position: 0px -324px;
+}
+
+.BOC {
+  background-position: 0px -108px;
+}
+
+.CEB {
+  background-position: 0px -216px;
+}
+
+.CITIC {
+  background-position: 0px -288px;
+}
+
+.SPDB {
+  background-position: 0px -828px;
+}
+
+.CMBC {
+  background-position: 0px -360px;
+}
+
+.CIB {
+  background-position: 0px -252px;
+}
+
+.SPABANK {
+  background-position: 0px -792px;
+}
+
+.GDB {
+  background-position: 0px -504px;
+}
+
+.SHRCB {
+  background-position: 0px -756px;
+}
+
+.SHBANK {
+  background-position: 0px -720px;
+}
+
+.NBBANK {
+  background-position: 0px -612px;
+}
+
+.HZCB {
+  background-position: 0px -540px;
+}
+
+.BJBANK {
+  background-position: 0px -36px;
+}
+
+.BJRCB {
+  background-position: 0px -72px;
+}
+
+.FDB {
+  background-position: 0px -468px;
+}
+
+.WZCB {
+  background-position: 0px -864px;
+}
+
+.NJCB {
+  background-position: 0px -648px;
+}
+
+.CSRCB {
+  background-position: 0px -432px;
+}
+
+.CDCB {
+  background-position: 0px -180px;
+}
+
+.ZJNX {
+  background-position: 0px -900px;
+}
+
+.HXB {
+  background-position: 0px -936px;
+}
+
+#BankSelect .modal-body>.row {
+	margin-bottom: 10px;
+}
+
+.MainContent .YanzhengButton {
+	margin: 30px auto;
+}
+
+.MainContent .ChangeBank {
+	color: #4bd3a5;
+	text-decoration: none;
+}
+
+.MainContent .checkbox a {
+	color: #4bd3a5;
+	text-decoration: none;
+}
+
+.TipsBlock {
+	color: #807d7d;
+}
+
+.TipsBlock .Border {
+	border: solid 2px #d5d4d4;
+	border-radius: 5px;
+	padding: 15px;
+}
+
+.TipsBlock p {
+	margin-bottom: 0;
+	font-size: 18px;
+}
+
+.TipsBlock p .fa {
+	margin-right: 5px;
+}
+
+.TipsBlock h3 {
+	margin-top: 0;
+}
+
+.TipsBlock>.row {
+	margin-bottom: 20px;
+}
+
+.SelectBankBlock .Border {
+	border: solid 1px #d5d4d4;
+	padding: 20px;
+	border-radius: 10px;
+}
+
+.SelectBankBlock .Border h4 {
+	color: #a1a0a0;
+	margin-top: 0;
+	margin-bottom: 20px;
+}
+
+.SelectBankBlock .form-horizontal input[type="radio"] {
+	margin-top: 23px;
+}
+
+.SelectBankBlock .form-horizontal img {
+	border: solid 1px #d5d4d4;
+	border-radius: 5px;
+}
+
+.SelectBankBlock .form-horizontal .SubmitButton {
+	margin-top: 40px;
+}
+
+.MainContent .form-horizontal .help-block {
+	color: #F00;
+}
+
+.MainContent .form-horizontal .help-block .fa {
+	margin-right: 3px;
+}

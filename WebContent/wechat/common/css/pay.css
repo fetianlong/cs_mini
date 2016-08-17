@@ -1,0 +1,24 @@
+@charset "utf-8";
+/* CSS Document */
+
+.Cost {
+	color: #64cfe9;
+	margin-top: 50px;
+	font-family: Arial, Helvetica, sans-serif;
+	margin-bottom: 20px;
+}
+
+.Cost i {
+	font-size: 16px;
+	margin-right: 3px;
+	font-weight: normal;
+}
+
+.SelectBlock .SelectButton {
+	background: #FFF;
+	color: #64cfe9;
+	border-color: #64cfe9;
+	cursor: default;
+	margin-top: 20px;
+	cursor: pointer;
+}

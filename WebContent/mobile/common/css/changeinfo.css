@@ -1,0 +1,47 @@
+@charset "utf-8";
+/* CSS Document */
+
+body {
+	margin-top: 20px;
+}
+
+.MenuPage {
+	background: #d9d9d9;
+}
+
+.ChangeUl {
+	margin: 0;
+	padding: 0;
+	list-style: none;
+}
+
+.ChangeUl li {
+	list-style: none;
+	margin-bottom: 10px;
+}
+
+.ChangeUl li a {
+	display: block;
+	text-align: left;
+	background: #FFF;
+	text-decoration: none;
+	color: #383838;
+}
+
+.ChangeUl li a:hover {
+	color: #383838;
+}
+
+.ChangeUl li a .fa {
+	color: #d9d9d9;
+}
+
+.help-block {
+	color: #F00;
+}
+
+.PlusButton {
+	background: #414a59;
+	border-color: #414a59;
+	cursor: pointer;
+}

@@ -1,0 +1,27 @@
+<!DOCTYPE hibernate-mapping PUBLIC 
+    "-//Hibernate/Hibernate Mapping DTD 3.0//EN"
+    "http://hibernate.sourceforge.net/hibernate-mapping-3.0.dtd">
+<hibernate-mapping>
+	<class name="com.dearho.cs.sys.pojo.Group" table="s_group">
+		<id name="groupId" type="java.lang.String">
+            <column name="group_id" length="32" />
+            <generator class="uuid.hex" />
+        </id>
+        <property name="groupName" type="java.lang.String">
+            <column name="group_name" length="255"  />
+        </property>
+        <property name="groupRemark" type="java.lang.String">
+            <column name="group_remark" length="510"  />
+        </property>
+        <property name="groupCreatorId" type="java.lang.String">
+            <column name="group_creator_id" length="32" />
+        </property>
+     
+        <property name="groupCreateTime" type="java.util.Date">
+            <column name="group_create_time"  />
+        </property>
+        <property name="ts" type="java.util.Date">
+       		<column name="ts"/>
+       	</property>
+	</class>
+</hibernate-mapping>

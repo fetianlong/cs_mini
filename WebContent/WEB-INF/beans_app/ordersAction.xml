@@ -1,0 +1,23 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<beans xmlns="http://www.springframework.org/schema/beans"
+	xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+	xsi:schemaLocation="http://www.springframework.org/schema/beans http://www.springframework.org/schema/beans/spring-beans-2.0.xsd">
+	
+	<!-- 订单 -->
+	
+	<bean id="ordersAppInterfaceAction" class="com.dearho.cs.appinterface.orders.action.OrdersAppInterfaceAction" scope="prototype">
+		<property name="branchDotService" ref="branchDotService" />
+		<property name="carService" ref="carService" />
+		<property name="ordersBillService" ref="ordersBillService" />
+		<property name="ordersService" ref="ordersService" />
+		<property name="subscriberService" ref="subscriberService" />
+		<property name="carVehicleModelService" ref="carVehicleModelService" />
+		<property name="ordersDetailService" ref="ordersDetailService" />
+		<property name="strategyBaseService" ref="strategyBaseService" />
+		<property name="orderPayService" ref="orderPayService"/>
+		<property name="wechatUserInfoService" ref="wechatUserInfoService"/>
+		<property name="accountService" ref="accountService"/>
+		<property name="carRealtimeStateService" ref="carRealtimeStateService"/>
+	</bean>
+	
+</beans>

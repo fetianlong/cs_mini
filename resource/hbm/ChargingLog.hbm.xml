@@ -1,0 +1,35 @@
+<!DOCTYPE hibernate-mapping PUBLIC 
+    "-//Hibernate/Hibernate Mapping DTD 3.0//EN"
+    "http://hibernate.sourceforge.net/hibernate-mapping-3.0.dtd">
+ 
+<hibernate-mapping>
+	<class name="com.dearho.cs.orders.pojo.ChargingLog" table="c_charging_log">
+		<id name="id" type="string">
+            <column name="id" length="32" />
+            <generator class="uuid.hex" />
+        </id>
+        <property name="teldPileCode" type="string">
+        	<column name="teld_Pile_Code"  />
+        </property>
+         <property name="subscriberId" type="string">
+        	<column name="subscriber_id"  />
+        </property>
+        <property name="ordersId" type="string">
+        	<column name="orders_id"  />
+        </property>
+        <property name="startTime" type="java.util.Date">
+        	<column name="start_time"  />
+        </property>
+        <property name="endTime" type="java.util.Date">
+        	<column name="end_time"  />
+        </property>
+        <property name="elec" type="double">
+        	<column name="elec"  />
+        </property>
+        <property name="fee" type="double">
+        	<column name="fee"  />
+        </property>
+        
+       
+	</class>
+</hibernate-mapping>

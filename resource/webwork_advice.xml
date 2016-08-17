@@ -1,0 +1,102 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE xwork PUBLIC "-//Apache Struts//XWork 1.1.1//EN" 
+"http://struts.apache.org/dtds/xwork-1.1.1.dtd">
+<xwork>
+
+		<!-- 一键投诉 -->
+ <package name="feedback" extends="webwork-default" namespace="/feedback">
+		<default-interceptor-ref name="defaultStack"/>
+		
+		<global-results>
+			<result name="timeout" type="dispatcher">
+                <param name="location">error.jsp</param>
+            </result>
+            <result name="illegal" type="dispatcher">
+                <param name="location">error.jsp</param>
+            </result>
+            <result name="error" type="dispatcher">
+                <param name="location">error.jsp</param>
+            </result>
+            <result name="illegal" type="dispatcher">
+                <param name="location">/resultxml.jsp</param>
+            </result>
+		</global-results>
+	
+	
+	<!-- 一键投诉 action  -->
+		<action name="getFeedbackById" class="feedbackAction" method="getFeedbackById">
+			<result name="success" type="dispatcher">
+                <param name="location">/pages/advice/feedback/feedbackget.jsp</param>
+            </result>
+			<interceptor-ref name="defaultStack"/>
+		</action>
+		<action name="updateFeedbackState" class="feedbackAction" method="updateFeedbackState">
+			<result name="success" type="dispatcher">
+                <param name="location">/resultjson.jsp</param>
+            </result>
+            <interceptor-ref name="defaultStack" />
+		</action>
+		<action name="queryFeedbacks" class="feedbackAction">
+			<result name="success" type="dispatcher">
+                <param name="location">/pages/advice/feedback/feedbacklist.jsp</param>
+            </result>
+			<interceptor-ref name="defaultStack"/>
+		</action>
+		<!-- 催我建点 -->
+		<action name="hotDot" class="hotDotAction">
+			<result name="success" type="dispatcher">
+                <param name="location">/pages/advice/hotDot.jsp</param>
+            </result>
+		</action>
+		
+		<!-- 系统通知 action  start -->
+			<!-- 条件查询列表 -->
+			<action name="queryInforms" class="informAction">
+				<result name="success" type="dispatcher">
+	                <param name="location">/pages/advice/inform/informlist.jsp</param>
+	            </result>
+				<interceptor-ref name="defaultStack"/>
+			</action>
+			<!--  通过id查询-->
+			<action name="getInformById" class="informAction" method="getInformById">
+				<result name="success" type="dispatcher">
+	                <param name="location">/pages/advice/inform/informget.jsp</param>
+	            </result>
+				<interceptor-ref name="defaultStack"/>
+			</action>
+			<!--添加  -->
+			<action name="addInform" class="informAction" method="addInform">
+				<result name="success" type="dispatcher">
+	                <param name="location">/resultjson.jsp</param>
+	            </result>
+	            <interceptor-ref name="defaultStack" />
+			</action>
+			<!-- 删除 -->
+			<action name="delInformById" class="informAction" method="delInformById">
+				<result name="success" type="dispatcher">
+	                <param name="location">/resultjson.jsp</param>
+	            </result>
+	            <interceptor-ref name="defaultStack" />
+			</action>
+			<!-- 批量删除 -->
+			<action name="delInformByIds" class="informAction" method="delInformByIds">
+				<result name="success" type="dispatcher">
+	                <param name="location">/resultjson.jsp</param>
+	            </result>
+	            <interceptor-ref name="defaultStack" />
+			</action>
+			
+			<!-- 更新-->
+			<action name="updateInform" class="informAction" method="updateInform">
+				<result name="success" type="dispatcher">
+	                <param name="location">/resultjson.jsp</param>
+	            </result>
+	            <interceptor-ref name="defaultStack" />
+			</action>
+		<!-- 系统通知 end -->
+		
+	</package>	
+		<!--  一键投诉 end -->
+		
+		
+</xwork>

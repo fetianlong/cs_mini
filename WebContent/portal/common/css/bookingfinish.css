@@ -1,0 +1,72 @@
+@charset "utf-8";
+/* CSS Document */
+
+.MainContent {
+	padding: 150px 0;
+	background: #f2f1f1;
+}
+
+.MainContent>.container {
+	background: #FFF;
+	padding-top: 0;
+	padding-bottom: 50px;
+	position: relative;
+	border-top: solid 3px #4bd3a5;
+}
+
+.CarInfoBlock {
+	margin-top: 50px;
+	padding-bottom: 50px;
+	border-bottom: dotted 1px #85debe;
+	margin-bottom: 100px;
+}
+
+.CarInfoBlock .Border {
+	border: solid 1px #b1b1b1;
+	padding: 10px;
+	background: #FFF;
+}
+
+.CarInfoBlock .RightBlock h1 {
+	color: #4dd3a5;
+	margin-top: 0;
+	margin-bottom: 20px;
+}
+
+.CarInfoBlock .RightBlock>.row {
+	font-size: 18px;
+	line-height: 30px;
+}
+
+.CarInfoBlock .RightBlock>.row>div:first-of-type {
+	color: #757575;
+}
+
+.CarInfoBlock .RightBlock>.row>div:last-of-type {
+	color: #a4a4a3;
+}
+
+.CarInfoBlock .RightBlock>.row>div .fa {
+	margin-right: 5px;
+}
+
+.TipsBlock h3 {
+	color: #757575;
+	margin-bottom: 100px;
+}
+
+.TipsBlock h3 .fa {
+	color: #4dd3a5;
+	margin-right: 5px;
+}
+
+.SubmitButton {
+	background: #4bd3a5;
+	color: #FFF !important;
+	border-radius: 0;
+}
+
+.SubmitButton:hover {
+	background: #4bd3a5;
+	color: #FFF;
+}

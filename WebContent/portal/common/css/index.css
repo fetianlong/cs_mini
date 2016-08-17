@@ -1,0 +1,339 @@
+@charset "utf-8";
+/* CSS Document */
+
+body {
+	overflow-x: hidden;
+}
+
+.Section1 {
+	background: url(../images/index/BigBG.jpg) no-repeat top center;
+	height: 472px;
+}
+
+.Section1 .TopBlock {
+	position: relative;
+	height: 472px;
+	overflow: hidden;
+}
+
+.Section1 .TopBlock .HandImg {
+	position: absolute;
+	right: -20px;
+	bottom: -70px;
+	transform-origin: bottom right;
+	animation: shakehand 5s linear infinite;
+	-webkit-animation: shakehand 5s linear infinite;
+}
+
+@keyframes shakehand {
+0% {
+	transform: rotate(0deg);	
+}
+
+5% {
+	transform: rotate(5deg);	
+}
+
+10% {
+	transform: rotate(0deg);	
+}
+
+15% {
+	transform: rotate(5deg);	
+}
+
+20% {
+	transform: rotate(0deg);	
+}
+}
+
+@-webkit-keyframes shakehand {
+0% {
+	transform: rotate(0deg);	
+}
+
+5% {
+	transform: rotate(5deg);	
+}
+
+10% {
+	transform: rotate(0deg);	
+}
+
+15% {
+	transform: rotate(5deg);	
+}
+
+20% {
+	transform: rotate(0deg);	
+}
+}
+
+.Section1 .CarRun {
+	position: absolute;
+	width: 563px;
+	height: 246px;
+	top: 250px;
+	animation: CarRun 10s cubic-bezier(0, 1, 1, 0) infinite;
+	-webkit-animation: CarRun 10s cubic-bezier(0, 1, 1, 0) infinite;
+}
+
+.Section1 .CarRun .CarLun {
+	position: absolute;
+	bottom: 26px;
+	animation: LunRun 10s cubic-bezier(0, 1, 1, 0) infinite;
+	-webkit-animation: LunRun 10s cubic-bezier(0, 1, 1, 0) infinite;
+}
+
+.Section1 .CarRun .CarLun.CarLun1 {
+	left: 67px;
+}
+
+.Section1 .CarRun .CarLun.CarLun2 {
+	left: 427px;
+}
+
+@keyframes CarRun {
+0% {
+	right: -120%;
+}
+
+100% {
+	right: 180%;
+}
+}
+
+@-webkit-keyframes CarRun {
+0% {
+	right: -120%;
+}
+
+100% {
+	right: 180%;
+}
+}
+
+@keyframes LunRun {
+	0% {transform: rotate(5000deg);}
+	100% {transform: rotate(-5000deg);}
+}
+
+@-webkit-keyframes LunRun {
+	0% {transform: rotate(5000deg);}
+	100% {transform: rotate(-5000deg);}
+}
+
+.Section1 .Topic {
+	margin-bottom: 50px;
+}
+
+.Section1 .Topic h1 {
+	font-size: 60px;
+	color: #FFF;
+	font-weight: bold;
+	padding-top: 60px;
+}
+
+.Section1 .Topic p {
+	font-weight: bold;
+}
+
+.Section1 .TiyanBlock {
+	background: rgba(255,255,255,0.8);
+	border-radius: 20px;
+	padding: 30px;
+}
+
+.Section1 .TiyanBlock select {
+	margin-bottom: 15px;
+}
+
+.Section1 .TiyanBlock .btn .fa {
+	margin-left: 5px;
+}
+
+.Section2 {
+	padding-bottom: 50px;
+}
+
+.Section2 .container {
+	position: relative;
+}
+
+.ArrowImg {
+	position: absolute;
+	top: 0;
+	left: 30%;
+}
+
+.Section2 h1 {
+	margin-top: 50px;
+}
+
+.Section2 h4 {
+	margin-bottom: 40px;
+}
+
+.Section2 .LiuchengBlock {
+	margin-bottom: 30px;
+}
+
+.Section2 .LiuchengBlock h3 {
+	margin-bottom: 20px;
+	margin-top: 30px;
+}
+
+.Section2 .LiuchengBlock h3 span {
+	color: #4bd3a5;
+	margin-right: 5px;
+}
+
+.Section2 .LiuchengBlock p {
+	font-size: 16px;
+	line-height: 24px;
+	padding: 0 20px;
+}
+
+.Section2 .LiuchengBlock p a {
+	color: #4bd3a5;
+	text-decoration: none;
+}
+
+.Section2 .LiuchengBlock .fa {
+	position: absolute;
+	right: 0;
+	top: 15%;
+	color: #4bd3a5;
+}
+
+.Section2 .LijiZhuceButton {
+	background: #4bd3a5;
+	color: #FFF;
+}
+
+.Section3 {
+	background: #eeeeee;
+	padding-bottom: 50px;
+}
+
+.Section3 .container {
+	position: relative;
+}
+
+.Section3 h1 {
+	margin-top: 50px;
+}
+
+.Section3 h4 {
+	margin-bottom: 40px;
+}
+
+.Section3 .JiageBlock {
+	margin-bottom: 30px;
+}
+
+.Section3 .JiageBlock h4 {
+	margin-bottom: 10px;
+}
+
+.Section3 .JiageBlock p {
+	font-size: 18px;
+}
+
+.Section3 .JiageBlock p span {
+	color: #f22227;
+	font-weight: bold;
+	margin-right: 2px;
+	font-size: 26px;
+}
+
+.Section3 .LiaojieButton {
+	background: #ff6d3b;
+	color: #FFF;
+}
+
+.Section4 {
+	background: #FFF;
+	padding-bottom: 50px;
+}
+
+.Section4 h1 {
+	margin-top: 50px;
+}
+
+.Section4 .container {
+	position: relative;
+}
+
+.Section4 .MapBlock {
+	margin-top: 20px;
+	margin-bottom: 50px;
+	height: 500px;
+}
+
+.Section4 .MapBlock .xinxi {
+	float: right;
+	color: #4bd3a5;
+	text-decoration: none;
+	cursor: pointer;
+}
+
+.Section4 .MapBlock .aa {
+	display: none;
+}
+
+.Section4 .MapControl {
+	position: absolute;
+	width: 190px;
+	top: 120px;
+	left: 90px;
+}
+
+.Section4 .MapControl .list-group-item {
+	cursor: pointer;
+	padding: 5px;
+}
+
+.Section4 .MapControl .list-group-item img {
+	margin-right: 5px;
+}
+
+#wdsl {
+	background: #5cb85c;
+}
+
+#cdzsl {
+	background-color: #d9534f;
+}
+
+#tccsl {
+	background-color: #5bc0de;
+}
+
+.Section5 {
+	background: #eeeeee;
+	padding-bottom: 80px;
+}
+
+.Section5 .container {
+	position: relative;
+}
+
+.Section5 h1 {
+	margin-top: 80px;
+	margin-bottom: 50px;
+}
+
+.Section6 {
+	background: #FFF;
+	padding-bottom: 50px;
+}
+
+.Section6 .container {
+	position: relative;
+}
+
+.Section6 .CarImg {
+	margin-top: 100px;
+	margin-bottom: 100px;
+}

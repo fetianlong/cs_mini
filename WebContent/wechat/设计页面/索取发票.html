@@ -1,0 +1,130 @@
+<!--公共头部开始-->
+<!doctype html>
+<html>
+<head>
+<meta charset="utf-8">
+<link rel=stylesheet href="../common/js/uikit/css/uikit.almost-flat.min.css">
+<script src="../common/js/jquery-1.12.1.min.js"></script>
+<script src="../common/js/uikit/js/uikit.min.js"></script>
+<script src="../common/js/main.js"></script>
+<link rel=stylesheet href="../common/css/main.css">
+<meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1, user-scalable=no">
+<meta http-equiv="X-UA-Compatible" content="IE=edge">
+<meta name="renderer" content="webkit">
+<!--公共头部结束-->
+
+<title>索取发票</title>
+<link rel=stylesheet href="../common/css/fapiao.css">
+<script>
+$(function(){
+	<!--选择某一项-->
+	$(".CarListUl").on("click", "li", function(){
+		if ($(this).hasClass("Selected")){
+			$(this).removeClass("Selected");
+			$(this).find(".RadioButton").removeClass("uk-icon-check-circle");
+			$(this).find(".RadioButton").addClass("uk-icon-circle-o");
+		} else {
+			$(this).addClass("Selected");
+			$(this).find(".RadioButton").addClass("uk-icon-check-circle");
+			$(this).find(".RadioButton").removeClass("uk-icon-circle-o");
+		};
+		SumPrice();
+	});
+	
+	<!--点击全选按钮-->
+	$(".BottomButton .SelectBlock").on("click", function(e) {
+        if ($(this).find("i").hasClass("uk-icon-circle-o")){
+			$(this).find("i").removeClass("uk-icon-circle-o");
+			$(this).find("i").addClass("uk-icon-check-circle");
+			$(".CarListUl li").addClass("Selected");
+			$(".CarListUl li .RadioButton").removeClass("uk-icon-circle-o");
+			$(".CarListUl li .RadioButton").addClass("uk-icon-check-circle");
+		} else {
+			$(this).find("i").addClass("uk-icon-circle-o");
+			$(this).find("i").removeClass("uk-icon-check-circle");
+			$(".CarListUl li").removeClass("Selected");
+			$(".CarListUl li .RadioButton").addClass("uk-icon-circle-o");
+			$(".CarListUl li .RadioButton").removeClass("uk-icon-check-circle");
+		};
+		SumPrice();
+    });
+	
+	function SumPrice(){
+		var SumPrice = 0;
+		$(".CarListUl li").each(function(index, element) {
+			if ($(element).hasClass("Selected")){
+				SumPrice = SumPrice + parseFloat($(element).find(".CarBlock .PriceBlock .Price").html());
+			};
+		});
+		$(".BottomButton .SumBlock .Price").html(SumPrice.toFixed(2));
+	};
+});
+</script>
+
+</head>
+
+<body>
+<div class="uk-container uk-container-center ListBlock">
+    <ul class="uk-list uk-list-space CarListUl">
+    	<!--当已选时，li添加Selected类-->
+        <li>
+        	<div class="uk-grid DingdanBlock">
+            	<div class="uk-width-1-1 DingdanBorder">
+                	<div><i class="RadioButton uk-icon-small uk-icon-circle-o"></i>订单号：000102031020310</div>
+                </div>
+            </div>
+            <div class="uk-grid uk-grid-small CarBlock">
+                <div class="uk-width-1-3 CarImg">
+                    <img class="uk-align-center" src="../common/images/bookcar/defaultcar.jpg">
+                </div>
+                <div class="uk-width-2-3">
+                    <h3 class="CarName">北汽EV200</h3>
+                    <p>取车时间：2016-03-14 15:00</p>
+                    <p>还车时间：2016-03-14 18:00<span class="PriceBlock"><i class="uk-icon-rmb"></i><span class="Price">25.00</span></span></p>
+                </div>
+            </div>
+        </li>
+        
+        <!--以下li为示意，无脑死循环即可-->
+        <li>
+        	<div class="uk-grid DingdanBlock">
+            	<div class="uk-width-1-1 DingdanBorder">
+                	<div><i class="RadioButton uk-icon-small uk-icon-circle-o"></i>订单号：000102031020310</div>
+                </div>
+            </div>
+            <div class="uk-grid uk-grid-small CarBlock">
+                <div class="uk-width-1-3 CarImg">
+                    <img class="uk-align-center" src="../common/images/bookcar/defaultcar.jpg">
+                </div>
+                <div class="uk-width-2-3">
+                    <h3 class="CarName">北汽EV200</h3>
+                    <p>取车时间：2016-03-14 15:00</p>
+                    <p>还车时间：2016-03-14 18:00<span class="PriceBlock"><i class="uk-icon-rmb"></i><span class="Price">25.00</span></span></p>
+                </div>
+            </div>
+        </li>
+        <li>
+        	<div class="uk-grid DingdanBlock">
+            	<div class="uk-width-1-1 DingdanBorder">
+                	<div><i class="RadioButton uk-icon-small uk-icon-circle-o"></i>订单号：000102031020310</div>
+                </div>
+            </div>
+            <div class="uk-grid uk-grid-small CarBlock">
+                <div class="uk-width-1-3 CarImg">
+                    <img class="uk-align-center" src="../common/images/bookcar/defaultcar.jpg">
+                </div>
+                <div class="uk-width-2-3">
+                    <h3 class="CarName">北汽EV200</h3>
+                    <p>取车时间：2016-03-14 15:00</p>
+                    <p>还车时间：2016-03-14 18:00<span class="PriceBlock"><i class="uk-icon-rmb"></i><span class="Price">25.00</span></span></p>
+                </div>
+            </div>
+        </li>
+    </ul>
+</div>
+<div class="BottomButton BoxShadow">
+    <p><span class="SelectBlock"><i class="uk-icon-circle-o"></i>全选</span><span class="SumBlock">合计：<span class="Price">0.00</span><span class="Unit">元</span></span></p>
+    <button class="uk-button uk-button-primary uk-button-large SubmitButton">索取发票</button>
+</div>
+</body>
+</html>

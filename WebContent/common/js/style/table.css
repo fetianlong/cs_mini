@@ -1,0 +1,35 @@
+body { font-family:"宋体",arial;margin:0; padding:0; background: #FFF; font-size:12px;	
+	word-wrap: break-word; 
+	word-break : break-all; 
+}
+div,form,img,ul,ol,li,dl,dt,dd {margin: 0; padding: 0; border: 0;	}
+.clear { clear: both; font-size: 0px; visibility: hidden; width: 0px; height: 0px
+}
+#layoutTable{margin-left:5px;}
+/*主版列表*/
+#treeList{border-top:1px solid #d5dec9;  border-right:1px solid #d5dec9; border-bottom:1px solid #d5dec9;}
+#treeList dt{ height:19px; line-height:19px; padding-left:10px;float:left;}
+#treeList dd{ height:18px; line-height:18px;  }
+#treeList .dd1{background: url(images/t2.gif) no-repeat left center; padding-left:28px; }
+#treeList .dd2{background: url(images/t1.gif) no-repeat left center; padding-left:40px;}
+#treeList dl{overflow:hidden; margin-left:2px;}
+#treeList .off{background:url(images/t3.gif) no-repeat left center;cursor:pointer;}
+#treeList .on{background: url(images/t4.gif) no-repeat left center;cursor:pointer;}
+#treeList a, #treeList a:visited, #treeList a:hover {
+	color:#535353;
+	text-decoration:none;
+}
+
+.closeDD{display:none;}
+.openDD{display:block;}
+.closeDD1{display:none;}
+.openDD1{display:block;}
+
+
+#treeList .dd1On a, #treeList .dd1On a:visited, #treeList .dd1On a:hover {color:red;}
+#treeList .dd1On{color:red;}
+
+.showDiv{display:'';}
+.hideDiv{display:none;}
+
+

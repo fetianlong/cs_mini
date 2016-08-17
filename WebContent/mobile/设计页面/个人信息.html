@@ -1,0 +1,94 @@
+<!doctype html>
+<html lang="zh-CN">
+<head>
+<meta charset="utf-8">
+<title>个人信息</title>
+
+<link rel=stylesheet href="../common/js/bootstrap/css/bootstrap.min.css">
+<link rel=stylesheet href="../common/js/fontawesome/css/font-awesome.min.css">
+<link rel=stylesheet href="../common/js/flatui/dist/css/flat-ui.min.css">
+<script src="../common/js/jquery.min.js"></script>
+<script src="../common/js/bootstrap/js/bootstrap.min.js"></script>
+<script src="../common/js/flatui/dist/js/flat-ui.min.js"></script>
+<script src="../common/js/main.js"></script>
+<link rel=stylesheet href="../common/css/main.css">
+<meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1, user-scalable=no">
+<meta http-equiv="X-UA-Compatible" content="IE=edge">
+<meta name="renderer" content="webkit">
+
+
+<link rel=stylesheet href="../common/css/userinfo.css">
+<script>
+$(function(){
+	$(".SexBlock input[type='radio']").radiocheck();
+});
+</script>
+</head>
+
+<body>
+<div class="container-fluid">
+  <div class="row">
+    <div class="col-md-4 col-md-offset-4">
+		<form>
+			<p class="Caption">基本资料</p>
+		  <div class="form-group">
+			<input type="text" class="form-control" id="name" placeholder="用户姓名">
+			<p class="help-block">错误提示</p>
+		  </div>
+		  <div class="form-group">
+			<div class="input-group">
+				<input type="text" class="form-control" id="shenhe" placeholder="未审核通过">
+				<div class="input-group-addon PlusButton">审核状态</div>
+			</div>
+		  </div>
+		  <div class="form-group">
+			<input type="text" class="form-control" id="jiazhao" placeholder="驾驶证号">
+			<p class="help-block">错误提示</p>
+		  </div>
+		  <div class="form-group">
+			<input type="text" class="form-control" id="zhifubao" placeholder="支付宝账号">
+			<p class="help-block">错误提示</p>
+		  </div>
+		  <p class="Caption">个人用车信息</p>
+		  <div class="form-group SexBlock">
+				<label class="radio" for="radio1">
+                  <input type="radio" name="Sex" value="1" id="radio1" data-toggle="radio" checked>
+                  男
+                </label>
+			<label class="radio" for="radio2">
+                  <input type="radio" name="Sex" value="2" id="radio2" data-toggle="radio">
+                  女
+                </label>
+		  </div>
+		  <div class="form-group">
+			<select class="form-control">
+			  <option>常用城市</option>
+			  <option>北京</option>
+			  <option>上海</option>
+			  <option>杭州</option>
+			  <option>济南</option>
+			</select>
+		  </div>
+		  <div class="form-group">
+			<input type="text" class="form-control" id="wangdian" placeholder="最近网点">
+			<p class="help-block">错误提示</p>
+		  </div>
+		  <div class="form-group">
+			<input type="text" class="form-control" id="email" placeholder="邮箱">
+			<p class="help-block">错误提示</p>
+		  </div>
+		  <div class="form-group">
+			<input type="text" class="form-control" id="phone" placeholder="紧急联系人电话">
+			<p class="help-block">错误提示</p>
+		  </div>
+			<div class="col-xs-8 col-xs-offset-2">
+				<button type="submit" class="btn btn-embossed btn-primary btn-block SubmitButton">确定</button>
+			</div>
+		</form>
+		
+	</div>
+  </div>
+</div>
+
+</body>
+</html>

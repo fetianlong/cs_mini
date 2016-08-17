@@ -1,0 +1,46 @@
+<!DOCTYPE hibernate-mapping PUBLIC 
+    "-//Hibernate/Hibernate Mapping DTD 3.0//EN"
+    "http://hibernate.sourceforge.net/hibernate-mapping-3.0.dtd">
+ 
+<hibernate-mapping>
+	<class name="com.dearho.cs.orders.pojo.OrdersComment" table="ORD_COMMENT">
+		<id name="id" type="java.lang.String">
+            <column name="ID" length="32" />
+            <generator class="uuid.hex" />
+        </id>
+        
+        <property name="ordersId" type="java.lang.String">
+        	<column name="orders_id" length="32" />
+        </property>
+        
+        <property name="commentTime" type="java.util.Date">
+        	<column name="comment_time"  />
+        </property>
+        
+        <property name="commentPerson" type="java.lang.String">
+        	<column name="comment_person" length="32"  />
+        </property>
+        
+        <property name="commentContent" type="java.lang.String">
+        	<column name="comment_content" length="1000" />
+        </property>
+        
+        <property name="auditState" type="java.lang.String">
+        	<column name="audit_state" length="32" />
+        </property>
+        
+        <property name="auditor" type="java.lang.String">
+        	<column name="auditor" length="32" />
+        </property>
+
+        <property name="auditTime" type="java.util.Date">
+        	<column name="audit_time"  />
+        </property>
+        
+         <property name="score" type="integer">
+        	<column name="score"  />
+        </property>
+        
+        
+	</class>
+</hibernate-mapping>

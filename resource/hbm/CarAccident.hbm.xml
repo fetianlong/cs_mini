@@ -1,0 +1,137 @@
+<!DOCTYPE hibernate-mapping PUBLIC 
+    "-//Hibernate/Hibernate Mapping DTD 3.0//EN"
+    "http://hibernate.sourceforge.net/hibernate-mapping-3.0.dtd">
+ 
+<hibernate-mapping>
+	<class name="com.dearho.cs.carservice.pojo.CarAccident" table="c_vehicle_accident">
+		<id name="id" type="string">
+            <column name="id" length="32" />
+            <generator class="uuid.hex" />
+        </id>
+        <property name="code" type="string">
+        	<column name="code"  />
+        </property>
+        <property name="city" type="string">
+        	<column name="city"  />
+        </property>
+        <property name="orderId" type="string">
+        	<column name="order_id"  />
+        </property>
+        <property name="memberId" type="string">
+        	<column name="member_id"  />
+        </property>
+        <property name="carId" type="string">
+        	<column name="car_id"  />
+        </property>
+        
+        <property name="accidentType" type="string">
+        	<column name="accident_type"  />
+        </property>
+        <property name="carLose" type="string">
+        	<column name="car_lose"  />
+        </property>
+        <property name="accidentDesc" type="string">
+        	<column name="accident_desc"  />
+        </property>
+        <property name="imgUrls" type="string">
+        	<column name="img_urls"  />
+        </property>
+        <property name="happenTime" type="java.util.Date">
+        	<column name="happen_time"  />
+        </property>
+        <property name="noticeCs" type="integer">
+        	<column name="notice_cs"  />
+        </property>
+        <property name="noticeTime" type="java.util.Date">
+        	<column name="notice_time"  />
+        </property>
+        <property name="acceptFlag" type="string">
+        	<column name="accept_flag"  />
+        </property>
+        <property name="acceptMember" type="string">
+        	<column name="accept_member"  />
+        </property>
+        <property name="handleStatus" type="string">
+        	<column name="handle_status"  />
+        </property>
+        
+        <property name="statusChangePerson1" type="string">
+        	<column name="status_change_person1"  />
+        </property>
+        <property name="statusChangeTime1" type="java.util.Date">
+        	<column name="status_change_time1"  />
+        </property>
+        <property name="statusChangePerson2" type="string">
+        	<column name="status_change_person2"  />
+        </property>
+        <property name="statusChangeTime2" type="java.util.Date">
+        	<column name="status_change_time2"  />
+        </property>
+        <property name="statusChangePerson3" type="string">
+        	<column name="status_change_person3"  />
+        </property>
+        <property name="statusChangeTime3" type="java.util.Date">
+        	<column name="status_change_time3"  />
+        </property>
+        <property name="statusChangePerson4" type="string">
+        	<column name="status_change_person4"  />
+        </property>
+        <property name="statusChangeTime4" type="java.util.Date">
+        	<column name="status_change_time4"  />
+        </property>
+        <property name="remark" type="string">
+        
+        	<column name="remark"  />
+        </property>
+        <property name="isDiscard" type="integer">
+        	<column name="is_discard"  />
+        </property>
+        <property name="creatorId" type="string">
+        	<column name="creator_id" length="32" />
+        </property>
+        <property name="createTime" type="java.util.Date">
+        	<column name="create_time" />
+        </property>
+        <property name="updateTime" type="java.util.Date">
+        	<column name="update_time" />
+        </property>
+        <property name="ts" type="java.util.Date">
+        	<column name="ts" />
+        </property>
+        
+        <property name="photo0" type="string">
+        	<column name="photo0"  />
+        </property>
+        <property name="photo1" type="string">
+        	<column name="photo1"  />
+        </property>
+        <property name="photo2" type="string">
+        	<column name="photo2"  />
+        </property>
+        <property name="photo3" type="string">
+        	<column name="photo3"  />
+        </property>
+        <property name="photo4" type="string">
+        	<column name="photo4"  />
+        </property>
+        <property name="photo5" type="string">
+        	<column name="photo5"  />
+        </property>
+        <property name="photo6" type="string">
+        	<column name="photo6"  />
+        </property>
+        <property name="photo7" type="string">
+        	<column name="photo7"  />
+        </property>
+        <property name="photo8" type="string">
+        	<column name="photo8"  />
+        </property>
+        <property name="photo9" type="string">
+        	<column name="photo9"  />
+        </property>
+        
+        <property name="callCode" type="string">
+        	<column name="call_Code"  />
+        </property>
+	</class>
+</hibernate-mapping>

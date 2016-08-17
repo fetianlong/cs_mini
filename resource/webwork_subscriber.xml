@@ -1,0 +1,165 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE xwork PUBLIC "-//Apache Struts//XWork 1.1.1//EN" 
+"http://struts.apache.org/dtds/xwork-1.1.1.dtd">
+<xwork>
+	<package name="subscriber" extends="webwork-default" namespace="/subscriber">
+		<default-interceptor-ref name="defaultStack"/>
+		
+		<global-results>
+			<result name="timeout" type="dispatcher">
+                <param name="location">/error.jsp</param>
+            </result>
+            <result name="illegal" type="dispatcher">
+                <param name="location">/error.jsp</param>
+            </result>
+            <result name="error" type="dispatcher">
+                <param name="location">/resultjson.jsp</param>
+            </result>
+             <result name="login" type="dispatcher">
+                <param name="location">/pages/subscriber/login.jsp</param>
+            </result>
+		</global-results>
+	
+	
+	<action name="index" class="subscriberrLoginAction">
+	 	<result name="success" >
+                <param name="location">/pages/subscriber/index.jsp</param>
+          </result>
+	</action>
+	
+		
+	
+	
+		
+		
+		<!-- 会员后台 start -->
+		<action name="showSubscriberList" class="subscriberSearchAction"   >
+			<result name="success" >
+                <param name="location">/pages/subscriber/subscriber/subscriber_list.jsp</param>
+            </result>
+            <result name="search" >
+                <param name="location">/pages/subscriber/subscriber/subscriberpage.jsp</param>
+            </result>
+            <result name="subscriber" >
+                <param name="location">/pages/subscriber/subscriber/subscriber_list_mini_subscriber.jsp</param>
+            </result>
+            <result name="rechargeLatest" >
+                <param name="location">/pages/subscriber/subscriber/subscriber_list_mini_recharge_latest.jsp</param>
+            </result>
+            <result name="refundLatest" >
+                <param name="location">/pages/subscriber/subscriber/subscriber_list_mini_refund_latest.jsp</param>
+            </result>
+            <result name="rechargeMost" >
+                <param name="location">/pages/subscriber/subscriber/subscriber_list_mini_recharge_most.jsp</param>
+            </result>
+            <result name="consumerMost" >
+                <param name="location">/pages/subscriber/subscriber/subscriber_list_mini_consumer_most.jsp</param>
+            </result>
+            <result name="orderFirst" >
+                <param name="location">/pages/subscriber/subscriber/subscriber_list_mini_order_first.jsp</param>
+            </result>
+            <result name="orderLatest" >
+                <param name="location">/pages/subscriber/subscriber/subscriber_list_mini_order_latest.jsp</param>
+            </result>
+            <result name="orderMost" >
+                <param name="location">/pages/subscriber/subscriber/subscriber_list_mini_order_most.jsp</param>
+            </result>
+            <result name="orderLongest" >
+                <param name="location">/pages/subscriber/subscriber/subscriber_list_mini_order_longest.jsp</param>
+            </result>
+            
+            
+		</action>
+		<action name="showSubscriberListMini" class="subscriberSearchMiniAction"   >
+			<result name="subscriber" >
+                <param name="location">/pages/subscriber/subscriber/subscriber_list_mini_subscriber.jsp</param>
+            </result>
+		</action>
+		
+		<!-- 弹框查询 -->
+		<action name="searchWindowSubscriberList" class="subscriberSearchAction" method="searchWindowSubscriberList"  >
+			<result name="success" >
+                <param name="location">/pages/subscriber/subscriber/subscriber_search_list_mini.jsp</param>
+            </result>
+		</action>
+		<action name="showSubscriberDetail" class="subscriberGetAction"   >
+			<result name="success" >
+                <param name="location">/pages/subscriber/subscriber/subscriber_detail.jsp</param>
+            </result>
+		</action>
+		<action name="showSubscriberDetail2" class="subscriberGetAction"   >
+			<result name="success" >
+                <param name="location">/pages/subscriber/subscriber/subscriber_detail2.jsp</param>
+            </result>
+		</action>
+		<action name="showSubscriberDetailForDialog" class="subscriberGetAction"   >
+			<result name="success" >
+                <param name="location">/pages/subscriber/subscriber/subscriber_detail_dialog.jsp</param>
+            </result>
+		</action>
+		<!-- 根据会员姓名查询会员是否存在 -->
+		<action name="isExistSubscriberName" class="subscriberGetAction"  method="isExistSubscriberName">
+		 	<result name="success" >
+	                <param name="location">/resultjson.jsp</param>
+	          </result>
+		</action>
+		
+		<action name="subscriberUpdate" class="subscriberUpdateAction"   >
+			<result name="success" >
+                <param name="location">/resultjson.jsp</param>
+            </result>
+		</action>
+		<!-- 会员后台 end -->
+		
+	
+		
+		
+		<!-- 来电管理 start -->
+		<action name="showCallList" class="subscriberCallSearchAction"   >
+			<result name="success" >
+                <param name="location">/pages/subscriber/call/call_list.jsp</param>
+            </result>
+		</action>
+		<action name="showCallDetail" class="subscriberCallGetAction"   >
+            <result name="success" >
+                <param name="location">/pages/subscriber/call/call_detail.jsp</param>
+            </result>
+		</action>
+		<action name="showCallDetailAdd" class="subscriberCallGetAction"  method="addInput" >
+          <result name="success" >
+                <param name="location">/pages/subscriber/call/call_detail_add.jsp</param>
+            </result>
+		</action>
+		
+		<action name="callAdd" class="subscriberCallAddAction"   >
+			<result name="success" >
+	               	<param name="location">/resultjson.jsp</param>
+	            </result>
+		</action>
+
+		<action name="callPhoneSearch" class="subscriberCallPhoneSearchAction">
+			<result name="success" >
+                <param name="location">/resultjson.jsp</param>
+            </result>
+		</action>
+		
+		
+		<action name="showCallHandling" class="subscriberCallGetAction"   >
+			<result name="success" >
+                <param name="location">/pages/subscriber/call/call_handling_detail.jsp</param>
+            </result>
+            
+		</action>
+		
+		
+		<action name="callHandlingUpdate" class="subscriberCallHandlingUpdateAction"   >
+			<result name="success" >
+	               	<param name="location">/resultjson.jsp</param>
+	            </result>
+		</action>
+		<!-- 来电管理 end -->
+		
+	</package>
+	
+	
+</xwork>

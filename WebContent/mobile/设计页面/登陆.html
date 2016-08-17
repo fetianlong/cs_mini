@@ -1,0 +1,53 @@
+<!doctype html>
+<html lang="zh-CN">
+<head>
+<meta charset="utf-8">
+<title>登陆</title>
+
+<link rel=stylesheet href="../common/js/bootstrap/css/bootstrap.min.css">
+<link rel=stylesheet href="../common/js/fontawesome/css/font-awesome.min.css">
+<link rel=stylesheet href="../common/js/flatui/dist/css/flat-ui.min.css">
+<script src="../common/js/jquery.min.js"></script>
+<script src="../common/js/bootstrap/js/bootstrap.min.js"></script>
+<script src="../common/js/flatui/dist/js/flat-ui.min.js"></script>
+<script src="../common/js/main.js"></script>
+
+<link rel=stylesheet href="../common/css/main.css">
+<link rel=stylesheet href="../common/css/login.css">
+
+<meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1, user-scalable=no">
+<meta http-equiv="X-UA-Compatible" content="IE=edge">
+<meta name="renderer" content="webkit">
+</head>
+
+<body>
+<div class="container-fluid">
+  <div class="row">
+    <h3 class="text-center">电老虎租车</h3>
+	<div class="col-md-4 col-md-offset-4">
+		<form method="post" action="#">
+			<div class="form-group">
+			  <label for="cellphone" class="hidden">手机号</label>
+			  <input class="form-control" type="text" name="cellphone" id="cellphone" placeholder="手机号">
+			  <p class="help-block ErrorTip">错误提示</p>
+			</div>
+			<div class="form-group">
+			  <label for="password" class="hidden">密码</label>
+			  <input class="form-control" type="password" name="password" id="password" placeholder="密码">
+			  <p class="help-block ErrorTip">错误提示</p>
+			</div>
+			<div class="row">
+				<div class="col-xs-8 col-xs-offset-2">
+					<input type="submit" value="登陆" class="btn btn-primary btn-block">
+				</div>
+			</div>
+		</form>
+		<div class="RegisterBlock">
+			<p class="text-right">第一次使用？<a href="#">立即注册</a></p>
+		</div>
+	</div>
+	
+  </div>
+</div>
+</body>
+</html>

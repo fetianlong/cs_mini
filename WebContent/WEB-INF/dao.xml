@@ -1,0 +1,290 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<beans xmlns="http://www.springframework.org/schema/beans"
+	xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+	xmlns:aop="http://www.springframework.org/schema/aop"
+	xmlns:tx="http://www.springframework.org/schema/tx"
+	xsi:schemaLocation="http://www.springframework.org/schema/beans 
+	http://www.springframework.org/schema/beans/spring-beans.xsd 
+	http://www.springframework.org/schema/aop
+	http://www.springframework.org/schema/aop/spring-aop.xsd
+	http://www.springframework.org/schema/tx 
+	http://www.springframework.org/schema/tx/spring-tx.xsd">
+	
+	<!-- 系统管理 start -->
+	
+	<bean id="userDAO" class="com.dearho.cs.sys.dao.impl.UserDAOImpl">
+		<property name="sessionFactory" ref="sessionFactory"/>
+	</bean>
+	
+	<bean id="menuDAO" class="com.dearho.cs.sys.dao.impl.MenuDAOImpl">
+		<property name="sessionFactory" ref="sessionFactory"/>
+	</bean>
+	<bean id="groupDAO" class="com.dearho.cs.sys.dao.impl.GroupDAOImpl">
+		<property name="sessionFactory" ref="sessionFactory"/>
+	</bean>
+	<bean id="groupMenuDAO" class="com.dearho.cs.sys.dao.impl.GroupMenuDAOImpl">
+		<property name="sessionFactory" ref="sessionFactory"/>
+	</bean>
+	
+	<bean id="functionDao" class="com.dearho.cs.sys.dao.impl.FunctionDaoImpl">
+		<property name="sessionFactory" ref="sessionFactory" />
+	</bean>
+	
+	<bean id="roleDAO" class="com.dearho.cs.sys.dao.impl.RoleDAOImpl">
+		<property name="sessionFactory" ref="sessionFactory"/>
+	</bean>
+	
+	<bean id="configDAO" class="com.dearho.cs.sys.dao.impl.ConfigDAOImpl">
+		<property name="sessionFactory" ref="sessionFactory"/>
+	</bean>
+	<bean id="dictDAO" class="com.dearho.cs.sys.dao.impl.DictDAOImpl">
+		<property name="sessionFactory" ref="sessionFactory"/>
+	</bean>
+	<bean id="dictGroupDAO" class="com.dearho.cs.sys.dao.impl.DictGroupDAOImpl">
+		<property name="sessionFactory" ref="sessionFactory"/>
+	</bean>
+	
+	<bean id="areaDAO" class="com.dearho.cs.sys.dao.impl.AreaDAOImpl">
+		<property name="sessionFactory" ref="sessionFactory"/>
+	</bean>
+	
+	<bean id="companyDAO" class="com.dearho.cs.sys.dao.impl.CompanyDAOImpl">
+		<property name="sessionFactory" ref="sessionFactory"/>
+	</bean>
+	
+	<bean id="operateLogDAO" class="com.dearho.cs.sys.dao.impl.OperateLogDAOImpl">
+		<property name="sessionFactory" ref="sessionFactory"/>
+	</bean>
+	
+	<!-- 系统管理  end -->
+	
+	<!-- 车辆Dao -->
+	<bean id="carDao" class="com.dearho.cs.car.dao.impl.CarDaoImpl">
+		<property name="sessionFactory" ref="sessionFactory" />
+	</bean>
+	
+	<bean id="carVehicleModelDao" class="com.dearho.cs.car.dao.impl.CarVehicleModelDaoImpl">
+		<property name="sessionFactory" ref="sessionFactory" />
+	</bean>
+	
+	<bean id="deviceDao" class="com.dearho.cs.device.dao.impl.DeviceDaoImpl">
+		<property name="sessionFactory" ref="sessionFactory" />
+	</bean>
+	
+	<bean id="deviceBindingDao" class="com.dearho.cs.device.dao.impl.DeviceBindingDaoImpl">
+		<property name="sessionFactory" ref="sessionFactory" />
+	</bean>
+	
+	
+	
+	
+	
+	<bean id="carRealtimeStateDAO" class="com.dearho.cs.resmonitor.dao.impl.CarRealtimeStateDaoImpl">
+		<property name="sessionFactory" ref="sessionFactory"/>
+		<property name="carVehicleModelService" ref="carVehicleModelService"/>
+		<property name="branchDotService" ref="branchDotService"/>
+		<property name="subscriberService" ref="subscriberService"/>
+	</bean>
+	
+	<bean id="carLocationDAO" class="com.dearho.cs.resmonitor.dao.impl.CarLocationDAOImpl">
+		<property name="sessionFactory" ref="sessionFactory"/>
+	</bean>
+	
+	<bean id="businessFlowDAO" class="com.dearho.cs.sys.dao.impl.BusinessFlowDAOImpl">
+		<property name="sessionFactory" ref="sessionFactory"/>
+	</bean>
+	
+	
+	<!-- 会员 start -->
+	<bean id="subscriberDao" class="com.dearho.cs.subscriber.dao.impl.SubscriberDaoImpl">
+		<property name="sessionFactory" ref="sessionFactory" />
+	</bean>
+	<bean id="subscriberConfirmDao" class="com.dearho.cs.subscriber.dao.impl.SubscriberConfirmDaoImpl">
+		<property name="sessionFactory" ref="sessionFactory" />
+	</bean>
+	
+	<bean id="subscriberLoginRecordDao" class="com.dearho.cs.subscriber.dao.impl.SubscriberLoginRecordDaoImpl">
+		<property name="sessionFactory" ref="sessionFactory" />
+	</bean>
+	<!-- 会员 end -->
+	
+	
+	<!-- 会员账户 start -->
+	<bean id="accountDao" class="com.dearho.cs.account.dao.impl.AccountDaoImpl">
+		<property name="sessionFactory" ref="sessionFactory" />
+	</bean>
+	
+	<bean id="accountTradeRecordDao" class="com.dearho.cs.account.dao.impl.AccountTradeRecordDaoImpl">
+		<property name="sessionFactory" ref="sessionFactory" />
+	</bean>
+	<bean id="accountTradeRecordDetailDao" class="com.dearho.cs.account.dao.impl.AccountTradeRecordDetailDaoImpl">
+		<property name="sessionFactory" ref="sessionFactory" />
+	</bean>
+	<bean id="rechargeCardDao" class="com.dearho.cs.account.dao.impl.RechargeCardDaoImpl">
+		<property name="sessionFactory" ref="sessionFactory" />
+	</bean>
+	<bean id="rechargeRecordDao" class="com.dearho.cs.account.dao.impl.RechargRecordDaoImpl">
+		<property name="sessionFactory" ref="sessionFactory" />
+	</bean>
+	<bean id="accountCardInstanceDao" class="com.dearho.cs.account.dao.impl.AccountCardInstanceDaoImpl">
+		<property name="sessionFactory" ref="sessionFactory" />
+	</bean>
+	<bean id="accountPaymentAccountDao" class="com.dearho.cs.account.dao.impl.AccountPaymentAccountDaoImpl">
+		<property name="sessionFactory" ref="sessionFactory" />
+	</bean>
+	<!-- 会员账户 end -->
+	
+	<!-- 接口log start -->
+	<bean id="interfaceMessageLogDao" class="com.dearho.cs.account.dao.impl.InterfaceMessageLogDaoImpl">
+		<property name="sessionFactory" ref="sessionFactory" />
+	</bean>
+	<!-- 接口log end -->
+	
+	<!-- 呼叫中心start -->
+	<bean id="subscriberCallDao" class="com.dearho.cs.subscriber.dao.impl.SubscriberCallDaoImpl">
+		<property name="sessionFactory" ref="sessionFactory" />
+	</bean>
+	
+	
+	<!-- 呼叫中心end -->
+	
+
+	<!-- 场地设备 start -->
+	<bean id="chargeStationDAO" class="com.dearho.cs.charge.dao.impl.ChargeStationDAOImpl">
+		<property name="sessionFactory" ref="sessionFactory" />
+	</bean>
+	<!-- 场地设备 end -->
+	
+	<!-- 订单相关的 -->
+	<bean id="ordersDao" class="com.dearho.cs.orders.dao.impl.OrdersDaoImpl">
+		<property name="sessionFactory" ref="sessionFactory" />
+	</bean>
+	<bean id="ordersDetailDao" class="com.dearho.cs.orders.dao.impl.OrdersDetailDaoImpl">
+		<property name="sessionFactory" ref="sessionFactory" />
+	</bean>
+	<bean id="ordersBillDao" class="com.dearho.cs.orders.dao.impl.OrdersBillDaoImpl">
+		<property name="sessionFactory" ref="sessionFactory" />
+	</bean>
+	<bean id="ordersCommentDao" class="com.dearho.cs.orders.dao.impl.OrdersCommentDaoImpl">
+		<property name="sessionFactory" ref="sessionFactory" />
+	</bean>
+	<bean id="chargingLogDao" class="com.dearho.cs.orders.dao.impl.ChargingLogDaoImpl">
+		<property name="sessionFactory" ref="sessionFactory" />
+	</bean>
+	<bean id="ticketsDao" class="com.dearho.cs.orders.dao.impl.TicketsDaoImpl">
+		<property name="sessionFactory" ref="sessionFactory" />
+	</bean>
+	
+	<!-- 网点管理 start -->
+	<bean id="branchDotDAO" class="com.dearho.cs.place.dao.impl.BranchDotDAOImpl">
+		<property name="sessionFactory" ref="sessionFactory" />
+	</bean>
+	
+	<bean id="carDotBindingDao" class="com.dearho.cs.place.dao.impl.CarDotBindingDaoImpl">
+		<property name="sessionFactory" ref="sessionFactory" />
+	</bean>
+	<!-- 网点管理 end -->
+	
+	
+	<!-- 车务 -->
+	<bean id="carAccidentDAO" class="com.dearho.cs.carservice.dao.impl.CarAccidentDAOImpl">
+		<property name="sessionFactory" ref="sessionFactory" />
+	</bean>
+	<bean id="carViolationDAO" class="com.dearho.cs.carservice.dao.impl.CarViolationDAOImpl">
+		<property name="sessionFactory" ref="sessionFactory" />
+	</bean>
+	<bean id="carMaintenanceDAO" class="com.dearho.cs.carservice.dao.impl.CarMaintenanceDAOImpl">
+		<property name="sessionFactory" ref="sessionFactory" />
+	</bean>
+	<bean id="carInsuranceDAO" class="com.dearho.cs.carservice.dao.impl.CarInsuranceDAOImpl">
+		<property name="sessionFactory" ref="sessionFactory" />
+	</bean>
+	<bean id="carRepairDAO" class="com.dearho.cs.carservice.dao.impl.CarRepairDAOImpl">
+		<property name="sessionFactory" ref="sessionFactory" />
+	</bean>
+	<bean id="parkingPatrolDAO" class="com.dearho.cs.carservice.dao.impl.ParkingPatrolDAOImpl">
+		<property name="sessionFactory" ref="sessionFactory" />
+	</bean>
+	<bean id="carPatrolDAO" class="com.dearho.cs.carservice.dao.impl.CarPatrolDAOImpl">
+		<property name="sessionFactory" ref="sessionFactory" />
+	</bean>
+	<bean id="indexDataShowDAO" class="com.dearho.cs.report.dao.impl.IndexDataShowDAOImpl">
+		<property name="sessionFactory" ref="sessionFactory" />
+	</bean>
+	
+	<bean id="subscriberPhoneChangeDao" class="com.dearho.cs.subscriber.dao.impl.SubscriberPhoneChangeDaoImpl">
+		<property name="sessionFactory" ref="sessionFactory" />
+	</bean>
+	
+	<bean id="wechatTokenInfoDao" class="com.dearho.cs.wechat.dao.impl.WechatTokenInfoDaoImpl">
+		<property name="sessionFactory" ref="sessionFactory"/>
+	</bean>
+	
+	<bean id="wechatUserInfoDao" class="com.dearho.cs.wechat.dao.impl.WechatUserInfoDaoImpl">
+		<property name="sessionFactory" ref="sessionFactory"/>
+	</bean>
+	
+	<bean id="smsRecordDao" class="com.dearho.cs.sys.dao.impl.SMSRecordDaoImpl">
+		<property name="sessionFactory" ref="sessionFactory"/>
+	</bean>
+	<bean id="smsCodeDao" class="com.dearho.cs.sys.dao.impl.SMSCodeDaoImpl">
+		<property name="sessionFactory" ref="sessionFactory"/>
+	</bean>
+	
+	<!-- 计价策略start -->
+	<bean id="strategyBaseDAO" class="com.dearho.cs.feestrategy.dao.impl.StrategyBaseDAOImpl">
+		<property name="sessionFactory" ref="sessionFactory"/>
+	</bean>
+	<!-- 计价策略end -->
+	
+	<!-- 特来电充电站start -->
+	<bean id="teldIntrfStationDAO" class="com.dearho.cs.teldintrf.dao.impl.TeldIntrfStationDAOImpl">
+		<property name="sessionFactory" ref="sessionFactory"/>
+	</bean>
+	<bean id="teldIntrfPileDAO" class="com.dearho.cs.teldintrf.dao.impl.TeldIntrfPileDAOImpl">
+		<property name="sessionFactory" ref="sessionFactory"/>
+	</bean>
+	<!-- 特来电充电站end -->
+	
+	
+	<!-- 统计start -->
+	<bean id="statisticsDao" class="com.dearho.cs.sys.dao.impl.StatisticsDaoImpl">
+		<property name="sessionFactory" ref="sessionFactory"/>
+	</bean>
+	<!-- 统计end -->
+	
+	<!-- 用户操作日志start -->
+	<bean id="systemOperateLogDAO" class="com.dearho.cs.sys.dao.impl.SystemOperateLogDAOImpl">
+		<property name="sessionFactory" ref="sessionFactory"/>
+	</bean>
+	<!-- 用户操作日志end -->
+	
+	<!-- 损坏上报 -->
+	<bean id="carBreakDao" class="com.dearho.cs.carservice.dao.impl.CarBreakDaoImpl">
+		<property name="sessionFactory" ref="sessionFactory"/>
+	</bean>
+	<!-- 车辆评价 -->
+	<bean id="carCommonDao" class="com.dearho.cs.carservice.dao.impl.CarCommonDaoImpl">
+		<property name="sessionFactory" ref="sessionFactory"  />
+	</bean>
+	
+	<!-- 一键投诉 -->
+	<bean id="feedbackDao" class="com.dearho.cs.advice.dao.impl.FeedbackDaoImpl">
+		<property name="sessionFactory" ref="sessionFactory"/>
+	</bean>
+	
+	<!-- 催我建点 -->
+	<bean id="hotDotDAO" class="com.dearho.cs.advice.dao.impl.HotDotDAOImpl">
+		<property name="sessionFactory" ref="sessionFactory"/>
+	</bean>
+	
+	<!-- 系统通知 -->
+	<bean id="informDao" class="com.dearho.cs.advice.dao.impl.InformDaoImpl">
+		<property name="sessionFactory" ref="sessionFactory"/>
+	</bean>
+	<bean id="informRecordDao" class="com.dearho.cs.advice.dao.impl.InformRecordDaoImpl">
+		<property name="sessionFactory" ref="sessionFactory"/>
+	</bean>
+	
+	
+</beans>

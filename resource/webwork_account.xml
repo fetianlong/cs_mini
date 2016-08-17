@@ -1,0 +1,299 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE xwork PUBLIC "-//Apache Struts//XWork 1.1.1//EN" 
+"http://struts.apache.org/dtds/xwork-1.1.1.dtd">
+<xwork>
+	<package name="account" extends="webwork-default" namespace="/account">
+		<default-interceptor-ref name="defaultStack"/>
+		
+		<global-results>
+			<result name="timeout" type="dispatcher">
+                <param name="location">/error.jsp</param>
+            </result>
+            <result name="illegal" type="dispatcher">
+                <param name="location">/error.jsp</param>
+            </result>
+            <result name="error" type="dispatcher">
+                <param name="location">/resultjson.jsp</param>
+            </result>
+            <result name="index" type="dispatcher">
+                 <param name="location">/pages/subscriber/personalCenter/account_index.jsp</param>
+            </result>
+             <result name="record" type="dispatcher">
+                 <param name="location">/pages/subscriber/personalCenter/account_index.jsp</param>
+            </result>
+		</global-results>
+	
+	
+		
+		<!-- 用户管理 -->
+		<action name="center" class="accountCenterGetAction"  >
+			<result name="success" >
+                <param name="location">/pages/subscriber/personalCenter/account_index.jsp</param>
+            </result>
+		</action>
+		
+		
+		
+		<!-- 消费记录 -->
+		<action name="queryTradingRecord" class="accountTradingRecordSearchAction"  >
+			<result name="success" >
+                <param name="location">/pages/subscriber/personalCenter/account_consumption_record.jsp</param>
+            </result>
+		</action>
+		<action name="showTradingRecord" class="accountTradingRecordGetAction"  >
+			<result name="success" >
+                <param name="location">/resultjson.jsp</param>
+            </result>
+		</action>
+		<action name="gotoTradingRecord" class="accountTradingRecordGetAction" method="gotoTradingRecord" >
+			<result name="success" >
+                <param name="location">/pages/subscriber/personalCenter/account_consumption_detail.jsp</param>
+            </result>
+		</action>
+		<!-- 充值 -->
+		<action name="gotoRechargeCheck" class="accountCenterRechargeAction"  method="gotoRechargeCheck">
+			<result name="success" >
+                <param name="location">/resultjson.jsp</param>
+            </result>
+		</action>
+		<action name="gotoRecharge" class="accountCenterRechargeAction"  method="gotoRecharge">
+			<result name="success" >
+                <param name="location">/pages/subscriber/personalCenter/account_recharge.jsp</param>
+            </result>
+		</action>
+		<action name="continueRecharge" class="accountCenterRechargeAction"  method="continueRecharge">
+			<result name="success" >
+                <param name="location">/pages/subscriber/personalCenter/account_pay_way.jsp</param>
+            </result>
+            <result name="fail" >
+                 <param name="location">/pages/subscriber/personalCenter/account_recharge.jsp</param>
+            </result>
+		</action>
+		<action name="queryTradingRecord" class="accountTradingRecordSearchAction"  >
+			<result name="success" >
+                <param name="location">/pages/subscriber/personalCenter/account_consumption_record.jsp</param>
+            </result>
+		</action>
+		
+		
+		<!-- 退款 -->
+		<action name="gotoApplyRefundCheck" class="accountApplyRefundAction"  method="gotoApplyRefundCheck">
+			<result name="success" >
+                <param name="location">/resultjson.jsp</param>
+            </result>
+		</action>
+		<action name="gotoApplyRefund" class="accountApplyRefundAction"  method="gotoApplyRefund">
+			<result name="success" >
+                <param name="location">/pages/subscriber/personalCenter/account_refund.jsp</param>
+            </result>
+		</action>
+		
+		<action name="applyRefund" class="accountApplyRefundAction" >
+			<result name="success" >
+                <param name="location">/resultjson.jsp</param>
+            </result>
+		</action>
+		
+		
+	
+		
+		
+		
+		<!-- 退款申请审核 start -->
+		<action name="showApplyRefundList" class="accountApplyRefundSearchAction"  >
+			<result name="success" >
+                <param name="location">/pages/account/applyrefund/apply_refund_list.jsp</param>
+            </result>
+		</action>
+		<action name="showApplyRefundDetail" class="accountApplyRefundGetAction"  >
+			<result name="success" >
+                <param name="location">/pages/account/applyrefund/apply_refund_detail.jsp</param>
+            </result>
+		</action>
+		<action name="showApplyRefundEditDetail" class="accountApplyRefundGetAction"  >
+			<result name="success" >
+                <param name="location">/pages/account/applyrefund/apply_refund_detail.jsp</param>
+            </result>
+		</action>
+		<action name="doApplyRefund" class="accountApplyRefundDoAction"  >
+			<result name="success" >
+                 <param name="location">/resultjson.jsp</param>
+            </result>
+		</action>
+		
+		<!-- 退款申请审核 end -->
+		
+		
+		<!--  后台账户管理 start -->
+		
+		<action name="showAccountList" class="accountSearchAction"   >
+			<result name="success" >
+                <param name="location">/pages/account/account/account_list.jsp</param>
+            </result>
+		</action>
+		<action name="showAccountTrading" class="accountTradingSearchAction"   >
+			<result name="success" >
+                <param name="location">/pages/account/account/account_trading_list.jsp</param>
+            </result>
+            <result name="result_mini" >
+                <param name="location">/pages/account/account/account_trading_mini_detail.jsp</param>
+            </result>
+		</action>
+		<action name="showAccountTradingDetail" class="accountTradingDetailSearchAction" >
+			<result name="success" >
+                <param name="location">/pages/account/account/account_trading_detail.jsp</param>
+            </result>
+		</action>
+		
+		<action name="downloadAccountTrading" class="accountTradingSearchAction" method="downloadAccountTrading" >
+		</action>
+		<!--  后台账户管理 end -->
+		
+		
+		<!-- 后台充值卡管理 start -->
+		<action name="showRechargeCardList" class="rechargeCardSearchAction"   >
+			<result name="success" >
+                <param name="location">/pages/account/rechargecard/recharge_card_list.jsp</param>
+            </result>
+		</action>
+		<action name="showRechargeCardDetail" class="rechargeCardGetAction"   >
+			<result name="success" >
+                <param name="location">/pages/account/rechargecard/recharge_card_detail.jsp</param>
+            </result>
+		</action>
+		<action name="rechargeCardAdd" class="rechargeCardUpdateAction"   >
+			<result name="success" >
+	               	<param name="location">/resultjson.jsp</param>
+	            </result>
+		</action>
+		<action name="rechargeCardUpdate" class="rechargeCardUpdateAction"   >
+			<result name="success" >
+	               	<param name="location">/resultjson.jsp</param>
+	            </result>
+		</action>
+		<action name="rechargeCardDelete" class="rechargeCardDeleteAction"   >
+			<result name="success" >
+	               	<param name="location">/resultjson.jsp</param>
+	        </result>
+		</action>
+		<!-- 后台充值卡管理  end -->
+		
+		
+		<!-- 后台充值记录管理 start -->
+		<action name="showRechargeRecordList" class="rechargeRecordSearchAction"   >
+			<result name="success" >
+                <param name="location">/pages/account/rechargerecord/recharge_record_list.jsp</param>
+            </result>
+		</action>
+		<action name="showRechargeRecordDetail" class="rechargeRecordGetAction"   >
+			<result name="success" >
+                <param name="location">/pages/account/rechargerecord/recharge_record_detail.jsp</param>
+            </result>
+		</action>
+		<action name="showCutPaymentRecordList" class="cutPaymentRecordSearchAction"   >
+			<result name="success" >
+                <param name="location">/pages/account/rechargerecord/cut_payment_record_list.jsp</param>
+            </result>
+		</action>
+		<action name="showCutPaymentRecordDetail" class="rechargeRecordGetAction"   >
+			<result name="success" >
+                <param name="location">/pages/account/rechargerecord/cut_payment_record_detail.jsp</param>
+            </result>
+		</action>
+		
+		<action name="downloadRechargeRecord" class="rechargeRecordSearchAction"  method="downloadRechargeRecord" >
+		</action>
+		<action name="downloadCutPaymentRecord" class="cutPaymentRecordSearchAction"  method="downloadCutPaymentRecord" >
+		</action>
+		<!-- 后台充值记录管理  end -->
+		
+		
+		<!-- 代充管理 start -->
+		<action name="showCommissionRechargeCard" class="commissionCardSearchAction"   >
+			<result name="success" >
+                <param name="location">/pages/account/commission/commission_recharge_card.jsp</param>
+            </result>
+		</action>
+		<action name="commissionCardForSearchSubscriberInfo" class="commissionCardSearchAction"  method="searchSubscriberInfo" >
+			<result name="success" >
+                <param name="location">/pages/account/commission/commission_recharge_card_mini.jsp</param>
+            </result>
+		</action>
+		<action name="saveCommissionRechargeCard" class="commissionCardSaveAction"   >
+			<interceptor-ref name="defaultStack" />
+      		<interceptor-ref name="token" />
+			<result name="success" >
+                <param name="location">/account/showCommissionRechargeCard.action?msg=${msg}</param>
+            </result>
+            <result name="invalid.token" >
+                <param name="location">/account/showCommissionRechargeCard.action?msg=当前页过期，请刷新页面,重新提交</param>
+            </result>
+		</action>
+		<!-- 代充管理  end -->
+		
+			<!-- 扣款管理 start -->
+		<action name="showCommissionCutPayment" class="commissionCutPaymentSearchAction"   >
+			<result name="success" >
+                <param name="location">/pages/account/commission/commission_cut_payment.jsp</param>
+            </result>
+		</action>
+		
+		<action name="saveCommissionCutPayment" class="commissionCutPaymentSaveAction"   >
+			<interceptor-ref name="defaultStack" />
+      		<interceptor-ref name="token" />
+			<result name="success" >
+                <param name="location">/account/showCommissionCutPayment.action?msg=${msg}</param>
+            </result>
+            <result name="invalid.token" >
+                <param name="location">/account/showCommissionCutPayment.action?msg=当前页过期，请刷新页面，重新提交</param>
+            </result>
+		</action>
+		<!-- 扣款管理  end -->
+		
+		<!-- 赠送管理 start -->
+		<!-- 赠送管理  end -->
+		
+	</package>
+	
+	<package name="dialog" extends="webwork-default" namespace="/dialog">
+		<action name="queryRechargeList" class="dialogAccountRechargeSearchAction"   >
+			<result name="success"  type="dispatcher">
+                <param name="location">/pages/account/account/account_recharge_mini_dialog.jsp</param>
+            </result>
+            <interceptor-ref name="defaultStack"/>
+        </action>
+        <action name="queryRefundList" class="dialogAccountRefundSearchAction"   >
+			<result name="success"  type="dispatcher">
+                <param name="location">/pages/account/account/account_refund_mini_dialog.jsp</param>
+            </result>
+            <interceptor-ref name="defaultStack"/>
+        </action>
+        <action name="queryAccountTrading" class="dialogAccountTradingAction"   >
+			<result name="success" type="dispatcher" >
+                <param name="location">/pages/account/account/account_trading_mini_dialog.jsp</param>
+            </result>
+              <interceptor-ref name="defaultStack"/>
+		</action>
+		<action name="sendMessage" class="sendMessageAction"   >
+			<result name="success" type="dispatcher" >
+                 <param name="location">/resultjson.jsp</param>
+            </result>
+               <interceptor-ref name="defaultStack"/>
+		</action>
+		<action name="gotoSendMessage" class="sendMessageAction"  method="gotoSendMessage" >
+			<result name="success" type="dispatcher" >
+                <param name="location">/pages/carservice/carviolation/sendMessageDialog.jsp</param>
+            </result>
+              <interceptor-ref name="defaultStack"/>
+		</action>
+		<action name="queryOperationLog" class="operationLogSearchAction"   >
+			<result name="success" type="dispatcher" >
+                <param name="location">/pages/system/operationlog/operationLogListMiniDialog.jsp</param>
+            </result>
+              <interceptor-ref name="defaultStack"/>
+		</action>
+		
+		
+	</package>
+	
+</xwork>

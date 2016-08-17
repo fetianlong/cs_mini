@@ -1,0 +1,35 @@
+<!DOCTYPE hibernate-mapping PUBLIC 
+    "-//Hibernate/Hibernate Mapping DTD 3.0//EN"
+    "http://hibernate.sourceforge.net/hibernate-mapping-3.0.dtd">
+<hibernate-mapping>
+	<class name="com.dearho.cs.sys.pojo.OperateLog" table="s_operate_log">
+		<id name="id" type="string">
+            <column name="id" length="32" />
+            <generator class="uuid.hex" />
+        </id>
+        <property name="name" type="string">
+            <column name="name"   />
+        </property>
+        <property name="modular" type="java.lang.String">
+            <column name="modular"  />
+        </property>
+        <property name="type" type="java.lang.String">
+            <column name="type"  />
+        </property>
+         <property name="user" type="java.lang.String">
+            <column name="user"  />
+        </property>
+        <property name="dataState" type="java.lang.String">
+            <column name="data_State"  />
+        </property>
+        <property name="carId" type="java.lang.String">
+            <column name="car_Id" />
+        </property>
+      <property name="userId" type="java.lang.String">
+            <column name="user_id"  />
+        </property>
+            <property name="ts" type="java.util.Date">
+       		<column name="ts"/>
+       	</property>
+	</class>
+</hibernate-mapping>

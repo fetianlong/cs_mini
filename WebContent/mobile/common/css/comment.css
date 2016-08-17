@@ -1,0 +1,65 @@
+@charset "utf-8";
+/* CSS Document */
+
+body {
+	background: #eeeeee;	
+}
+
+.CarImgBlock {
+	box-shadow: 0 1px 3px #999;
+	margin-bottom: 20px;
+	background: #FFF;
+}
+
+h4 {
+	font-size: 16px;
+	font-weight: normal;
+	margin: 0;
+	margin-bottom: 5px;
+}
+
+h4.Caption {
+	margin: 20px 0 10px 10px;
+}
+
+p {
+	font-size: 12px;
+	margin: 0;
+}
+
+.CarNameBlock .CarScore .Score {
+	color: #ffa810;
+	margin-right: 10px;
+}
+
+.CarNameBlock .CarScore .Score span:first-of-type {
+	margin-right: 3px;
+}
+
+.Score .fa {
+	color: #eeeeee;
+}
+
+.Score .fa.get {
+	color: #ffa810;
+}
+
+.ListUl .Time {
+	margin-left: 10px;
+}
+
+.ListUl {
+	margin: 0;
+	padding: 0;
+	list-style: none;
+}
+
+.ListUl li {
+	margin: 0;
+	padding: 0;
+	margin-bottom: 10px;
+}
+
+.ListUl li .UserInfo {
+	margin-bottom: 5px;
+}

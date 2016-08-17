@@ -1,0 +1,49 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE xwork PUBLIC "-//Apache Struts//XWork 1.1//EN" 
+"http://struts.apache.org/dtds/xwork-1.1.dtd">
+<xwork>
+	<package name="webwork-default">
+		<result-types>
+			<result-type name="dispatcher" class="com.opensymphony.webwork.dispatcher.ServletDispatcherResult" default="true"/>
+			<result-type name="redirect" class="com.opensymphony.webwork.dispatcher.ServletRedirectResult"/>
+			<result-type name="chain" class="com.opensymphony.xwork.ActionChainResult"/>
+			<result-type name="httpheader" class="com.opensymphony.webwork.dispatcher.HttpHeaderResult"/>
+			<result-type name="stream" class="com.opensymphony.webwork.dispatcher.StreamResult"/>
+		</result-types>
+
+		<interceptors>
+			<interceptor name="timer" class="com.opensymphony.xwork.interceptor.TimerInterceptor"/>
+			<interceptor name="logger" class="com.opensymphony.xwork.interceptor.LoggingInterceptor"/>
+			<interceptor name="chain" class="com.opensymphony.xwork.interceptor.ChainingInterceptor"/>
+			<interceptor name="static-params" class="com.opensymphony.xwork.interceptor.StaticParametersInterceptor"/>
+			<interceptor name="params" class="com.opensymphony.xwork.interceptor.ParametersInterceptor"/>
+			<interceptor name="model-driven" class="com.opensymphony.xwork.interceptor.ModelDrivenInterceptor"/>
+			<interceptor name="validation" class="com.opensymphony.xwork.validator.ValidationInterceptor"/>
+			<interceptor name="workflow" class="com.opensymphony.xwork.interceptor.DefaultWorkflowInterceptor"/>
+			<interceptor name="prepare" class="com.opensymphony.xwork.interceptor.PrepareInterceptor"/>
+			<interceptor name="fileUpload" class="com.opensymphony.webwork.interceptor.FileUploadInterceptor"/>
+			<interceptor name="fieldHtmlTag" class="com.dearho.cs.util.HtmlInterceptor"/>
+			<interceptor name="token" class="com.opensymphony.webwork.interceptor.TokenInterceptor"/>
+			
+			<interceptor-stack name="modelStack">
+				<interceptor-ref name="model-driven"/>
+				<interceptor-ref name="fieldHtmlTag"/>
+				<interceptor-ref name="params"/>
+			</interceptor-stack>
+
+			<interceptor-stack name="defaultStack">
+				<interceptor-ref name="fieldHtmlTag"/>
+				<interceptor-ref name="params"/>
+			</interceptor-stack>
+
+			<interceptor-stack name="uploadStack">
+				<interceptor-ref name="fileUpload"/>
+				<interceptor-ref name="params"/>
+			</interceptor-stack>
+			<interceptor-stack name="token">
+				<interceptor-ref name="token"/>
+			</interceptor-stack>
+         
+		</interceptors>
+	</package>
+</xwork>

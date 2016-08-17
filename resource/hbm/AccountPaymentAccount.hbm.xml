@@ -1,0 +1,36 @@
+<!DOCTYPE hibernate-mapping PUBLIC 
+    "-//Hibernate/Hibernate Mapping DTD 3.0//EN"
+    "http://hibernate.sourceforge.net/hibernate-mapping-3.0.dtd">
+<hibernate-mapping>
+	<class name="com.dearho.cs.account.pojo.AccountPaymentAccount" table="acc_payment_account">
+		<id name="id" type="java.lang.String">
+            <column name="id" length="32" />
+             <generator class="uuid.hex" />
+        </id>
+        <property name="subscriberId" type="java.lang.String">
+            <column name="subscriber_id"   />
+        </property>
+        <property name="type" type="java.lang.Integer">
+            <column name="type" />
+        </property>
+        <property name="bankTypeCode" type="java.lang.String">
+            <column name="bank_type_code"   />
+        </property>
+        <property name="accountNo" type="java.lang.String">
+            <column name="account_no"   />
+        </property>
+        <property name="name" type="java.lang.String">
+            <column name="name"   />
+        </property>
+        <property name="ts" type="java.util.Date">
+            <column name="ts" />
+        </property>
+         
+	</class>
+	
+	
+	
+	
+	
+	
+</hibernate-mapping>

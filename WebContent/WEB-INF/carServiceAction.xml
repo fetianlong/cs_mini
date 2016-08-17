@@ -1,0 +1,207 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<beans xmlns="http://www.springframework.org/schema/beans"
+	xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+	xsi:schemaLocation="http://www.springframework.org/schema/beans http://www.springframework.org/schema/beans/spring-beans-2.0.xsd">
+	
+	<bean id="carAccidentSearchAction" class="com.dearho.cs.carservice.action.accident.CarAccidentSearchAction" scope="prototype">
+		<property name="carAccidentService" ref="carAccidentService"  />
+		<property name="areaService" ref="areaService"  />
+		<property name="subscriberService" ref="subscriberService"  />
+		<property name="ordersService" ref="ordersService"  />
+		<property name="carService" ref="carService"  />
+	</bean>
+	<bean id="carAccidentGetAction" class="com.dearho.cs.carservice.action.accident.CarAccidentGetAction" scope="prototype">
+		<property name="carAccidentService" ref="carAccidentService" />
+		<property name="areaService" ref="areaService"  />
+		<property name="subscriberService" ref="subscriberService"  />
+		<property name="ordersService" ref="ordersService"  />
+		<property name="carService" ref="carService"  />
+	</bean>
+	<bean id="carAccidentAddAction" class="com.dearho.cs.carservice.action.accident.CarAccidentAddAction" scope="prototype">
+		<property name="carAccidentService" ref="carAccidentService" />
+		<property name="carService" ref="carService" />
+	</bean>
+	
+	<bean id="carAccidentDeleteAction" class="com.dearho.cs.carservice.action.accident.CarAccidentDeleteAction" scope="prototype">
+		<property name="carAccidentService" ref="carAccidentService" />
+	</bean>
+	<bean id="carAccidentChangeDiscardAction" class="com.dearho.cs.carservice.action.accident.CarAccidentChangeDiscardAction" scope="prototype">
+		<property name="carAccidentService" ref="carAccidentService" />
+	</bean>
+	
+	<bean id="carAccidentUpdateAction" class="com.dearho.cs.carservice.action.accident.CarAccidentUpdateAction" scope="prototype">
+		<property name="carAccidentService" ref="carAccidentService" />
+		<property name="carService" ref="carService" />
+	</bean>
+	
+	
+	<bean id="carMaintenanceSearchAction" class="com.dearho.cs.carservice.action.maintenance.CarMaintenanceSearchAction" scope="prototype">
+		<property name="carMaintenanceService" ref="carMaintenanceService"  />
+		<property name="carVehicleModelService" ref="carVehicleModelService"  />
+		<property name="areaService" ref="areaService"  />
+		<property name="carService" ref="carService"  />
+	</bean>
+	<bean id="carMaintenanceGetAction" class="com.dearho.cs.carservice.action.maintenance.CarMaintenanceGetAction" scope="prototype">
+		<property name="carMaintenanceService" ref="carMaintenanceService" />
+		<property name="areaService" ref="areaService"  />
+		<property name="carService" ref="carService"  />
+	</bean>
+	<bean id="carMaintenanceAddAction" class="com.dearho.cs.carservice.action.maintenance.CarMaintenanceAddAction" scope="prototype">
+		<property name="carMaintenanceService" ref="carMaintenanceService" />
+	</bean>
+	
+	<bean id="carMaintenanceDeleteAction" class="com.dearho.cs.carservice.action.maintenance.CarMaintenanceDeleteAction" scope="prototype">
+		<property name="carMaintenanceService" ref="carMaintenanceService" />
+	</bean>
+	
+	<bean id="carMaintenanceUpdateAction" class="com.dearho.cs.carservice.action.maintenance.CarMaintenanceUpdateAction" scope="prototype">
+		<property name="carMaintenanceService" ref="carMaintenanceService" />
+	</bean>
+	
+	<bean id="carMaintenanceChangeDiscardAction" class="com.dearho.cs.carservice.action.maintenance.CarMaintenanceChangeDiscardAction" scope="prototype">
+		<property name="carMaintenanceService" ref="carMaintenanceService" />
+	</bean>
+	<bean id="carMaintenanceWarningAction" class="com.dearho.cs.carservice.action.maintenance.CarMaintenanceWarningAction" scope="prototype">
+		<property name="carMaintenanceService" ref="carMaintenanceService" />
+		<property name="carService" ref="carService" />
+	</bean>
+	
+	
+	
+	
+	<bean id="carViolationSearchAction" class="com.dearho.cs.carservice.action.violation.CarViolationSearchAction" scope="prototype">
+		<property name="carViolationService" ref="carViolationService"  />
+		<property name="areaService" ref="areaService"  />
+		<property name="subscriberService" ref="subscriberService"  />
+		<property name="ordersService" ref="ordersService"  />
+		<property name="carService" ref="carService"  />
+	</bean>
+	<bean id="carViolationGetAction" class="com.dearho.cs.carservice.action.violation.CarViolationGetAction" scope="prototype">
+		<property name="carViolationService" ref="carViolationService" />
+		<property name="areaService" ref="areaService"  />
+		<property name="subscriberService" ref="subscriberService"  />
+		<property name="ordersService" ref="ordersService"  />
+		<property name="carService" ref="carService"  />
+	</bean>
+	<bean id="carViolationAddAction" class="com.dearho.cs.carservice.action.violation.CarViolationAddAction" scope="prototype">
+		<property name="carViolationService" ref="carViolationService" />
+	</bean>
+	
+	<bean id="carViolationDeleteAction" class="com.dearho.cs.carservice.action.violation.CarViolationDeleteAction" scope="prototype">
+		<property name="carViolationService" ref="carViolationService" />
+	</bean>
+	
+	<bean id="carViolationUpdateAction" class="com.dearho.cs.carservice.action.violation.CarViolationUpdateAction" scope="prototype">
+		<property name="carViolationService" ref="carViolationService" />
+	</bean>
+	<bean id="carViolationChangeDiscardAction" class="com.dearho.cs.carservice.action.violation.CarViolationChangeDiscardAction" scope="prototype">
+		<property name="carViolationService" ref="carViolationService" />
+	</bean>
+	
+	<bean id="carInsuranceSearchAction" class="com.dearho.cs.carservice.action.insurance.CarInsuranceSearchAction" scope="prototype">
+		<property name="carInsuranceService" ref="carInsuranceService"  />
+		<property name="areaService" ref="areaService"  />
+		<property name="carService" ref="carService"  />
+	</bean>
+	<bean id="carInsuranceGetAction" class="com.dearho.cs.carservice.action.insurance.CarInsuranceGetAction" scope="prototype">
+		<property name="carInsuranceService" ref="carInsuranceService" />
+		<property name="areaService" ref="areaService"  />
+		<property name="carService" ref="carService"  />
+	</bean>
+	<bean id="carInsuranceAddAction" class="com.dearho.cs.carservice.action.insurance.CarInsuranceAddAction" scope="prototype">
+		<property name="carInsuranceService" ref="carInsuranceService" />
+	</bean>
+	<bean id="carInsuranceDeleteAction" class="com.dearho.cs.carservice.action.insurance.CarInsuranceDeleteAction" scope="prototype">
+		<property name="carInsuranceService" ref="carInsuranceService" />
+	</bean>
+	<bean id="carInsuranceUpdateAction" class="com.dearho.cs.carservice.action.insurance.CarInsuranceUpdateAction" scope="prototype">
+		<property name="carInsuranceService" ref="carInsuranceService" />
+	</bean>
+	<bean id="carInsuranceChangeDiscardAction" class="com.dearho.cs.carservice.action.insurance.CarInsuranceChangeDiscardAction" scope="prototype">
+		<property name="carInsuranceService" ref="carInsuranceService" />
+	</bean>
+	
+	<bean id="carRepairSearchAction" class="com.dearho.cs.carservice.action.repair.CarRepairSearchAction" scope="prototype">
+		<property name="carRepairService" ref="carRepairService"  />
+		<property name="areaService" ref="areaService"  />
+		<property name="carService" ref="carService"  />
+		<property name="subscriberService" ref="subscriberService"  />
+		<property name="ordersService" ref="ordersService"  />
+	</bean>
+	<bean id="carRepairGetAction" class="com.dearho.cs.carservice.action.repair.CarRepairGetAction" scope="prototype">
+		<property name="carRepairService" ref="carRepairService" />
+		<property name="areaService" ref="areaService"  />
+		<property name="carService" ref="carService"  />
+		<property name="subscriberService" ref="subscriberService"  />
+		<property name="ordersService" ref="ordersService"  />
+	</bean>
+	<bean id="carRepairAddAction" class="com.dearho.cs.carservice.action.repair.CarRepairAddAction" scope="prototype">
+		<property name="carRepairService" ref="carRepairService" />
+		<property name="carService" ref="carService" />
+	</bean>
+	<bean id="carRepairDeleteAction" class="com.dearho.cs.carservice.action.repair.CarRepairDeleteAction" scope="prototype">
+		<property name="carRepairService" ref="carRepairService" />
+	</bean>
+	<bean id="carRepairUpdateAction" class="com.dearho.cs.carservice.action.repair.CarRepairUpdateAction" scope="prototype">
+		<property name="carRepairService" ref="carRepairService" />
+		<property name="carService" ref="carService" />
+	</bean>
+	<bean id="carRepairChangeDiscardAction" class="com.dearho.cs.carservice.action.repair.CarRepairChangeDiscardAction" scope="prototype">
+		<property name="carRepairService" ref="carRepairService" />
+	</bean>
+	
+	
+	<bean id="parkingPatrolSearchAction" class="com.dearho.cs.carservice.action.patrol.parking.ParkingPatrolSearchAction" scope="prototype">
+		<property name="parkingPatrolService" ref="parkingPatrolService"  />
+		<property name="userService" ref="userService"  />
+		<property name="areaService" ref="areaService"  />
+		<property name="branchDotService" ref="branchDotService"  />
+		
+	</bean>
+	<bean id="parkingPatrolGetAction" class="com.dearho.cs.carservice.action.patrol.parking.ParkingPatrolGetAction" scope="prototype">
+		<property name="parkingPatrolService" ref="parkingPatrolService" />
+		<property name="userService" ref="userService"  />
+		<property name="areaService" ref="areaService"  />
+		<property name="branchDotService" ref="branchDotService"  />
+	</bean>
+	<bean id="parkingPatrolAddAction" class="com.dearho.cs.carservice.action.patrol.parking.ParkingPatrolAddAction" scope="prototype">
+		<property name="parkingPatrolService" ref="parkingPatrolService" />
+	</bean>
+	<bean id="parkingPatrolDeleteAction" class="com.dearho.cs.carservice.action.patrol.parking.ParkingPatrolDeleteAction" scope="prototype">
+		<property name="parkingPatrolService" ref="parkingPatrolService" />
+	</bean>
+	<bean id="parkingPatrolUpdateAction" class="com.dearho.cs.carservice.action.patrol.parking.ParkingPatrolUpdateAction" scope="prototype">
+		<property name="parkingPatrolService" ref="parkingPatrolService" />
+	</bean>
+	<bean id="parkingPatrolChangeDiscardAction" class="com.dearho.cs.carservice.action.patrol.parking.ParkingPatrolChangeDiscardAction" scope="prototype">
+		<property name="parkingPatrolService" ref="parkingPatrolService" />
+	</bean>
+	
+	
+	
+	<bean id="carPatrolSearchAction" class="com.dearho.cs.carservice.action.patrol.car.CarPatrolSearchAction" scope="prototype">
+		<property name="carPatrolService" ref="carPatrolService"  />
+		<property name="carService" ref="carService" />
+		<property name="parkingPatrolService" ref="parkingPatrolService" />
+		<property name="branchDotService" ref="branchDotService" />
+	</bean>
+	<bean id="carPatrolGetAction" class="com.dearho.cs.carservice.action.patrol.car.CarPatrolGetAction" scope="prototype">
+		<property name="carPatrolService" ref="carPatrolService" />
+		<property name="carService" ref="carService" />
+		<property name="parkingPatrolService" ref="parkingPatrolService" />
+		<property name="branchDotService" ref="branchDotService" />
+	</bean>
+	<bean id="carPatrolAddAction" class="com.dearho.cs.carservice.action.patrol.car.CarPatrolAddAction" scope="prototype">
+		<property name="carPatrolService" ref="carPatrolService" />
+		<property name="parkingPatrolService" ref="parkingPatrolService" />
+	</bean>
+	<bean id="carPatrolDeleteAction" class="com.dearho.cs.carservice.action.patrol.car.CarPatrolDeleteAction" scope="prototype">
+		<property name="carPatrolService" ref="carPatrolService" />
+	</bean>
+	<bean id="carPatrolUpdateAction" class="com.dearho.cs.carservice.action.patrol.car.CarPatrolUpdateAction" scope="prototype">
+		<property name="carPatrolService" ref="carPatrolService" />
+		<property name="parkingPatrolService" ref="parkingPatrolService" />
+	</bean>
+	
+		
+</beans>

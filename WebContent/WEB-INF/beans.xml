@@ -1,0 +1,55 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<beans xmlns="http://www.springframework.org/schema/beans"
+	xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+	xmlns:aop="http://www.springframework.org/schema/aop"
+	xmlns:tx="http://www.springframework.org/schema/tx"
+	xsi:schemaLocation="http://www.springframework.org/schema/beans 
+	http://www.springframework.org/schema/beans/spring-beans.xsd 
+	http://www.springframework.org/schema/aop
+	http://www.springframework.org/schema/aop/spring-aop.xsd
+	http://www.springframework.org/schema/tx 
+	http://www.springframework.org/schema/tx/spring-tx.xsd">
+	<import resource="service.xml"/>
+	<import resource="dao.xml"/>
+	<import resource="action.xml"/>
+	<!-- 车辆bean 配置文件 -->
+	<import resource="carAction.xml"/>
+	
+	<!-- 车机bean 配置文件 -->
+	<import resource="deviceAction.xml"/>
+	
+	<!-- 资源监控 bean 配置文件 -->
+	<import resource="resMonitorAction.xml"/>
+	<!-- 会员 bean 配置文件 -->
+	<import resource="subscriberAction.xml"/>
+	<!-- 订单相关的配置文件 -->
+	<import resource="ordersAction.xml"/>
+	<!-- 网点配置文件 -->
+	<import resource="placeAction.xml"/>
+	<!-- 充电桩 -->
+	<import resource="chargeAction.xml"/>
+	<!-- 车务 -->
+	<import resource="carServiceAction.xml"/>
+	<!-- 报表  start-->
+	<import resource="reportAction.xml"/>
+	<!-- 计费策略 -->
+	<import resource="FeeStrategyAction.xml"/>
+	
+	<!-- 支付 -->
+	<import resource="payAction.xml"/>
+	
+	<!-- 支付 -->
+	<import resource="statisticsAction.xml"/>
+	
+	<!-- 特来电充电站-->
+	<import resource="teldIntrfAction.xml"/>
+	
+	<!-- 投诉建议-->
+	<import resource="adviceAction.xml"/>
+	
+	<!-- APP beans-->
+	<import resource="beans_app/subscriberAction.xml"/>
+	<import resource="beans_app/ordersAction.xml"/>
+	<import resource="beans_app/bookCarAction.xml"/>
+	<import resource="beans_app/sysAction.xml"/>
+</beans>

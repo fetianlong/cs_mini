@@ -1,0 +1,103 @@
+<!DOCTYPE hibernate-mapping PUBLIC 
+    "-//Hibernate/Hibernate Mapping DTD 3.0//EN"
+    "http://hibernate.sourceforge.net/hibernate-mapping-3.0.dtd">
+ 
+<hibernate-mapping>
+	<class name="com.dearho.cs.car.pojo.CarVehicleModel" table="c_vehicle_model">
+		<id name="id" type="string">
+            <column name="ID" length="32" />
+            <generator class="uuid.hex" />
+        </id>
+       	<property name="name" type="string">
+       		<column name="NAME" length="64" />
+       	</property>
+       	<property name="engineType" type="string">
+       		<column name="ENGINE_TYPE" length="64" />
+       	</property>
+       	<property name="brand" type="string">
+       		<column name="brand" length="32" />
+       	</property>
+       	<property name="level" type="string">
+       		<column name="level" length="64" />
+       	</property>
+       	<property name="seatingNum" type="integer">
+       		<column name="seating_num" />
+       	</property>
+       	<property name="luggageNum" type="double">
+       		<column name="luggage_num" />
+       	</property>
+       	<property name="casesNum" type="integer">
+       		<column name="cases_num" />
+       	</property>
+       	<property name="gearboxType" type="string">
+       		<column name="gearbox_type" length="64" />
+       	</property>
+       	<property name="entertainmentSystem" type="integer">
+       		<column name="enterainment_system" />
+       	</property>
+       	<property name="standardMileage" type="integer">
+       		<column name="standard_mileage" />
+       	</property>
+       	<property name="creatorId" type="string">
+       		<column name="creator_id" length="32" />
+       	</property>
+       	<property name="createDate" type="java.util.Date">
+       		<column name="create_date" />
+       	</property>
+       	<property name="ts" type="java.util.Date">
+       		<column name="ts"/>
+       	</property>
+       	
+       	<property name="webModelPhoto" type="string">
+       		<column name="web_model_photo"/>
+       	</property>
+       	<property name="androidModelPhoto" type="string">
+       		<column name="android_model_photo"/>
+       	</property>
+       	<property name="IOSModelPhoto" type="string">
+       		<column name="ios_model_photo"/>
+       	</property>
+       	<property name="microWebModelPhoto" type="string">
+       		<column name="microweb_model_photo"/>
+       	</property>
+       	
+       	<property name="mileage20" type="double">
+       		<column name="mileage_20"/>
+       	</property>
+       	<property name="mileage30" type="double">
+       		<column name="mileage_30"/>
+       	</property>
+       	<property name="mileage40" type="double">
+       		<column name="mileage_40"/>
+       	</property>
+       	<property name="mileage50" type="double">
+       		<column name="mileage_50"/>
+       	</property>
+       	<property name="mileage60" type="double">
+       		<column name="mileage_60"/>
+       	</property>
+       	<property name="mileage70" type="double">
+       		<column name="mileage_70"/>
+       	</property>
+       	<property name="mileage80" type="double">
+       		<column name="mileage_80"/>
+       	</property>
+       	<property name="mileage90" type="double">
+       		<column name="mileage_90"/>
+       	</property>
+       	<property name="mileage100" type="double">
+       		<column name="mileage_100"/>
+       	</property>
+       	
+       	<property name="hasgps" type="integer">
+       		<column name="hasgps"/>
+       	</property>
+       	
+       	<property name="shizuStrategy" type="string">
+            <column name="shizu_strategy" />
+        </property>
+        <property name="rizuStrategy" type="string">
+            <column name="rizu_strategy" />
+        </property>
+	</class>
+</hibernate-mapping>

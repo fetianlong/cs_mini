@@ -1,0 +1,290 @@
+@charset "utf-8";
+/* CSS Document */
+
+body {
+	background: #eeeeee;
+}
+
+.CarImgBlock {
+	position: relative;
+	padding-top: 10px;
+	padding-bottom: 10px;
+	margin-bottom: 20px;
+	background: #FFF;
+}
+
+.CarImgBlock .CarImgLink {
+	display: block;
+	cursor: pointer;
+	border: solid 1px #dfdddd;
+	text-decoration: none;
+}
+
+.CarImgBlock .CarImgLink img {
+	width: 100%;
+}
+
+.CarImgBlock .CarImgLink p {
+	font-size: 14px;
+	line-height: 20px;
+	text-align: center;
+	background: #e5e5e5;
+	color: #FFF;
+	margin: 0;
+	padding: 0;
+}
+
+.CarImgBlock .CarNameBlock {
+	padding-left: 0;
+}
+
+.CarImgBlock .CarNameBlock h4 {
+	font-weight: normal;
+	font-size: 16px;
+	margin: 0;
+	margin-bottom: 10px;
+	color: #383838;
+}
+
+.CarImgBlock .CarNameBlock p {
+	font-size: 12px;
+	line-height: 16px;
+}
+
+.CarImgBlock .CarNameBlock .CarType {
+	display: inline-block;
+	padding: 0 2px;
+	color: #4bd3a5;
+	border: solid 1px #4bd3a5;
+	border-radius: 2px;
+	font-size: 12px;
+	line-height: 18px;
+	margin: 0;
+	margin-left: 5px;
+}
+
+.CarImgBlock .CarPrice {
+	position: absolute;
+	right: 10px;
+	color: #fe9c3b;
+}
+
+.CarImgBlock .CarPrice p {
+	font-size: 8px;
+	line-height: 18px;
+	margin: 0;
+}
+
+.CarImgBlock .CarPrice span {
+	font-size: 12px;
+	line-height: 18px;
+	margin-right: 2px;
+}
+
+.OneBlock {
+	border-top: none;
+	border-bottom: none;
+	position: relative;
+	padding: 0 10px;
+}
+
+.OneBlock ul {
+	margin: 0;
+	padding: 0;
+	list-style: none;
+}
+
+.OneBlock ul li {
+	font-size: 14px;
+	line-height: 34px;
+	border-bottom: solid 1px #e7e7e7;
+	color: #606060;
+}
+
+.OneBlock ul li:last-of-type {
+	border-bottom: none;
+}
+
+.OneBlock .Caption {
+	position: absolute;
+	left: 20px;
+	top: -12px;
+	background: #FFF;
+	font-size: 16px;
+	line-height: 24px;
+	border-radius: 14px;
+	padding: 0 6px;
+	color: #393838;
+}
+
+.CarListUl {
+	list-style: none;
+	margin: 0;
+	padding: 0;
+}
+
+.CarListUl li {
+	font-size: 12px;
+	line-height: 18px;
+}
+
+.CarListUl .progress {
+	display: inline-block;
+	width: 30%;
+	margin-bottom: 0;
+	margin-right: 5px;
+}
+
+.CarListUl .progress .progress-bar-info {
+	background-color: #fe9c3b;
+}
+
+.CarOrderBlock {
+	margin-bottom: 50px;
+}
+
+.CarOrderBlock .SubBlock {
+	display: none;
+	background: #c1d7d4;
+	margin: 0 -10px;
+	padding: 0 10px;
+	color: #FFF;
+	font-size: 14px;
+	line-height: 34px;
+	box-shadow: 0 4px 2px -2px #b8cdca inset;
+}
+
+.CarOrderBlock ul li {
+	/*border-bottom: none;*/
+}
+
+.CarOrderBlock ul li .checkbox {
+	cursor: pointer;
+	font-size: 14px;
+	margin-top: 7px;
+	margin-bottom: 3px;
+}
+
+.CarOrderBlock ul li .checkbox .icons {
+	/*border: none;
+	border-radius: 50%;
+	overflow: hidden;
+	
+	height: 18px;
+	width: 18px;
+	line-height: 18px;
+	font-size: 18px;*/
+}
+
+.CarOrderBlock ul li .checkbox .icons .icon-unchecked, .CarOrderBlock ul li .checkbox .icons .icon-checked {
+	
+}
+
+.CarOrderBlock ul li .checkbox .icons .icon-unchecked {
+	color: #e6e6e6 !important;
+}
+
+.CarOrderBlock ul li .checkbox .icons .icon-checked {
+	color: #fe9c3b !important;
+}
+
+/*测试用
+.CarOrderBlock ul li .checkbox .ArrowIcon:hover .fa {
+	transform: rotate(90deg);
+}*/
+
+.CarOrderBlock ul li .checkbox .ArrowIcon .fa {
+	color: #d6d6d6;
+	transform: rotate(0);
+	transition: all 0.2s linear;
+	-webkit-transition: all 0.2s linear;
+	-moz-transition: all 0.2s linear;
+	-o-transition: all 0.2s linear;
+}
+
+.CarOrderBlock .YuguLink {
+	display: block;
+	color: #FFF;
+	text-decoration: none;
+}
+
+.CarOrderBlock .TimeSelectBlock {
+	display: inline-block;
+	margin: 0 10px;
+}
+
+.CarOrderBlock .TimeSelectBlock .btn {
+	background: transparent;
+	padding: 0;
+	width: 20px;
+	height: 20px;
+	margin: 0 5px 4px;
+}
+
+.CarOrderBlock .TimeSelectBlock .TimeInput {
+	display: inline-block;
+	width: 50px;
+	color: #fe9c3b;
+	background: transparent;
+	border: none;
+	text-align: center;
+	padding: 0;
+	font-size: 14px;
+	line-height: 34px;
+	height: 34px;
+	-webkit-appearance: none;
+}
+
+.CarOrderBlock .TimeSelectBlock .TimeInput::-webkit-outer-spin-button,
+.CarOrderBlock .TimeSelectBlock .TimeInput::-webkit-inner-spin-button {
+    -webkit-appearance: none !important;
+    margin: 0;
+}
+
+.CarOrderBlock .RizuPrice {
+	color: #fe9c3b;
+	font-size: 12px;
+	line-height: 12px;
+}
+
+.CarOrderBlock .RizuPrice span {
+	margin-right: 3px;
+	font-size: 18px;
+	line-height: 34px;
+}
+
+.HuancheLink {
+	display: inline-block;
+	font-size: 14px;
+	line-height: 26px;
+	background: #f5f5f5;
+	border: solid 1px #a5a5a5;
+	color: #777777;
+	text-decoration: none;
+	padding: 0 5px;
+	border-radius: 0;
+	clear: both;
+	margin-right: 20px;
+	margin-bottom: 20px;
+}
+
+.HuancheLink .fa {
+	color: #cc6666;
+	margin-right: 5px;
+}
+
+.HuancheLink:hover {
+	color: #777777;
+}
+
+.Tips {
+	font-size: 14px;
+	line-height: 24px;
+	color: #fe9c3b;
+	text-align: center;
+	padding: 0 10px;
+}
+
+.SubmitButton {
+	margin-bottom: 20px;
+}

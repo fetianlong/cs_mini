@@ -1,0 +1,29 @@
+<!DOCTYPE hibernate-mapping PUBLIC 
+    "-//Hibernate/Hibernate Mapping DTD 3.0//EN"
+    "http://hibernate.sourceforge.net/hibernate-mapping-3.0.dtd">
+<hibernate-mapping>
+	<class name="com.dearho.cs.sys.pojo.Menu" table="s_menu">
+		<id name="menuId" type="java.lang.Integer">
+            <column name="menu_id"  />
+            <generator class="increment" /> 
+        </id>
+        <property name="menuName" type="java.lang.String">
+            <column name="menu_name" length="255" not-null="true" />
+        </property>
+        <property name="menuUrl" type="java.lang.String">
+            <column name="menu_url" length="255"  />
+        </property>
+        <property name="menuType" type="java.lang.String">
+            <column name="menu_type" length="32" />
+        </property>
+        <property name="menuPid" type="java.lang.Integer">
+            <column name="menu_pid"  />
+        </property>
+        <property name="menuOrder" type="java.lang.Integer">
+            <column name="menu_order"  />
+        </property>
+        <property name="ts" type="java.util.Date">
+       		<column name="ts"/>
+       	</property>
+	</class>
+</hibernate-mapping>

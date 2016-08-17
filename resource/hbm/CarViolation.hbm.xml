@@ -1,0 +1,110 @@
+<!DOCTYPE hibernate-mapping PUBLIC 
+    "-//Hibernate/Hibernate Mapping DTD 3.0//EN"
+    "http://hibernate.sourceforge.net/hibernate-mapping-3.0.dtd">
+ 
+<hibernate-mapping>
+	<class name="com.dearho.cs.carservice.pojo.CarViolation" table="c_vehicle_violation">
+		<id name="id" type="string">
+            <column name="id" length="32" />
+            <generator class="uuid.hex" />
+        </id>
+        <property name="code" type="string">
+        	<column name="code"  />
+        </property>
+        <property name="city" type="string">
+        	<column name="city"  />
+        </property>
+        <property name="carId" type="string">
+        	<column name="car_id"  />
+        </property>
+         <property name="orderId" type="string">
+        	<column name="order_id"  />
+        </property>
+         <property name="memberId" type="string">
+        	<column name="member_id"  />
+        </property>
+        
+        <property name="money" type="double">
+        	<column name="money"  />
+        </property>
+        <property name="score" type="integer">
+        	<column name="score"  />
+        </property>
+        <property name="happenTime" type="java.util.Date">
+        	<column name="happen_time"  />
+        </property>
+       <property name="desc" type="string">
+        	<column name="vehicle_desc"  />
+        </property>
+         <property name="noticeTime" type="java.util.Date">
+        	<column name="notice_time"  />
+        </property>
+         <property name="offTime" type="java.util.Date">
+        	<column name="off_time"  />
+        </property>
+        <property name="handleType" type="string">
+        	<column name="handle_type"  />
+        </property>
+        <property name="handleDept" type="string">
+        	<column name="handle_dept"  />
+        </property>
+        <property name="handleTime" type="java.util.Date">
+        	<column name="handle_time"  />
+        </property>
+        <property name="sendType" type="string">
+        	<column name="send_type"  />
+        </property>
+        <property name="sendAddress" type="string">
+        	<column name="send_address"  />
+        </property>
+        <property name="acceptMember" type="string">
+        	<column name="accept_member"  />
+        </property>
+        <property name="acceptFlag" type="string">
+        	<column name="accept_flag"  />
+        </property>
+        <property name="bizStatus" type="string">
+        	<column name="biz_status"  />
+        </property>
+        
+        <property name="statusChangePerson1" type="string">
+        	<column name="status_change_person1"  />
+        </property>
+        <property name="statusChangeTime1" type="java.util.Date">
+        	<column name="status_change_time1"  />
+        </property>
+        <property name="statusChangePerson2" type="string">
+        	<column name="status_change_person2"  />
+        </property>
+        <property name="statusChangeTime2" type="java.util.Date">
+        	<column name="status_change_time2"  />
+        </property>
+        <property name="statusChangePerson3" type="string">
+        	<column name="status_change_person3"  />
+        </property>
+        <property name="statusChangeTime3" type="java.util.Date">
+        	<column name="status_change_time3"  />
+        </property>
+        
+        <property name="remark" type="string">
+        	<column name="remark"  />
+        </property>
+        <property name="isDiscard" type="integer">
+        	<column name="is_discard"  />
+        </property>
+        <property name="creatorId" type="string">
+        	<column name="creator_id" length="32" />
+        </property>
+        <property name="createTime" type="java.util.Date">
+        	<column name="create_time" />
+        </property>
+        <property name="updateTime" type="java.util.Date">
+        	<column name="update_time" />
+        </property>
+        <property name="ts" type="java.util.Date">
+        	<column name="ts" />
+        </property>
+        
+        
+	</class>
+</hibernate-mapping>

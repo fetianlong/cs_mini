@@ -1,0 +1,43 @@
+@charset "utf-8";
+/* CSS Document */
+
+.ListBlock .table th, .ListBlock .table td {
+	font-size: 14px;
+	text-align: center;
+}
+
+.ListBlock .table tbody tr {
+	cursor: pointer;
+}
+
+table .Color1 {
+	color: #038f5d !important;
+}
+
+table .Color2 {
+	color: #f99338 !important;
+}
+
+table .Color3 {
+	color: #4eb7f3 !important;
+}
+
+.modal table {
+	width: 100%;
+}
+
+.modal table tbody th, .modal table tbody td {
+	font-size: 14px;
+}
+
+.modal table tbody th {
+	width: 80px;
+}
+
+.modal table tbody td {
+	color: #999;
+}
+
+.modal table tbody td .fa {
+	margin-right: 2px;
+}

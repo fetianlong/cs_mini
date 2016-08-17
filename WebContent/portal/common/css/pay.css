@@ -1,0 +1,58 @@
+@charset "utf-8";
+/* CSS Document */
+
+.MainContent {
+	padding: 100px 0;
+	background: #f2f1f1;
+}
+
+.MainContent>.container {
+	background: #FFF;
+	padding-top: 50px;
+	padding-bottom: 50px;
+	position: relative;
+}
+
+.PriceBlock h1 {
+	color: #4bd3a5;
+	margin-bottom: 50px;
+	margin-top: 0;
+}
+
+.PriceBlock p {
+	text-align: center;
+	color: #999;
+}
+
+.PriceBlock h1 .fa {
+	margin-right: 5px;
+}
+
+.SelectTypeBlock {
+	margin-bottom: 100px;
+}
+
+.SelectTypeBlock .btn.Selected {
+	background: #4bd3a5;
+	color: #FFF;
+	border-color: #4bd3a5;
+}
+
+.MainContent .SubmitButton {
+	background: #4bd3a5;
+	color: #FFF;
+	border-color: #4bd3a5;
+	border-radius: 0;
+}
+
+.ScanQrCodeBlock p {
+	background: rgba(0,0,0,0.8);
+	color: #FFF;
+	font-size: 16px;
+	line-height: 24px;
+	padding: 20px 20px;
+}
+
+.ScanQrCodeBlock p .fa {
+	margin-right: 10px;
+}

@@ -1,0 +1,142 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE xwork PUBLIC "-//Apache Struts//XWork 1.1.1//EN" 
+"http://struts.apache.org/dtds/xwork-1.1.1.dtd">
+<xwork>
+	<package name="place" extends="webwork-default" namespace="/place">
+		<default-interceptor-ref name="defaultStack"/>
+		
+		<global-results>
+			<result name="timeout" type="dispatcher">
+                <param name="location">error.jsp</param>
+            </result>
+            <result name="illegal" type="dispatcher">
+                <param name="location">error.jsp</param>
+            </result>
+		</global-results>
+	
+   		<action name="branchDotSearch" class="branchDotSearchAction">
+			<result name="success" type="dispatcher">
+                <param name="location">/pages/place/branchdotlist.jsp</param>
+            </result>
+            <result name="returnbackdot" type="dispatcher">
+                <param name="location">/pages/place/returnbacklist.jsp</param>
+            </result>
+            <result name="page" type="dispatcher">
+                <param name="location">/pages/place/branchdotpage.jsp</param>
+            </result>
+			<result name="error" type="dispatcher">
+                <param name="location">error.jsp</param>
+            </result>
+			<interceptor-ref name="defaultStack"/>
+		</action>
+		<action name="branchDotGet" class="branchDotGetAction">
+			<result name="success" type="dispatcher">
+                <param name="location">/pages/place/branchdotadd.jsp</param>
+            </result>
+			<result name="error" type="dispatcher">
+                <param name="location">error.jsp</param>
+            </result>
+			<interceptor-ref name="defaultStack"/>
+		</action>
+		<action name="branchDotAdd" class="branchDotAddAction">
+			<result name="success" type="dispatcher">
+                <param name="location">/resultjson.jsp</param>
+            </result>
+			<result name="error" type="dispatcher">
+                <param name="location">/resultjson.jsp</param>
+            </result>
+			<result name="illegal" type="dispatcher">
+                <param name="location">/resultxml.jsp</param>
+            </result>
+            <interceptor-ref name="defaultStack" />
+		</action>
+		<action name="branchDotUpdate" class="branchDotUpdateAction">
+			<result name="success" type="dispatcher">
+                <param name="location">/resultjson.jsp</param>
+            </result>
+			<result name="error" type="dispatcher">
+                <param name="location">/resultjson.jsp</param>
+            </result>
+			<result name="illegal" type="dispatcher">
+                <param name="location">/resultxml.jsp</param>
+            </result>
+            <interceptor-ref name="defaultStack" />
+		</action>
+		<action name="branchDotDelete" class="branchDotDeleteAction">
+			<result name="success" type="dispatcher">
+                <param name="location">/resultjson.jsp</param>
+            </result>
+			<result name="error" type="dispatcher">
+                <param name="location">/resultjson.jsp</param>
+            </result>
+			<result name="illegal" type="dispatcher">
+                <param name="location">/resultxml.jsp</param>
+            </result>
+            <interceptor-ref name="defaultStack" />
+		</action>
+		
+		
+		<action name="dotInfoSearch" class="dotInfoSearchAction">
+			<result name="success" type="dispatcher">
+                <param name="location">/resultjson.jsp</param>
+            </result>
+			<result name="error" type="dispatcher">
+                <param name="location">/resultjson.jsp</param>
+            </result>
+			<interceptor-ref name="defaultStack"/>
+		</action>
+		
+	</package>
+	
+	
+	
+	<package name="place/carDotBinding" extends="webwork-default" namespace="/place/carDotBinding">
+		<default-interceptor-ref name="defaultStack"/>
+		
+		<global-results>
+			<result name="timeout" type="dispatcher">
+                <param name="location">error.jsp</param>
+            </result>
+            <result name="illegal" type="dispatcher">
+                <param name="location">error.jsp</param>
+            </result>
+		</global-results>
+	
+   		<action name="searchCarDotBinding" class="carDotBindingAction" method="searchCarDotBinding">
+			<result name="success" type="dispatcher">
+                <param name="location">/pages/place/cardotbindinglist.jsp</param>
+            </result>
+		</action>
+		
+		<action name="searchCars" class="carDotBindingAction" method="searchCars">
+			<result name="success" type="dispatcher">
+                <param name="location">/pages/place/cardotbindingget.jsp</param>
+            </result>
+			<result name="error" type="dispatcher">
+                <param name="location">error.jsp</param>
+            </result>
+			<interceptor-ref name="defaultStack"/>
+		</action>
+		
+		<action name="addCarDotBinding" class="carDotBindingAction" method="addCarDotBinding">
+			<result name="success" type="dispatcher">
+                <param name="location">/resultjson.jsp</param>
+            </result>
+			<result name="error" type="dispatcher">
+                <param name="location">/resultjson.jsp</param>
+            </result>
+		</action>
+		<action name="deleteCarDotBinding" class="carDotBindingAction"  method="deleteCarDotBinding">
+			<result name="success" type="dispatcher">
+                <param name="location">/resultjson.jsp</param>
+            </result>
+			<result name="error" type="dispatcher">
+                <param name="location">/resultjson.jsp</param>
+            </result>
+		</action>
+		
+		
+		
+		
+	</package>
+</xwork>

@@ -1,0 +1,61 @@
+@charset "utf-8";
+/* CSS Document */
+
+.Icon {
+	border-radius: 50%;
+	width: 150px;
+	height: 150px;
+	line-height: 150px;
+	margin: 30px auto;
+	text-align: center;
+	color: #51bf87;
+	border: dashed 2px #51bf87;
+}
+
+.Icon .fa.fa-bolt {
+	color: #FFF;
+	line-height: 40px;
+}
+
+.ReturnCarImg {
+	margin: 30px auto;
+}
+
+p {
+	font-size: 14px;
+	line-height: 24px;
+}
+
+.btn {
+	margin-left: 5px;
+}
+
+.BottomButton p {
+	margin-bottom: 0;
+}
+
+.BottomButton .row>div[class^="col-"] {
+	padding-left: 5px;
+	padding-right: 5px;
+}
+
+.ReturnButton {
+	background: #FFF;
+	color: #1abc9c;
+	text-decoration: none;
+	padding: 20px 0 0;
+	font-size: 12px;
+}
+
+.ReturnButton:hover {
+	color: #1abc9c;
+}
+
+.ReturnButton .fa {
+	margin-right: 2px;
+}
+
+.Tips {
+	text-align: center;
+	font-size: 20px;
+}

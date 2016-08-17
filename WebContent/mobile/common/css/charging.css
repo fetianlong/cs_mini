@@ -1,0 +1,143 @@
+@charset "utf-8";
+/* CSS Document */
+
+body {
+	position: relative;
+	background: #eeeeee;
+}
+
+.ShowStateBlock {
+	position: relative;
+	padding: 0;
+	border-top: none;
+	padding-top: 20px;
+}
+
+.ShowStateBlock p {
+	margin-bottom: 0;
+	font-size: 14px;
+}
+
+.ShowStateBlock .ShowTime {
+	position: absolute;
+	width: 100%;
+	top: 76px;
+	font-size: 36px;
+	line-height: 40px;
+	text-align: center;
+	color: #4bd3a5;
+}
+
+.ShowStateBlock .Caption {
+	font-size: 16px;
+	margin-top: 10px;
+	margin-bottom: 20px;
+	color: #a1a1a1;
+}
+
+.ShowStateBlock .Caption .fa {
+	color: #4bd3a5;
+	margin-right: 5px;
+}
+
+.ShowStateBlock .Caption span {
+	color: #4bd3a5;
+	font-size: 24px;
+	margin: 0 2px;
+}
+
+.ShowStateBlock .Caption span.Unit {
+	font-size: 16px;
+}
+
+.ShowStateBlock .ShowTime .Unit {
+	font-size: 24px;
+	margin-left: 2px;
+}
+
+.ControlBlock ul {
+	list-style: none;
+	padding: 0;
+	margin: 0;
+	box-shadow: 0 0 10px #999;
+}
+
+.ControlBlock ul li {
+	float: left;
+	width: 25%;
+	padding: 0;
+	margin: 0;
+}
+
+.ControlBlock ul li button {
+	display: block;
+	background: #FFF;
+	color: #414a59;
+	text-align: center;
+	width: 100%;
+	border-radius: 0;
+	font-size: 14px;
+	line-height: 40px;
+	padding: 0;
+}
+
+.ControlBlock ul li button:hover {
+	color: #414a59;
+}
+
+.ControlBlock ul li button .fa {
+	margin-right: 3px;
+}
+
+.OneBlock p {
+	font-size: 12px;
+	margin-bottom: 5px;
+}
+
+.CdzBlock p {
+	color: #4bd3a5;
+	margin: 0;
+}
+
+.CdzBlock p:first-of-type {
+	font-size: 18px;
+}
+
+.InfoBlock div[class^="col-"] {
+	padding-left: 0;
+	padding-right: 0;
+}
+
+.InfoBlock table:last-of-type {
+	margin-bottom: 0;
+}
+
+.table>tbody>tr>td, .table>tbody>tr>th, .table>tfoot>tr>td, .table>tfoot>tr>th, .table>thead>tr>td, .table>thead>tr>th {
+	border-top: none;
+	padding-top: 0;
+	padding-bottom: 0;
+	font-size: 14px;
+	width: 25%;
+}
+
+.table {
+	border: none;
+}
+
+.table>tbody>tr>td:nth-of-type(2), .table>tbody>tr>td:nth-of-type(4) {
+	text-align: right;
+	/*padding-right: 10px;*/
+}
+
+.OneBlock .row {
+	margin-left: 0;
+	margin-right: 0;
+}
+
+.table>tbody>tr>td span {
+	margin: 2px;
+}
+
+.ControlBlock {
+	margin-bottom: 20px;
+}

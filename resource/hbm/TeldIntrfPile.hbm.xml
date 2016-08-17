@@ -1,0 +1,28 @@
+<!DOCTYPE hibernate-mapping PUBLIC 
+    "-//Hibernate/Hibernate Mapping DTD 3.0//EN"
+    "http://hibernate.sourceforge.net/hibernate-mapping-3.0.dtd">
+ <hibernate-mapping>
+ 	<class name="com.dearho.cs.teldintrf.pojo.TeldIntrfPile" table="teld_intrf_pile">
+        <id name="pileCode" type="string">
+        	<column name="pileCode" />
+        </id>
+        <property name="pileName" type="string">
+        	<column name="pileName" />
+        </property>
+        <property name="pileType" type="string">
+        	<column name="pileType" />
+        </property>
+        <property name="stationCode" type="string">
+        	<column name="stationCode" />
+        </property>
+        
+        
+         <property name="createTime" type="java.util.Date">
+        	<column name="createTime"  />
+        </property>
+         <property name="updateTime" type="java.util.Date">
+        	<column name="updateTime" />
+        </property>
+	</class>
+ 
+ </hibernate-mapping>

@@ -1,0 +1,40 @@
+@charset "utf-8";
+/* CSS Document */
+
+.SexBlock label {
+	display: inline-block;
+	margin-right: 20px;
+}
+
+.Caption {
+	font-size: 14px;
+	font-weight: bold;
+	margin: 0;
+	margin-top: 20px;
+}
+
+form .form-group {
+	margin-bottom: 10px;
+}
+
+.SubmitButton {
+	margin: 20px 0;
+}
+
+.form-control[disabled], .form-control[readonly], fieldset[disabled] .form-control, .select2-search input[type=text][disabled], .select2-search input[type=text][readonly], fieldset[disabled] .select2-search input[type=text] {
+	opacity: 1;
+	background: #FFF;
+	border-color: #bdc3c7;
+	color: #34495e;
+}
+
+.PlusButton {
+	background: #414a59;
+	border-color: #414a59;
+	color: #FFF;
+}
+
+.PlusButton a {
+	color: #FFF;
+	text-decoration: none;
+}

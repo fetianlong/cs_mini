@@ -1,0 +1,44 @@
+@charset "utf-8";
+/* CSS Document */
+
+.Tips {
+	font-size: 14px;
+	color: #999;
+	margin-top: 50px;
+	margin-bottom: 5px;
+}
+
+.Money {
+	color: #1abc9c;
+	margin-top: 0;
+	margin-bottom: 50px;
+	text-shadow: 1px 1px 2px #999;
+}
+
+.Money .fa {
+	margin-right: 5px;
+}
+
+.SelectZhifuBlock .btn {
+	background: #FFF;
+	border: solid 1px #999;
+	color: #333;
+}
+
+.SelectZhifuBlock .btn.Selected {
+	background: #1abc9c;
+	color: #FFF;
+	border-color: #1abc9c;
+}
+
+.SelectZhifuBlock .btn.disabled {
+	background: #eee;
+}
+
+.SelectZhifuBlock .btn.disabled:focus {
+	background: #eee;
+}
+
+.SelectZhifuBlock .btn .fa {
+	margin-right: 2px;
+}

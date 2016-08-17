@@ -1,0 +1,875 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE xwork PUBLIC "-//Apache Struts//XWork 1.1.1//EN" 
+"http://struts.apache.org/dtds/xwork-1.1.1.dtd">
+<xwork>
+
+<package name="/mobile/test" extends="webwork-default" namespace="/mobile/test">
+		<default-interceptor-ref name="defaultStack"/>
+			<global-results>
+				<result name="timeout" type="dispatcher">
+	                <param name="location">/error.jsp</param>
+	            </result>
+	            <result name="illegal" type="dispatcher">
+	                <param name="location">/error.jsp</param>
+	            </result>
+	            <result name="error" type="dispatcher">
+	                <param name="location">/resultjson.jsp</param>
+	            </result>
+	             <result name="login" type="dispatcher">
+	                <param name="location">/mobile/pages/login.jsp</param>
+	            </result>
+			</global-results>
+			
+			
+			<!-- 微信支付start -->	
+			<!-- 订单创建 -->
+		<action name="confirmPayOrders" class="mobileBookCarAction" method="confirmPayOrders">
+			<result name="success" type="dispatcher">
+				<param name="location">/resultjson.jsp</param>
+			</result>
+			<result name="account_pay_success" type="dispatcher">
+				<param name="location">/mobile/toCurrentOrder.action</param>
+			</result>
+			<result name="fail" type="dispatcher">
+				<param name="location">/mobile/toPayFee.action?retMsg=${retMsg}</param>
+			</result>
+			<result name="wx_pay_success" >
+		                <param name="location">/mobile/pages/order_weixin_pay.jsp</param>
+		     </result>
+		</action>
+		
+			<!-- 订单结算 -->
+		
+		<action name="confirmPayOrdersFinish" class="mobileBookCarAction" method="confirmPayOrdersFinish">
+			<result name="success" type="dispatcher">
+				<param name="location">/resultjson.jsp</param>
+			</result>
+			<result name="account_pay_success" type="dispatcher">
+				<param name="location">/mobile/toCompleteOrder.action</param>
+			</result>
+			<result name="fail" type="dispatcher">
+				<param name="location">/mobile/toPayOrderFinishFee.action?retMsg=${retMsg}</param>
+			</result>
+			<result name="wx_pay_success" >
+		                <param name="location">/mobile/pages/order_weixin_pay.jsp</param>
+		     </result>
+		</action>
+		
+		<!-- 微信充值 start-->
+			<action name="payRecharge" class="accountCenterRechargeAction">
+	            <result name="wx_pay_success" >
+	                <param name="location">/mobile/pages/account/weixin_pay.jsp</param>
+	            </result>
+	            
+	            <result name="fail" type="dispatcher">
+	                 <param name="location">/mobile/account/gotoRecharge.action?retMsg=${retMsg}</param>
+	            </result>
+			</action>
+			<!-- 微信充值 end -->
+		
+		
+		<!-- 微信支付end -->
+			
+	</package>
+	<package name="/mobile/online" extends="webwork-default" namespace="/mobile/online">
+		<default-interceptor-ref name="defaultStack"/>
+			<global-results>
+				<result name="timeout" type="dispatcher">
+	                <param name="location">/error.jsp</param>
+	            </result>
+	            <result name="illegal" type="dispatcher">
+	                <param name="location">/error.jsp</param>
+	            </result>
+	            <result name="error" type="dispatcher">
+	                <param name="location">/resultjson.jsp</param>
+	            </result>
+	             <result name="login" type="dispatcher">
+	                <param name="location">/mobile/pages/login.jsp</param>
+	            </result>
+			</global-results>
+			
+			<!-- 微信支付start -->	
+			<!-- 订单创建 -->
+		
+		<action name="confirmPayOrders" class="mobileBookCarAction" method="confirmPayOrders">
+			<result name="success" type="dispatcher">
+				<param name="location">/resultjson.jsp</param>
+			</result>
+			<result name="account_pay_success" type="dispatcher">
+				<param name="location">/mobile/toCurrentOrder.action</param>
+			</result>
+			<result name="fail" type="dispatcher">
+				<param name="location">/mobile/toPayFee.action?retMsg=${retMsg}</param>
+			</result>
+			<result name="wx_pay_success" >
+		                <param name="location">/mobile/pages/order_weixin_pay.jsp</param>
+		     </result>
+		</action>
+		
+			<!-- 订单结算 -->
+		<action name="confirmPayOrdersFinish" class="mobileBookCarAction" method="confirmPayOrdersFinish">
+			<result name="success" type="dispatcher">
+				<param name="location">/resultjson.jsp</param>
+			</result>
+			<result name="account_pay_success" type="dispatcher">
+				<param name="location">/mobile/toCompleteOrder.action</param>
+			</result>
+			<result name="fail" type="dispatcher">
+				<param name="location">/mobile/toPayOrderFinishFee.action?retMsg=${retMsg}</param>
+			</result>
+			<result name="wx_pay_success" >
+		                <param name="location">/mobile/pages/order_weixin_pay.jsp</param>
+		     </result>
+		</action>
+		
+		
+		<!-- 微信充值 start-->
+			
+			<action name="payRecharge" class="accountCenterRechargeAction">
+	            <result name="wx_pay_success" >
+	                <param name="location">/mobile/pages/account/weixin_pay.jsp</param>
+	            </result>
+	            
+	            <result name="fail" type="dispatcher">
+	                 <param name="location">/mobile/account/gotoRecharge.action?retMsg=${retMsg}</param>
+	            </result>
+			</action>
+			<!-- 微信充值 end -->
+		
+		
+		<!-- 微信支付end -->
+			
+	</package>
+	<package name="mobile" extends="webwork-default" namespace="/mobile">
+		<default-interceptor-ref name="defaultStack"/>
+		
+		<global-results>
+			<result name="timeout" type="dispatcher">
+                <param name="location">/error.jsp</param>
+            </result>
+            <result name="illegal" type="dispatcher">
+                <param name="location">/error.jsp</param>
+            </result>
+            <result name="error" type="dispatcher">
+                <param name="location">/resultjson.jsp</param>
+            </result>
+             <result name="login" type="dispatcher">
+                <param name="location">/mobile/pages/login.jsp</param>
+            </result>
+		</global-results>
+		
+		
+	
+		<!--  用户登录 -->
+		<action name="wechatLogin" class="subscriberrLoginAction"  method="gotoLogin" >
+			<result name="success" >
+                <param name="location">/mobile/pages/login.jsp</param>
+            </result>
+		</action>
+		<action name="doLogin" class="mobileLoginAction" >
+			<result name="success" >
+                <param name="location">/resultjson.jsp</param>
+            </result>
+		</action>
+		<action name="logout" class="subscriberrLogoutAction" >
+			<result name="success" >
+                 <param name="location">/mobile/pages/index.jsp</param>
+            </result>
+		</action>
+		<action name="sendLoginCode" class="mobileLoginAction" method="sendLoginCode">
+			<result name="success" >
+                <param name="location">/resultjson.jsp</param>
+            </result>
+		</action>
+		
+		<!-- 约车start  -->
+		<action name="toWelcomePage" class="mobileBookCarAction" method="toWelcomePage">
+			<result name="success" type="dispatcher">
+				<param name="location">/mobile/pages/welcome.jsp</param>
+			</result>
+		</action>
+		<action name="toBookCar" class="mobileBookCarAction" method="toBookCar">
+			<result name="success" type="dispatcher">
+				<param name="location">/mobile/pages/bookcar.jsp</param>
+			</result>
+			<result name="login" type="dispatcher">
+				<param name="location">/mobile/pages/login.jsp</param>
+			</result>
+		</action>
+		<action name="toShowCarFee" class="mobileBookCarAction" method="toShowCarFee">
+			<result name="success" type="dispatcher">
+				<param name="location">/mobile/pages/carfeeshow.jsp</param>
+			</result>
+		</action>
+		<action name="showFee" class="mobileBookCarAction" method="showFee">
+			<result name="success" type="dispatcher">
+				<param name="location">/resultjson.jsp</param>
+			</result>
+		</action>
+		<action name="toShowDotCarList" class="mobileBookCarAction" method="toShowDotCarList">
+			<result name="success" type="dispatcher">
+				<param name="location">/mobile/pages/bookcarshowcarlist.jsp</param>
+			</result>
+		</action>
+		<action name="getDotDetailInfo" class="mobileBookCarAction" method="getDotDetailInfo">
+			<result name="success" type="dispatcher">
+				<param name="location">/resultjson.jsp</param>
+			</result>
+			<result name="login" type="dispatcher">
+                <param name="location">/mobile/pages/login.jsp</param>
+            </result>
+		</action>
+		<action name="toShowReturnDot" class="mobileBookCarAction" method="toShowReturnDot">
+			<result name="success" type="dispatcher">
+				<param name="location">/mobile/pages/showreturndot.jsp</param>
+			</result>
+		</action>
+		<action name="getReturnDot" class="mobileBookCarAction" method="getReturnDot">
+			<result name="success" type="dispatcher">
+				<param name="location">/resultjson.jsp</param>
+			</result>
+		</action>
+		
+		<action name="toBookingInfoCheck" class="mobileBookCarAction" method="toBookingInfoCheck">
+			<result name="success" type="dispatcher">
+				<param name="location">/resultjson.jsp</param>
+			</result>
+		</action>
+		<action name="toBookingInfo" class="mobileBookCarAction" method="toBookingInfo">
+			<result name="success" type="dispatcher">
+				<param name="location">/mobile/pages/bookinginfo.jsp</param>
+			</result>
+		</action>
+		<action name="toBookingInfoTwo" class="mobileBookCarAction" method="toBookingInfoTwo">
+			<result name="success" type="dispatcher">
+				<param name="location">/mobile/pages/bookinginfotwo.jsp</param>
+			</result>
+		</action>
+		<action name="bookCar" class="mobileBookCarAction" >
+			<result name="success" type="dispatcher">
+				<param name="location">/resultjson.jsp</param>
+			</result>
+			<result name="error" type="dispatcher">
+				<param name="location">/resultjson.jsp</param>
+			</result>
+		</action>
+		<action name="toPayFee" class="mobileBookCarAction" method="toPayFee">
+			<result name="success" type="dispatcher">
+				<param name="location">/mobile/pages/payfee.jsp</param>
+			</result>
+		</action>
+		<action name="countingOrdersFee" class="mobileBookCarAction" method="countingOrdersFee">
+			<result name="success" type="dispatcher">
+				<param name="location">/resultjson.jsp</param>
+			</result>
+		</action>
+		
+		<action name="toPayOrderFinishFee" class="mobileBookCarAction" method="toPayOrderFinishFee">
+			<result name="success" type="dispatcher">
+				<param name="location">/mobile/pages/order_finish_pay_fee.jsp</param>
+			</result>
+			<result name="fail" type="dispatcher">
+				<param name="location">/mobile/pages/order_finish_pay_fee.jsp</param>
+			</result>
+		</action>
+		
+		
+		<action name="toBookingFinish" class="mobileBookCarAction" method="toBookingFinish">
+			<result name="success" type="dispatcher">
+				<param name="location">/mobile/pages/bookingfinish.jsp</param>
+			</result>
+			<result name="login" type="dispatcher">
+				<param name="location">/mobile/pages/login.jsp</param>
+			</result>
+		</action>
+		
+		<action name="dotInfoSearch" class="mobileBookCarAction" method="dotInfoSearch">
+			<result name="success" type="dispatcher">
+				<param name="location">/resultjson.jsp</param>
+			</result>
+		</action>
+		
+		<action name="changeRentType" class="mobileBookCarAction" method="changeRentType">
+			<result name="success" type="dispatcher">
+				<param name="location">/mobile/pages/chooserenttype.jsp</param>
+			</result>
+			<result name="error" type="dispatcher">
+				<param name="location">/resultjson.jsp</param>
+			</result>
+		</action>
+		
+		<action name="confirmChangeRentType" class="mobileBookCarAction" method="confirmChangeRentType">
+			<result name="success" type="dispatcher">
+				<param name="location">/resultjson.jsp</param>
+			</result>
+		</action>
+		
+		<action name="checkAreadyRent" class="mobileBookCarAction" method="checkAreadyRent">
+			<result name="success" type="dispatcher">
+				<param name="location">/resultjson.jsp</param>
+			</result>
+			<result name="error" type="dispatcher">
+				<param name="location">/resultjson.jsp</param>
+			</result>
+		</action>
+		
+		<!-- 约车end -->
+		
+		<!-- 当前订单start -->
+		<action name="getGetCarRemainTime" class="mobileCurrentOrdersAction" method="getGetCarRemainTime">
+			<result name="success" type="dispatcher">
+				<param name="location">/resultjson.jsp</param>
+			</result>
+		</action>
+		<action name="toCurrentOrder" class="mobileCurrentOrdersAction" method="toCurrentOrder">
+			<result name="success" type="dispatcher">
+				<param name="location">/mobile/pages/currentorders.jsp</param>
+			</result>
+			<result name="login" type="dispatcher">
+				<param name="location">/mobile/pages/login.jsp</param>
+			</result>
+			<result name="returnbackcar" type="dispatcher">
+				<param name="location">/mobile/pages/returnbackcar.jsp</param>
+			</result>
+			<result name="finish" type="dispatcher">
+				<param name="location">/mobile/toBookingFinish.action</param>
+			</result>
+			<result name="history" type="dispatcher">
+				<param name="location">/mobile/toOrderList.action</param>
+			</result>
+			<result name="pay" type="dispatcher">
+				<param name="location">/mobile/toPayFee.action</param>
+			</result>
+		</action>
+		<action name="getOrderStartTime" class="mobileCurrentOrdersAction" method="getOrderStartTime">
+			<result name="success" type="dispatcher">
+				<param name="location">/resultjson.jsp</param>
+			</result>
+		</action>
+		<action name="countCurrentFee" class="mobileCurrentOrdersAction" method="countCurrentFee">
+			<result name="success" type="dispatcher">
+				<param name="location">/resultjson.jsp</param>
+			</result>
+		</action>
+		<action name="startUseCar" class="mobileCurrentOrdersAction" method="startUseCar">
+			<result name="success" type="dispatcher">
+				<param name="location">/resultjson.jsp</param>
+			</result>
+			<result name="login" type="dispatcher">
+				<param name="location">/mobile/pages/login.jsp</param>
+			</result>
+		</action>
+		<action name="openDoor" class="mobileCurrentOrdersAction" method="openDoor">
+			<result name="success" type="dispatcher">
+				<param name="location">/resultjson.jsp</param>
+			</result>
+			<result name="login" type="dispatcher">
+				<param name="location">/mobile/pages/login.jsp</param>
+			</result>
+		</action>
+		<action name="closeDoor" class="mobileCurrentOrdersAction" method="closeDoor">
+			<result name="success" type="dispatcher">
+				<param name="location">/resultjson.jsp</param>
+			</result>
+			<result name="login" type="dispatcher">
+				<param name="location">/mobile/pages/login.jsp</param>
+			</result>
+		</action>
+		
+		<action name="checkReturnBackCar" class="mobileCurrentOrdersAction" method="checkReturnBackCar">
+			<result name="success" type="dispatcher">
+				<param name="location">/resultjson.jsp</param>
+			</result>
+			<result name="login" type="dispatcher">
+				<param name="location">/mobile/pages/login.jsp</param>
+			</result>
+		</action>
+		<action name="returnBackCar" class="mobileCurrentOrdersAction" method="returnBackCar">
+			<result name="success" type="dispatcher">
+				<param name="location">/resultjson.jsp</param>
+			</result>
+<!-- 			<result name="success" type="dispatcher"> -->
+<!-- 				<param name="location">/mobile/pages/returnbackcar.jsp</param> -->
+<!-- 			</result> -->
+<!-- 			<result name="login" type="dispatcher"> -->
+<!-- 				<param name="location">/mobile/pages/login.jsp</param> -->
+<!-- 			</result> -->
+<!-- 			<result name="bookcar" type="dispatcher"> -->
+<!-- 				<param name="location">/mobile/toBookCar.action</param> -->
+<!-- 			</result> -->
+<!-- 			<result name="order" type="dispatcher"> -->
+<!-- 				<param name="location">/mobile/toCurrentOrder.action</param> -->
+<!-- 			</result> -->
+		</action>
+		<action name="toCompleteOrder" class="mobileCurrentOrdersAction" method="toCompleteOrder">
+			<result name="success" type="dispatcher">
+				<param name="location">/mobile/toReturnComplete.action</param>
+			</result>
+			<result name="login" type="dispatcher">
+				<param name="location">/mobile/pages/login.jsp</param>
+			</result>
+		</action>
+		<action name="toReturnComplete" class="mobileCurrentOrdersAction" method="toReturnComplete">
+			<result name="success" type="dispatcher">
+				<param name="location">/mobile/pages/returnbackcar.jsp</param>
+			</result>
+			<result name="login" type="dispatcher">
+				<param name="location">/mobile/pages/login.jsp</param>
+			</result>
+		</action>
+		
+		
+		<action name="toCurrentCarInfo" class="mobileCurrentOrdersAction" method="toCurrentCarInfo">
+			<result name="success" type="dispatcher">
+				<param name="location">/mobile/pages/currentcarinfo.jsp</param>
+			</result>
+			<result name="login" type="dispatcher">
+				<param name="location">/mobile/pages/login.jsp</param>
+			</result>
+		</action>
+		<action name="toChargingStationListPage" class="mobileCurrentOrdersAction" method="toChargingStationListPage">
+			<result name="success" type="dispatcher">
+				<param name="location">/mobile/pages/neerchargestationpage.jsp</param>
+			</result>
+		</action>
+		<action name="cancelOrder" class="ordersCancelAction" method="mobileCancel">
+			<result name="success" type="dispatcher">
+				<param name="location">/resultjson.jsp</param>
+			</result>
+		</action>
+		<action name="searchChargeStation" class="mobileCurrentOrdersAction" method="searchChargeStation">
+			<result name="success" type="dispatcher">
+				<param name="location">/resultjson.jsp</param>
+			</result>
+		</action>
+		<action name="toBackCarInfo" class="mobileCurrentOrdersAction" method="toBackCarInfo">
+			<result name="success" type="dispatcher">
+				<param name="location">/mobile/pages/returnbackcarinfo.jsp</param>
+			</result>
+			<result name="error" type="dispatcher">
+				<param name="location">/mobile/pages/404.html</param>
+			</result>
+		</action>
+		<action name="getCarRealTimeState" class="mobileCurrentOrdersAction" method="getCarRealTimeState">
+			<result name="success" type="dispatcher">
+				<param name="location">/resultjson.jsp</param>
+			</result>
+		</action>
+		
+		<!-- 当前订单end -->
+		
+		<!-- 历史订单start -->
+		<action name="toOrderList" class="mobileOrdersSearchAction" method="toOrderList">
+			<result name="success" type="dispatcher">
+				<param name="location">/mobile/pages/orderslist.jsp</param>
+			</result>
+			<result name="error" type="dispatcher">
+				<param name="location">/mobile/pages/login.jsp</param>
+			</result>
+		</action>
+		<action name="searchOrders" class="mobileOrdersSearchAction" method="searchOrders">
+			<result name="success" type="dispatcher">
+				<param name="location">/resultjson.jsp</param>
+			</result>
+		</action>
+		<action name="searchOrdersDetailTickets" class="mobileOrdersSearchAction" method="searchOrdersDetailTickets">
+			<result name="success" type="dispatcher">
+				<param name="location">/resultjson.jsp</param>
+			</result>
+		</action>
+		<action name="toOrdersDetail" class="mobileOrdersSearchAction" method="toOrdersDetail">
+			<result name="success" type="dispatcher">
+				<param name="location">/mobile/pages/ordersdetail.jsp</param>
+			</result>
+			<result name="error" type="dispatcher">
+				<param name="location">/mobile/pages/login.jsp</param>
+			</result>
+		</action>
+		
+		<!-- 历史订单end -->
+		
+		<!-- 发票管理start -->
+		<action name="needInvoice" class="mobileOrdersSearchAction" method="needInvoice">
+			<result name="success" type="dispatcher">
+				<param name="location">/resultjson.jsp</param>
+			</result>
+		</action>
+		
+		<action name="chooseNeedBillOrders" class="mobileOrdersSearchAction" method="chooseNeedBillOrders">
+			<result name="success" type="dispatcher">
+				<param name="location">/mobile/pages/needinvoice.jsp</param>
+			</result>
+		</action>
+		
+		<action name="confirmNeedInvoice" class="mobileOrdersSearchAction" method="confirmNeedInvoice">
+			<result name="success" type="dispatcher">
+				<param name="location">/mobile/pages/apply_bill_success.jsp</param>
+			</result>
+			<result name="error" type="dispatcher">
+				<param name="location">/resultjson.jsp</param>
+			</result>
+		</action>
+		<!-- 发票管理end -->
+		
+		<!-- 订单评论start -->
+		<action name="toOrdersCommentAdd" class="mobileCommentAction" method="toOrdersCommentAdd">
+			<result name="success" type="dispatcher">
+				<param name="location">/mobile/pages/orderscommentadd.jsp</param>
+			</result>
+			<result name="login" type="dispatcher">
+				<param name="location">/mobile/pages/login.jsp</param>
+			</result>
+		</action>
+		<action name="toCommentList" class="mobileCommentAction" method="toCommentList">
+			<result name="success" type="dispatcher">
+				<param name="location">/mobile/pages/orderscommentlist.jsp</param>
+			</result>
+			<result name="login" type="dispatcher">
+				<param name="location">/mobile/pages/login.jsp</param>
+			</result>
+		</action>
+		<action name="addComment" class="mobileCommentAction" method="addComment">
+			<result name="success" type="dispatcher">
+				<param name="location">/resultjson.jsp</param>
+			</result>
+			<result name="login" type="dispatcher">
+				<param name="location">/mobile/pages/login.jsp</param>
+			</result>
+		</action>
+		<action name="searchCommentList" class="mobileCommentAction" method="searchCommentList">
+			<result name="success" type="dispatcher">
+				<param name="location">/resultjson.jsp</param>
+			</result>
+			<result name="login" type="dispatcher">
+				<param name="location">/mobile/pages/login.jsp</param>
+			</result>
+		</action>
+		
+		<!-- 订单评论end -->
+		
+		
+		<action name="creatWechatMenu" class="wechatCoreAction" method="creatWechatMenu">
+			<result name="success" type="dispatcher">
+				<param name="location">/resultjson.jsp</param>
+			</result>
+		</action>
+		
+		<action name="getSavedAccessToken" class="wechatCoreAction" method="getSavedAccessToken">
+			<result name="success" type="dispatcher">
+				<param name="location">/resultjson.jsp</param>
+			</result>
+		</action>
+		
+		<!-- 保存 JsapiTicket-->
+		<action name="saveJsapiTicket" class="wechatCoreAction" method="saveJsapiTicket">
+			<result name="success" type="dispatcher">
+				<param name="location">/resultjson.jsp</param>
+			</result>
+		</action>
+		<!-- 查询 JsapiTicket-->
+		<action name="queryJsapiTicket" class="wechatCoreAction" method="queryJsapiTicket">
+			<result name="success" type="dispatcher">
+				<param name="location">/resultjson.jsp</param>
+			</result>
+		</action>
+	
+	<!-- JS-SDK 获取签名 -->
+		<action name="getSignature" class="wechatCoreAction" method="getSignature">
+			<result name="success" type="dispatcher">
+				<param name="location">/resultjson.jsp</param>
+			</result>
+		</action>	
+		
+		<!-- 生成二维码 -->
+		<action name="createQRCode" class="wechatCoreAction" method="createQRCode">
+			<result name="success" type="dispatcher">
+				<param name="location">/mobile/pages/newQrcode.jsp</param>
+			</result>
+		</action>
+		
+		<!-- 扫描二维码start  -->
+		<action name="scanQRCode" class="mobileBookCarAction" method="scanQRCode">
+			<result name="success" type="dispatcher">
+				<param name="location">/mobile/pages/scanQrcode.jsp</param>
+			</result>
+		</action>
+		<!-- 充电end  -->
+	</package>
+	
+	<!-- subscriber相关 -->
+	<package name="mobile/subscriber" extends="webwork-default" namespace="/mobile/subscriber">
+		<default-interceptor-ref name="defaultStack"/>
+		
+		<global-results>
+			<result name="timeout" type="dispatcher">
+                <param name="location">/error.jsp</param>
+            </result>
+            <result name="illegal" type="dispatcher">
+                <param name="location">/error.jsp</param>
+            </result>
+            <result name="error" type="dispatcher">
+                <param name="location">/resultjson.jsp</param>
+            </result>
+             <result name="login" type="dispatcher">
+                <param name="location">/mobile/pages/login.jsp</param>
+            </result>
+		</global-results>
+		
+		
+		<!-- 发送手机验证码   找回密码-->
+		<action name="sendPhoneFindPwdCode" class="subscriberRegisterOneAction" method="sendPhoneFindPwdCode"  >
+			<result name="success" >
+                <param name="location">/resultjson.jsp</param>
+            </result>
+		</action>
+		
+		<action name="resetPwd" class="subscriberRegisterOneAction" method="resetPwd"  >
+			<result name="success" >
+                <param name="location">/resultjson.jsp</param>
+            </result>
+		</action>
+		
+		
+		<action name="register" class="subscriberRegisterOneAction"  method="gotoRegister" >
+			<result name="success" >
+                <param name="location">/mobile/pages/register/register.jsp</param>
+            </result>
+		</action>
+		
+		<action name="registerStepOne" class="subscriberRegisterOneAction"   >
+			<result name="success" >
+                <param name="location">/resultjson.jsp</param>
+            </result>
+		</action>
+		
+		<action name="registerNextStep" class="subscriberRegisterOneAction" method="registerNextStep" >
+			<result name="success" >
+                <param name="location">/mobile/pages/register/identify.jsp</param>
+            </result>
+		</action>
+		
+		
+		<!-- 发送手机验证码  注册 -->
+		<action name="sendPhoneVerificationCode" class="subscriberRegisterOneAction" method="sendPhoneVerificationCode"  >
+			<result name="success" >
+                <param name="location">/resultjson.jsp</param>
+            </result>
+		</action>
+		
+		<!-- 手机号是否已注册 -->
+		<action name="isPhoneEngagedNew" class="subscriberRegisterOneAction" method="isPhoneEngagedNew"  >
+			<result name="success" >
+                <param name="location">/resultjson.jsp</param>
+            </result>
+		</action>
+		
+		
+		<!-- 用户注册 第二步 -->
+		<action name="registerFinish" class="subscriberRegisterTwoAction" method="mobileRegister" >
+			<result name="success" >
+                 <param name="location">/mobile/pages/register/register_success.jsp</param>
+            </result>
+            <result name="fail" >
+                 <param name="location">/mobile/pages/register/identify.jsp</param>
+            </result>
+            <interceptor-ref name="uploadStack"/>
+		</action>
+		
+		<action name="registerFinishNoUpload" class="subscriberRegisterTwoAction" method="mobileRegister">
+		        <result name="success" type="dispatcher">
+	                <param name="location">/mobile/pages/register/register_success.jsp</param>
+	            </result>
+	            <result name="fail" type="dispatcher">
+	                 <param name="location">/mobile/pages/register/identify.jsp</param>
+	            </result>
+	          <interceptor-ref name="defaultStack"/>
+		</action>
+		
+		<!-- 基本信息 start -->
+			<action name="showBaseInfo" class="subscriberBaseInfoGetAction"   >
+				<result name="success" >
+	                <param name="location">/mobile/pages/subscriber/userinfo.jsp</param>
+	            </result>
+			</action>
+			
+			<action name="showBillInfo" class="subscriberBaseInfoGetAction" method="showBillInfo">
+				<result name="success" >
+	                <param name="location">/mobile/pages/subscriber/postinfo.jsp</param>
+	            </result>
+			</action>
+			
+			<action name="updateBaseInfo" class="subscriberBaseInfoUpdateAction"   >
+				<result name="success" >
+                		<param name="location">/resultjson.jsp</param>
+           		 </result>
+			</action>
+			<action name="updateBillInfo" class="subscriberBaseInfoUpdateAction" method="updateBillInfo">
+				<result name="success" >
+                		<param name="location">/resultjson.jsp</param>
+           		 </result>
+			</action>
+			<action name="wechatUnbinding" class="subscriberWechatUnbindingAction"   >
+				<result name="success" >
+	                <param name="location">/resultjson.jsp</param>
+	            </result>
+			</action>
+			<action name="wechatBinding" class="subscriberWechatBindingAction"   >
+				<result name="success" >
+	                <param name="location">/mobile/subscriber/showBaseInfo.action</param>
+	            </result>
+			</action>
+			
+			
+			
+			<action name="searchCity" class="subscriberBaseInfoGetAction"  method="searchCity" >
+				<result name="success" >
+	               	<param name="location">/resultjson.jsp</param>
+	            </result>
+			</action>
+					
+		<!-- 基本信息 end -->
+	
+		
+		
+		<!-- 发送手机验证码   更改手机-->
+		<action name="sendChangePhoneCode" class="subscriberRegisterOneAction" method="sendChangePhoneCode"  >
+			<result name="success" >
+                <param name="location">/resultjson.jsp</param>
+            </result>
+		</action>
+		
+		<action name="changePhoneNo" class="subscriberRegisterOneAction" method="changePhoneNo"  >
+			<result name="success" >
+                <param name="location">/resultjson.jsp</param>
+            </result>
+		</action>
+		<action name="changePassword" class="subscriberChangePasswordAction">
+	        <result name="success" >
+                <param name="location">/resultjson.jsp</param>
+            </result>
+		</action>
+	</package>
+	
+	
+	
+	
+	<package name="/mobile/account" extends="webwork-default" namespace="/mobile/account">
+				<default-interceptor-ref name="defaultStack"/>
+				
+				<global-results>
+					<result name="timeout" type="dispatcher">
+		                <param name="location">/error.jsp</param>
+		            </result>
+		            <result name="illegal" type="dispatcher">
+		                <param name="location">/error.jsp</param>
+		            </result>
+		            <result name="error" type="dispatcher">
+		                <param name="location">/resultjson.jsp</param>
+		            </result>
+		             <result name="login" type="dispatcher">
+		                <param name="location">/mobile/pages/login.jsp</param>
+		            </result>
+				</global-results>
+			
+			
+			
+			
+				<!-- 用户管理 -->
+				<action name="index" class="accountCenterGetAction"  >
+					<result name="success" >
+		                <param name="location">/mobile/pages/account/account.jsp</param>
+		            </result>
+				</action>
+				
+				<!-- 呼叫客服 -->
+				<action name="toCustomerService" class="accountCenterGetAction" method="toCustomerService">
+					<result name="success" >
+		                <param name="location">/mobile/pages/account/customerService.jsp</param>
+		            </result>
+				</action>
+				
+				<!-- 消费记录 -->
+				<action name="showTradingList" class="accountTradingRecordSearchAction" method="mobileSearchTradeRecord" >
+					<result name="success" >
+		                <param name="location">/mobile/pages/account/account_trading_record.jsp</param>
+		            </result>
+				</action>
+				
+				<!-- 消费记录  mini-->
+				<action name="showTradingListMini" class="accountTradingRecordSearchAction" method="showTradingListMini" >
+					<result name="success" >
+		                <param name="location">/mobile/pages/account/account_trading_record_mini.jsp</param>
+		            </result>
+				</action>
+				<action name="showTradingDetailMini" class="accountTradingRecordSearchAction" method="showTradingDetailMini" >
+					<result name="success" >
+		                <param name="location">/mobile/pages/account/account_trading_record_detail_mini.jsp</param>
+		            </result>
+				</action>
+				
+				
+				<!-- 退款 -->
+				<action name="gotoApplyRefundCheck" class="accountApplyRefundAction"  method="gotoApplyRefundCheck">
+					<result name="success" >
+		                <param name="location">/resultjson.jsp</param>
+		            </result>
+				</action>
+				<action name="gotoApplyRefund" class="accountApplyRefundAction"  method="gotoApplyRefund">
+					<result name="success" >
+		                <param name="location">/mobile/pages/account/refund.jsp</param>
+		            </result>
+				</action>
+				
+				<!-- 充值 -->
+				<action name="gotoRechargeCheck" class="accountCenterRechargeAction"  method="gotoRechargeCheck">
+					<result name="success" >
+		                <param name="location">/resultjson.jsp</param>
+		            </result>
+				</action>
+				<action name="gotoRecharge" class="accountCenterRechargeAction"  method="gotoRecharge">
+					<result name="success" >
+		                <param name="location">/mobile/pages/account/recharge.jsp</param>
+		            </result>
+				</action>
+				
+				
+				<action name="continueRecharge" class="accountCenterRechargeAction"  method="continueRecharge">
+					<result name="success" >
+		                <param name="location">/mobile/pages/accountpayway.jsp</param>
+		            </result>
+		            <result name="fail" >
+		                 <param name="location">/mobile/pages/recharge.jsp</param>
+		            </result>
+				</action>
+				
+				<action name="gotoPortalApplyRefund" class="accountApplyRefundAction"  method="gotoPortalApplyRefund">
+			<result name="success" >
+                <param name="location">/mobile/pages/refund.jsp</param>
+            </result>
+		</action>
+		
+		
+	
+		
+		
+		
+		
+		
+
+
+		
+		<action name="applyRefund" class="accountApplyRefundAction" >
+			<result name="success" >
+                <param name="location">/resultjson.jsp</param>
+            </result>
+		</action>
+		
+		
+	</package>
+	
+	
+	
+	
+	
+	
+</xwork>

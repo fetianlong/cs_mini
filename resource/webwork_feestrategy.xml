@@ -1,0 +1,74 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE xwork PUBLIC "-//Apache Struts//XWork 1.1.1//EN" 
+"http://struts.apache.org/dtds/xwork-1.1.1.dtd">
+<xwork>
+	<package name="feestrategy/strategyBase" extends="webwork-default" namespace="/feestrategy/strategyBase">
+		<default-interceptor-ref name="defaultStack"/>
+		
+		<global-results>
+			<result name="timeout" type="dispatcher">
+                <param name="location">/error.jsp</param>
+            </result>
+            <result name="illegal" type="dispatcher">
+                <param name="location">/error.jsp</param>
+            </result>
+            <result name="error" type="dispatcher">
+                <param name="location">/resultjson.jsp</param>
+            </result>
+             <result name="login" type="dispatcher">
+                <param name="location">/common/login.action</param>
+            </result>
+		</global-results>
+	
+		<action name="searchStrategyBase" class="strategyBaseAction"  method="searchStrategyBase" >
+			<result name="success" >
+                <param name="location">/pages/feestrategy/strategybase/list.jsp</param>
+            </result>
+            <result name="page" >
+                <param name="location">/pages/feestrategy/strategybase/page.jsp</param>
+            </result>
+            <result name="pagecheck" >
+                <param name="location">/pages/feestrategy/strategybase/pagecheck.jsp</param>
+            </result>
+		</action>
+		<action name="editStrategyBase" class="strategyBaseAction"  method="editStrategyBase" >
+			<result name="success" >
+                <param name="location">/pages/feestrategy/strategybase/detail.jsp</param>
+            </result>
+		</action>
+		<action name="checkName" class="strategyBaseAction"  method="checkName" >
+			<result name="success" type="dispatcher">
+				<param name="location">/resultjson.jsp</param>
+			</result>
+			<result name="error" type="dispatcher">
+				<param name="location">/resultjson.jsp</param>
+			</result>
+		</action>
+		<action name="addStrategyBase" class="strategyBaseAction"  method="addStrategyBase" >
+			<result name="success" type="dispatcher">
+				<param name="location">/resultjson.jsp</param>
+			</result>
+			<result name="error" type="dispatcher">
+				<param name="location">/resultjson.jsp</param>
+			</result>
+		</action>
+		<action name="updateStrategyBase" class="strategyBaseAction"  method="updateStrategyBase" >
+			<result name="success" type="dispatcher">
+				<param name="location">/resultjson.jsp</param>
+			</result>
+			<result name="error" type="dispatcher">
+				<param name="location">/resultjson.jsp</param>
+			</result>
+		</action>
+		<action name="abandonedStrategyBase" class="strategyBaseAction"  method="abandonedStrategyBase" >
+			<result name="success" type="dispatcher">
+				<param name="location">/resultjson.jsp</param>
+			</result>
+			<result name="error" type="dispatcher">
+				<param name="location">/resultjson.jsp</param>
+			</result>
+		</action>
+		
+	</package>
+	
+</xwork>

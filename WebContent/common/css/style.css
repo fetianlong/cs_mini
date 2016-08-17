@@ -1,0 +1,71 @@
+@charset "utf-8";
+/* CSS Document */
+
+
+/*clyd_map start*/
+.clyd_wd_yc { 
+	height:124px; 
+	border-radius:5px;
+	box-shadow:0 0 10px #999; 
+	padding-top:10px;
+	background-color: #fff;
+	position:absolute; 
+	top:55px; 
+	left:70px;
+	width:189px; 
+	z-index: 0
+}
+.clyd_wd_yc ul{
+	margin: 0;
+	padding: 0;
+}
+.allli{
+	corsor:pointer;
+    color: #666666;
+    font-size: 14px;
+    height: 27px;
+    line-height: 27px;
+    list-style: outside none none;
+    margin-bottom: 7px;
+    padding-left: 41px;
+    cursor:pointer;
+    margin-left:10px;
+}
+.alla{
+   float: right;
+    font-size: 12px;
+    height: 12px;
+    line-height: 12px;
+    margin-top: 7px;
+    text-align: center;
+    width: 25px;
+    margin-right: 10px;
+}
+.wd {
+    background:rgba(0, 0, 0, 0) url("images/mark_4_lt.png") no-repeat;
+}
+.wd_a {
+    background-color: #ffef8d;
+    border: 1px solid #e8da73;
+    border-radius: 4px;
+    color: #333;
+    
+}
+.cdz {
+    background: rgba(0, 0, 0, 0) url("images/mark_2_lt.png") no-repeat ;
+}
+.cdz_a{
+    background-color: #94e4c9;
+    border: 1px solid #7ed8ba;
+    border-radius: 4px;
+    color: #fff;
+}
+.tcc {
+    background: rgba(0, 0, 0, 0) url("images/mark_1_lt.png") no-repeat;
+}
+.tcc_a{
+    background-color: #4d98dd;
+    border: 1px solid #6A6AFA;
+    border-radius: 4px;
+    color: #fff;
+}

@@ -1,0 +1,74 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE xwork PUBLIC "-//Apache Struts//XWork 1.1.1//EN" 
+"http://struts.apache.org/dtds/xwork-1.1.1.dtd">
+<xwork>
+	<package name="charge" extends="webwork-default" namespace="/charge">
+		<default-interceptor-ref name="defaultStack"/>
+		
+		<global-results>
+			<result name="timeout" type="dispatcher">
+                <param name="location">error.jsp</param>
+            </result>
+            <result name="illegal" type="dispatcher">
+                <param name="location">error.jsp</param>
+            </result>
+		</global-results>
+	
+   		<action name="searchChargeStation" class="chargeStationAction" method="searchChargeStation">
+			<result name="success" type="dispatcher">
+                <param name="location">/pages/charge/chargestationlist.jsp</param>
+            </result>
+			<result name="error" type="dispatcher">
+                <param name="location">error.jsp</param>
+            </result>
+			<interceptor-ref name="defaultStack"/>
+		</action>
+		<action name="toAddOrUpdateChargeStation" class="chargeStationAction" method="toAddOrUpdateChargeStation">
+			<result name="success" type="dispatcher">
+                <param name="location">/pages/charge/chargestationget.jsp</param>
+            </result>
+			<result name="error" type="dispatcher">
+                <param name="location">error.jsp</param>
+            </result>
+			<interceptor-ref name="defaultStack"/>
+		</action>
+		<action name="addChargeStation" class="chargeStationAction" method="addChargeStation">
+			<result name="success" type="dispatcher">
+                <param name="location">/resultjson.jsp</param>
+            </result>
+			<result name="error" type="dispatcher">
+                <param name="location">/resultjson.jsp</param>
+            </result>
+			<result name="illegal" type="dispatcher">
+                <param name="location">/resultxml.jsp</param>
+            </result>
+            <interceptor-ref name="defaultStack" />
+		</action>
+		<action name="updateChargeStation" class="chargeStationAction" method="updateChargeStation">
+			<result name="success" type="dispatcher">
+                <param name="location">/resultjson.jsp</param>
+            </result>
+			<result name="error" type="dispatcher">
+                <param name="location">/resultjson.jsp</param>
+            </result>
+			<result name="illegal" type="dispatcher">
+                <param name="location">/resultxml.jsp</param>
+            </result>
+            <interceptor-ref name="defaultStack" />
+		</action>
+		<action name="deleteChareStation" class="chargeStationAction" method="deleteChareStation">
+			<result name="success" type="dispatcher">
+                <param name="location">/resultjson.jsp</param>
+            </result>
+			<result name="error" type="dispatcher">
+                <param name="location">/resultjson.jsp</param>
+            </result>
+			<result name="illegal" type="dispatcher">
+                <param name="location">/resultxml.jsp</param>
+            </result>
+            <interceptor-ref name="defaultStack" />
+		</action>
+		
+	</package>
+	
+</xwork>

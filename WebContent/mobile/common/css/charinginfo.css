@@ -1,0 +1,41 @@
+@charset "utf-8";
+/* CSS Document */
+
+.NameBlock {
+	padding: 30px 10px;
+}
+
+.NameBlock h4 {
+	color: #4bd3a5;
+	font-size: 18px;
+	font-weight: normal;
+	margin: 0;
+}
+
+.InfoBlock {
+	background: #f1f1f1;
+	border-left: solid 3px #4bd3a5;
+	padding: 10px;
+	margin-bottom: 50px;
+}
+
+.InfoBlock p {
+	margin: 0;
+	font-size: 14px;
+}
+
+.InfoBlock p.State {
+	margin-bottom: 10px;
+}
+
+.InfoBlock p.State span.label {
+	margin-right: 10px;
+}
+
+.TipsBlock p {
+	font-size: 14px;
+}
+
+.BottomButton .btn {
+	text-decoration: none;
+}

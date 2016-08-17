@@ -1,0 +1,24 @@
+@charset "utf-8";
+/* CSS Document */
+
+.MainContent h3 {
+	margin: 0;
+	line-height: 1.6;
+}
+
+.MainContent h4 {
+	margin-top: 20px;
+}
+
+.MainContent>.container {
+	padding-bottom: 150px;
+}
+
+.MainContent h4 a {
+	color: #56c594;
+	margin: 0 5px;
+}
+
+.MainContent h4 a .fa {
+	margin-left: 2px;
+}

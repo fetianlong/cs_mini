@@ -1,0 +1,42 @@
+<!DOCTYPE hibernate-mapping PUBLIC 
+    "-//Hibernate/Hibernate Mapping DTD 3.0//EN"
+    "http://hibernate.sourceforge.net/hibernate-mapping-3.0.dtd">
+<hibernate-mapping>
+	<class name="com.dearho.cs.account.pojo.Account" table="acc_account">
+		<id name="subscriberId" type="java.lang.String">
+            <column name="subscriber_id" length="32" />
+        </id>
+        <property name="amount" type="java.lang.Double">
+            <column name="amount"   />
+        </property>
+        
+        <property name="frozenAmount" type="java.lang.Double">
+            <column name="frozen_amount"   />
+        </property>
+        <property name="usableAmount" type="java.lang.Double">
+            <column name="usable_amount"   />
+        </property>
+          <property name="isRefund" type="java.lang.Integer">
+            <column name="is_refund" />
+        </property>
+         <property name="lastOperateTime" type="java.util.Date">
+            <column name="last_operate_time" />
+        </property>
+         <property name="lastOperateAmount" type="java.lang.Double">
+            <column name="last_operate_amount" />
+        </property>
+        <property name="lastOperateType" type="java.lang.Integer">
+            <column name="last_operate_type" />
+        </property>
+        <property name="ts" type="java.util.Date">
+            <column name="ts" />
+        </property>
+         
+	</class>
+	
+	
+	
+	
+	
+	
+</hibernate-mapping>

@@ -1,0 +1,26 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<beans xmlns="http://www.springframework.org/schema/beans"
+	xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+	xsi:schemaLocation="http://www.springframework.org/schema/beans http://www.springframework.org/schema/beans/spring-beans-2.0.xsd">
+	
+	<!-- 查询网点及车辆 -->
+	<bean id="appBookCarAction" class="com.dearho.cs.appinterface.bookcar.action.AppBookCarAction" scope="prototype">
+		<property name="branchDotService" ref="branchDotService" />
+		<property name="strategyBaseService" ref="strategyBaseService" />
+	</bean>
+	
+	<!-- 充电 -->
+	<bean id="chargeReturnAction" class="com.dearho.cs.appinterface.bookcar.action.ChargeReturnAction" scope="prototype">
+		<property name="chargeStationService" ref="chargeStationService" />
+		<property name="carRealtimeStateService" ref="carRealtimeStateService" />
+	</bean>
+	
+	<!-- 还车 -->
+	<bean id="returnBackCarAction" class="com.dearho.cs.appinterface.bookcar.action.ReturnBackCarAction" scope="prototype">
+		<property name="branchDotService" ref="branchDotService" />
+	</bean>
+	
+	
+	
+	
+</beans>

@@ -1,0 +1,26 @@
+@charset "utf-8";
+/* CSS Document */
+
+body {
+	background: #f2f1f1;
+}
+
+.MainContent {
+	padding: 150px 0;
+}
+
+.MainContent>.container {
+	position: relative;
+}
+
+.MainContent .ReturnButton {
+	background: #fc5a34;
+	color: #FFF;
+}
+
+.Footer {
+	position: fixed;
+	bottom: 0;
+	left: 0;
+	width: 100%;
+}

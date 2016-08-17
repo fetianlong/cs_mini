@@ -1,0 +1,92 @@
+<!doctype html>
+<html lang="zh-CN">
+<head>
+<meta charset="utf-8">
+<title>车辆预定</title>
+
+<link rel=stylesheet href="../common/js/bootstrap/css/bootstrap.min.css">
+<link rel=stylesheet href="../common/js/fontawesome/css/font-awesome.min.css">
+<link rel=stylesheet href="../common/js/flatui/dist/css/flat-ui.min.css">
+<script src="../common/js/jquery.min.js"></script>
+<script src="../common/js/bootstrap/js/bootstrap.min.js"></script>
+<script src="../common/js/flatui/dist/js/flat-ui.min.js"></script>
+<script src="../common/js/main.js"></script>
+<link rel=stylesheet href="../common/css/main.css">
+<meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1, user-scalable=no">
+<meta http-equiv="X-UA-Compatible" content="IE=edge">
+<meta name="renderer" content="webkit">
+
+
+
+<link rel=stylesheet href="../common/css/bookingcar.css">
+<script>
+$(function(){
+	$(".switch input[type='checkbox']").bootstrapSwitch();
+	$('#NeedFapiao').on('switchChange.bootstrapSwitch', function (event, state) {
+		if (state){
+			$('#NeedFapiao').attr('value',1);
+			$(".FapiaoInfo").slideDown(500);
+		} else {
+			$('#NeedFapiao').attr('value',0);
+			$(".FapiaoInfo").slideUp(500);
+		};
+	});
+});
+</script>
+
+</head>
+
+<body class="Yuding2">
+<div class="CarImgBlock">
+	<img class="img-responsive center-block CarImg" src="../common/images/bookingcar/DefaultCar.jpg">
+</div>
+<div class="container-fluid">
+  <div class="row">
+    <div class="col-md-4 col-md-offset-4">
+		<p class="TimeShow">取车时间<span class="pull-right">2015-09-09 11:00</span></p>
+		<p class="TimeShow">预计还车时间<span class="pull-right">2015-09-19 15:00</span></p>
+		<p class="AddressShow"><i class="fa fa-map-marker"></i><span>力宝广场网点</span></p>
+		<p class="CostShow"><i class="fa fa-database"></i>费用预估：<span>90.00</span></p>
+		
+		<form class="form-horizontal">
+			<p class="FapiaoShow">我需要开发票<span class="switch pull-right">
+					<input id="NeedFapiao" type="checkbox" name="orders.isBill"  data-size="mini" 
+					data-on-text="是" data-off-text="否" data-on-color="success" data-off-color="warning" value=0 />
+				</span></p>
+			<div class="FapiaoInfo">
+				<div class="form-group">
+					<div class="col-xs-12">
+						<input type="text" class="form-control" placeholder="发票抬头">
+					</div>
+  				</div>
+				<div class="form-group">
+					<div class="col-xs-6">
+						<input type="text" class="form-control" placeholder="收件人">
+					</div>
+					<div class="col-xs-6">
+						<input type="text" class="form-control" placeholder="邮编">
+					</div>
+  				</div>
+				<div class="form-group">
+					<div class="col-xs-12">
+						<input type="text" class="form-control" placeholder="联系方式">
+					</div>
+  				</div>
+				<div class="form-group">
+					<div class="col-xs-12">
+						<input type="text" class="form-control" placeholder="邮寄地址">
+					</div>
+  				</div>
+			</div>
+			<div class="row SubmitButton">
+				<div class="col-xs-8 col-xs-offset-2">
+					<button type="submit" class="btn btn-embossed btn-primary btn-block">提交订单</button>
+				</div>
+			</div>
+		</form>
+	</div>
+  </div>
+</div>
+
+</body>
+</html>

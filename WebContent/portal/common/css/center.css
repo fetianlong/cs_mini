@@ -1,0 +1,76 @@
+@charset "utf-8";
+/* CSS Document */
+
+.MainContent {
+	padding: 150px 0 0;
+	background: #f2f1f1;
+}
+
+.MainContent>.container {
+	background: #FFF;
+	padding-top: 150px;
+	padding-bottom: 50px;
+	position: relative;
+}
+
+.MainContent .TitleImg {
+	position: absolute;
+	top: -70px;
+	left: 45%;
+}
+
+.MainContent .CenterBlock .Border {
+	border: solid 2px #4bd3a5;
+	border-radius: 5px;
+}
+
+.MainContent .CenterBlock ul {
+	list-style: none;
+	padding: 0;
+	margin: 0;
+}
+
+.MainContent .CenterBlock ul li {
+	font-size: 16px;
+	line-height: 48px;
+	text-align: left;
+	padding-left: 28%;
+	border-bottom: dotted 1px #cfd0cf;
+}
+
+.MainContent .CenterBlock ul li:first-of-type {
+	background: #4bd3a5;
+	color: #FFF;
+	border-bottom: none;
+	text-align: center;
+	padding-left: 0;
+}
+
+.MainContent .CenterBlock ul li:last-of-type {
+	/*border-bottom: none;*/
+}
+
+.MainContent .CenterBlock ul li .fa {
+	margin-right: 10px;
+	color: #6dcff6;
+	visibility: hidden;
+}
+
+.MainContent .CenterBlock ul li:hover .fa {
+	visibility: visible;
+}
+
+.MainContent .CenterBlock ul li.active .fa {
+	visibility: visible;
+}
+
+.SubmitButton {
+	background: #4bd3a5;
+	color: #FFF !important;
+	border-radius: 0;
+}
+
+.SubmitButton:hover {
+	background: #4bd3a5;
+	color: #FFF;
+}

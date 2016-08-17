@@ -1,0 +1,264 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<beans xmlns="http://www.springframework.org/schema/beans"
+	xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+	xsi:schemaLocation="http://www.springframework.org/schema/beans http://www.springframework.org/schema/beans/spring-beans-2.0.xsd">
+	
+	<!-- 会员 相关  -->
+	<bean id="subscriberrLoginAction" class="com.dearho.cs.subscriber.action.login.SubscriberrLoginAction" scope="prototype">
+		<property name="subscriberService" ref="subscriberService"/>
+		<property name="subscriberLoginRecordService" ref="subscriberLoginRecordService"/>
+	</bean>
+	<bean id="subscriberrLogoutAction" class="com.dearho.cs.subscriber.action.login.SubscriberrLogoutAction" scope="prototype">
+		<property name="subscriberService" ref="subscriberService"/>
+	</bean>
+	
+	<!--  会员注册 start -->
+	<bean id="subscriberRegisterOneAction" class="com.dearho.cs.subscriber.action.register.SubscriberRegisterOneAction" scope="prototype">
+		<property name="subscriberService" ref="subscriberService"/>
+		<property name="subscriberPhoneChangeService" ref="subscriberPhoneChangeService"/>
+		<property name="wechatUserInfoService" ref="wechatUserInfoService"/>
+		<property name="smsCodeService" ref="smsCodeService"/>
+	</bean>
+	<bean id="subscriberRegisterTwoAction" class="com.dearho.cs.subscriber.action.register.SubscriberRegisterTwoAction" scope="prototype">
+		<property name="subscriberService" ref="subscriberService"/>
+	</bean>
+	<bean id="subscriberRegisterPerfectAction" class="com.dearho.cs.subscriber.action.register.SubscriberRegisterPerfectAction" scope="prototype">
+		<property name="subscriberService" ref="subscriberService"/>
+	</bean>
+	<!-- 会员注册 end -->
+	
+	
+	<!-- 个人中心 start -->
+	<bean id="subscriberBaseInfoUpdateAction" class="com.dearho.cs.subscriber.action.personalCenter.SubscriberBaseInfoUpdateAction" scope="prototype">
+		<property name="subscriberService" ref="subscriberService"/>
+	</bean>
+	<bean id="subscriberBaseInfoGetAction" class="com.dearho.cs.subscriber.action.personalCenter.SubscriberBaseInfoGetAction" scope="prototype">
+		<property name="subscriberService" ref="subscriberService"/>
+		<property name="ordersService" ref="ordersService"/>
+		<property name="wechatUserInfoService" ref="wechatUserInfoService"/>
+		
+	</bean>
+	<bean id="subscriberChangePasswordAction" class="com.dearho.cs.subscriber.action.personalCenter.SubscriberChangePasswordAction" scope="prototype">
+		<property name="subscriberService" ref="subscriberService"/>
+	</bean>
+	<bean id="subscriberChangePhoneNOAction" class="com.dearho.cs.subscriber.action.personalCenter.SubscriberChangePhoneNOAction" scope="prototype">
+		<property name="subscriberService" ref="subscriberService"/>
+		<property name="smsCodeService" ref="smsCodeService"/>
+	</bean>
+	
+	<bean id="subscriberWechatUnbindingAction" class="com.dearho.cs.subscriber.action.personalCenter.SubscriberWechatUnbindingAction" scope="prototype">
+		<property name="wechatUserInfoService" ref="wechatUserInfoService"/>
+		<property name="subscriberService" ref="subscriberService"/>
+	</bean>
+	<bean id="subscriberWechatBindingAction" class="com.dearho.cs.subscriber.action.personalCenter.SubscriberWechatBindingAction" scope="prototype">
+		<property name="wechatUserInfoService" ref="wechatUserInfoService"/>
+		<property name="subscriberService" ref="subscriberService"/>
+	</bean>
+	<!-- 个人中心 end -->
+	
+	
+	
+	<!--  会员审核 start -->
+	<bean id="subscriberConfirmAction" class="com.dearho.cs.subscriber.action.confirm.SubscriberConfirmAction" scope="prototype">
+		<property name="subscriberConfirmService" ref="subscriberConfirmService"/>
+	</bean>
+	<bean id="subscriberConfirmGetAction" class="com.dearho.cs.subscriber.action.confirm.SubscriberConfirmGetAction" scope="prototype">
+		<property name="subscriberConfirmService" ref="subscriberConfirmService"/>
+		<property name="userService" ref="userService"/>
+		
+	</bean>
+	<bean id="subscriberConfirmSearchAction" class="com.dearho.cs.subscriber.action.confirm.SubscriberConfirmSearchAction" scope="prototype">
+		<property name="subscriberConfirmService" ref="subscriberConfirmService"/>
+	</bean>
+	<!--  会员审核 end -->
+	
+	
+	
+	
+	<!-- 会员信息 start -->
+	<bean id="subscriberGetAction" class="com.dearho.cs.subscriber.action.subscriber.SubscriberGetAction" scope="prototype">
+		<property name="subscriberService" ref="subscriberService"/>
+		<property name="ordersService" ref="ordersService"/>
+		<property name="wechatUserInfoService" ref="wechatUserInfoService"/>
+	</bean>
+	<bean id="subscriberSearchAction" class="com.dearho.cs.subscriber.action.subscriber.SubscriberSearchAction" scope="prototype">
+		<property name="subscriberService" ref="subscriberService"/>
+	</bean>
+	<bean id="subscriberSearchMiniAction" class="com.dearho.cs.subscriber.action.subscriber.SubscriberSearchMiniAction" scope="prototype">
+		<property name="subscriberService" ref="subscriberService"/>
+	</bean>
+	<bean id="subscriberUpdateAction" class="com.dearho.cs.subscriber.action.subscriber.SubscriberUpdateAction" scope="prototype">
+		<property name="subscriberService" ref="subscriberService"/>
+	</bean>
+	
+	
+	<!-- 会员信息 end -->
+	
+	
+	
+	
+	<!-- 充值卡 start -->
+	<bean id="rechargeCardSearchAction" class="com.dearho.cs.account.action.rechargecard.RechargeCardSearchAction" scope="prototype">
+		<property name="rechargeCardService" ref="rechargeCardService"/>
+	</bean>
+	<bean id="rechargeCardGetAction" class="com.dearho.cs.account.action.rechargecard.RechargeCardGetAction" scope="prototype">
+		<property name="rechargeCardService" ref="rechargeCardService"/>
+	</bean>
+	<bean id="rechargeCardUpdateAction" class="com.dearho.cs.account.action.rechargecard.RechargeCardUpdateAction" scope="prototype">
+		<property name="rechargeCardService" ref="rechargeCardService"/>
+	</bean>
+	<bean id="rechargeCardDeleteAction" class="com.dearho.cs.account.action.rechargecard.RechargeCardDeleteAction" scope="prototype">
+		<property name="rechargeCardService" ref="rechargeCardService"/>
+	</bean>
+	<!-- 充值卡 end -->
+	<!-- 充值记录 start -->
+	<bean id="cutPaymentRecordSearchAction" class="com.dearho.cs.account.action.rechargerecord.CutPaymentRecordSearchAction" scope="prototype">
+		<property name="rechargeRecordService" ref="rechargeRecordService"/>
+	</bean>
+	<bean id="rechargeRecordSearchAction" class="com.dearho.cs.account.action.rechargerecord.RechargeRecordSearchAction" scope="prototype">
+		<property name="rechargeRecordService" ref="rechargeRecordService"/>
+	</bean>
+	<bean id="rechargeRecordGetAction" class="com.dearho.cs.account.action.rechargerecord.RechargeRecordGetAction" scope="prototype">
+		<property name="rechargeRecordService" ref="rechargeRecordService"/>
+	</bean>
+	<!-- 充值记录 end -->
+	<!-- 代充start -->
+	<bean id="commissionCardSearchAction" class="com.dearho.cs.account.action.commission.CommissionCardSearchAction" scope="prototype">
+		<property name="rechargeCardService" ref="rechargeCardService"/>
+		<property name="subscriberService" ref="subscriberService"/>
+	</bean>
+	<bean id="commissionCardSaveAction" class="com.dearho.cs.account.action.commission.CommissionCardSaveAction" scope="prototype">
+		<property name="rechargeCardService" ref="rechargeCardService"/>
+		<property name="subscriberService" ref="subscriberService"/>
+		<property name="accountService" ref="accountService"></property>
+	</bean>
+	<!-- 代充end -->
+	
+	<!-- 扣款start -->
+	<bean id="commissionCutPaymentSearchAction" class="com.dearho.cs.account.action.commission.CommissionCutPaymentSearchAction" scope="prototype">
+	</bean>
+	<bean id="commissionCutPaymentSaveAction" class="com.dearho.cs.account.action.commission.CommissionCutPaymentSaveAction" scope="prototype">
+		<property name="rechargeCardService" ref="rechargeCardService"/>
+		<property name="subscriberService" ref="subscriberService"/>
+		<property name="accountService" ref="accountService"></property>
+	</bean>
+	<!-- 扣款end -->
+	
+	<!-- 后台交易记录 -->
+	
+	<bean id="accountTradingDetailSearchAction" class="com.dearho.cs.account.action.account.AccountTradingDetailSearchAction" scope="prototype">
+		<property name="accountTradeRecordService" ref="accountTradeRecordService"/>
+		<property name="subscriberService" ref="subscriberService"/>
+	</bean>
+	<!-- 会员账号start -->
+	<bean id="accountTradingSearchAction" class="com.dearho.cs.account.action.account.AccountTradingSearchAction" scope="prototype">
+		<property name="accountTradeRecordService" ref="accountTradeRecordService"/>
+	</bean>
+	<bean id="accountSearchAction" class="com.dearho.cs.account.action.account.AccountSearchAction" scope="prototype">
+		<property name="accountService" ref="accountService"/>
+		<property name="accountTradeRecordService" ref="accountTradeRecordService"/>
+	</bean>
+	
+	<!--  -->
+	
+	<!-- 前台个人中心账号管理 start-->
+		<bean id="accountCenterGetAction" class="com.dearho.cs.account.action.center.AccountCenterGetAction" scope="prototype">
+			<property name="accountService" ref="accountService"/>
+			<property name="ordersService" ref="ordersService"/>
+			<property name="subscriberService" ref="subscriberService"/>
+			<property name="carService" ref="carService"/>
+			<property name="wechatUserInfoService" ref="wechatUserInfoService"/>
+			
+			
+		</bean>
+		
+	
+		
+		<!-- 申请退款 -->
+		<bean id="accountApplyRefundAction" class="com.dearho.cs.account.action.center.AccountApplyRefundAction" scope="prototype">
+			<property name="refundService" ref="refundService"/>
+			<property name="accountService" ref="accountService"/>
+			<property name="wechatUserInfoService" ref="wechatUserInfoService"/>
+		</bean>
+		<!-- 充值 -->
+		<bean id="accountCenterRechargeAction" class="com.dearho.cs.account.action.center.AccountCenterRechargeAction" scope="prototype">
+			<property name="accountService" ref="accountService"/>
+			<property name="rechargeCardService" ref="rechargeCardService"/>
+			<property name="payService" ref="payService"/>
+			<property name="wechatUserInfoService" ref="wechatUserInfoService"/>
+		</bean>
+		
+		<!-- 消费记录 -->
+		<bean id="accountTradingRecordSearchAction" class="com.dearho.cs.account.action.center.AccountTradingRecordSearchAction" scope="prototype">
+			<property name="accountService" ref="accountService"/>
+			<property name="accountTradeRecordService" ref="accountTradeRecordService"/>
+			
+		</bean>
+		<bean id="accountTradingRecordGetAction" class="com.dearho.cs.account.action.center.AccountTradingRecordGetAction" scope="prototype">
+			<property name="accountTradeRecordService" ref="accountTradeRecordService"/>
+			<property name="ordersService" ref="ordersService"/>
+			
+		</bean>
+	
+	<!-- 前台个人中心账号管理 end -->
+	
+	
+	
+	<!-- 退款申请 start -->
+	<bean id="accountApplyRefundSearchAction" class="com.dearho.cs.account.action.refundapply.AccountApplyRefundSearchAction" scope="prototype">
+		<property name="subscriberConfirmService" ref="subscriberConfirmService"/>	
+	</bean>
+	<bean id="accountApplyRefundGetAction" class="com.dearho.cs.account.action.refundapply.AccountApplyRefundGetAction" scope="prototype">
+		<property name="subscriberConfirmService" ref="subscriberConfirmService"/>	
+		<property name="userService" ref="userService"/>	
+		<property name="accountService" ref="accountService"/>
+		<property name="refundService" ref="refundService"/>
+	</bean>
+	<bean id="accountApplyRefundDoAction" class="com.dearho.cs.account.action.refundapply.AccountApplyRefundDoAction" scope="prototype">
+		<property name="refundService" ref="refundService"/>	
+		<property name="subscriberConfirmService" ref="subscriberConfirmService"/>	
+		
+	</bean>
+	<!-- 退款申请 end -->
+	
+	
+	<!--呼叫中心 start -->
+	<bean id="subscriberCallGetAction" class="com.dearho.cs.subscriber.action.call.SubscriberCallGetAction" scope="prototype">
+		<property name="subscriberCallService" ref="subscriberCallService"/>
+	</bean>
+		<bean id="subscriberCallSearchAction" class="com.dearho.cs.subscriber.action.call.SubscriberCallSearchAction" scope="prototype">
+		<property name="subscriberCallService" ref="subscriberCallService"/>	
+	</bean>
+	<bean id="subscriberCallAddAction" class="com.dearho.cs.subscriber.action.call.SubscriberCallAddAction" scope="prototype">
+		<property name="subscriberCallService" ref="subscriberCallService"/>	
+	</bean>
+	
+	<bean id="subscriberCallPhoneSearchAction" class="com.dearho.cs.subscriber.action.call.SubscriberCallPhoneSearchAction" scope="prototype">
+		<property name="subscriberService" ref="subscriberService"/>
+		<property name="ordersService" ref="ordersService"  />	
+	</bean>
+	
+	<bean id="subscriberCallHandlingUpdateAction" class="com.dearho.cs.subscriber.action.call.SubscriberCallHandlingUpdateAction" scope="prototype">
+		<property name="subscriberCallService" ref="subscriberCallService"/>	
+	</bean>
+	<!--呼叫中心end -->
+	
+	
+		
+	
+	<!--微信端 -->
+	<bean id="wechatCoreAction" class="com.dearho.cs.wechat.action.WechatCoreAction" scope="prototype">
+		<property name="wechatTokenInfoService" ref="wechatTokenInfoService"/>
+		<property name="wechatUserInfoService" ref="wechatUserInfoService"/>
+	</bean>
+	<bean id="mobileLoginAction" class="com.dearho.cs.wechat.action.MobileLoginAction" scope="prototype">
+		<property name="subscriberService" ref="subscriberService"/>
+		<property name="subscriberLoginRecordService" ref="subscriberLoginRecordService"/>
+		<property name="wechatUserInfoService" ref="wechatUserInfoService"/>
+		<property name="smsCodeService" ref="smsCodeService"/>
+	</bean>
+	<!--微信端end -->
+	
+	
+	
+</beans>

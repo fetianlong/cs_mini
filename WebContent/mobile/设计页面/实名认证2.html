@@ -1,0 +1,69 @@
+<!doctype html>
+<html lang="zh-CN">
+<head>
+<meta charset="utf-8">
+<title>实名认证</title>
+
+<link rel=stylesheet href="../common/js/bootstrap/css/bootstrap.min.css">
+<link rel=stylesheet href="../common/js/fontawesome/css/font-awesome.min.css">
+<link rel=stylesheet href="../common/js/flatui/dist/css/flat-ui.min.css">
+<script src="../common/js/jquery.min.js"></script>
+<script src="../common/js/bootstrap/js/bootstrap.min.js"></script>
+<script src="../common/js/flatui/dist/js/flat-ui.min.js"></script>
+<script src="../common/js/main.js"></script>
+
+<link rel=stylesheet href="../common/css/main.css">
+<link rel=stylesheet href="../common/css/register.css">
+
+<meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1, user-scalable=no">
+<meta http-equiv="X-UA-Compatible" content="IE=edge">
+<meta name="renderer" content="webkit">
+
+<script>
+$(function(){
+	$(".UploadID").click(function(e) {
+		$("#ID").click();
+	});
+	$(".UploadJiazhao").click(function(e) {
+		$("#jiazhao").click();
+	});
+});
+</script>
+</head>
+
+<body>
+<div class="container-fluid">
+  <div class="row">
+    <div class="col-md-4 col-md-offset-4">
+		<form>
+		<div class="form-group">
+			<label class="sr-only" for="name">真实姓名</label>
+			<input type="text" class="form-control" id="name" placeholder="真实姓名">
+			<p class="help-block ErrorTip">错误提示</p>
+		</div>
+		<div class="form-group">
+			<label class="sr-only" for="ID">上传身份证件</label>
+			<p class="help-block">请上传有效身份证件</p>
+			<img class="img-responsive center-block UploadID" src="../common/images/register/camera.jpg">
+			<input class="hidden" type="file" id="ID">
+			<p class="help-block ErrorTip">错误提示</p>
+		</div>
+		<div class="form-group">
+			<label class="sr-only" for="jiazhao">上传驾驶执照</label>
+			<p class="help-block">请上传有效驾驶执照</p>
+			<img class="img-responsive center-block UploadJiazhao" src="../common/images/register/camera.jpg">
+			<input class="hidden" type="file" id="jiazhao">
+			<p class="help-block ErrorTip">错误提示</p>
+		</div>
+		<div class="BottomButton">
+			<div class="col-xs-8 col-xs-offset-2">
+				<button type="submit" class="btn btn-embossed btn-primary btn-block">下一步</button>
+			</div>
+		</div>
+		</form>
+	</div>
+  </div>
+</div>
+
+</body>
+</html>

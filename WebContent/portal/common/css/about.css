@@ -1,0 +1,53 @@
+@charset "utf-8";
+/* CSS Document */
+
+body {
+	background: url(../images/about/Background.jpg) no-repeat center center;
+	background-attachment: fixed;
+}
+
+.Header .NavBarBlock {
+	background: #FFF;
+}
+
+.MainContent {
+	margin-top: 0;
+}
+
+.MainContent .section {
+	padding-top: 80px;
+	position: relative;
+}
+
+.MainContent .section2 img {
+	margin-bottom: 20px;
+}
+
+.MainContent .section3 .imgfloat3 {
+	position: absolute;
+	top: 20%;
+	left: 45%;
+}
+
+.MainContent .section6 img:first-of-type {
+	margin-bottom: 50px;
+}
+
+.MainContent .section6 img:last-of-type {
+	animation-delay: 1s;
+	-webkit-animation-delay: 1s;
+}
+
+.MainContent .section9 img:last-of-type {
+	animation-delay: 1s;
+	-webkit-animation-delay: 1s;
+}
+
+.MainContent .section9 img:first-of-type {
+	margin-bottom: 50px;
+}
+
+#fp-nav ul li a span, .fp-slidesNav ul li a span {
+	background: #CCC;
+}
+

@@ -1,0 +1,30 @@
+<!DOCTYPE hibernate-mapping PUBLIC 
+    "-//Hibernate/Hibernate Mapping DTD 3.0//EN"
+    "http://hibernate.sourceforge.net/hibernate-mapping-3.0.dtd">
+<hibernate-mapping>
+	<class name="com.dearho.cs.subscriber.pojo.SubscriberPhoneChangeRecord" table="sub_phone_change_record">
+		<id name="id" type="java.lang.String">
+            <column name="id" length="32" />
+            <generator class="uuid.hex" />
+        </id>
+      
+        <property name="oldPhoneNo" type="string">
+            <column name="old_phone_no" />
+        </property>
+        <property name="newPhoneNo" type="string">
+            <column name="new_phone_no" />
+        </property>
+        <property name="changerType" type="integer">
+            <column name="changer_type" />
+        </property>
+        <property name="changerId" type="string">
+            <column name="changer_id" />
+        </property>
+        
+         
+        <property name="ts" type="java.util.Date">
+            <column name="ts" not-null="true"/>
+        </property> 
+	</class>
+	
+</hibernate-mapping>

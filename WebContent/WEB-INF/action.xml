@@ -1,0 +1,245 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<beans xmlns="http://www.springframework.org/schema/beans"
+	xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+	xsi:schemaLocation="http://www.springframework.org/schema/beans http://www.springframework.org/schema/beans/spring-beans-2.0.xsd">
+	<bean id="loginAction" class="com.dearho.cs.sys.action.user.LoginAction" scope="prototype">
+		<property name="userService" ref="userService"/>
+	</bean>
+	<bean id="logoutAction" class="com.dearho.cs.sys.action.user.LogoutAction" scope="prototype"></bean>
+	<bean id="appDownAction" class="com.dearho.cs.subscriber.action.login.AppDownAction" scope="prototype">
+		
+	</bean>
+	
+	
+	<bean id="indexAction" class="com.dearho.cs.sys.action.user.IndexAction" scope="prototype">
+		<property name="userService" ref="userService"/>
+	</bean>
+	<bean id="userSearchAction" class="com.dearho.cs.sys.action.user.UserSearchAction" scope="prototype">
+		<property name="userService" ref="userService"/>
+	</bean>
+	<bean id="userGetAction" class="com.dearho.cs.sys.action.user.UserGetAction" scope="prototype">
+		<property name="userService" ref="userService"/>
+		<property name="groupService" ref="groupService"/>
+	</bean>
+	<bean id="userAddAction" class="com.dearho.cs.sys.action.user.UserAddAction" scope="prototype">
+		<property name="userService" ref="userService"/>
+	</bean>
+	<bean id="userUpdateAction" class="com.dearho.cs.sys.action.user.UserUpdateAction" scope="prototype">
+		<property name="userService" ref="userService"/>
+	</bean>
+	<bean id="userDeleteAction" class="com.dearho.cs.sys.action.user.UserDeleteAction" scope="prototype">
+		<property name="userService" ref="userService"/>
+	</bean>
+	<bean id="userChangePasswordAction" class="com.dearho.cs.sys.action.user.UserChangePasswordAction" scope="prototype">
+		<property name="userService" ref="userService"/>
+	</bean>
+	
+	<bean id="functionSearch" class="com.dearho.cs.sys.action.function.FunctionSearchAction" scope="prototype">
+		<property name="functionService" ref="functionService" />
+	</bean>
+	
+	<bean id="functionGet" class="com.dearho.cs.sys.action.function.FunctionGetAction">
+		<property name="functionService" ref="functionService" />
+	</bean>
+	
+	<bean id="functionAdd" class="com.dearho.cs.sys.action.function.FunctionAddAction">
+		<property name="functionService" ref="functionService" />
+	</bean>
+	<bean id="functionDelete" class="com.dearho.cs.sys.action.function.FunctionDeleteAction">
+		<property name="functionService" ref="functionService" />
+	</bean>
+	
+	<bean id="roleSearchAction" class="com.dearho.cs.sys.action.role.RoleSearchAction" scope="prototype">
+		<property name="roleService" ref="roleService"/>
+	</bean>
+	<bean id="roleGetAction" class="com.dearho.cs.sys.action.role.RoleGetAction" scope="prototype">
+		<property name="roleService" ref="roleService"/>
+	</bean>
+	<bean id="roleAddAction" class="com.dearho.cs.sys.action.role.RoleAddAction" scope="prototype">
+		<property name="roleService" ref="roleService"/>
+	</bean>
+	<bean id="roleUpdateAction" class="com.dearho.cs.sys.action.role.RoleUpdateAction" scope="prototype">
+		<property name="roleService" ref="roleService"/>
+	</bean>
+	<bean id="roleDeleteAction" class="com.dearho.cs.sys.action.role.RoleDeleteAction" scope="prototype">
+		<property name="roleService" ref="roleService"/>
+	</bean>
+	
+	<bean id="pinyinUtilAction" class="com.dearho.cs.util.PinYinAction" scope="prototype">
+	</bean>
+	
+		<!-- 用户组 start -->
+	<bean id="groupSerachAction" class="com.dearho.cs.sys.action.group.GroupSerachAction" scope="prototype">
+		<property name="groupService" ref="groupService"/>
+	</bean>
+	<bean id="groupGetAction" class="com.dearho.cs.sys.action.group.GroupGetAction" scope="prototype">
+		<property name="groupService" ref="groupService"/>
+	</bean>
+	<bean id="groupAddOrUpdateAction" class="com.dearho.cs.sys.action.group.GroupAddOrUpdateAction" scope="prototype">
+		<property name="groupService" ref="groupService"/>
+	</bean>
+	<bean id="groupDeleteAction" class="com.dearho.cs.sys.action.group.GroupDeleteAction" scope="prototype">
+		<property name="groupService" ref="groupService"/>
+		<property name="userService" ref="userService"/>
+	</bean>
+	<bean id="groupGetPrivilegeAction" class="com.dearho.cs.sys.action.group.GroupGetPrivilegeAction" scope="prototype">
+		<property name="groupService" ref="groupService"/>
+		<property name="menuService" ref="menuService"/>
+	</bean>
+	<bean id="groupAddPrivilegeAction" class="com.dearho.cs.sys.action.group.GroupAddPrivilegeAction" scope="prototype">
+		<property name="groupService" ref="groupService"/>
+		<property name="menuService" ref="menuService"/>
+	</bean>
+	<!-- 用户组 end -->
+	
+	
+	<!-- 菜单 start -->
+	<bean id="menuSearchAction" class="com.dearho.cs.sys.action.menu.MenuSearchAction" scope="prototype">
+		<property name="menuService" ref="menuService"/>
+	</bean>
+	<bean id="menuGetAction" class="com.dearho.cs.sys.action.menu.MenuGetAction" scope="prototype">
+		<property name="menuService" ref="menuService"/>
+	</bean>
+	<bean id="menuAddAction" class="com.dearho.cs.sys.action.menu.MenuAddAction" scope="prototype">
+		<property name="menuService" ref="menuService"/>
+	</bean>
+	<bean id="menuDeleteAction" class="com.dearho.cs.sys.action.menu.MenuDeleteAction" scope="prototype">
+		<property name="menuService" ref="menuService"/>
+	</bean>
+	<bean id="menuUpdateAction" class="com.dearho.cs.sys.action.menu.MenuUpdateAction" scope="prototype">
+		<property name="menuService" ref="menuService"/>
+	</bean>
+	<!-- 菜单 end -->
+	
+	<!-- 系统参数  start-->
+	<bean id="configSearchAction" class="com.dearho.cs.sys.action.config.ConfigSearchAction" scope="prototype">
+		<property name="configService" ref="configService"/>
+	</bean>
+	<bean id="configGetAction" class="com.dearho.cs.sys.action.config.ConfigGetAction" scope="prototype">
+		<property name="configService" ref="configService"/>
+	</bean>
+	<bean id="configAddAction" class="com.dearho.cs.sys.action.config.ConfigAddAction" scope="prototype">
+		<property name="configService" ref="configService"/>
+	</bean>
+	<bean id="configUpdateAction" class="com.dearho.cs.sys.action.config.ConfigUpdateAction" scope="prototype">
+		<property name="configService" ref="configService"/>
+	</bean>
+	<bean id="configDeleteAction" class="com.dearho.cs.sys.action.config.ConfigDeleteAction" scope="prototype">
+		<property name="configService" ref="configService"/>
+	</bean>
+	
+	<!-- 系统参数  end-->
+	
+	<!-- 字典组 start-->
+	<bean id="dictGroupSearchAction" class="com.dearho.cs.sys.action.dictgroup.DictGroupSearchAction" scope="prototype">
+		<property name="dictGroupService" ref="dictGroupService"/>
+	</bean>
+	<bean id="dictGroupGetAction" class="com.dearho.cs.sys.action.dictgroup.DictGroupGetAction" scope="prototype">
+		<property name="dictGroupService" ref="dictGroupService"/>
+	</bean>
+	<bean id="dictGroupAddAction" class="com.dearho.cs.sys.action.dictgroup.DictGroupAddAction" scope="prototype">
+		<property name="dictGroupService" ref="dictGroupService"/>
+	</bean>
+	<bean id="dictGroupUpdateAction" class="com.dearho.cs.sys.action.dictgroup.DictGroupUpdateAction" scope="prototype">
+		<property name="dictGroupService" ref="dictGroupService"/>
+	</bean>
+	<bean id="dictGroupDeleteAction" class="com.dearho.cs.sys.action.dictgroup.DictGroupDeleteAction" scope="prototype">
+		<property name="dictGroupService" ref="dictGroupService"/>
+		<property name="dictService" ref="dictService"/>
+	</bean>
+	
+	<!-- 字典组  end-->
+	<!-- 字典   start-->
+	<bean id="dictSearchAction" class="com.dearho.cs.sys.action.dict.DictSearchAction" scope="prototype">
+		<property name="dictService" ref="dictService"/>
+		<property name="dictGroupService" ref="dictGroupService"/>
+	</bean>
+	<bean id="dictGetAction" class="com.dearho.cs.sys.action.dict.DictGetAction" scope="prototype">
+		<property name="dictService" ref="dictService"/>
+		<property name="dictGroupService" ref="dictGroupService"/>
+	</bean>
+	<bean id="dictAddAction" class="com.dearho.cs.sys.action.dict.DictAddAction" scope="prototype">
+		<property name="dictService" ref="dictService"/>
+	</bean>
+	<bean id="dictUpdateAction" class="com.dearho.cs.sys.action.dict.DictUpdateAction" scope="prototype">
+		<property name="dictService" ref="dictService"/>
+	</bean>
+	<bean id="dictDeleteAction" class="com.dearho.cs.sys.action.dict.DictDeleteAction" scope="prototype">
+		<property name="dictService" ref="dictService"/>
+	</bean>
+	
+	<!-- 字典  end-->
+	
+	<!-- 行政区划  start-->
+	<bean id="areaSearchAction" class="com.dearho.cs.sys.action.area.AreaSearchAction" scope="prototype">
+		<property name="areaService" ref="areaService"/>
+	</bean>
+	<bean id="areaGetAction" class="com.dearho.cs.sys.action.area.AreaGetAction" scope="prototype">
+		<property name="areaService" ref="areaService"/>
+	</bean>
+	<bean id="areaAddAction" class="com.dearho.cs.sys.action.area.AreaAddAction" scope="prototype">
+		<property name="areaService" ref="areaService"/>
+	</bean>
+	<bean id="areaUpdateAction" class="com.dearho.cs.sys.action.area.AreaUpdateAction" scope="prototype">
+		<property name="areaService" ref="areaService"/>
+	</bean>
+	<bean id="areaDeleteAction" class="com.dearho.cs.sys.action.area.AreaDeleteAction" scope="prototype">
+		<property name="areaService" ref="areaService"/>
+	</bean>
+	<!-- 行政区划  end-->
+	
+	<!-- 公司企业  start-->
+	<bean id="companySearchAction" class="com.dearho.cs.sys.action.company.CompanySearchAction" scope="prototype">
+		<property name="companyService" ref="companyService"/>
+	</bean>
+	<bean id="companyGetAction" class="com.dearho.cs.sys.action.company.CompanyGetAction" scope="prototype">
+		<property name="companyService" ref="companyService"/>
+	</bean>
+	<bean id="companyAddAction" class="com.dearho.cs.sys.action.company.CompanyAddAction" scope="prototype">
+		<property name="companyService" ref="companyService"/>
+	</bean>
+	<bean id="companyUpdateAction" class="com.dearho.cs.sys.action.company.CompanyUpdateAction" scope="prototype">
+		<property name="companyService" ref="companyService"/>
+	</bean>
+	<bean id="companyDeleteAction" class="com.dearho.cs.sys.action.company.CompanyDeleteAction" scope="prototype">
+		<property name="companyService" ref="companyService"/>
+	</bean>
+	<!-- 公司企业  end-->
+	
+	<!-- 弹框数据查询  start-->
+	<bean id="dialogAccountRechargeSearchAction" class="com.dearho.cs.account.action.account.AccountRechargeSearchAction" scope="prototype">
+		<property name="accountTradeRecordService" ref="accountTradeRecordService"/>
+	</bean>
+	<bean id="dialogAccountRefundSearchAction" class="com.dearho.cs.account.action.account.AccountRefundSearchAction" scope="prototype">
+		<property name="accountTradeRecordService" ref="accountTradeRecordService"/>
+	</bean>
+	<bean id="dialogAccountTradingAction" class="com.dearho.cs.account.action.account.AccountTradingAction" scope="prototype">
+		<property name="accountTradeRecordService" ref="accountTradeRecordService"/>
+	</bean>
+	
+	<bean id="sendMessageAction" class="com.dearho.cs.account.action.account.SendMessageAction" scope="prototype">
+		<property name="subscriberService" ref="subscriberService"/>
+	</bean>
+	
+	
+	<!-- 弹框数据查询  end-->
+	
+	<!-- 操作日志 -->
+	<bean id="operationLogSearchAction" class="com.dearho.cs.sys.action.operationlog.OperationLogSearchAction" scope="prototype">
+		<property name="operateLogService" ref="operateLogService"/>
+	</bean>
+	
+	<bean id="sysOperateLogRecordAction" class="com.dearho.cs.sys.action.operationlog.SysOperateLogRecordAction" scope="prototype">
+		<property name="systemOperateLogService" ref="systemOperateLogService"/>
+	</bean>
+	<!-- 操作日志 -->
+	
+	<bean id="smsRecordSerachAction" class="com.dearho.cs.sys.action.smsrecrd.SMSRecordSerachAction" scope="prototype">
+		<property name="smsRecordService" ref="smsRecordService"/>
+	</bean>
+		<bean id="smsRecordGetAction" class="com.dearho.cs.sys.action.smsrecrd.SMSRecordGetAction" scope="prototype">
+		<property name="smsRecordService" ref="smsRecordService"/>
+	</bean>
+	
+	
+</beans>

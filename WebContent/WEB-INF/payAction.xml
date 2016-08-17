@@ -1,0 +1,38 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<beans xmlns="http://www.springframework.org/schema/beans"
+	xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+	xsi:schemaLocation="http://www.springframework.org/schema/beans http://www.springframework.org/schema/beans/spring-beans-2.0.xsd">
+	
+	
+	
+	
+	
+	<!-- 微信公众号支付 start-->
+	<bean id="wxpayJsPayRechargeBackRcveiveAction" class="com.dearho.cs.wxpay.action.JsPayRechargeBackRcveiveAction" scope="prototype">
+		<property name="interfaceMessageLogService" ref="interfaceMessageLogService"  />
+		<property name="payService" ref="payService"/>
+	</bean>
+	<bean id="wxpayJsPayOrderPayBackRcveiveAction" class="com.dearho.cs.wxpay.action.JsPayOrderPayBackRcveiveAction" scope="prototype">
+		<property name="interfaceMessageLogService" ref="interfaceMessageLogService"  />
+		<property name="orderPayService" ref="orderPayService"/>
+	</bean>
+	<bean id="wxpayJsPayOrderFinishPayBackRcveiveAction" class="com.dearho.cs.wxpay.action.JsPayOrderFinishPayBackRcveiveAction" scope="prototype">
+		<property name="interfaceMessageLogService" ref="interfaceMessageLogService"  />
+		<property name="orderPayService" ref="orderPayService"/>
+	</bean>
+	
+	<bean id="nativePayRechargeBackRcveiveAction" class="com.dearho.cs.wxpay.action.NativePayRechargeBackRcveiveAction" scope="prototype">
+		<property name="interfaceMessageLogService" ref="interfaceMessageLogService"  />
+		<property name="payService" ref="payService"/>
+	</bean>
+	<bean id="nativePayOrderBackRcveiveAction" class="com.dearho.cs.wxpay.action.NativePayOrderBackRcveiveAction" scope="prototype">
+		<property name="interfaceMessageLogService" ref="interfaceMessageLogService"  />
+		<property name="orderPayService" ref="orderPayService"/>
+	</bean>
+	<!-- 微信公众号支付 end -->
+	
+	
+	
+	
+	
+</beans>

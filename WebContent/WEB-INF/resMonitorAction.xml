@@ -1,0 +1,25 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<beans xmlns="http://www.springframework.org/schema/beans"
+	xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+	xsi:schemaLocation="http://www.springframework.org/schema/beans http://www.springframework.org/schema/beans/spring-beans-2.0.xsd">
+	
+	<bean id="getCarGpsDetailInfoAction" class="com.dearho.cs.resmonitor.action.car.GetCarGpsDetailInfoAction" scope="prototype">
+		<property name="carLocationService" ref="carLocationService"/>
+		<property name="deviceBindingService" ref="deviceBindingService"></property>
+	</bean>
+	
+	<bean id="carRealtimeStateAction" class="com.dearho.cs.resmonitor.action.car.CarRealtimeStateAction" scope="prototype">
+		<property name="carRealtimeStateService" ref="carRealtimeStateService"/>
+		<property name="carService" ref="carService"></property>
+		<property name="deviceBindingService" ref="deviceBindingService"></property>
+	</bean>
+	
+	<bean id="carTrajectoryAction" class="com.dearho.cs.resmonitor.action.car.CarTrajectoryAction" scope="prototype">
+		<property name="carLocationService" ref="carLocationService"/>
+		<property name="deviceBindingService" ref="deviceBindingService"></property>
+		<property name="ordersService" ref="ordersService"></property>
+		<property name="subscriberService" ref="subscriberService"></property>
+		<property name="branchDotService" ref="branchDotService"></property>
+	</bean>
+	
+</beans>

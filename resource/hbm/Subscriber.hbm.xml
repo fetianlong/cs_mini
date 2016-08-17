@@ -1,0 +1,128 @@
+<!DOCTYPE hibernate-mapping PUBLIC 
+    "-//Hibernate/Hibernate Mapping DTD 3.0//EN"
+    "http://hibernate.sourceforge.net/hibernate-mapping-3.0.dtd">
+<hibernate-mapping>
+	<class name="com.dearho.cs.subscriber.pojo.Subscriber" table="sub_subscriber">
+		<id name="id" type="java.lang.String">
+            <column name="ID" length="32" />
+            <generator class="uuid.hex" />
+        </id>
+        <property name="nickname" type="java.lang.String">
+            <column name="nickname" length="32"  />
+        </property>
+        <property name="nickstatus" type="java.lang.Integer">
+            <column name="nick_status"/>
+        </property>
+        <property name="name" type="java.lang.String">
+            <column name="NAME" length="32"  />
+        </property>
+        <property name="password" type="java.lang.String">
+            <column name="password" length="64" />
+        </property>
+         <property name="phoneNo" type="java.lang.String">
+            <column name="phone_no" length="32" not-null="true"/>
+        </property>
+         <property name="state" type="java.lang.Integer">
+            <column name="state" />
+        </property>
+          <property name="eventState" type="java.lang.Integer">
+            <column name="event_state" />
+        </property>
+        <property name="drivingLicenseNo" type="java.lang.String">
+            <column name="driving_license_no" length="32"/>
+        </property>
+         <property name="email" type="java.lang.String">
+            <column name="email" length="32" />
+        </property>
+        <property name="webchatNo" type="java.lang.String">
+            <column name="webchat_no" length="32" />
+        </property>
+      
+        <property name="province" type="java.lang.String">
+            <column name="province"  />
+        </property>
+         <property name="city" type="java.lang.String">
+            <column name="city"  />
+        </property>
+        <property name="county" type="java.lang.String">
+            <column name="county"  />
+        </property>
+         <property name="address" type="java.lang.String">
+            <column name="address" />
+        </property>
+         <property name="remark" type="java.lang.String">
+            <column name="remark" />
+        </property>
+         <property name="sex" type="java.lang.String">
+            <column name="sex" length="32" />
+        </property>
+        
+         <property name="postAddress" type="java.lang.String">
+            <column name="post_address" length="510" />
+        </property>
+         <property name="idCardImg" type="java.lang.String">
+            <column name="id_card_img" length="510" />
+        </property>
+         <property name="drivingLicenseImg" type="java.lang.String">
+            <column name="driving_license_img" length="510" />
+        </property>
+        
+      
+         <property name="points" type="java.lang.Integer">
+            <column name="points" />
+        </property>
+        <property name="emergencyContact" type="java.lang.String">
+            <column name="emergency_contact" length="32" />
+        </property>
+        <property name="emergencyContactPhone" type="java.lang.String">
+            <column name="emergency_contact_phone" length="32" />
+        </property>
+        <property name="emergencyContactAddress" type="java.lang.String">
+            <column name="emergency_contact_address" length="32" />
+        </property>
+         <property name="createDate" type="java.util.Date">
+            <column name="create_date" />
+        </property>
+        <property name="avatar" type="java.lang.String">
+            <column name="avatar" length="510" />
+        </property>
+        <property name="registerPlace" type="java.lang.String">
+            <column name="register_place" length="32" />
+        </property>
+        
+        
+      	<property name="source" type="java.lang.String">
+            <column name="source" length="32" />
+        </property>
+        <property name="stopDate" type="java.util.Date">
+            <column name="stop_date" />
+        </property>
+         <property name="errorCount" type="java.lang.Integer">
+            <column name="error_count" />
+        </property>
+         <property name="ts" type="java.util.Date">
+            <column name="ts" not-null="true"/>
+        </property> 
+        
+        <property name="billTitle" type="java.lang.String">
+            <column name="bill_title" length="510" />
+        </property>
+        
+        <property name="billPostCode" type="java.lang.String">
+            <column name="bill_post_code" length="510" />
+        </property>
+        
+        <property name="wechatUnionId" type="java.lang.String">
+            <column name="wechat_unionid"  />
+        </property>
+        <property name="loginMacAddress" type="java.lang.String">
+            <column name="login_mac_address"  />
+        </property>
+	</class>
+	
+	
+	
+	
+	
+	
+</hibernate-mapping>

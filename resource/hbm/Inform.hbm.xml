@@ -1,0 +1,31 @@
+<!DOCTYPE hibernate-mapping PUBLIC 
+    "-//Hibernate/Hibernate Mapping DTD 3.0//EN"
+    "http://hibernate.sourceforge.net/hibernate-mapping-3.0.dtd">
+<hibernate-mapping>
+	<class name="com.dearho.cs.advice.pojo.Inform" table="c_inform">
+        <id name="id" type="string">
+            <column name="id" length="32" />
+        </id>
+        <property name="informContent" type="java.lang.String">
+            <column name="inform_content" length="255" >
+            	<comment>消息体</comment>
+            </column>
+        </property>
+        <property name="informType" type="java.lang.Integer">
+            <column name="inform_type" >
+            	<comment>通知0、短信1</comment>
+            </column>
+       </property>
+        <property name="informSendType" type="java.lang.Integer">
+            <column name="inform_send_type" >
+            	<comment>1群发、2指定用户</comment>
+            </column>
+       </property>
+        <property name="ts" type="java.util.Date">
+            <column name="ts" >
+            	<comment>创建时间</comment>
+            </column>
+        </property>
+	</class>
+	
+</hibernate-mapping>

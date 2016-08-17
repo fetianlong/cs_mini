@@ -1,0 +1,143 @@
+@charset "utf-8";
+/* CSS Document */
+
+.checkboxFive,.checkboxFive1,.checkboxFive2,.checkboxFive3 {
+	width: 70px;
+	margin: 0px 0px;
+	position: relative;
+	
+
+}
+
+.checkboxFive label {
+	cursor: pointer;
+	position: absolute;
+	width: 16px;
+	height: 16px;
+	border-radius:5px;
+	top: 6px;
+  	left: -2px;
+	background: #dbf6ed;
+	border:1px solid #ddd;
+	display:block;
+}
+.checkboxFive1 label {
+	cursor: pointer;
+	position: absolute;
+	width: 16px;
+	height: 16px;
+	border-radius:5px;
+	top: 6px;
+  	left: -2px;
+	background: #dbf6ed;
+	border:1px solid #ddd;
+	display:block;
+}
+.checkboxFive2 label {
+	cursor: pointer;
+	position: absolute;
+	width: 16px;
+	height: 16px;
+	border-radius:5px;
+	top: 6px;
+  	left: 3px;
+	background: #dbf6ed;
+	border:1px solid #ddd;
+	display:block;
+}
+.checkboxFive3 label {
+	cursor: pointer;
+	position: absolute;
+	width: 16px;
+	height: 16px;
+	border-radius:5px;
+	top: 6px;
+  	left: 3px;
+	background: #dbf6ed;
+	border:1px solid #ddd;
+	display:block;
+}
+.checkboxFive label:after {
+	opacity: 0.2;
+	content: '';
+	position: absolute;
+	width: 12px;
+	height: 5px;
+	background: transparent;
+	top: 0px;
+	left: 3px;
+	border: 3px solid #666;
+	border-top: none;
+	border-right: none;
+
+	-webkit-transform: rotate(-45deg);
+	-moz-transform: rotate(-45deg);
+	-o-transform: rotate(-45deg);
+	-ms-transform: rotate(-45deg);
+	transform: rotate(-45deg);
+}
+.checkboxFive1 label:after {
+	opacity: 0.2;
+	content: '';
+	position: absolute;
+	width: 12px;
+	height: 5px;
+	background: transparent;
+	top: 0px;
+	left: 3px;
+	border: 3px solid #666;
+	border-top: none;
+	border-right: none;
+
+	-webkit-transform: rotate(-45deg);
+	-moz-transform: rotate(-45deg);
+	-o-transform: rotate(-45deg);
+	-ms-transform: rotate(-45deg);
+	transform: rotate(-45deg);
+}
+.checkboxFive2 label:after {
+	opacity: 0.2;
+	content: '';
+	position: absolute;
+	width: 12px;
+	height: 5px;
+	background: transparent;
+	top: 0px;
+	left: 3px;
+	border: 3px solid #666;
+	border-top: none;
+	border-right: none;
+
+	-webkit-transform: rotate(-45deg);
+	-moz-transform: rotate(-45deg);
+	-o-transform: rotate(-45deg);
+	-ms-transform: rotate(-45deg);
+	transform: rotate(-45deg);
+}
+.checkboxFive3 label:after {
+	opacity: 0.2;
+	content: '';
+	position: absolute;
+	width: 12px;
+	height: 5px;
+	background: transparent;
+	top: 0px;
+	left: 3px;
+	border: 3px solid #666;
+	border-top: none;
+	border-right: none;
+
+	-webkit-transform: rotate(-45deg);
+	-moz-transform: rotate(-45deg);
+	-o-transform: rotate(-45deg);
+	-ms-transform: rotate(-45deg);
+	transform: rotate(-45deg);
+}
+
+.checkboxFive label:hover::after,.checkboxFive1 label:hover::after,.checkboxFive2 label:hover::after,.checkboxFive3 label:hover::after {
+	opacity: 0.5;
+}
+
+.checkboxFive input[type=checkbox]:checked + label:after,.checkboxFive1 input[type=checkbox]:checked + label:after,.checkboxFive2 input[type=checkbox]:checked + label:after,.checkboxFive3 input[type=checkbox]:checked + label:after {
+	opacity: 1;
+}

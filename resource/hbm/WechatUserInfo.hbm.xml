@@ -1,0 +1,55 @@
+<!DOCTYPE hibernate-mapping PUBLIC 
+    "-//Hibernate/Hibernate Mapping DTD 3.0//EN"
+    "http://hibernate.sourceforge.net/hibernate-mapping-3.0.dtd">
+ 
+<hibernate-mapping>
+	<class name="com.dearho.cs.wechat.pojo.WechatUserInfo" table="WX_USERINFO">
+		<id name="id" type="java.lang.String">
+            <column name="ID" length="32" />
+            <generator class="uuid.hex" />
+        </id>
+        
+        <property name="openId" type="java.lang.String">
+        	<column name="openid" />
+        </property>
+        
+         <property name="nickname" type="java.lang.String">
+        	<column name="nickname"  />
+        </property>
+
+         <property name="sex" type="java.lang.Integer">
+        	<column name="sex"  />
+        </property>
+        
+        <property name="country" type="java.lang.String">
+        	<column name="country"  />
+        </property>
+        
+        <property name="province" type="java.lang.String">
+        	<column name="province"  />
+        </property>
+        
+      	<property name="city" type="java.lang.String">
+        	<column name="city"  />
+        </property>
+        
+       <property name="headImgUrl" type="java.lang.String">
+        	<column name="headimgurl"  />
+        </property>
+        
+        <property name="createTime" type="java.util.Date">
+        	<column name="create_time"  />
+        </property>
+        
+       <property name="subscriberId" type="java.lang.String">
+        	<column name="subscriber_id"  />
+        </property>
+        
+       
+        
+        <property name="unionId" type="java.lang.String">
+        	<column name="unionid"  />
+        </property>
+        
+	</class>
+</hibernate-mapping>

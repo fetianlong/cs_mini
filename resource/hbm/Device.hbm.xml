@@ -1,0 +1,51 @@
+<!DOCTYPE hibernate-mapping PUBLIC 
+    "-//Hibernate/Hibernate Mapping DTD 3.0//EN"
+    "http://hibernate.sourceforge.net/hibernate-mapping-3.0.dtd">
+ <hibernate-mapping>
+ 	<class name="com.dearho.cs.device.pojo.Device" table="D_DEVICE">
+		<id name="id" type="java.lang.String">
+            <column name="ID" length="32" />
+            <generator class="uuid.hex" />
+        </id>
+         <property name="setNo" type="java.lang.String">
+        	<column name="SET_No" length="64" />
+        </property>
+        <property name="setName" type="java.lang.String">
+        	<column name="SET_NAME" length="64" />
+        </property>
+         <property name="setType" type="java.lang.String">
+        	<column name="SET_TYPE" length="64" />
+        </property>
+        <property name="remark" type="java.lang.String">
+        	<column name="remark" />
+        </property>
+         <property name="simId" type="java.lang.String">
+        	<column name="SIM_ID" length="64" />
+        </property>
+         <property name="updateFirmware" type="java.lang.Integer">
+        	<column name="UPDATE_FIRMWARE" />
+        </property>
+         <property name="firmwareVersion" type="java.lang.String">
+        	<column name="FIRMWARE_VERSION" length="64" />
+        </property>
+         <property name="setState" type="java.lang.String">
+        	<column name="SET_STATE" length="64" />
+        </property>
+        <property name="onlineDate" type="java.util.Date">
+        	<column name="ONLINE_DATE" />
+        </property>
+        <property name="productDate" type="java.util.Date">
+        	<column name="PRODUCT_DATE" />
+        </property>
+         <property name="creatorId" type="java.lang.String">
+        	<column name="CREATOR_ID" length="32" />
+        </property>
+         <property name="createDate" type="java.util.Date">
+        	<column name="CREATE_DATE"  />
+        </property>
+         <property name="ts" type="java.util.Date">
+        	<column name="TS" />
+        </property>
+	</class>
+ 
+ </hibernate-mapping>

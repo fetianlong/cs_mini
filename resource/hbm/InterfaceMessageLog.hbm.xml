@@ -1,0 +1,41 @@
+<!DOCTYPE hibernate-mapping PUBLIC 
+    "-//Hibernate/Hibernate Mapping DTD 3.0//EN"
+    "http://hibernate.sourceforge.net/hibernate-mapping-3.0.dtd">
+<hibernate-mapping>
+	<class name="com.dearho.cs.account.pojo.InterfaceMessageLog" table="s_interface_message_log">
+		<id name="id" type="java.lang.String">
+            <column name="id" length="32" />
+            <generator class="uuid.hex" />
+        </id>
+        <property name="type" type="java.lang.Integer">
+            <column name="type"   />
+        </property>
+        <property name="channel" type="java.lang.Integer">
+            <column name="channel"   />
+        </property>
+        <property name="bizId" type="java.lang.String">
+            <column name="biz_id"   />
+        </property>
+       <!--  <property name="isSend" type="java.lang.Integer">
+            <column name="is_send"   />
+        </property> -->
+        <property name="respCode" type="java.lang.String">
+            <column name="resp_code"   />
+        </property>
+        <property name="requestMessage" type="java.lang.String">
+            <column name="request_message"   />
+        </property>
+        <property name="responseMessage" type="java.lang.String">
+            <column name="response_message"   />
+        </property>
+        <property name="ts" type="java.util.Date">
+            <column name="ts" />
+        </property>  
+	</class>
+	
+	
+	
+	
+	
+	
+</hibernate-mapping>

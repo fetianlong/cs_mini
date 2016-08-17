@@ -1,0 +1,860 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE xwork PUBLIC "-//Apache Struts//XWork 1.1.1//EN" 
+"http://struts.apache.org/dtds/xwork-1.1.1.dtd">
+<xwork>
+	<package name="common" extends="webwork-default" namespace="/common" >
+		<default-interceptor-ref name="defaultStack"/>
+		
+		<global-results>
+			<result name="timeout" type="dispatcher">
+                <param name="location">error.jsp</param>
+            </result>
+            <result name="illegal" type="dispatcher">
+                <param name="location">error.jsp</param>
+            </result>
+		</global-results>
+	
+   		<action name="login" class="loginAction" method="gotoLogin">
+			<result name="success" type="dispatcher">
+                <param name="location">/admin/pages/login.jsp</param>
+            </result>
+		</action>
+		
+		<action name="doLogin" class="loginAction">
+			<result name="success" type="dispatcher">
+                <param name="location">/resultjson.jsp</param>
+            </result>
+			<result name="error" type="dispatcher">
+                <param name="location">/resultjson.jsp</param>
+            </result>
+			<interceptor-ref name="defaultStack"/>
+		</action>
+		
+		<action name="index" class="indexAction">
+			<result name="success" type="dispatcher">
+                <param name="location">/admin/pages/main.jsp</param>
+            </result>
+            <result name="error" type="dispatcher">
+                <param name="location">resultjson.jsp</param>
+            </result>
+			<interceptor-ref name="defaultStack"/>
+		</action>
+		<action name="logout" class="logoutAction">
+			<result name="success" type="dispatcher">
+                <param name="location">/admin/pages/login.jsp</param>
+            </result>
+            <result name="error" type="dispatcher">
+                <param name="location">resultjson.jsp</param>
+            </result>
+			<interceptor-ref name="defaultStack"/>
+		</action>
+		<action name="uploadAvatar" class="indexAction" method="uploadAvatar"  >
+			<result name="success" type="dispatcher">
+                <param name="location">/resultjson.jsp</param>
+            </result>
+			<interceptor-ref name="uploadStack"/>
+		</action>
+            
+	</package>
+	<package name="user" extends="webwork-default" namespace="/user">
+		<default-interceptor-ref name="defaultStack"/>
+		
+		<global-results>
+			<result name="timeout" type="dispatcher">
+                <param name="location">error.jsp</param>
+            </result>
+            <result name="illegal" type="dispatcher">
+                <param name="location">error.jsp</param>
+            </result>
+		</global-results>
+	
+   		<action name="userSearch" class="userSearchAction">
+			<result name="success" type="dispatcher">
+                <param name="location">/pages/system/user/userlist.jsp</param>
+            </result>
+            <result name="search" type="dispatcher">
+                <param name="location">/pages/system/user/userpage.jsp</param>
+            </result>
+			<result name="error" type="dispatcher">
+                <param name="location">error.jsp</param>
+            </result>
+			<interceptor-ref name="defaultStack"/>
+		</action>
+		<action name="changePassword" class="userChangePasswordAction">
+			<result name="success" type="dispatcher">
+               <param name="location">/resultjson.jsp</param>
+            </result>
+			<result name="error" type="dispatcher">
+                <param name="location">error.jsp</param>
+            </result>
+			<interceptor-ref name="defaultStack"/>
+		</action>
+		<action name="gotoChangePassword" class="userChangePasswordAction" method="gotoChangePassword">
+			<result name="success" type="dispatcher">
+               <param name="location">/pages/system/user/user_password.jsp</param>
+            </result>
+			<interceptor-ref name="defaultStack"/>
+		</action>
+		<action name="userGet" class="userGetAction">
+			<result name="success" type="dispatcher">
+                <param name="location">/pages/system/user/userget.jsp</param>
+            </result>
+			<result name="error" type="dispatcher">
+                <param name="location">error.jsp</param>
+            </result>
+			<interceptor-ref name="defaultStack"/>
+		</action>
+		<action name="userAdd" class="userAddAction">
+			<result name="success" type="dispatcher">
+                <param name="location">/resultjson.jsp</param>
+            </result>
+			<result name="error" type="dispatcher">
+                <param name="location">/resultjson.jsp</param>
+            </result>
+			<result name="illegal" type="dispatcher">
+                <param name="location">/resultxml.jsp</param>
+            </result>
+            <interceptor-ref name="defaultStack" />
+		</action>
+		<action name="userUpdate" class="userUpdateAction">
+			<result name="success" type="dispatcher">
+                <param name="location">/resultjson.jsp</param>
+            </result>
+			<result name="error" type="dispatcher">
+                <param name="location">/resultjson.jsp</param>
+            </result>
+			<result name="illegal" type="dispatcher">
+                <param name="location">/resultxml.jsp</param>
+            </result>
+            <interceptor-ref name="defaultStack" />
+		</action>
+		<action name="userDelete" class="userDeleteAction">
+			<result name="success" type="dispatcher">
+                <param name="location">/resultjson.jsp</param>
+            </result>
+			<result name="error" type="dispatcher">
+                <param name="location">/resultjson.jsp</param>
+            </result>
+			<result name="illegal" type="dispatcher">
+                <param name="location">/resultxml.jsp</param>
+            </result>
+            <interceptor-ref name="defaultStack" />
+		</action>
+		
+		
+		<action name="resetPassword" class="userChangePasswordAction" method="resetPassword">
+			<result name="success" type="dispatcher">
+                <param name="location">/resultjson.jsp</param>
+            </result>
+			<result name="error" type="dispatcher">
+                <param name="location">/resultjson.jsp</param>
+            </result>
+			<result name="illegal" type="dispatcher">
+                <param name="location">/resultxml.jsp</param>
+            </result>
+            <interceptor-ref name="defaultStack" />
+		</action>
+		
+	</package>
+	
+	<!-- 组 -->
+	<package name="group" extends="webwork-default" namespace="/group">
+		<default-interceptor-ref name="defaultStack"/>
+		
+		<global-results>
+			<result name="timeout" type="dispatcher">
+                <param name="location">/error.jsp</param>
+            </result>
+            <result name="illegal" type="dispatcher">
+                <param name="location">/error.jsp</param>
+            </result>
+            <result name="error" type="dispatcher">
+                <param name="location">/error.jsp</param>
+            </result>
+		</global-results>
+	
+   		<action name="groupSearch" class="groupSerachAction">
+			<result name="success" type="dispatcher">
+                <param name="location">/pages/system/group/group_list.jsp</param>
+            </result>
+		</action>
+		<action name="gotoGroupGet" class="groupGetAction">
+			<result name="success" type="dispatcher">
+                <param name="location">/pages/system/group/group_get.jsp</param>
+            </result>
+		</action>
+		<action name="gotoGroupUpdate" class="groupGetAction">
+			<result name="success" type="dispatcher">
+                <param name="location">/pages/system/group/group_get.jsp</param>
+            </result>
+		</action>
+		<!--  
+		<action name="groupGet" class="groupGetAction">
+			<result name="success" type="dispatcher">
+                <param name="location">/pages/system/group/group_get.jsp</param>
+            </result>
+		</action>
+		
+		<action name="groupAddOrUpdate" class="groupAddOrUpdateAction">
+			<result name="success" type="dispatcher">
+                <param name="location">/resultjson.jsp</param>
+            </result>
+		</action>
+		-->
+		<action name="groupAdd" class="groupAddOrUpdateAction">
+			<result name="success" type="dispatcher">
+                <param name="location">/resultjson.jsp</param>
+            </result>
+		</action>
+		<action name="groupUpdate" class="groupAddOrUpdateAction">
+			<result name="success" type="dispatcher">
+                <param name="location">/resultjson.jsp</param>
+            </result>
+		</action>
+		
+		<action name="groupDelete" class="groupDeleteAction">
+			<result name="success">
+                <param name="location">/resultjson.jsp</param>
+            </result>
+		</action>
+		<action name="groupGetPrivilege" class="groupGetPrivilegeAction">
+			<result name="success" type="dispatcher">
+                <param name="location">/pages/system/group/privilege_get.jsp</param>
+            </result>
+		</action>
+		<action name="getGroupMenu" class="groupGetPrivilegeAction" method="getGroupMenu">
+			<result name="success" type="dispatcher">
+                <param name="location">/resultjson.jsp</param>
+            </result>
+		</action>
+		<action name="groupAddPrivilege" class="groupAddPrivilegeAction">
+			<result name="success" type="dispatcher">
+                <param name="location">/resultjson.jsp</param>
+            </result>
+		</action>
+	</package>
+	
+	<package name="menu" extends="webwork-default" namespace="/menu">
+		<default-interceptor-ref name="defaultStack"/>
+		
+		<global-results>
+			<result name="timeout" type="dispatcher">
+                <param name="location">/error.jsp</param>
+            </result>
+            <result name="illegal" type="dispatcher">
+                <param name="location">/error.jsp</param>
+            </result>
+            <result name="error" type="dispatcher">
+                <param name="location">/error.jsp</param>
+            </result>
+		</global-results>
+	
+	
+	<action name="menuSearch" class="menuSearchAction">
+			<result name="success" type="dispatcher">
+                <param name="location">/pages/system/menu/menu_list.jsp</param>
+            </result>
+			<result name="error" type="dispatcher">
+                <param name="location">/error.jsp</param>
+            </result>
+		</action>
+		<action name="goMenuAdd" class="menuGetAction">
+			<result name="success" type="dispatcher">
+				<param name="location">/pages/system/menu/menu_get.jsp</param>
+			</result>
+			<result name="error" type="dispatcher">
+                <param name="location">/error.jsp</param>
+            </result>
+		</action>
+		<action name="goMenuUpdate" class="menuGetAction">
+			<result name="success" type="dispatcher">
+				<param name="location">/pages/system/menu/menu_get.jsp</param>
+			</result>
+			<result name="error" type="dispatcher">
+                <param name="location">/error.jsp</param>
+            </result>
+		</action>
+		<action name="menuAdd" class="menuAddAction">
+			<result name="success" type="dispatcher">
+				<param name="location">/resultjson.jsp</param>
+			</result>
+			<result name="error" type="dispatcher">
+				<param name="location">/resultjson.jsp</param>
+			</result>
+		</action>
+		<action name="menuDelete" class="menuDeleteAction">
+			<result name="success" type="dispatcher">
+				<param name="location">/resultjson.jsp</param>
+			</result>
+			<result name="error" type="dispatcher">
+				<param name="location">/resultjson.jsp</param>
+			</result>
+		</action>
+		<action name="menuUpdate" class="menuUpdateAction">
+			<result name="success" type="dispatcher">
+				<param name="location">/resultjson.jsp</param>
+			</result>
+			<result name="error" type="dispatcher">
+				<param name="location">/resultjson.jsp</param>
+			</result>
+		</action>
+	</package>
+	
+	
+	
+	
+	<package name="functions" extends="webwork-default" namespace="/functions">
+		<default-interceptor-ref name="defaultStack"/>
+		<global-results>
+			<result name="timeout" type="dispatcher">
+                <param name="location">error.jsp</param>
+            </result>
+            <result name="illegal" type="dispatcher">
+                <param name="location">error.jsp</param>
+            </result>
+		</global-results>
+		<action name="functionSearch" class="functionSearch">
+			<result name="success" type="dispatcher">
+				<param name="location">/pages/system/func/funclist.jsp</param>
+			</result>
+		</action>
+		
+		<action name="functionGet" class="functionGet">
+			<result name="success" type="dispatcher">
+				<param name="location">/pages/system/func/funcGet.jsp</param>
+			</result>
+		</action>
+		<action name="functionAdd" class="functionAdd">
+			<result name="success" type="dispatcher">
+				<param name="location">/resultjson.jsp</param>
+			</result>
+		</action>
+		<action name="functionDelete" class="functionDelete">
+			<result name="success" type="dispatcher">
+				<param name="location">/resultjson.jsp</param>
+			</result>
+		</action>
+	</package>
+	<package name="role" extends="webwork-default" namespace="/role">
+		<default-interceptor-ref name="defaultStack"/>
+		
+		<global-results>
+			<result name="timeout" type="dispatcher">
+                <param name="location">error.jsp</param>
+            </result>
+            <result name="illegal" type="dispatcher">
+                <param name="location">error.jsp</param>
+            </result>
+		</global-results>
+	
+   		<action name="roleSearch" class="roleSearchAction">
+			<result name="success" type="dispatcher">
+                <param name="location">/pages/system/role/rolelist.jsp</param>
+            </result>
+			<result name="error" type="dispatcher">
+                <param name="location">error.jsp</param>
+            </result>
+			<interceptor-ref name="defaultStack"/>
+		</action>
+		<action name="roleGet" class="roleGetAction">
+			<result name="success" type="dispatcher">
+                <param name="location">/pages/system/role/roleget.jsp</param>
+            </result>
+			<result name="error" type="dispatcher">
+                <param name="location">error.jsp</param>
+            </result>
+			<interceptor-ref name="defaultStack"/>
+		</action>
+		<action name="roleAdd" class="roleAddAction">
+			<result name="success" type="dispatcher">
+                <param name="location">/resultjson.jsp</param>
+            </result>
+			<result name="error" type="dispatcher">
+                <param name="location">/resultjson.jsp</param>
+            </result>
+			<result name="illegal" type="dispatcher">
+                <param name="location">/resultxml.jsp</param>
+            </result>
+            <interceptor-ref name="defaultStack" />
+		</action>
+		<action name="roleUpdate" class="roleUpdateAction">
+			<result name="success" type="dispatcher">
+                <param name="location">/resultjson.jsp</param>
+            </result>
+			<result name="error" type="dispatcher">
+                <param name="location">/resultjson.jsp</param>
+            </result>
+			<result name="illegal" type="dispatcher">
+                <param name="location">/resultxml.jsp</param>
+            </result>
+            <interceptor-ref name="defaultStack" />
+		</action>
+		<action name="roleDelete" class="roleDeleteAction">
+			<result name="success" type="dispatcher">
+                <param name="location">/resultjson.jsp</param>
+            </result>
+			<result name="error" type="dispatcher">
+                <param name="location">/resultjson.jsp</param>
+            </result>
+			<result name="illegal" type="dispatcher">
+                <param name="location">/resultxml.jsp</param>
+            </result>
+            <interceptor-ref name="defaultStack" />
+		</action>
+	</package>
+	
+	<package name="config" extends="webwork-default" namespace="/config">
+		<default-interceptor-ref name="defaultStack"/>
+		
+		<global-results>
+			<result name="timeout" type="dispatcher">
+                <param name="location">error.jsp</param>
+            </result>
+            <result name="illegal" type="dispatcher">
+                <param name="location">error.jsp</param>
+            </result>
+		</global-results>
+	
+   		<action name="configSearch" class="configSearchAction">
+			<result name="success" type="dispatcher">
+                <param name="location">/pages/system/config/configlist.jsp</param>
+            </result>
+			<result name="error" type="dispatcher">
+                <param name="location">error.jsp</param>
+            </result>
+			<interceptor-ref name="defaultStack"/>
+		</action>
+		<action name="configGet" class="configGetAction">
+			<result name="success" type="dispatcher">
+                <param name="location">/pages/system/config/configget.jsp</param>
+            </result>
+			<result name="error" type="dispatcher">
+                <param name="location">error.jsp</param>
+            </result>
+			<interceptor-ref name="defaultStack"/>
+		</action>
+		<action name="configAdd" class="configAddAction">
+			<result name="success" type="dispatcher">
+                <param name="location">/resultjson.jsp</param>
+            </result>
+			<result name="error" type="dispatcher">
+                <param name="location">/resultjson.jsp</param>
+            </result>
+			<result name="illegal" type="dispatcher">
+                <param name="location">/resultxml.jsp</param>
+            </result>
+            <interceptor-ref name="defaultStack" />
+		</action>
+		<action name="configUpdate" class="configUpdateAction">
+			<result name="success" type="dispatcher">
+                <param name="location">/resultjson.jsp</param>
+            </result>
+			<result name="error" type="dispatcher">
+                <param name="location">/resultjson.jsp</param>
+            </result>
+			<result name="illegal" type="dispatcher">
+                <param name="location">/resultxml.jsp</param>
+            </result>
+            <interceptor-ref name="defaultStack" />
+		</action>
+		<action name="configDelete" class="configDeleteAction">
+			<result name="success" type="dispatcher">
+                <param name="location">/resultjson.jsp</param>
+            </result>
+			<result name="error" type="dispatcher">
+                <param name="location">/resultjson.jsp</param>
+            </result>
+			<result name="illegal" type="dispatcher">
+                <param name="location">/resultxml.jsp</param>
+            </result>
+            <interceptor-ref name="defaultStack" />
+		</action>
+	</package>
+	
+	<package name="dict" extends="webwork-default" namespace="/dict">
+		<default-interceptor-ref name="defaultStack"/>
+		
+		<global-results>
+			<result name="timeout" type="dispatcher">
+                <param name="location">error.jsp</param>
+            </result>
+            <result name="illegal" type="dispatcher">
+                <param name="location">error.jsp</param>
+            </result>
+		</global-results>
+	
+   		<action name="dictSearch" class="dictSearchAction">
+			<result name="success" type="dispatcher">
+                <param name="location">/pages/system/dict/dictlist.jsp</param>
+            </result>
+			<result name="error" type="dispatcher">
+                <param name="location">error.jsp</param>
+            </result>
+			<interceptor-ref name="defaultStack"/>
+		</action>
+		<action name="dictGet" class="dictGetAction">
+			<result name="success" type="dispatcher">
+                <param name="location">/pages/system/dict/dictget.jsp</param>
+            </result>
+			<result name="error" type="dispatcher">
+                <param name="location">error.jsp</param>
+            </result>
+			<interceptor-ref name="defaultStack"/>
+		</action>
+		<action name="dictAdd" class="dictAddAction">
+			<result name="success" type="dispatcher">
+                <param name="location">/resultjson.jsp</param>
+            </result>
+			<result name="error" type="dispatcher">
+                <param name="location">/resultjson.jsp</param>
+            </result>
+			<result name="illegal" type="dispatcher">
+                <param name="location">/resultxml.jsp</param>
+            </result>
+            <interceptor-ref name="defaultStack" />
+		</action>
+		<action name="dictUpdate" class="dictUpdateAction">
+			<result name="success" type="dispatcher">
+                <param name="location">/resultjson.jsp</param>
+            </result>
+			<result name="error" type="dispatcher">
+                <param name="location">/resultjson.jsp</param>
+            </result>
+			<result name="illegal" type="dispatcher">
+                <param name="location">/resultxml.jsp</param>
+            </result>
+            <interceptor-ref name="defaultStack" />
+		</action>
+		<action name="dictDelete" class="dictDeleteAction">
+			<result name="success" type="dispatcher">
+                <param name="location">/resultjson.jsp</param>
+            </result>
+			<result name="error" type="dispatcher">
+                <param name="location">/resultjson.jsp</param>
+            </result>
+			<result name="illegal" type="dispatcher">
+                <param name="location">/resultxml.jsp</param>
+            </result>
+            <interceptor-ref name="defaultStack" />
+		</action>
+	</package>
+	
+	<package name="dictgroup" extends="webwork-default" namespace="/dictgroup">
+		<default-interceptor-ref name="defaultStack"/>
+		
+		<global-results>
+			<result name="timeout" type="dispatcher">
+                <param name="location">error.jsp</param>
+            </result>
+            <result name="illegal" type="dispatcher">
+                <param name="location">error.jsp</param>
+            </result>
+		</global-results>
+	
+   		<action name="dictGroupSearch" class="dictGroupSearchAction">
+			<result name="success" type="dispatcher">
+                <param name="location">/pages/system/dictgroup/dictgrouplist.jsp</param>
+            </result>
+			<result name="error" type="dispatcher">
+                <param name="location">error.jsp</param>
+            </result>
+			<interceptor-ref name="defaultStack"/>
+		</action>
+		<action name="dictGroupGet" class="dictGroupGetAction">
+			<result name="success" type="dispatcher">
+                <param name="location">/pages/system/dictgroup/dictgroupget.jsp</param>
+            </result>
+			<result name="error" type="dispatcher">
+                <param name="location">error.jsp</param>
+            </result>
+			<interceptor-ref name="defaultStack"/>
+		</action>
+		<action name="dictGroupAdd" class="dictGroupAddAction">
+			<result name="success" type="dispatcher">
+                <param name="location">/resultjson.jsp</param>
+            </result>
+			<result name="error" type="dispatcher">
+                <param name="location">/resultjson.jsp</param>
+            </result>
+			<result name="illegal" type="dispatcher">
+                <param name="location">/resultxml.jsp</param>
+            </result>
+            <interceptor-ref name="defaultStack" />
+		</action>
+		<action name="dictGroupUpdate" class="dictGroupUpdateAction">
+			<result name="success" type="dispatcher">
+                <param name="location">/resultjson.jsp</param>
+            </result>
+			<result name="error" type="dispatcher">
+                <param name="location">/resultjson.jsp</param>
+            </result>
+			<result name="illegal" type="dispatcher">
+                <param name="location">/resultxml.jsp</param>
+            </result>
+            <interceptor-ref name="defaultStack" />
+		</action>
+		<action name="dictGroupDelete" class="dictGroupDeleteAction">
+			<result name="success" type="dispatcher">
+                <param name="location">/resultjson.jsp</param>
+            </result>
+			<result name="error" type="dispatcher">
+                <param name="location">/resultjson.jsp</param>
+            </result>
+			<result name="illegal" type="dispatcher">
+                <param name="location">/resultxml.jsp</param>
+            </result>
+            <interceptor-ref name="defaultStack" />
+		</action>
+	</package>
+	
+	
+	<package name="area" extends="webwork-default" namespace="/area">
+		<default-interceptor-ref name="defaultStack"/>
+		
+		<global-results>
+			<result name="timeout" type="dispatcher">
+                <param name="location">error.jsp</param>
+            </result>
+            <result name="illegal" type="dispatcher">
+                <param name="location">error.jsp</param>
+            </result>
+		</global-results>
+	
+   		<action name="areaSearch" class="areaSearchAction">
+			<result name="success" type="dispatcher">
+                <param name="location">/pages/system/area/arealist.jsp</param>
+            </result>
+			<result name="error" type="dispatcher">
+                <param name="location">error.jsp</param>
+            </result>
+			<interceptor-ref name="defaultStack"/>
+		</action>
+		<action name="areaGet" class="areaGetAction">
+			<result name="success" type="dispatcher">
+                <param name="location">/pages/system/area/areaget.jsp</param>
+            </result>
+			<result name="error" type="dispatcher">
+                <param name="location">error.jsp</param>
+            </result>
+			<interceptor-ref name="defaultStack"/>
+		</action>
+		<action name="areaAdd" class="areaAddAction">
+			<result name="success" type="dispatcher">
+                <param name="location">/resultjson.jsp</param>
+            </result>
+			<result name="error" type="dispatcher">
+                <param name="location">/resultjson.jsp</param>
+            </result>
+			<result name="illegal" type="dispatcher">
+                <param name="location">/resultxml.jsp</param>
+            </result>
+            <interceptor-ref name="defaultStack" />
+		</action>
+		<action name="areaUpdate" class="areaUpdateAction">
+			<result name="success" type="dispatcher">
+                <param name="location">/resultjson.jsp</param>
+            </result>
+			<result name="error" type="dispatcher">
+                <param name="location">/resultjson.jsp</param>
+            </result>
+			<result name="illegal" type="dispatcher">
+                <param name="location">/resultxml.jsp</param>
+            </result>
+            <interceptor-ref name="defaultStack" />
+		</action>
+		<action name="areaDelete" class="areaDeleteAction">
+			<result name="success" type="dispatcher">
+                <param name="location">/resultjson.jsp</param>
+            </result>
+			<result name="error" type="dispatcher">
+                <param name="location">/resultjson.jsp</param>
+            </result>
+			<result name="illegal" type="dispatcher">
+                <param name="location">/resultxml.jsp</param>
+            </result>
+            <interceptor-ref name="defaultStack" />
+		</action>
+	</package>
+	
+	
+	<package name="company" extends="webwork-default" namespace="/company">
+		<default-interceptor-ref name="defaultStack"/>
+		
+		<global-results>
+			<result name="timeout" type="dispatcher">
+                <param name="location">error.jsp</param>
+            </result>
+            <result name="illegal" type="dispatcher">
+                <param name="location">error.jsp</param>
+            </result>
+		</global-results>
+	
+   		<action name="companySearch" class="companySearchAction">
+			<result name="success" type="dispatcher">
+                <param name="location">/pages/system/company/companylist.jsp</param>
+            </result>
+			<result name="error" type="dispatcher">
+                <param name="location">error.jsp</param>
+            </result>
+			<interceptor-ref name="defaultStack"/>
+		</action>
+		<action name="companyGet" class="companyGetAction">
+			<result name="success" type="dispatcher">
+                <param name="location">/pages/system/company/companyget.jsp</param>
+            </result>
+			<result name="error" type="dispatcher">
+                <param name="location">error.jsp</param>
+            </result>
+			<interceptor-ref name="defaultStack"/>
+		</action>
+		<action name="companyAdd" class="companyAddAction">
+			<result name="success" type="dispatcher">
+                <param name="location">/resultjson.jsp</param>
+            </result>
+			<result name="error" type="dispatcher">
+                <param name="location">/resultjson.jsp</param>
+            </result>
+			<result name="illegal" type="dispatcher">
+                <param name="location">/resultxml.jsp</param>
+            </result>
+            <interceptor-ref name="defaultStack" />
+		</action>
+		<action name="companyUpdate" class="companyUpdateAction">
+			<result name="success" type="dispatcher">
+                <param name="location">/resultjson.jsp</param>
+            </result>
+			<result name="error" type="dispatcher">
+                <param name="location">/resultjson.jsp</param>
+            </result>
+			<result name="illegal" type="dispatcher">
+                <param name="location">/resultxml.jsp</param>
+            </result>
+            <interceptor-ref name="defaultStack" />
+		</action>
+		<action name="companyDelete" class="companyDeleteAction">
+			<result name="success" type="dispatcher">
+                <param name="location">/resultjson.jsp</param>
+            </result>
+			<result name="error" type="dispatcher">
+                <param name="location">/resultjson.jsp</param>
+            </result>
+			<result name="illegal" type="dispatcher">
+                <param name="location">/resultxml.jsp</param>
+            </result>
+            <interceptor-ref name="defaultStack" />
+		</action>
+	</package>
+	
+	<package name="systemutil" extends="webwork-default" namespace="/systemutil">
+		<default-interceptor-ref name="defaultStack"/>
+		
+		<global-results>
+			<result name="timeout" type="dispatcher">
+                <param name="location">error.jsp</param>
+            </result>
+            <result name="illegal" type="dispatcher">
+                <param name="location">error.jsp</param>
+            </result>
+		</global-results>
+		
+		<action name="pinyinUtil" class="pinyinUtilAction">
+			<result name="success" type="dispatcher">
+                <param name="location">/resultjson.jsp</param>
+            </result>
+			<result name="error" type="dispatcher">
+                <param name="location">/resultjson.jsp</param>
+            </result>
+			<interceptor-ref name="defaultStack"/>
+		</action>
+		
+		<action name="sysOperateLogRecord" class="sysOperateLogRecordAction">
+			<result name="success" type="dispatcher">
+                <param name="location">/pages/system/operationlog/operateLogList.jsp</param>
+            </result>
+			<interceptor-ref name="defaultStack"/>
+		</action>
+		
+		<action name="getSysOperateLogByDataId" class="sysOperateLogRecordAction" method="getSysOperateLogByDataId">
+			<result name="success" type="dispatcher">
+                <param name="location">/pages/system/operationlog/operateLogDetail.jsp</param>
+            </result>
+			<interceptor-ref name="defaultStack"/>
+		</action>
+		
+	</package>
+	
+	
+	<package name="smsRecord" extends="webwork-default" namespace="/smsRecord" >
+		<default-interceptor-ref name="defaultStack"/>
+		
+		<global-results>
+			<result name="timeout" type="dispatcher">
+                <param name="location">error.jsp</param>
+            </result>
+            <result name="illegal" type="dispatcher">
+                <param name="location">error.jsp</param>
+            </result>
+		</global-results>
+	
+		<action name="smsRecordSearch" class="smsRecordSerachAction">
+			<result name="success" type="dispatcher">
+                <param name="location">/pages/system/smsrecord/sms_record_list.jsp</param>
+            </result>
+			<result name="error" type="dispatcher">
+                <param name="location">error.jsp</param>
+            </result>
+			<interceptor-ref name="defaultStack"/>
+		</action>
+		<action name="smsRecordGet" class="smsRecordGetAction">
+			<result name="success" type="dispatcher">
+                <param name="location">/pages/system/smsrecord/sms_record_get.jsp</param>
+            </result>
+			<result name="error" type="dispatcher">
+                <param name="location">error.jsp</param>
+            </result>
+			<interceptor-ref name="defaultStack"/>
+		</action>
+	</package>
+	
+	
+	
+	<package name="statistics" extends="webwork-default" namespace="/statistics">
+		<default-interceptor-ref name="defaultStack"/>
+		
+		<global-results>
+			<result name="timeout" type="dispatcher">
+                <param name="location">error.jsp</param>
+            </result>
+            <result name="illegal" type="dispatcher">
+                <param name="location">error.jsp</param>
+            </result>
+		</global-results>
+	
+   		<action name="orderStatisticsSearch" class="orderStatisticsSearchAction">
+			<result name="success" type="dispatcher">
+                <param name="location">/pages/statistics/order/statistics_order_list.jsp</param>
+            </result>
+			<interceptor-ref name="defaultStack"/>
+		</action>
+		
+		
+		<action name="orderStatisticsDownload" class="orderStatisticsSearchAction" method="download">
+			<result name="success" type="dispatcher">
+				<param name="location">/resultjson.jsp</param>
+			</result>
+			<interceptor-ref name="defaultStack"/>
+		</action>
+		
+		<action name="orderStatisticsDetail" class="orderStatisticsDetailAction">
+			<result name="success" type="dispatcher">
+                <param name="location">/pages/statistics/order/orderslist.jsp</param>
+            </result>
+			<interceptor-ref name="defaultStack"/>
+		</action>
+		
+	</package>
+	
+	
+	
+	
+</xwork>

@@ -1,0 +1,116 @@
+@charset "utf-8";
+/* CSS Document */
+
+.ListBlock {
+	margin-top: 10px;
+	margin-bottom: 50px;
+}
+
+.ListBlock .CarListUl li {
+	box-shadow: 0 0 10px #dcdcdc;
+	padding: 10px;
+	cursor: pointer;
+}
+
+.ListBlock .CarListUl li>.CarBlock {
+	margin-top: 10px;
+}
+
+.ListBlock .CarListUl li .DingdanBlock .DingdanBorder div {
+	border-bottom: solid 1px #dcdcdc;
+	font-size: 12px;
+	line-height: 20px;
+	color: #717171;
+}
+
+.ListBlock .CarListUl li .DingdanBlock .DingdanBorder div i {
+	margin-right: 5px;
+	color: #717171;
+}
+
+.ListBlock .CarListUl li.Selected .DingdanBlock .DingdanBorder div i {
+	color: #64cfe9;
+}
+
+.ListBlock .CarListUl li .CarImg {
+	border-right: solid 1px #dcdcdc;
+	padding-right: 10px;
+}
+
+.ListBlock .CarListUl li .CarImg img {
+	margin-bottom: 0;
+}
+
+.ListBlock .CarListUl li .CarImg .CarNo {
+	text-align: center;
+	font-size: 14px;
+	line-height: 18px;
+	margin: 0;
+	color: #4f4e4e;
+	font-weight: bold;
+}
+
+.ListBlock .CarListUl li .CarName {
+	color: #212121;
+	margin: 0;
+	margin-bottom: 10px;
+}
+
+.ListBlock .CarListUl li p {
+	font-size: 12px;
+	line-height: 16px;
+	color: #858585;
+	margin: 0;
+}
+
+.ListBlock .CarListUl li p .PriceBlock {
+	float: right;
+	color: #64cfe9;
+}
+
+.ListBlock .CarListUl li p .PriceBlock .Price {
+	font-size: 18px;
+	margin-right: 2px;
+}
+
+
+.BottomButton {
+	background: rgba(255,255,255,0.9);
+	bottom: 0;
+	padding-top: 0;
+	padding-bottom: 0;
+	padding-left: 10px;
+}
+
+
+.BottomButton p {
+	font-size: 14px;
+	line-height: 36px;
+	margin: 0;
+	vertical-align: bottom;
+	display: inline-block;
+	float: left;
+}
+
+.BottomButton .SelectBlock {
+	cursor: pointer;
+	margin-right: 20px;
+}
+
+.BottomButton .SelectBlock i {
+	color: #64cfe9;
+	margin-right: 3px;
+}
+
+.BottomButton .SumBlock .Price {
+	font-size: 20px;
+	color: #64cfe9;
+	vertical-align: baseline;
+	margin-right: 3px;
+}
+
+.BottomButton .SubmitButton {
+	float: right;
+	width: 40%;
+	border-radius: 0;
+}

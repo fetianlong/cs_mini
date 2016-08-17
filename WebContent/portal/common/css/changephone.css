@@ -1,0 +1,19 @@
+@charset "utf-8";
+/* CSS Document */
+
+.ContentBlock .SaveButton {
+	margin: 30px auto;
+}
+
+.ContentBlock label {
+	font-size: 16px;
+	color: #383838;
+}
+
+.ContentBlock p.help-block {
+	color: #F00;
+}
+
+.ContentBlock p.help-block .fa {
+	margin-right: 3px;
+}

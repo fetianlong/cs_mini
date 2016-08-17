@@ -1,0 +1,101 @@
+<!--公共头部开始-->
+<!doctype html>
+<html>
+<head>
+<meta charset="utf-8">
+<link rel=stylesheet href="../common/js/uikit/css/uikit.almost-flat.min.css">
+<script src="../common/js/jquery-1.12.1.min.js"></script>
+<script src="../common/js/uikit/js/uikit.min.js"></script>
+<script src="../common/js/main.js"></script>
+<link rel=stylesheet href="../common/css/main.css">
+<meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1, user-scalable=no">
+<meta http-equiv="X-UA-Compatible" content="IE=edge">
+<meta name="renderer" content="webkit">
+<!--公共头部结束-->
+
+<title>确认用车</title>
+<link rel=stylesheet href="../common/css/bookinginfo.css">
+<script>
+$(function(){
+	<!--日期前后拨动按钮-->
+	$(".SelectBlock .LeftButton").click(function(e) {
+		if (parseInt($(".SelectBlock .DayInput").val()) > 1){
+			$(".SelectBlock .DayInput").val((parseInt($(".SelectBlock .DayInput").val()) - 1).toString());
+		};
+		return false;
+	});
+	$(".SelectBlock .RightButton").click(function(e) {
+		$(".SelectBlock .DayInput").val((parseInt($(".SelectBlock .DayInput").val()) + 1).toString());
+		return false;
+	});
+	
+	<!--选择租赁类型-->
+	$(".SelectBlock .OneBlock").click(function(e) {
+        $(".SelectBlock .OneBlock").removeClass("Selected");
+		$(this).addClass("Selected");
+		if ($(this).hasClass("Rizu")){
+			$(".CarTips").html("订单提交60分钟后开始计费");
+		} else {
+			$(".CarTips").html("请在订单提交2分钟内取车，逾期订单将自动取消");
+		};
+    });
+	
+	<!--默认选择时租-->
+	$(".SelectBlock .OneBlock.Shizu").click();
+});
+</script>
+
+</head>
+
+<body>
+<!--微信客户端公用头部-->
+<div class="uk-container uk-container-center uk-text-center WechatHeader">
+	<div class="uk-grid uk-grid-collapse">
+        <div class="uk-width-1-6">
+            <a class="HeaderButton uk-float-left" href="#"><i class="uk-icon-user"></i></a>
+        </div>
+        <div class="uk-width-4-6">
+            <p class="PageCaption"></p>
+        </div>
+        <div class="uk-width-1-6">
+            <a class="HeaderButton uk-float-right" href="#"><i class="uk-icon-phone"></i></a>
+        </div>
+    </div>
+</div>
+
+<div class="uk-container uk-container-center uk-text-center MainContent">
+	<form>
+    <div class="CarInfoBlock">
+    	<img class="uk-align-center CarImg" src="../common/images/bookcar/defaultcar.jpg">
+        <h4 class="CarInfo"><span class="Type">北汽EV200</span><span class="No">京PE1234</span></h4>
+        <p><i class="uk-icon-circle"></i>东方新天地网点</p>
+        <p>续航：100KM</p>
+    </div>
+    
+    <div class="SelectBlock">
+    	<div class="uk-grid uk-grid-small">
+        	<div class="uk-width-1-2">
+            	<div class="OneBlock Shizu">
+                    <h3><img class="SelectImg" src="../common/images/bookinginfo/shizu.png">时租</h3>
+                    <p class="Tips">最低消费0.00元，每24小时最高消费10.00元</p>
+                </div>
+            </div>
+            <div class="uk-width-1-2">
+            	<div class="OneBlock Rizu">
+                    <h3><img class="SelectImg" src="../common/images/bookinginfo/rizu.png">日租</h3>
+                    <div class="DaySelect">
+                    	<i class="SelectButton uk-icon-caret-left LeftButton"></i><input class="DayInput" type="number" name="#" value="1"><i class="SelectButton uk-icon-caret-right RightButton"></i><span>天</span>
+                    </div>
+                    <p class="Tips">1.00元/天</p>
+                </div>
+            </div>
+        </div>
+    </div>
+    <a class="BackCarLink" href="#">查看还车网点<i class="uk-icon-angle-double-right"></i></a>
+    
+    <p class="CarTips">订单提交60分钟后开始计费</p>
+    <button class="uk-button uk-button-large uk-width-1-1 SubmitButton" type="submit">确认用车</button>
+    </form>
+</div>
+</body>
+</html>

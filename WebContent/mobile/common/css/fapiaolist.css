@@ -1,0 +1,261 @@
+@charset "utf-8";
+/* CSS Document */
+
+body {
+	background-color: #eeeeee;
+	margin-top: 10px;
+	margin-bottom: 43px;
+}
+
+.ListBlock .ListUl {
+	margin: 0;
+	padding: 0;
+	list-style: none;
+}
+
+.ListBlock .ListUl li {
+	background: #FFF;
+	margin-bottom: 10px;
+	padding: 0;
+	font-size: 12px;
+	border-top: solid 1px #e5e5e5;
+	border-bottom: solid 1px #e5e5e5;
+	color: #999;
+	cursor: pointer;
+}
+
+.ListBlock .ListUl li.NoList {
+	padding: 10px 0;
+	background: #fcf8e3;
+}
+
+.ListBlock .ListUl li.NoList .fa {
+	color: #4bd3a5;
+	margin-right: 5px;
+}
+
+.ListBlock .ListUl li .OrderInfo {
+	font-size: 14px;
+	margin-left: 35px;
+	margin-bottom: 2px;
+}
+
+.ListBlock .ListUl li .OrderInfo .OrderState {
+	color: #31cc98;
+}
+
+.ListBlock .ListUl li .OrderLink {
+	display: block;
+	background: #f5f5f5;
+	padding: 5px;
+}
+
+.ListBlock .ListUl li .OrderLink .row {
+	margin-left: 0;
+	margin-right: 0;
+}
+
+.ListBlock .ListUl li .OrderLink .row>div[class^="col-"] {
+	padding-left: 5px;
+	padding-right: 5px;
+}
+
+.ListBlock .ListUl li .OrderLink .CarName {
+	font-size: 14px;
+	color: #152133;
+	font-weight: normal;
+	margin: 0;
+	margin-bottom: 20px;
+}
+
+.ListBlock .ListUl li .OrderLink .CarName .CarPrice {
+	color: #19c98d;
+	font-size: 16px;
+}
+
+.ListBlock .ListUl li .OrderLink .CarName .CarPrice .fa {
+	color: #19c98d;
+	margin-right: 2px;
+}
+
+.ListBlock .ListUl li .OrderLink .CarTime {
+	color: #cfcfcf;
+}
+
+.ListBlock .ListUl li .OrderLink .CarTime p {
+	margin: 0;
+	font-size: 12px;
+	line-height: 16px;
+}
+
+.ListBlock .ListUl li .PinglunButtonBlock {
+	padding: 10px;
+}
+
+.ListBlock .ListUl li .PinglunButtonBlock .PinglunButton {
+	background: #FFF;
+	border: solid 1px #434c5b;
+	text-decoration: none;
+	color: #434c5b;
+	padding: 5px 25px;
+	font-size: 12px;
+}
+
+.ListBlock .ListUl li .checkbox {
+	padding-left: 0;
+	margin-top: 5px;
+	margin-bottom: 0;
+	cursor: pointer;
+}
+
+.ListBlock .ListUl li .checkbox .icons {
+	left: 5px;
+	top: 1px;
+}
+
+.ListBlock .ListUl li .checkbox .icons .icon-unchecked, .ListBlock .ListUl li .checkbox .icons .icon-checked {
+	/*border: solid 1px #666666;
+	border-radius: 50%;
+	overflow: hidden;	*/
+}
+
+.ListBlock .ListUl li .checkbox .icons .icon-unchecked {
+	color: #eeeeee;
+}
+
+.ListBlock .ListUl li .checkbox .icons .icon-checked {
+	color: #fe9c3b !important;
+	border-color: #fe9c3b !important;
+}
+
+.ListBlock .ListUl .NoOrder .fa {
+	margin-right: 5px;
+	color: #1abc9c;
+}
+
+.ListBlock .ListUl .NoOrder {
+	padding: 20px;
+	text-align: center;
+	font-size: 14px;
+}
+
+.BottomBlock {
+	position: fixed;
+	bottom: 0;
+	left: 0;
+	width: 100%;
+	background: #414a59;
+	color: #FFF;
+}
+
+.BottomBlock .checkbox {
+	display: inline-block;
+	margin-top: 10px;
+}
+
+.BottomBlock .Heiji {
+	display: inline-block;
+	font-size: 14px;
+	line-height: 1;
+	margin-top: 10px;
+	margin-bottom: 12px;
+}
+
+.BottomBlock .Heiji .fa {
+	margin-right: 3px;
+}
+
+.BottomBlock .Heiji span {
+	font-size: 18px;
+}
+
+.BottomBlock .SubmitButton {
+	display: block;
+	width: 100%;
+	border: none;
+	font-size: 16px;
+	line-height: 40px;
+	text-align: center;
+	background: #fe9c3b;
+	color: #FFF;
+	text-decoration: none;
+}
+
+.BottomBlock .SubmitButton.disabled {
+	background: #CCC;
+}
+
+.BottomBlock .col-xs-4 {
+	padding-left: 0;
+	padding-right: 0;
+}
+
+.BottomBlock .checkbox .icons .icon-unchecked, .BottomBlock .checkbox .icons .icon-checked {
+	/*border: solid 1px #666666;
+	border-radius: 50%;
+	overflow: hidden;	*/
+}
+
+.BottomBlock .checkbox .icons .icon-unchecked {
+	/*color: transparent;*/
+}
+
+.BottomBlock .checkbox .icons .icon-checked {
+	color: #fe9c3b !important;
+	border-color: #fe9c3b !important;
+	background-color: #34495e;
+}
+
+.SuccessTipBlock {
+	margin-bottom: 20px;
+	margin-top: 20%;
+}
+
+.SuccessTipBlock h4 {
+	text-align: center;
+	font-weight: normal;
+}
+
+.SuccessTipBlock p {
+	border-bottom: solid 1px #CCC;
+	font-size: 12px;
+	margin-right: 20px;
+	color: #666;
+	font-style: italic;
+}
+
+.SuccessTipBlock p img {
+	margin-left: 5px;
+}
+
+.SuccessLabelBlock {
+	background: #FFF;
+	border-top: solid 1px #e8e8e8;
+	border-bottom: solid 1px #e8e8e8;
+	padding: 10px;
+	margin-bottom: 10px;
+}
+
+.SuccessLabelBlock h4 {
+	font-weight: normal;
+	font-size: 18px;
+	margin: 10px 0 20px;
+}
+
+.SuccessLabelBlock p {
+	font-size: 14px;
+	line-height: 20px;
+	margin: 0;
+}
+
+.SuccessLabelBlock p .fa {
+	margin-right: 3px;
+}
+
+.SuccessLabelBlock p .fa.fa-phone {
+	color: #6dc6aa;
+}
+
+.SuccessLabelBlock p .fa.fa-map-marker {
+	color: #e03434;
+}

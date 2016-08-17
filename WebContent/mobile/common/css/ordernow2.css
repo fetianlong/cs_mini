@@ -1,0 +1,310 @@
+@charset "utf-8";
+/* CSS Document */
+
+.NoOrderBlock {
+	margin-top: 50px;
+}
+
+.NoOrderBlock p {
+	color: #CCC;
+	margin-bottom: 50px;
+}
+
+.NoOrderBlock .YudingButton {
+	text-decoration: none;
+}
+
+.StateBlock {
+	background: #dee2e2;
+	padding-bottom: 10px;
+}
+
+.StateBlock .StateImgBlock {
+	width: 270px;
+	height: 270px;
+	background-position: center center;
+	background-repeat: no-repeat;
+	margin: -20px auto 0;
+	position: relative;
+}
+
+.StateBlock .StateImgBlock .StateCircleBlock {
+	position: absolute;
+	top: 60px;
+	left: 60px;
+	background: #5b5b63;
+	border-radius: 50%;
+	width: 150px;
+	height: 150px;
+	box-shadow: 0 0 20px #b5bbbb;
+}
+
+.StateBlock .StateImgBlock .StateCircleBlock .StateFlowingBlock {
+	background-color: #FFF;
+	border-radius: 50%;
+	width: 110px;
+	height: 110px;
+	margin: 20px auto;
+	box-shadow: 0 0 20px #5b5b63;
+	position: relative;
+}
+
+.StateBlock .StateImgBlock .StateCircleBlock .StateFlowingBlock.Flowing {
+	background-image: url(../images/ordernow/flowing.png);
+	background-repeat: no-repeat;
+}
+	
+.StateBlock .StateImgBlock .StateCircleBlock .StateFlowingBlock .CanvasBlock {
+	width: 110px;
+	height: 110px;
+	border-radius: 999px;
+	-canvas-border-radius: 999px;
+	-moz-border-radius: 999px;
+	-webkit-border-radius: 999px;
+	border-top-left-radius: 999px;
+    border-top-right-radius: 999px;
+    border-bottom-right-radius: 999px;
+    border-bottom-left-radius: 999px;
+    background-clip: padding-box;
+	overflow: hidden !important;
+}
+
+.StateBlock .StateImgBlock .StateCircleBlock .StateFlowingBlock .StateNumBlock {
+	position: absolute;
+	top: 25px;
+	left: 25px;
+	width: 60px;
+	height: 60px;
+	box-shadow: 0 0 20px #b3d4e3;
+	border-radius: 50%;
+	background: #FFF;
+	font-size: 30px;
+	line-height: 60px;
+	text-align: center;
+	color: #898181;
+}
+
+.StateBlock .StateImgBlock .StateCircleBlock .StateFlowingBlock .StateNumBlock span {
+	position: absolute;
+	right: 4px;
+	top: 20px;
+	font-size: 12px;
+	line-height: 12px;
+	font-weight: normal;
+	vertical-align: super;
+	color: #838282;
+}
+
+.StateBlock .XuhangBlock {
+	font-size: 14px;
+	text-align: center;
+	margin-bottom: 0;
+	color: #5c5c64;
+	line-height: 16px;
+	margin-top: -30px;
+}
+
+.StateBlock .XuhangBlock .Number {
+	color: #ffab18;
+	font-size: 20px;
+}
+
+.StateBlock .XuhangBlock .Number .Danwei {
+	font-size: 14px;
+	margin-left: 2px;
+}
+
+.FeiyongBlock {
+	border-bottom: solid 1px #dedede;
+}
+
+.FeiyongBlock p {
+	text-align: center;
+	font-size: 16px;
+	margin: 5px 5px;
+	color: #918c8c;
+}
+
+.FeiyongBlock p .fa {
+	color: #ffab18;
+	margin-right: 3px;
+}
+
+.FeiyongBlock p .Number {
+	font-size: 24px;
+	color: #ffab18;
+}
+
+.LinkBlock ul {
+	list-style: none;
+	margin: 0;
+	padding: 10px 0;
+}
+
+.LinkBlock ul li {
+	text-align: center;
+	width: 33%;
+	float: left;
+	border-right: solid 1px #dedede;
+	overflow: hidden;
+}
+
+.LinkBlock ul li:nth-of-type(3), .LinkBlock ul li:last-of-type {
+	border-right: none;
+}
+
+.LinkBlock ul li:nth-of-type(-n+3) {
+	border-bottom: solid 1px #dedede;
+}
+
+.LinkBlock ul li .btn {
+	display: block;
+	background: #FFF;
+	text-decoration: none;
+	color: #898181;
+	border-radius: 0;
+	padding: 10px 0;
+	margin: 0;
+	width: 100%;
+}
+
+.LinkBlock ul li .btn:active {
+	background: #d6e3e9;
+}
+
+.LinkBlock ul li .btn img {
+	margin-bottom: 10px;
+	max-width: 38px !important;
+}
+
+.LinkBlock ul li .btn p {
+	font-size: 14px;
+	line-height: 0px;
+	margin: 0;
+}
+
+.LinkBlock ul li .btn small {
+	font-size: 8px;
+	line-height: 10px;
+	margin: 0;
+	overflow: hidden;
+	white-space: nowrap;
+	text-overflow: ellipsis;
+}
+
+.OrderBlock {
+	padding-left: 0;
+	padding-right: 0;
+}
+
+.OrderBlock div#accordion {
+	border: none;
+}
+
+.OrderBlock .panel {
+	border: none;
+	border-radius: 0;
+	box-shadow: none;
+}
+
+.OrderBlock .panel-default>.panel-heading {
+	border: none;
+	border-radius: 0;
+	box-shadow: none;
+	background-color: #e5e5e5;
+	padding: 0;
+}
+
+.OrderBlock .panel-default>.panel-heading .panel-title a {
+	display: block;
+	text-decoration: none;
+}
+
+.OrderBlock .panel-default>.panel-heading .panel-title a .row {
+	margin-left: 0;
+	margin-right: 0;
+	padding: 5px 0;
+}
+
+.OrderBlock .panel-default>.panel-heading .panel-title a .row div[class^="col-xs"] {
+	padding-left: 5px;
+	padding-right: 5px;
+}
+
+.OrderBlock .panel-default>.panel-heading .panel-title a .row p {
+	font-size: 12px;
+	line-height: 16px;
+	margin: 0;
+	padding: 0;
+	color: #414a59;
+	overflow: hidden;
+	white-space: nowrap;
+	text-overflow: ellipsis;
+	font-weight: normal;
+}
+
+.OrderBlock .panel-default>.panel-heading .panel-title a .row p .label {
+	font-size: 10px;
+	line-height: 16px;
+	padding: 0 4px;
+	font-weight: normal;
+}
+
+.OrderBlock .panel-default>.panel-heading .panel-title a .row .OrderState p {
+	line-height: 32px;
+	font-size: 14px;
+}
+
+.OrderBlock .panel-default>.panel-heading .panel-title a .row .OrderState p .label {
+	margin-left: 4px;
+}
+
+.OrderBlock .panel-default>.panel-heading .panel-title a .row .OrderPrice p {
+	line-height: 32px;
+	font-size: 14px;
+	color: #ffab18;
+	text-align: right;
+}
+
+.OrderBlock .panel-default>.panel-heading .panel-title a .row .OrderPrice p .fa {
+	margin-right: 3px;
+}
+
+.OrderBlock .panel-default>.panel-heading .panel-title a .row .OrderTime p .label {
+	margin-right: 4px;
+	background: #eeeeee;
+	color: #959595;
+}
+
+.OrderBlock .panel-default>.panel-heading .panel-title a .row .OrderTime p.OneP {
+	line-height: 32px;
+}
+
+.OrderBlock .panel-group .panel-heading+.panel-collapse>.list-group, .OrderBlock .panel-group .panel-heading+.panel-collapse>.panel-body {
+	border-top: none;
+	padding: 5px;
+}
+
+.OrderBlock .panel-group .panel-collapse .panel-body table {
+	border: none;
+	margin: 0;
+	width: 100%;
+}
+
+.OrderBlock .panel-group .panel-collapse .panel-body table tbody tr th {
+	width: 25%;
+}
+
+.OrderBlock .panel-group .panel-collapse .panel-body table tbody tr {
+	border-bottom: solid 1px #CCC;
+}
+
+.OrderBlock .panel-group .panel-collapse .panel-body table tbody tr:last-of-type {
+	border-bottom: none;
+}
+
+.OrderBlock .panel-group .panel-collapse .panel-body table tbody tr th, .OrderBlock .panel-group .panel-collapse .panel-body table tbody tr td {
+	font-size: 12px;
+	line-height: 20px;
+	vertical-align: top;
+}

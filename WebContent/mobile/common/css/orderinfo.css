@@ -1,0 +1,151 @@
+@charset "utf-8";
+/* CSS Document */
+
+.OrderStateBlock {
+	background-color: #dcdfdf;
+	background-image: url(../images/orderinfo/background.png);
+	background-position: 20% bottom;
+	background-repeat: no-repeat;
+	height: 100px;
+}
+
+.OrderStateBlock.Background1 {
+	background-image: url(../images/orderinfo/background1.png);
+}
+
+.OrderStateBlock.Background2 {
+	background-image: url(../images/orderinfo/background2.png);
+}
+
+.OrderStateBlock.Background3 {
+	background-image: url(../images/orderinfo/background3.png);
+}
+
+.OrderStateBlock p {
+	text-align: center;
+	font-size: 24px;
+	line-height: 100px;
+	text-indent: 40px;
+	margin: 0;
+	color: #898181;
+}
+
+.OneBlock .OrderPrice {
+	color: #29cb94;
+}
+
+.OneBlock .OrderPrice .fa {
+	margin-right: 2px;
+}
+
+.OneBlock p {
+	font-size: 12px;
+	margin-bottom: 5px;
+}
+
+.SubBlock {
+	border: solid 1px #CCC;
+	border-radius: 5px;
+	padding: 5px;
+}
+
+.OneBlock {
+	border: none;
+	position: relative;
+}
+
+.OneBlock>.Caption {
+	background: #f4f3f3;
+	margin: -10px -10px 0;
+	font-size: 14px;
+	line-height: 30px;
+	padding: 0 10px;
+	margin-bottom: 10px;
+}
+
+.OneBlock .SubBlock>.Caption {
+	margin: -5px -5px 0;
+	font-size: 12px;
+	line-height: 30px;
+	padding: 0 10px;
+	margin-bottom: 10px;
+	border-bottom: solid 1px #CCC;
+}
+
+.OneBlock .SubBlock>.Caption .label {
+	margin-right: 5px;
+}
+
+.OneBlock .SubBlock {
+	margin-bottom: 10px;
+}
+
+.OneBlock .SubBlock:last-of-type {
+	margin-bottom: 0;
+}
+
+.OneBlock .SubBlock .fa {
+	margin-right: 3px;
+}
+
+.OneBlock .SubBlock .label {
+	background: #4bd3a5;
+}
+
+.PriceBlock {
+	position: absolute;
+	bottom: 15px;
+	right: 10px;
+	text-align: right;
+}
+
+.PriceBlock p {
+	margin: 0;
+}
+
+.PriceBlock .CarType {
+	color: #4bd3a5;
+}
+
+.PriceBlock .CarType span {
+	border: solid 1px #4bd3a5;
+	padding: 0 3px;
+	border-radius: 3px;
+}
+
+.PriceBlock .CarPrice .fa {
+	color: #ffab18;
+	margin-right: 3px;
+}
+
+.PriceBlock .CarPrice span {
+	font-size: 20px;
+	color: #ffab18;
+}
+
+.XiangqingBlock {
+	background: #e5e5e5;
+}
+
+.XiangqingBlock>.Caption {
+	background: inherit;
+	color: #42c7b2;
+	border-bottom: solid 1px #d2d2d2;
+}
+
+.XiangqingBlock>.Caption span {
+	margin-top: 5px;
+	font-weight: normal;
+}
+
+.BottomButton {
+	padding-top: 10px;
+	background: rgba(255,255,255,0.8);
+	bottom: 0;
+	padding-bottom: 10px;
+	box-shadow: 0 0px 10px #999;
+}
+
+.BottomButton a {
+	text-decoration: none;
+}

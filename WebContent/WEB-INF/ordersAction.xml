@@ -1,0 +1,98 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<beans xmlns="http://www.springframework.org/schema/beans"
+	xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+	xsi:schemaLocation="http://www.springframework.org/schema/beans http://www.springframework.org/schema/beans/spring-beans-2.0.xsd">
+	<!-- 订单 -->
+	
+	
+	<bean id="ordersSearchAction" class="com.dearho.cs.orders.action.OrdersSearchAction" scope="prototype">
+		<property name="ordersService" ref="ordersService" />
+		<property name="subscriberService" ref="subscriberService" />
+		<property name="carService" ref="carService" />
+		<property name="branchDotService" ref="branchDotService" />
+		<property name="ordersDetailService" ref="ordersDetailService" />
+		<property name="strategyBaseService" ref="strategyBaseService" />
+	</bean>
+	
+	<bean id="ordersBillSearchAction" class="com.dearho.cs.orders.action.OrdersBillSearchAction" scope="prototype">
+		<property name="ordersService" ref="ordersService" />
+		<property name="ordersBillService" ref="ordersBillService" />
+	</bean>
+	
+	<bean id="ordersCommentSearchAction" class="com.dearho.cs.orders.action.OrdersCommentSearchAction" scope="prototype">
+		<property name="ordersService" ref="ordersService" />
+		<property name="subscriberService" ref="subscriberService" />
+		<property name="userService" ref="userService" />
+		<property name="ordersCommentService" ref="ordersCommentService" />
+	</bean>
+	
+	<bean id="ordersCommentDeleteAction" class="com.dearho.cs.orders.action.OrdersCommentDeleteAction" scope="prototype">
+		<property name="ordersCommentService" ref="ordersCommentService" />
+	</bean>
+	<bean id="ordersCommentAuditAction" class="com.dearho.cs.orders.action.OrdersCommentAuditAction" scope="prototype">
+		<property name="ordersCommentService" ref="ordersCommentService" />
+	</bean>
+	
+	
+	<bean id="ordersCancelAction" class="com.dearho.cs.orders.action.OrdersCancelAction" scope="prototype" >
+		<property name="ordersService" ref="ordersService"  />
+		<property name="subscriberService" ref="subscriberService" />
+		<property name="accountService" ref="accountService"  />
+		<property name="carService" ref="carService" />
+	</bean>
+	
+	
+	<bean id="mobileBookCarAction" class="com.dearho.cs.orders.action.MobileBookCarAction" scope="prototype">
+		<property name="branchDotService" ref="branchDotService" />
+		<property name="chargeStationService" ref="chargeStationService" />
+		<property name="carService" ref="carService" />
+		<property name="ordersBillService" ref="ordersBillService" />
+		<property name="ordersService" ref="ordersService" />
+		<property name="subscriberService" ref="subscriberService" />
+		<property name="carVehicleModelService" ref="carVehicleModelService" />
+		<property name="ordersDetailService" ref="ordersDetailService" />
+		<property name="strategyBaseService" ref="strategyBaseService" />
+		<property name="orderPayService" ref="orderPayService"/>
+		<property name="wechatUserInfoService" ref="wechatUserInfoService"/>
+		<property name="carDotBindingService" ref="carDotBindingService" />
+		<property name="accountService" ref="accountService"/>
+		<property name="configService" ref="configService"/>
+	</bean>
+	
+	<bean id="mobileOrdersSearchAction" class="com.dearho.cs.orders.action.MobileOrdersSearchAction" scope="prototype">
+		<property name="ordersService" ref="ordersService" />
+		<property name="ordersDetailService" ref="ordersDetailService" />
+		<property name="ticketsService" ref="ticketsService" />
+		<property name="subscriberService" ref="subscriberService" />
+		<property name="carService" ref="carService" />
+		<property name="ordersBillService" ref="ordersBillService" />
+		<property name="strategyBaseService" ref="strategyBaseService" />
+	</bean>
+	
+	<bean id="mobileCommentAction" class="com.dearho.cs.orders.action.MobileCommentAction" scope="prototype">
+		<property name="ordersService" ref="ordersService" />
+		<property name="subscriberService" ref="subscriberService" />
+		<property name="userService" ref="userService" />
+		<property name="ordersCommentService" ref="ordersCommentService" />
+		<property name="carService" ref="carService" />
+	</bean>
+	
+	<bean id="mobileCurrentOrdersAction" class="com.dearho.cs.orders.action.MobileCurrentOrdersAction" scope="prototype">
+		<property name="ordersService" ref="ordersService" />
+		<property name="subscriberService" ref="subscriberService" />
+		<property name="carService" ref="carService" />
+		<property name="chargingLogService" ref="chargingLogService" />
+		<property name="carRealtimeStateService" ref="carRealtimeStateService" />
+		<property name="chargeStationService" ref="chargeStationService" />
+		<property name="accountService" ref="accountService" />
+		<property name="branchDotService" ref="branchDotService" />
+		<property name="deviceBindingService" ref="deviceBindingService" />
+		<property name="operateLogService" ref="operateLogService" />
+		<property name="deviceService" ref="deviceService" />
+		<property name="ordersDetailService" ref="ordersDetailService" />
+		<property name="strategyBaseService" ref="strategyBaseService" />
+		<property name="carDotBindingService" ref="carDotBindingService" />
+	</bean>
+	
+	
+</beans>

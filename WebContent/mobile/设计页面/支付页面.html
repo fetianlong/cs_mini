@@ -1,0 +1,55 @@
+<!doctype html>
+<html lang="zh-CN">
+<head>
+<meta charset="utf-8">
+<title>选择支付方式</title>
+
+<link rel=stylesheet href="../common/js/bootstrap/css/bootstrap.min.css">
+<link rel=stylesheet href="../common/js/fontawesome/css/font-awesome.min.css">
+<link rel=stylesheet href="../common/js/flatui/dist/css/flat-ui.min.css">
+<script src="../common/js/jquery.min.js"></script>
+<script src="../common/js/bootstrap/js/bootstrap.min.js"></script>
+<script src="../common/js/flatui/dist/js/flat-ui.min.js"></script>
+<script src="../common/js/main.js"></script>
+<link rel=stylesheet href="../common/css/main.css">
+<meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1, user-scalable=no">
+<meta http-equiv="X-UA-Compatible" content="IE=edge">
+<meta name="renderer" content="webkit">
+
+
+<link rel="stylesheet" href="../common/css/selectzhifu.css">
+<script>
+$(function(){
+	$(".SelectZhifuBlock .btn").click(function(e) {
+		$(".SelectZhifuBlock .btn").removeClass("Selected");
+		$(this).addClass("Selected");
+	});
+});
+</script>
+
+</head>
+
+<body>
+<div class="container">
+	<div class="row">
+		<div class="col-xs-12 text-center">
+			<p class="Tips">支付金额</p>
+			<h2 class="Money"><i class="fa fa-jpy"></i>65</h2>
+			<div class="row SelectZhifuBlock">
+				<div class="col-xs-8 col-xs-offset-2">
+					<button class="btn btn-default btn-block Selected">账户余额</button>
+					<button class="btn btn-default btn-block">微信支付</button>
+					<button class="btn btn-default btn-block">支付宝支付</button>
+				</div>
+			</div>
+		</div>
+	</div>
+</div>
+
+<div class="BottomButton">
+	<div class="col-xs-8 col-xs-offset-2">
+		<button class="btn btn-embossed btn-primary btn-block">立即支付</button>
+	</div>
+</div>
+</body>
+</html>

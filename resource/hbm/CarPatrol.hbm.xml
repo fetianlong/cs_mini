@@ -1,0 +1,214 @@
+<!DOCTYPE hibernate-mapping PUBLIC 
+    "-//Hibernate/Hibernate Mapping DTD 3.0//EN"
+    "http://hibernate.sourceforge.net/hibernate-mapping-3.0.dtd">
+ 
+<hibernate-mapping>
+	<class name="com.dearho.cs.carservice.pojo.CarPatrol" table="c_vehicle_patrol_car">
+		<id name="id" type="string">
+            <column name="id" length="32" />
+            <generator class="uuid.hex" />
+        </id>
+        <property name="code" type="string">
+        	<column name="code"  />
+        </property>
+        
+        <property name="parkingPatrolId" type="string">
+        	<column name="parking_Patrol_Id"  />
+        </property>
+        <property name="dotId" type="string">
+        	<column name="dot_Id"  />
+        </property>
+        <property name="carId" type="string">
+        	<column name="car_Id"  />
+        </property>
+        <property name="paint" type="integer">
+        	<column name="paint"  />
+        </property>
+        <property name="glass" type="integer">
+        	<column name="glass"  />
+        </property>
+        <property name="tirePressure" type="integer">
+        	<column name="tire_Pressure"  />
+        </property>
+        <property name="SOC" type="double">
+        	<column name="SOC"  />
+        </property>
+        <property name="frontWheel" type="string">
+        	<column name="front_Wheel"  />
+        </property>
+        <property name="rearWheel" type="string">
+        	<column name="rear_Wheel"  />
+        </property>
+        <property name="safetyBelt" type="string">
+        	<column name="safety_Belt"  />
+        </property>
+        <property name="sunVisorL" type="string">
+        	<column name="sun_Visor_L"  />
+        </property>
+        <property name="sunVisorR" type="string">
+        	<column name="sun_Visor_R"  />
+        </property>
+        <property name="windshield" type="string">
+        	<column name="windshield"  />
+        </property>
+        <property name="horn" type="string">
+        	<column name="horn"  />
+        </property>
+        <property name="skylightSwitch" type="string">
+        	<column name="skylight_Switch"  />
+        </property>
+        <property name="wiper" type="string">
+        	<column name="wiper"  />
+        </property>
+        <property name="lampSwitch" type="string">
+        	<column name="lamp_Switch"  />
+        </property>
+        <property name="chairFace" type="string">
+        	<column name="chair_Face"  />
+        </property>
+        <property name="chairAdjust" type="string">
+        	<column name="chair_Adjust"  />
+        </property>
+        <property name="reflector" type="string">
+        	<column name="reflector"  />
+        </property>
+        <property name="wiperSwitch" type="string">
+        	<column name="wiper_Switch"  />
+        </property>
+        <property name="interior" type="string">
+        	<column name="interior"  />
+        </property>
+        <property name="doorHandle" type="string">
+        	<column name="door_Handle"  />
+        </property>
+        <property name="handbrake" type="string">
+        	<column name="handbrake"  />
+        </property>
+        <property name="doorMat" type="string">
+        	<column name="door_Mat"  />
+        </property>
+        <property name="windowGlass" type="string">
+        	<column name="window_Glass"  />
+        </property>
+        <property name="brake" type="string">
+        	<column name="brake"  />
+        </property>
+        <property name="taxStandard" type="string">
+        	<column name="tax_Standard"  />
+        </property>
+        <property name="skylight" type="string">
+        	<column name="skylight"  />
+        </property>
+        <property name="airConditioning" type="string">
+        	<column name="air_Conditioning"  />
+        </property>
+        <property name="vehicleGPS" type="string">
+        	<column name="vehicle_GPS"  />
+        </property>
+        <property name="light" type="string">
+        	<column name="light"  />
+        </property>
+        <property name="sound" type="string">
+        	<column name="sound"  />
+        </property>
+        <property name="childrenSeat" type="string">
+        	<column name="children_Seat"  />
+        </property>
+        <property name="jack" type="string">
+        	<column name="jack"  />
+        </property>
+        <property name="cigaretteLighter" type="string">
+        	<column name="cigarette_Lighter"  />
+        </property>
+        <property name="carKey" type="string">
+        	<column name="car_Key"  />
+        </property>
+        <property name="toolKit" type="string">
+        	<column name="tool_Kit"  />
+        </property>
+        <property name="ashtray" type="string">
+        	<column name="ashtray"  />
+        </property>
+        <property name="drivingLicense" type="string">
+        	<column name="driving_License"  />
+        </property>
+        <property name="failureWarningPlate" type="string">
+        	<column name="failure_Warning_Plate"  />
+        </property>
+        <property name="storageBox" type="string">
+        	<column name="storage_Box"  />
+        </property>
+        <property name="autoLogo" type="string">
+        	<column name="auto_Logo"  />
+        </property>
+        <property name="spareTire" type="string">
+        	<column name="spare_Tire"  />
+        </property>
+        <property name="windowLift" type="string">
+        	<column name="window_Lift"  />
+        </property>
+        <property name="book" type="string">
+        	<column name="book"  />
+        </property>
+        <property name="fireExtinguisher" type="string">
+        	<column name="fire_Extinguisher"  />
+        </property>
+        <property name="indoorLight" type="string">
+        	<column name="indoor_Light"  />
+        </property>
+        <property name="dashboard" type="string">
+        	<column name="dashboard"  />
+        </property>
+        <property name="steeringLamp" type="string">
+        	<column name="steering_Lamp"  />
+        </property>
+        <property name="steeringWheel" type="string">
+        	<column name="steering_Wheel"  />
+        </property>
+        <property name="inRearLamp" type="string">
+        	<column name="in_Rear_Lamp"  />
+        </property>
+        <property name="frontPhoto" type="string">
+        	<column name="front_Photo"  />
+        </property>
+        <property name="backPhoto" type="string">
+        	<column name="back_Photo"  />
+        </property>
+        <property name="leftPhoto" type="string">
+        	<column name="left_Photo"  />
+        </property>
+        <property name="rightPhoto" type="string">
+        	<column name="right_Photo"  />
+        </property>
+        <property name="sparePhoto1" type="string">
+        	<column name="spare_Photo1"  />
+        </property>
+        <property name="sparePhoto2" type="string">
+        	<column name="spare_Photo2"  />
+        </property>
+        <property name="isOk" type="integer">
+        	<column name="is_Ok"  />
+        </property>
+        
+        
+        <property name="remark" type="string">
+        	<column name="remark"  />
+        </property>
+        <property name="isDiscard" type="integer">
+        	<column name="is_discard"  />
+        </property>
+        <property name="creatorId" type="string">
+        	<column name="creator_id" length="32" />
+        </property>
+        <property name="createTime" type="java.util.Date">
+        	<column name="create_time" />
+        </property>
+        <property name="updateTime" type="java.util.Date">
+        	<column name="update_time" />
+        </property>
+        <property name="ts" type="java.util.Date">
+        	<column name="ts" />
+        </property>
+        
+	</class>
+</hibernate-mapping>

@@ -1,0 +1,104 @@
+	
+	
+.dhtmlgoodies_tabPane_content{
+/* 		height:36px;	Height of tabs */
+		height : 40px;
+		line-height:36px;
+		border-bottom:2px solid #1fbaa2;
+		padding-bottom:1px;
+		text-align : left;
+		width : 94%;
+		overflow: hidden;
+	    
+	}
+
+	
+	.dhtmlgoodies_tabPane{
+/* 		height:36px;	Height of tabs */
+		height : 40px;
+		line-height:40px;
+		border-bottom:2px solid #1fbaa2;
+		padding-bottom:1px;
+		width : auto;
+		white-space:nowrap;
+	}
+	.dhtmlgoodies_aTab{
+		/*border-left:1px solid #919b9c;
+		border-right:1px solid #919b9c;
+		border-bottom:1px solid #919b9c;*/
+		font-family: "Î¢ÈíÑÅºÚ";
+		padding:5px;	
+        height:95%;		
+		
+	}
+	.dhtmlgoodies_tabPane DIV{
+		display:inline-block;
+/* 		height:100%;	Height of tabs */
+		padding-left:3px;
+		vertical-align:middle;
+		background-repeat:no-repeat;
+		background-position:bottom left;
+		cursor:pointer;
+		bottom:-1px;
+		margin-left:2px;
+	}
+	.dhtmlgoodies_tabPane .tabActive{
+		background-color:#1fbba6;
+		margin-left:3px;
+		width : auto;
+/* 		margin-right:3px;	 */
+		z-index:10;	
+		border-radius:10px 10px 0 0;
+		color:#fff;
+		
+	}
+	.dhtmlgoodies_tabPane .tabInactive{
+		border-radius:10px 10px 0 0; 
+		border:1px solid #ccc;
+		margin-left:0px;
+		margin-right:0px;
+		z-index:1;
+		border-bottom:none;
+	}
+
+  	.dhtmlgoodies_tabPane .inactiveTabOver{
+        border-radius:10px 10px 0 0; 
+		border:1px solid #ccc;
+		margin-left:0px;
+		margin-right:0px;
+		border-bottom:none;
+	}
+	.dhtmlgoodies_tabPane span{
+		font-family:arial;
+		/*vertical-align:top;*/
+		font-size:16px;
+		padding-left:13px;
+		padding-right:0px;		
+		/*line-height:21px;*/
+		/*float:left;*/
+	}
+	.dhtmlgoodies_tabPane .tabActive span{
+		padding-bottom:1px;
+		/*line-height:20px;*/
+	}
+	
+	.dhtmlgoodies_tabPane  img{
+		float:left;
+		/*display: none;*/
+	}
+	.leftbutn {
+		right: 60px; 
+		background:url(../images/left_btn.png) no-repeat; 
+	}
+	.rightbutn{
+		right: 20px;
+	    background:url(../images/right_btn.png) no-repeat; 
+	}
+	.dhtmlgoodies_divbutn {
+		display:none;
+		position: absolute;
+		top: 118px;
+		width:21px; 
+		height:23px; 
+		border:none;
+	}

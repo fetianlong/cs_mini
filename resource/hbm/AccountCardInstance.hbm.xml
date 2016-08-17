@@ -1,0 +1,46 @@
+<!DOCTYPE hibernate-mapping PUBLIC 
+    "-//Hibernate/Hibernate Mapping DTD 3.0//EN"
+    "http://hibernate.sourceforge.net/hibernate-mapping-3.0.dtd">
+<hibernate-mapping>
+	<class name="com.dearho.cs.account.pojo.AccountCardInstance" table="acc_card_instance">
+		<id name="id" type="java.lang.String">
+            <column name="id" length="32" />
+             <generator class="uuid.hex" />
+        </id>
+        <property name="subscriberId" type="java.lang.String">
+            <column name="subscriber_id"   />
+        </property>
+        <property name="rechargeCardId" type="java.lang.String">
+            <column name="recharge_card_id"   />
+        </property>
+       
+        <property name="isValid" type="java.lang.Integer">
+            <column name="is_valid" />
+        </property>
+        <property name="amount" type="java.lang.Double">
+            <column name="amount" />
+        </property>
+        <property name="remainingAmount" type="java.lang.Double">
+            <column name="remaining_amount" />
+        </property>
+        <property name="isSystem" type="java.lang.Integer">
+            <column name="is_system" />
+        </property>
+         <property name="creatorId" type="java.lang.String">
+            <column name="creator_id" length="32"/>
+        </property>
+        <property name="createTime" type="java.util.Date">
+            <column name="create_time" />
+        </property> 
+        <property name="ts" type="java.util.Date">
+            <column name="ts" />
+        </property>
+         
+	</class>
+	
+	
+	
+	
+	
+	
+</hibernate-mapping>

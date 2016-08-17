@@ -1,0 +1,34 @@
+<!DOCTYPE hibernate-mapping PUBLIC 
+    "-//Hibernate/Hibernate Mapping DTD 3.0//EN"
+    "http://hibernate.sourceforge.net/hibernate-mapping-3.0.dtd">
+ 
+<hibernate-mapping>
+	<class name="com.dearho.cs.device.pojo.DeviceBinding" table="c_device_binding">
+		<id name="id" type="java.lang.String">
+            <column name="ID" length="32" />
+            <generator class="uuid.hex" />
+        </id>
+        <property name="carId" type="java.lang.String">
+        	<column name="CAR_ID"  length="32" not-null="true" />
+        </property> 
+        <property name="deviceId" type="java.lang.String">
+        	<column name="device_id" length="32" not-null="true" />
+        </property> 
+        <property name="bindType" type="java.lang.Integer">
+        	<column name="bind_type" length="64" />
+        </property>
+		<property name="deviceNo" type="java.lang.String">
+			<column name="device_no" length="64" />
+		</property>        
+        <property name="bindDate" type="java.util.Date">
+        	<column name="BIND_DATE" />
+        </property>
+        <property name="bindUserId" type="java.lang.String">
+        	<column name="bind_user_id" />
+        </property>
+         <property name="carPlateNo" type="java.lang.String">
+        	<column name="car_Plate_No" />
+        </property>
+        
+	</class>
+</hibernate-mapping>

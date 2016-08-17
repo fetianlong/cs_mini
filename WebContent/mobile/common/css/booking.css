@@ -1,0 +1,266 @@
+@charset "utf-8";
+/* CSS Document */
+
+body {
+	/*overflow: hidden;*/
+}
+
+body.BookingError {
+	background: #d3d3d3;
+	color: #414a59;
+	margin-top: 50px;
+}
+
+.MapBlock {
+	background: #CCC;
+}
+
+.BookingError .BookingErrorImg {
+	margin-bottom: 50px;
+}
+
+.SelectCarBlock {
+	position: fixed;
+	bottom: 0;
+	left: 0;
+	width: 100%;
+	z-index: 2000;
+}
+
+.SelectCarBlock>div {
+	padding-left: 5px;
+	padding-right: 5px;
+}
+
+.BottomButton {
+	z-index: 0;
+}
+
+.SelectCarBlock .SelectCarBorder {
+	background: #FFF;
+	border: solid 1px #999;
+	border-bottom: none;
+	box-shadow: 0 0 3px #CCC;
+	border-radius: 5px 5px 0 0;
+	padding: 10px;
+	position: relative;
+}
+
+.SelectCarBlock .SelectCarBorder .CloseSelectCar {
+	position: absolute;
+	color: #6dc6a9;
+	top: -30px;
+	left: 35%;
+	background: #FFF;
+	border: solid 1px #999;
+	border-bottom: 0;
+	border-radius: 5px 5px 0 0;
+	width: 100px;
+	height: 30px;
+	text-align: center;
+	cursor: pointer;
+	line-height: 30px;
+}
+
+.SelectCarBlock .SelectCarBorder .JianImg {
+	position: absolute;
+	top: 0;
+	right: 0;
+}
+
+.SelectCarBlock .swiper-container {
+    width: 100%;
+}  
+
+.SelectCarBlock .swiper-container .swiper-wrapper {
+	margin-bottom: 10px;
+}
+
+.swiper-container-horizontal>.swiper-pagination {
+	bottom: 0;
+}
+
+.SelectCarBlock .CarCaption {
+	margin-bottom: 5px;
+	font-size: 14px;
+}
+
+.SelectCarBlock .CarCaption span {
+	margin-left: 10px;
+	color: #13c689;
+}
+
+.SelectCarBlock .CarImg {
+	height: 50px;
+	width: 92px;
+}
+
+.SelectCarBlock .CarStar .fa {
+	color: #fd8700;
+}
+
+.SelectCarBlock .CarInfo {
+	font-size: 12px;
+	line-height: 20px;
+	text-align: center;
+}
+
+.SelectCarBlock .CarInfo .CarProperty img {
+	height: 16px;
+	width: 16px;
+	margin-right: 5px;
+}
+
+.SelectCarBlock .CarInfo .CarScore .CarStar {
+	display: inline-block;
+	margin-left: 5px;
+	margin-right: 2px;
+}
+
+.SelectCarBlock .CarInfo .CarPosition .fa {
+	color: #fa8b60;
+	margin-right: 5px;
+}
+
+.SelectCarBlock .Continued {
+	font-size: 14px;
+	margin: 0;
+	color: #ff8200;
+}
+
+.SelectCarBlock .Continued span {
+	margin: 0 2px;
+}
+
+.SelectCarBlock .CarProgress {
+	font-size: 12px;
+}
+
+.SelectCarBlock .CarProgress div[class^="col-"] {
+	padding-left: 5px;
+	padding-right: 5px;
+}
+
+.SelectCarBlock .CarProgress .BatteryIcon {
+	text-align: right;
+	color: #3baa39;
+}
+
+.SelectCarBlock .CarProgress .progress {
+	margin-top: 3px;
+	margin-bottom: 15px;
+}
+
+.SelectCarBlock .CarProgress .progress-bar {
+	border-right: solid 1px #FFF;
+	width: 10%;
+}
+
+.SelectCarBlock .CarProgress .progress-bar:last-of-type {
+	border-right: none;
+}
+
+.SelectCarBlock .CarProgress .progress-bar:nth-of-type(n+1) {
+	background-color: #a2e64c;
+}
+
+.SelectCarBlock .CarProgress .progress-bar:nth-of-type(n+3) {
+	background-color: #88c23f;
+}
+
+.SelectCarBlock .CarProgress .progress-bar:nth-of-type(n+5) {
+	background-color: #5f9f0e;
+}
+
+.SelectCarBlock .CarProgress .progress-bar:nth-of-type(n+7) {
+	background-color: #369b34;
+}
+
+.SelectCarBlock .CarProgress .progress-bar:nth-of-type(n+9) {
+	background-color: #008a41;
+}
+
+.SelectCarBlock .CarButton>div.col-xs-7 {
+	padding-right: 5px;
+}
+
+.SelectCarBlock .CarButton>div.col-xs-5 {
+	padding-left: 5px;
+}
+
+.SelectCarBlock .CarButton button {
+	border: solid 1px #1abc9c;
+}
+
+.SelectCarBlock .CarButton .GengduoButton {
+	background: #FFF;
+	border: solid 1px #1abc9c;
+	color: #1abc9c;
+	text-decoration: none;
+}
+
+.CarPositionBlock {
+	display: none;
+	position: fixed;
+	top: 50px;
+	left: 10%;
+	width: 80%;
+	text-align: center;
+	font-size: 14px;
+	line-height: 40px;
+	color: #333;
+	background: #efeff4;
+	background: rgba(239,239,244,0.9);
+	border-radius: 5px;
+	border: solid 1px #c9c9ce;
+}
+
+.SelectImg {
+	border: none;
+	position: absolute;
+	left: 16px;
+	top:-37px;
+}
+
+.CarNumSpan {
+	background: #FFF;
+	position: absolute;
+	font-size: 12px; 
+	line-height: 18px;
+	top: -30px;
+	right: -12px;
+	height: 18px;
+	width: 18px;
+	text-align: center;
+	color: #20be8c;
+	border-radius: 50%;
+}
+
+.SelectCarBlock .NoCar {
+	margin: 96px 0;
+}
+
+.OpenCarSelect {
+	text-decoration: none;
+}
+
+@media (min-width: 1000px){
+.TopMenu input[type="text"] {
+	height: 50px;
+	font-size: 18px;
+}
+
+.TopMenu ul li a {
+	height: 50px;
+	line-height: 50px;
+}
+
+.TopMenu .btn {
+	height: 50px;
+	padding-right: 10px;
+}
+
+.SelectCarBlock .SelectCarBorder .CloseSelectCar {
+	left: 42%;
+}
+}

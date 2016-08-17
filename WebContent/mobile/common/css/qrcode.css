@@ -1,0 +1,74 @@
+@charset "utf-8";
+/* CSS Document */
+
+body {
+	background: #eeeeee;
+}
+
+.Icon {
+	border-radius: 50%;
+	width: 150px;
+	height: 150px;
+	line-height: 150px;
+	margin: 30px auto;
+	text-align: center;
+	color: #51bf87;
+	border: dashed 2px #51bf87;
+}
+
+.Icon .fa.fa-bolt {
+	color: #FFF;
+	line-height: 40px;
+}
+
+.ButtonBlock {
+	margin-bottom: 20px;
+}
+
+.ButtonBlock .btn {
+	margin-bottom: 10px;
+	text-decoration: none;
+}
+
+.ShuomingBlock ul {
+	margin: 10px 0 30px;
+	padding: 0;
+	list-style: none;
+}
+
+.ShuomingBlock ul li {
+	margin: 0;
+	padding: 10px;
+	list-style: none;
+	background: #FFF;
+	position: relative;
+	margin-bottom: 10px;
+}
+
+.ShuomingBlock ul li .Corner {
+	position: absolute;
+	top: 0;
+	right: 0;
+	display: block;
+	background: url(../images/charing/corner.png) right top no-repeat;
+	width: 40px;
+	height: 40px;
+	color: #FFF;
+	font-size: 14px;
+	text-align: right;
+	padding-right: 2px;
+}
+
+.ShuomingBlock ul li img {
+	border: solid 1px #eeeeee;
+}
+
+.ShuomingBlock ul li p {
+	font-size: 14px;
+	margin-top: 24px;
+}
+
+.LinkBlock a {
+	text-decoration: none;
+	font-size: 12px;
+}

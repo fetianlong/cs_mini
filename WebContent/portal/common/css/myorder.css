@@ -1,0 +1,251 @@
+@charset "utf-8";
+/* CSS Document */
+
+.ContentBlock .Border {
+	border: solid 1px #4bd3a5;
+}
+
+.ContentBlock>div.row {
+	margin-bottom: 30px;
+}
+
+.CenterInfo .Border {
+	background: #f2f1f1;
+	padding-top: 20px;
+	padding-bottom: 20px;
+	border: none;
+}
+
+.CenterInfo .HeadImg {
+	position: relative;
+	width: 150px;
+	height: 150px;
+	border: solid 2px #8d8c8c;
+	border-radius: 50%;
+	overflow: hidden;
+	margin: 0 auto;
+	cursor: pointer;
+}
+
+.CenterInfo .HeadImg:hover p {
+	display: block;
+}
+
+.CenterInfo .HeadImg p {
+	display: none;
+	position: absolute;
+	bottom: 0;
+	left: 0;
+	width: 100%;
+	background: #333;
+	background: rgba(0,0,0,0.8);
+	color: #FFF;
+	font-size: 16px;
+	line-height: 36px;
+	text-align: center;
+	margin-bottom: 0;
+}
+
+.CenterInfo h3 {
+	color: #666666;
+}
+
+.CenterInfo h3 span {
+	color: #fd3636;
+	margin: 0 5px;
+}
+
+.CenterInfo .SubmitButton {
+	padding: 10px 40px;
+	font-size: 16px;
+}
+
+.CenterInfo .SubmitButton.disabled {
+	background: #CCC;
+}
+
+.CenterInfo label {
+	font-size: 14px;
+	color: #8d8c8c;
+}
+
+.CenterInfo .form-control-static {
+	color: #8d8c8c;
+}
+
+.OrderList .nav-tabs {
+	border-bottom-color: #4bd3a5;
+}
+
+.OrderList .nav-tabs>li.active>a, .OrderList .nav-tabs>li.active>a:focus, .OrderList .nav-tabs>li.active>a:hover {
+	border-color: #4bd3a5;
+	border-bottom-color: transparent;
+}
+
+.OrderList .nav-tabs>li>a {
+	border-radius: 0;
+	cursor: pointer;
+	font-size: 16px;
+}
+
+.ContentBlock .Caption {
+	color: #8d8c8c;
+	text-indent: 1em;
+	line-height: 40px;
+	margin-top: 0;
+	border-bottom: solid 1px #4bd3a5;
+}
+
+.OrderInfo .EmptyOrder {
+	border: dashed 2px #d2d3d3;
+	margin: 20px;
+}
+
+.OrderInfo .EmptyOrder p {
+	margin: 50px auto;
+	font-size: 20px;
+	color: #8d8c8c;
+}
+
+.OrderInfo .EmptyOrder p a {
+	color: #4bd3a5;
+	margin-left: 10px;
+	font-size: 24px;
+}
+
+.OrderInfo .EmptyOrder p a .fa {
+	margin-left: 5px;
+}
+
+.OrderInfo>.SubOrder {
+	margin-bottom: 20px;
+}
+
+.OrderInfo>.SubOrder .Caption {
+	text-indent: 0;
+}
+
+.OrderInfo>.SubOrder .Caption span {
+	margin-right: 5px;
+}
+
+.OrderInfo>.SubOrder .Caption span.Zhuangtai {
+	font-size: 14px;
+	line-height: 24px;
+}
+
+.OrderList table {
+	text-align: center;
+	margin-top: 10px;
+}
+
+.OrderList table thead {
+	background: #f2f1f1;
+	
+}
+
+.OrderList table thead th {
+	border-right: solid 1px #d2d2d2;
+	text-align: center;
+	border-bottom: none;
+	font-size: 16px;
+	font-weight: normal;
+}
+
+.OrderList table tbody td a:first-of-type {
+	color: #4bd3a5;
+	text-decoration: none;
+}
+
+.OrderList table tbody td a:nth-of-type(2) {
+	color: #ff6900;
+	text-decoration: none;
+}
+
+.OrderList table tbody td a {
+	cursor: pointer;
+}
+
+.OrderList .ChangePage {
+	margin-bottom: 20px;
+}
+
+.OrderList .ChangePage a {
+	background: #c9cacb;
+	color: #FFF;
+	border: solid 1px #FFF;
+}
+
+.OrderList .ChangePage a:hover {
+	background: #56c594;
+}
+
+.OrderList .ChangePage a.active {
+	background: #56c594;
+}
+
+.OrderInfo .ChangePage {
+	margin-bottom: 20px;
+	margin-top: 20px;
+}
+
+.OrderExplain h4.Caption {
+	margin-bottom: 0;
+}
+
+.OrderExplain table {
+	margin-bottom: 0;
+	font-size: 14px;
+	color: #8d8c8c;
+}
+
+.OrderExplain table tbody tr td {
+	border-top-color: #4bd3a5;
+}
+
+.OrderExplain table tbody tr:first-of-type td {
+	border-top: none;
+}
+
+.OrderExplain table tbody tr td:first-of-type {
+	border-right: solid 1px #4bd3a5;
+	width: 15%;
+	text-align: center;
+}
+
+.OrderInfoPage .Border {
+	background: #f2f1f1;
+	padding: 10px 20px;
+}
+
+.OrderInfoPage p {
+	margin-bottom: 0;
+	font-size: 16px;
+	line-height: 26px;
+}
+
+.OrderInfoPage {
+	color: #8d8c8c;
+}
+
+.OrderInfoPage .Caption {
+	border-bottom: solid 1px #e5e5e5;
+	margin-bottom: 10px;
+}
+
+.OrderInfoPage>.row {
+	margin-bottom: 20px;
+}
+
+.OrderInfoPage h4 {
+	margin: 0;
+	line-height: 1.8;
+}
+
+.OrderInfoPage .OrderInfo .Border>.row {
+	margin-bottom: 20px;
+}
+
+.OrderInfoPage .OrderInfo .Border>.row:first-of-type {
+	margin-bottom: 0;
+}

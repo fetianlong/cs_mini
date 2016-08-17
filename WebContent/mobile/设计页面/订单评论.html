@@ -1,0 +1,58 @@
+<!doctype html>
+<html lang="zh-CN">
+<head>
+<meta charset="utf-8">
+<title>订单评论</title>
+
+<link rel=stylesheet href="../common/js/bootstrap/css/bootstrap.min.css">
+<link rel=stylesheet href="../common/js/fontawesome/css/font-awesome.min.css">
+<link rel=stylesheet href="../common/js/flatui/dist/css/flat-ui.min.css">
+<script src="../common/js/jquery.min.js"></script>
+<script src="../common/js/bootstrap/js/bootstrap.min.js"></script>
+<script src="../common/js/flatui/dist/js/flat-ui.min.js"></script>
+<script src="../common/js/main.js"></script>
+<link rel=stylesheet href="../common/css/main.css">
+<meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1, user-scalable=no">
+<meta http-equiv="X-UA-Compatible" content="IE=edge">
+<meta name="renderer" content="webkit">
+
+<script src="../common/js/star/js/jquery.raty.min.js"></script>
+<link rel="stylesheet" href="../common/css/ratewrite.css">
+<script>
+$(function(){
+	$('#star').raty({
+		path: "../common/js/star/doc/img/",
+		cancelOff: 'cancel-off-big.png',
+		cancelOn: 'cancel-on-big.png',
+		size: 36,
+		starHalf: 'star-half-big.png',
+		starOff: 'star-off-big.png',
+		starOn: 'star-on-big.png',
+		target : '#target',
+		targetKeep   : true,
+		hints: ["很差","失望","一般","满意","惊喜"],
+		click: function(score, event){
+			alert(score);
+		}
+	});
+});
+</script>
+</head>
+
+<body>
+<form>
+<div class="OneBlock PingfenBlock">
+	评分：
+	<span id="star"></span>
+	<span id="target" class="pull-right"></span>
+</div>
+
+<div class="OneBlock">
+	<textarea class="form-control" rows="10" placeholder="谈谈您这次的驾驶体验吧~！"></textarea>
+</div>
+<div class="col-xs-8 col-xs-offset-2">
+	<a href="#" class="btn btn-embossed btn-primary btn-block SubmitButton">提交</a>
+</div>
+</form>
+</body>
+</html>

@@ -1,0 +1,24 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<beans xmlns="http://www.springframework.org/schema/beans"
+	xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+	xsi:schemaLocation="http://www.springframework.org/schema/beans http://www.springframework.org/schema/beans/spring-beans-2.0.xsd">
+	
+	
+	<!-- APP 短信 接口 -->
+	<bean id="appShortMessage" class="com.dearho.cs.appinterface.sys.action.AppShortMessageAction" scope="prototype">
+												
+		<property name="smsCodeService" ref="smsCodeService" />
+			
+	</bean>
+	
+	<!--  -->
+	<bean id="appLoginAction" class="com.dearho.cs.appinterface.sys.action.AppLoginAction" scope="prototype">
+												
+		<property name="smsCodeService" ref="smsCodeService" />
+		<property name="subscriberService" ref="subscriberService" />
+		<!-- <property name="appTokenService" ref="appTokenService" /> -->
+		
+	</bean>
+
+		
+</beans>

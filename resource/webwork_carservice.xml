@@ -1,0 +1,537 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE xwork PUBLIC "-//Apache Struts//XWork 1.1.1//EN" 
+"http://struts.apache.org/dtds/xwork-1.1.1.dtd">
+<xwork>
+	<package name="carservice" extends="webwork-default" namespace="/carservice">
+		<default-interceptor-ref name="defaultStack"/>
+		
+		<global-results>
+			<result name="timeout" type="dispatcher">
+                <param name="location">error.jsp</param>
+            </result>
+            <result name="illegal" type="dispatcher">
+                <param name="location">error.jsp</param>
+            </result>
+		</global-results>
+	
+   		<action name="carAccidentSearch" class="carAccidentSearchAction">
+			<result name="success" type="dispatcher">
+                <param name="location">/pages/carservice/caraccident/caraccidentlist.jsp</param>
+            </result>
+			<result name="error" type="dispatcher">
+                <param name="location">error.jsp</param>
+            </result>
+			<interceptor-ref name="defaultStack"/>
+		</action>
+		<action name="carAccidentSearchForDialog" class="carAccidentSearchAction">
+			<result name="success" type="dispatcher">
+                <param name="location">/pages/carservice/caraccident/carAccidentListMiniDialog.jsp</param>
+            </result>
+			<interceptor-ref name="defaultStack"/>
+		</action>
+		<action name="carAccidentGet" class="carAccidentGetAction">
+			<result name="success" type="dispatcher">
+                <param name="location">/pages/carservice/caraccident/caraccidentget.jsp</param>
+            </result>
+			<result name="error" type="dispatcher">
+                <param name="location">error.jsp</param>
+            </result>
+			<interceptor-ref name="defaultStack"/>
+		</action>
+		<action name="carAccidentAdd" class="carAccidentAddAction">
+			<result name="success" type="dispatcher">
+                <param name="location">/resultjson.jsp</param>
+            </result>
+			<result name="error" type="dispatcher">
+                <param name="location">/resultjson.jsp</param>
+            </result>
+			<result name="illegal" type="dispatcher">
+                <param name="location">/resultxml.jsp</param>
+            </result>
+            <interceptor-ref name="uploadStack"/>
+		</action>
+		<action name="carAccidentUpdate" class="carAccidentUpdateAction">
+			<result name="success" type="dispatcher">
+                <param name="location">/resultjson.jsp</param>
+            </result>
+			<result name="error" type="dispatcher">
+                <param name="location">/resultjson.jsp</param>
+            </result>
+			<result name="illegal" type="dispatcher">
+                <param name="location">/resultxml.jsp</param>
+            </result>
+            <interceptor-ref name="uploadStack"/>
+		</action>
+		<action name="carAccidentDelete" class="carAccidentDeleteAction">
+			<result name="success" type="dispatcher">
+                <param name="location">/resultjson.jsp</param>
+            </result>
+			<result name="error" type="dispatcher">
+                <param name="location">/resultjson.jsp</param>
+            </result>
+			<result name="illegal" type="dispatcher">
+                <param name="location">/resultxml.jsp</param>
+            </result>
+            <interceptor-ref name="defaultStack" />
+		</action>
+		<action name="carAccidentChangeDiscard" class="carAccidentChangeDiscardAction">
+			<result name="success" type="dispatcher">
+                <param name="location">/resultjson.jsp</param>
+            </result>
+			<result name="error" type="dispatcher">
+                <param name="location">/resultjson.jsp</param>
+            </result>
+			<result name="illegal" type="dispatcher">
+                <param name="location">/resultxml.jsp</param>
+            </result>
+            <interceptor-ref name="defaultStack" />
+		</action>
+		
+		<action name="carViolationSearch" class="carViolationSearchAction">
+			<result name="success" type="dispatcher">
+                <param name="location">/pages/carservice/carviolation/carviolationlist.jsp</param>
+            </result>
+			<result name="error" type="dispatcher">
+                <param name="location">error.jsp</param>
+            </result>
+			<interceptor-ref name="defaultStack"/>
+		</action>
+		<action name="carViolationSearchForDialog" class="carViolationSearchAction">
+			<result name="success" type="dispatcher">
+                <param name="location">/pages/carservice/carviolation/carViolationListMiniDialog.jsp</param>
+            </result>
+			<interceptor-ref name="defaultStack"/>
+		</action>
+		<action name="carViolationGet" class="carViolationGetAction">
+			<result name="success" type="dispatcher">
+                <param name="location">/pages/carservice/carviolation/carviolationget.jsp</param>
+            </result>
+			<result name="error" type="dispatcher">
+                <param name="location">error.jsp</param>
+            </result>
+			<interceptor-ref name="defaultStack"/>
+		</action>
+		<action name="carViolationAdd" class="carViolationAddAction">
+			<result name="success" type="dispatcher">
+                <param name="location">/resultjson.jsp</param>
+            </result>
+			<result name="error" type="dispatcher">
+                <param name="location">/resultjson.jsp</param>
+            </result>
+			<result name="illegal" type="dispatcher">
+                <param name="location">/resultxml.jsp</param>
+            </result>
+            <interceptor-ref name="defaultStack" />
+		</action>
+		<action name="carViolationUpdate" class="carViolationUpdateAction">
+			<result name="success" type="dispatcher">
+                <param name="location">/resultjson.jsp</param>
+            </result>
+			<result name="error" type="dispatcher">
+                <param name="location">/resultjson.jsp</param>
+            </result>
+			<result name="illegal" type="dispatcher">
+                <param name="location">/resultxml.jsp</param>
+            </result>
+            <interceptor-ref name="defaultStack" />
+		</action>
+		<action name="carViolationDelete" class="carViolationDeleteAction">
+			<result name="success" type="dispatcher">
+                <param name="location">/resultjson.jsp</param>
+            </result>
+			<result name="error" type="dispatcher">
+                <param name="location">/resultjson.jsp</param>
+            </result>
+			<result name="illegal" type="dispatcher">
+                <param name="location">/resultxml.jsp</param>
+            </result>
+            <interceptor-ref name="defaultStack" />
+		</action>
+		<action name="carViolationChangeDiscard" class="carViolationChangeDiscardAction">
+			<result name="success" type="dispatcher">
+                <param name="location">/resultjson.jsp</param>
+            </result>
+			<result name="error" type="dispatcher">
+                <param name="location">/resultjson.jsp</param>
+            </result>
+			<result name="illegal" type="dispatcher">
+                <param name="location">/resultxml.jsp</param>
+            </result>
+            <interceptor-ref name="defaultStack" />
+		</action>
+		
+		
+		<action name="carMaintenanceSearch" class="carMaintenanceSearchAction">
+			<result name="success" type="dispatcher">
+                <param name="location">/pages/carservice/carmaintenance/carmaintenancelist.jsp</param>
+            </result>
+			<result name="error" type="dispatcher">
+                <param name="location">error.jsp</param>
+            </result>
+			<interceptor-ref name="defaultStack"/>
+		</action>
+		<action name="carMaintenanceSearchForDialog" class="carMaintenanceSearchAction">
+			<result name="success" type="dispatcher">
+                <param name="location">/pages/carservice/carmaintenance/car_maintenance_list_mini_dialog.jsp</param>
+            </result>
+			<interceptor-ref name="defaultStack"/>
+		</action>
+		<action name="carMaintenanceGet" class="carMaintenanceGetAction">
+			<result name="success" type="dispatcher">
+                <param name="location">/pages/carservice/carmaintenance/carmaintenanceget.jsp</param>
+            </result>
+			<result name="error" type="dispatcher">
+                <param name="location">error.jsp</param>
+            </result>
+			<interceptor-ref name="defaultStack"/>
+		</action>
+		<action name="carMaintenanceAdd" class="carMaintenanceAddAction">
+			<result name="success" type="dispatcher">
+                <param name="location">/resultjson.jsp</param>
+            </result>
+			<result name="error" type="dispatcher">
+                <param name="location">/resultjson.jsp</param>
+            </result>
+			<result name="illegal" type="dispatcher">
+                <param name="location">/resultxml.jsp</param>
+            </result>
+            <interceptor-ref name="defaultStack" />
+		</action>
+		<action name="carMaintenanceUpdate" class="carMaintenanceUpdateAction">
+			<result name="success" type="dispatcher">
+                <param name="location">/resultjson.jsp</param>
+            </result>
+			<result name="error" type="dispatcher">
+                <param name="location">/resultjson.jsp</param>
+            </result>
+			<result name="illegal" type="dispatcher">
+                <param name="location">/resultxml.jsp</param>
+            </result>
+            <interceptor-ref name="defaultStack" />
+		</action>
+		<action name="carMaintenanceDelete" class="carMaintenanceDeleteAction">
+			<result name="success" type="dispatcher">
+                <param name="location">/resultjson.jsp</param>
+            </result>
+			<result name="error" type="dispatcher">
+                <param name="location">/resultjson.jsp</param>
+            </result>
+			<result name="illegal" type="dispatcher">
+                <param name="location">/resultxml.jsp</param>
+            </result>
+            <interceptor-ref name="defaultStack" />
+		</action>
+		<action name="carMaintenanceChangeDiscard" class="carMaintenanceChangeDiscardAction">
+			<result name="success" type="dispatcher">
+                <param name="location">/resultjson.jsp</param>
+            </result>
+			<result name="error" type="dispatcher">
+                <param name="location">/resultjson.jsp</param>
+            </result>
+			<result name="illegal" type="dispatcher">
+                <param name="location">/resultxml.jsp</param>
+            </result>
+            <interceptor-ref name="defaultStack" />
+		</action>
+		<action name="carMaintenanceWarning" class="carMaintenanceWarningAction">
+			<result name="success" type="dispatcher">
+                <param name="location">/pages/carservice/carmaintenance/carmaintenancewarnlist.jsp</param>
+            </result>
+			<interceptor-ref name="defaultStack"/>
+		</action>
+		
+		
+		<action name="carInsuranceSearch" class="carInsuranceSearchAction">
+			<result name="success" type="dispatcher">
+                <param name="location">/pages/carservice/carinsurance/carinsurancelist.jsp</param>
+            </result>
+			<result name="error" type="dispatcher">
+                <param name="location">error.jsp</param>
+            </result>
+			<interceptor-ref name="defaultStack"/>
+		</action>
+		<action name="carInsuranceGet" class="carInsuranceGetAction">
+			<result name="success" type="dispatcher">
+                <param name="location">/pages/carservice/carinsurance/carinsuranceget.jsp</param>
+            </result>
+			<result name="error" type="dispatcher">
+                <param name="location">error.jsp</param>
+            </result>
+			<interceptor-ref name="defaultStack"/>
+		</action>
+		<action name="carInsuranceAdd" class="carInsuranceAddAction">
+			<result name="success" type="dispatcher">
+                <param name="location">/resultjson.jsp</param>
+            </result>
+			<result name="error" type="dispatcher">
+                <param name="location">/resultjson.jsp</param>
+            </result>
+			<result name="illegal" type="dispatcher">
+                <param name="location">/resultxml.jsp</param>
+            </result>
+            <interceptor-ref name="defaultStack" />
+		</action>
+		<action name="carInsuranceUpdate" class="carInsuranceUpdateAction">
+			<result name="success" type="dispatcher">
+                <param name="location">/resultjson.jsp</param>
+            </result>
+			<result name="error" type="dispatcher">
+                <param name="location">/resultjson.jsp</param>
+            </result>
+			<result name="illegal" type="dispatcher">
+                <param name="location">/resultxml.jsp</param>
+            </result>
+            <interceptor-ref name="defaultStack" />
+		</action>
+		<action name="carInsuranceDelete" class="carInsuranceDeleteAction">
+			<result name="success" type="dispatcher">
+                <param name="location">/resultjson.jsp</param>
+            </result>
+			<result name="error" type="dispatcher">
+                <param name="location">/resultjson.jsp</param>
+            </result>
+			<result name="illegal" type="dispatcher">
+                <param name="location">/resultxml.jsp</param>
+            </result>
+            <interceptor-ref name="defaultStack" />
+		</action>
+		<action name="carInsuranceChangeDiscard" class="carInsuranceChangeDiscardAction">
+			<result name="success" type="dispatcher">
+                <param name="location">/resultjson.jsp</param>
+            </result>
+			<result name="error" type="dispatcher">
+                <param name="location">/resultjson.jsp</param>
+            </result>
+			<result name="illegal" type="dispatcher">
+                <param name="location">/resultxml.jsp</param>
+            </result>
+            <interceptor-ref name="defaultStack" />
+		</action>
+		
+		
+		<action name="carRepairSearch" class="carRepairSearchAction">
+			<result name="success" type="dispatcher">
+                <param name="location">/pages/carservice/carrepair/carrepairlist.jsp</param>
+            </result>
+			<result name="error" type="dispatcher">
+                <param name="location">error.jsp</param>
+            </result>
+			<interceptor-ref name="defaultStack"/>
+		</action>
+		<action name="carRepairGet" class="carRepairGetAction">
+			<result name="success" type="dispatcher">
+                <param name="location">/pages/carservice/carrepair/carrepairget.jsp</param>
+            </result>
+			<result name="error" type="dispatcher">
+                <param name="location">error.jsp</param>
+            </result>
+			<interceptor-ref name="defaultStack"/>
+		</action>
+		<action name="carRepairAdd" class="carRepairAddAction">
+			<result name="success" type="dispatcher">
+                <param name="location">/resultjson.jsp</param>
+            </result>
+			<result name="error" type="dispatcher">
+                <param name="location">/resultjson.jsp</param>
+            </result>
+			<result name="illegal" type="dispatcher">
+                <param name="location">/resultxml.jsp</param>
+            </result>
+            <interceptor-ref name="defaultStack" />
+		</action>
+		<action name="carRepairUpdate" class="carRepairUpdateAction">
+			<result name="success" type="dispatcher">
+                <param name="location">/resultjson.jsp</param>
+            </result>
+			<result name="error" type="dispatcher">
+                <param name="location">/resultjson.jsp</param>
+            </result>
+			<result name="illegal" type="dispatcher">
+                <param name="location">/resultxml.jsp</param>
+            </result>
+            <interceptor-ref name="defaultStack" />
+		</action>
+		<action name="carRepairDelete" class="carRepairDeleteAction">
+			<result name="success" type="dispatcher">
+                <param name="location">/resultjson.jsp</param>
+            </result>
+			<result name="error" type="dispatcher">
+                <param name="location">/resultjson.jsp</param>
+            </result>
+			<result name="illegal" type="dispatcher">
+                <param name="location">/resultxml.jsp</param>
+            </result>
+            <interceptor-ref name="defaultStack" />
+		</action>
+		<action name="carRepairChangeDiscard" class="parkingPatrolChangeDiscardAction">
+			<result name="success" type="dispatcher">
+                <param name="location">/resultjson.jsp</param>
+            </result>
+			<result name="error" type="dispatcher">
+                <param name="location">/resultjson.jsp</param>
+            </result>
+			<result name="illegal" type="dispatcher">
+                <param name="location">/resultxml.jsp</param>
+            </result>
+            <interceptor-ref name="defaultStack" />
+		</action>
+		
+		
+		<action name="parkingPatrolSearch" class="parkingPatrolSearchAction">
+			<result name="success" type="dispatcher">
+                <param name="location">/pages/carservice/parkingpatrol/parkingpatrollist.jsp</param>
+            </result>
+            <result name="search" type="dispatcher">
+                <param name="location">/pages/carservice/parkingpatrol/parkingpatrolpage.jsp</param>
+            </result>
+			<result name="error" type="dispatcher">
+                <param name="location">error.jsp</param>
+            </result>
+			<interceptor-ref name="defaultStack"/>
+		</action>
+		<action name="parkingPatrolGet" class="parkingPatrolGetAction">
+			<result name="success" type="dispatcher">
+                <param name="location">/pages/carservice/parkingpatrol/parkingpatrolget.jsp</param>
+            </result>
+			<result name="error" type="dispatcher">
+                <param name="location">error.jsp</param>
+            </result>
+			<interceptor-ref name="defaultStack"/>
+		</action>
+		<action name="parkingPatrolAdd" class="parkingPatrolAddAction">
+			<result name="success" type="dispatcher">
+                <param name="location">/resultjson.jsp</param>
+            </result>
+			<result name="error" type="dispatcher">
+                <param name="location">/resultjson.jsp</param>
+            </result>
+			<result name="illegal" type="dispatcher">
+                <param name="location">/resultxml.jsp</param>
+            </result>
+            <interceptor-ref name="defaultStack" />
+		</action>
+		<action name="parkingPatrolUpdate" class="parkingPatrolUpdateAction">
+			<result name="success" type="dispatcher">
+                <param name="location">/resultjson.jsp</param>
+            </result>
+			<result name="error" type="dispatcher">
+                <param name="location">/resultjson.jsp</param>
+            </result>
+			<result name="illegal" type="dispatcher">
+                <param name="location">/resultxml.jsp</param>
+            </result>
+            <interceptor-ref name="defaultStack" />
+		</action>
+		<action name="parkingPatrolDelete" class="parkingPatrolDeleteAction">
+			<result name="success" type="dispatcher">
+                <param name="location">/resultjson.jsp</param>
+            </result>
+			<result name="error" type="dispatcher">
+                <param name="location">/resultjson.jsp</param>
+            </result>
+			<result name="illegal" type="dispatcher">
+                <param name="location">/resultxml.jsp</param>
+            </result>
+            <interceptor-ref name="defaultStack" />
+		</action>
+		<action name="parkingPatrolChangeDiscard" class="parkingPatrolChangeDiscardAction">
+			<result name="success" type="dispatcher">
+                <param name="location">/resultjson.jsp</param>
+            </result>
+			<result name="error" type="dispatcher">
+                <param name="location">/resultjson.jsp</param>
+            </result>
+			<result name="illegal" type="dispatcher">
+                <param name="location">/resultxml.jsp</param>
+            </result>
+            <interceptor-ref name="defaultStack" />
+		</action>
+		
+		<action name="carPatrolSearch" class="carPatrolSearchAction">
+			<result name="success" type="dispatcher">
+                <param name="location">/pages/carservice/carpatrol/carpatrollist.jsp</param>
+            </result>
+            <result name="inparking" type="dispatcher">
+                <param name="location">/pages/carservice/carpatrol/carpatrolinparkinglist.jsp</param>
+            </result>
+			<result name="error" type="dispatcher">
+                <param name="location">error.jsp</param>
+            </result>
+			<interceptor-ref name="defaultStack"/>
+		</action>
+		<action name="carPatrolGet" class="carPatrolGetAction">
+			<result name="success" type="dispatcher">
+                <param name="location">/pages/carservice/carpatrol/carpatrolget.jsp</param>
+            </result>
+			<result name="error" type="dispatcher">
+                <param name="location">error.jsp</param>
+            </result>
+			<interceptor-ref name="defaultStack"/>
+		</action>
+		<action name="carPatrolAdd" class="carPatrolAddAction">
+			<result name="success" type="dispatcher">
+                <param name="location">/resultjson.jsp</param>
+            </result>
+			<result name="error" type="dispatcher">
+                <param name="location">/resultjson.jsp</param>
+            </result>
+			<result name="illegal" type="dispatcher">
+                <param name="location">/resultxml.jsp</param>
+            </result>
+            <interceptor-ref name="uploadStack"/>
+		</action>
+		<action name="carPatrolUpdate" class="carPatrolUpdateAction">
+			<result name="success" type="dispatcher">
+                <param name="location">/resultjson.jsp</param>
+            </result>
+			<result name="error" type="dispatcher">
+                <param name="location">/resultjson.jsp</param>
+            </result>
+			<result name="illegal" type="dispatcher">
+                <param name="location">/resultxml.jsp</param>
+            </result>
+            <interceptor-ref name="uploadStack"/>
+		</action>
+		<action name="carPatrolDelete" class="carPatrolDeleteAction">
+			<result name="success" type="dispatcher">
+                <param name="location">/resultjson.jsp</param>
+            </result>
+			<result name="error" type="dispatcher">
+                <param name="location">/resultjson.jsp</param>
+            </result>
+			<result name="illegal" type="dispatcher">
+                <param name="location">/resultxml.jsp</param>
+            </result>
+            <interceptor-ref name="defaultStack" />
+		</action>
+		
+		
+				
+		<!-- 损坏上报 -->
+		<action name="carbreak" class="carbreakAction">
+			<result name="success" type="dispatcher">
+				<param name="location">/pages/carservice/carBreak/carBreakPage.jsp</param>
+			</result>
+		</action>
+		
+		<action name="carBreakDetail" class="carbreakAction" method="carBreakDetail">
+			<result name="success" type="dispatcher">
+				<param name="location">/pages/carservice/carBreak/carBreakDetail.jsp</param>
+			</result>
+		</action>
+		
+		<!-- 车辆评价 -->
+		<action name="searchCarCommon" class="carCommonAction" method="searchCarCommon">
+			<result name="success" type="dispatcher">
+				<param name="location">/pages/carservice/carcommon/searchCarCommon.jsp</param>
+			</result>
+		</action>
+		<action name="caCommonDetail" class="carCommonAction" method="caCommonDetail">
+			<result name="success" type="dispatcher">
+				<param name="location">/pages/carservice/carcommon/carCommonDetail.jsp</param>
+			</result>
+		</action>
+		
+	</package>
+	
+</xwork>

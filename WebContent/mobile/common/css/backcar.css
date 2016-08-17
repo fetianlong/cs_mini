@@ -1,0 +1,41 @@
+@charset "utf-8";
+/* CSS Document */
+
+.CarImgBlock {
+	box-shadow: 0 1px 3px #999;
+	margin-bottom: 20px;
+	background: #FFF;
+}
+
+.table>tbody>tr>td, .table>tbody>tr>th, .table>tfoot>tr>td, .table>tfoot>tr>th, .table>thead>tr>td, .table>thead>tr>th {
+	border-top: none;
+	font-size: 14px;
+	vertical-align: baseline;
+}
+
+.table>tbody>tr>td:first-of-type {
+	width: 50%;
+}
+
+.table>tbody>tr>td:last-of-type {
+	color: #8d8d8d;
+}
+
+.table {
+	border: none;
+}
+
+.table>tbody>tr:last-of-type>td:last-of-type {
+	font-size: 32px;
+	color: #4bd3a5;
+	font-weight: bold;
+}
+
+.BottomButton .Tips {
+	font-size: 12px;
+	margin-bottom: 10px;
+}
+
+.BottomButton .fa {
+	color: #4fb084;
+}

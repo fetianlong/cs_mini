@@ -1,0 +1,1617 @@
+@charset "utf-8";
+/* CSS Document */
+
+body {
+	font-family: "Segoe UI", "Lucida Grande", Helvetica, Arial, "微软雅黑", "Microsoft YaHei", FreeSans, Arimo, "Droid Sans","wenquanyi micro hei","Hiragino Sans GB", "Hiragino Sans GB W3", Arial, sans-serif;
+	overflow: hidden;
+}
+
+a {
+	text-decoration: none;
+	color: #333333;	
+}
+
+a:link, a:visited {
+	color: #333333;
+	text-decoration: none;
+}
+	
+a:hover, a:active {
+	color: #000;
+	text-decoration: none;
+}
+
+.LeftBlock {
+	background: #43444D;
+	width: 15%;
+	height: 100%;
+	float: left;
+	padding: 10px 0;
+	color: #ffffff;
+	overflow-x: hidden;
+	overflow-y: auto;
+}
+
+.LeftBlock::-webkit-scrollbar {  
+    width: 4px;
+	background: #3d3d3d;
+}
+  
+/*定义滑块 内阴影+圆角*/  
+.LeftBlock::-webkit-scrollbar-thumb {  
+    border-radius: 2px;
+    background-color: #666666;  
+}
+
+.LeftBlock .UserInfoBlock .UserPhoto {
+	position: relative;
+	border-radius: 50%;
+	height: 100px;
+	width: 100px;
+	overflow: hidden;
+	padding: 0;
+	margin-bottom: 5px;
+	border: 4px solid #7B7979;
+}
+
+.LeftBlock .UserInfoBlock .UserPhoto img {
+	width: 100px;
+	height: 100px;
+	text-align: center;
+	border-radius: 50%;
+}
+
+.LeftBlock .UserInfoBlock .UserPhoto p {
+	position: absolute;
+	left: 0;
+	bottom: 0;
+	color: #FFF;
+	background: rgba(0,0,0,0.8);
+	text-align: center;
+	font-size: 14px;
+	line-height: 30px;
+	margin-bottom: 0;
+	width: 100%;
+}
+
+.LeftBlock .UserInfoBlock .UserName {
+	margin-bottom: 5px;
+	font-size: 18px;
+}
+
+.LeftBlock .UserInfoBlock .UserName span {
+	margin: 0 5px;
+}
+
+.LeftBlock .UserInfoBlock .UserLastTime {
+	font-size: 12px;
+	margin-bottom: 10px;
+}
+
+.LeftBlock .MainMenuUl {
+	padding: 0;
+	margin: 0;
+	list-style: none;
+	overflow-x: hidden;
+	overflow-y: auto;
+}
+
+.LeftBlock .MainMenuUl>li {
+	list-style: none;
+	border-bottom: solid 1px #5c5c5c;
+}
+
+.LeftBlock .MainMenuUl li a {
+	position: relative;
+	display: block;
+	color: #ffffff;
+	background: transparent;
+	font-size: 16px;
+	line-height: 26px;
+	padding: 5px 0 5px 20px;
+}
+
+.LeftBlock .MainMenuUl li a:hover {
+	color: #FFF;
+}
+
+.LeftBlock .MainMenuUl>li>ul>li>a .fa {
+	color: #FFF;
+}
+
+.LeftBlock .MainMenuUl>li>ul>li>a:hover .fa {
+	color: #FFF;
+}
+
+.LeftBlock .MainMenuUl>li.active>a:hover {
+	color: #FFF;
+}
+
+.LeftBlock .MainMenuUl>li>ul>li.active a {
+	color: #1aba9c;
+}
+
+.LeftBlock .MainMenuUl>li>ul>li.active a .fa {
+	color: #FFF;
+}
+
+.LeftBlock .MainMenuUl>li>ul {
+	display: none;
+	margin: 0;
+	list-style: none;
+}
+
+.LeftBlock .MainMenuUl>li>ul>li {
+	list-style: none;
+}
+
+.LeftBlock .MainMenuUl>li>ul>li a {
+	padding-top: 2px;
+	padding-bottom: 2px;
+	font-size: 16px;
+}
+
+.LeftBlock .MainMenuUl>li>ul>li a .fa {
+	margin-right: 5px;
+}
+
+.LeftBlock .MainMenuUl .MenuImg {
+	display: inline-block;
+	margin-right: 10px;
+	margin-top: 2px;
+	background-image: url(../images/main/menuimg.png);
+	background-repeat: no-repeat;
+	width: 15px;
+	height: 15px;
+}
+
+.LeftBlock .MainMenuUl .MenuImg1 .MenuImg {
+	background-position: -255px 0;
+}
+
+.LeftBlock .MainMenuUl .MenuImg1:hover .MenuImg {
+	background-position: -240px 0;
+}
+
+.LeftBlock .MainMenuUl .MenuImg2 .MenuImg {
+	background-position: -15px 0;
+}
+
+.LeftBlock .MainMenuUl .MenuImg2:hover .MenuImg {
+	background-position: 0 0;
+}
+
+.LeftBlock .MainMenuUl .MenuImg3 .MenuImg {
+	background-position: -45px 0;
+}
+
+.LeftBlock .MainMenuUl .MenuImg3:hover .MenuImg {
+	background-position: -30px 0;
+}
+
+.LeftBlock .MainMenuUl .MenuImg4 .MenuImg {
+	background-position: -75px 0;
+}
+
+.LeftBlock .MainMenuUl .MenuImg4:hover .MenuImg {
+	background-position: -60px 0;
+}
+
+.LeftBlock .MainMenuUl .MenuImg5 .MenuImg {
+	background-position: -105px 0;
+}
+
+.LeftBlock .MainMenuUl .MenuImg5:hover .MenuImg {
+	background-position: -90px 0;
+}
+
+.LeftBlock .MainMenuUl .MenuImg6 .MenuImg {
+	background-position: -135px 0;
+}
+
+.LeftBlock .MainMenuUl .MenuImg6:hover .MenuImg {
+	background-position: -120px 0;
+}
+.LeftBlock .MainMenuUl .MenuImg6_1 .MenuImg {
+	background-position: -241px 0;
+}
+
+.LeftBlock .MainMenuUl .MenuImg6_1:hover .MenuImg {
+	background-position: -256px 0;
+}
+.LeftBlock .MainMenuUl .MenuImg7 .MenuImg {
+	background-position: -195px 0;
+}
+
+.LeftBlock .MainMenuUl .MenuImg7:hover .MenuImg {
+	background-position: -180px 0;
+}
+.LeftBlock .MainMenuUl .MenuImg7_1 .MenuImg {
+	background-position: -150px 0;
+}
+
+.LeftBlock .MainMenuUl .MenuImg7_1:hover .MenuImg {
+	background-position: -165px 0;
+}
+
+.LeftBlock .MainMenuUl .MenuImg8 .MenuImg {
+	background-position: -195px 0;
+}
+
+.LeftBlock .MainMenuUl .MenuImg8:hover .MenuImg {
+	background-position: -180px 0;
+}
+
+.LeftBlock .MainMenuUl .MenuImg9 .MenuImg {
+	background-position: -225px 0;
+}
+
+.LeftBlock .MainMenuUl .MenuImg9:hover .MenuImg {
+	background-position: -210px 0;
+}
+
+.LeftBlock .MainMenuUl .RightFa {
+	position: absolute;
+	right: -2px;
+	top: 3px;
+	display: none;
+	color: #e9e9e9;
+}
+
+.LeftBlock .MainMenuUl .MenuLink {
+	position: relative;
+	cursor: pointer;
+}
+
+.LeftBlock .MainMenuUl li.active .MenuLink {
+	background: #2b2b2b;
+}
+
+.LeftBlock .MainMenuUl li.active .MenuImg1 .MenuImg {
+	background-position: -240px 0;
+}
+
+.LeftBlock .MainMenuUl li.active .MenuImg2 .MenuImg {
+	background-position: 0 0;
+}
+
+.LeftBlock .MainMenuUl li.active .MenuImg3 .MenuImg {
+	background-position: -30px 0;
+}
+
+.LeftBlock .MainMenuUl li.active .MenuImg4 .MenuImg {
+	background-position: -60px 0;
+}
+
+.LeftBlock .MainMenuUl li.active .MenuImg5 .MenuImg {
+	background-position: -90px 0;
+}
+
+.LeftBlock .MainMenuUl li.active .MenuImg6 .MenuImg {
+	background-position: -120px 0;
+}
+
+.LeftBlock .MainMenuUl li.active .MenuImg7 .MenuImg {
+	background-position: -150px 0;
+}
+
+.LeftBlock .MainMenuUl li.active .MenuImg8 .MenuImg {
+	background-position: -180px 0;
+}
+
+.LeftBlock .MainMenuUl li.active .MenuImg9 .MenuImg {
+	background-position: -210px 0;
+}
+
+.LeftBlock .MainMenuUl .DirectionArrow {
+	position: absolute;
+	right: 30px;
+	top: 10px;
+	color: #777777;
+}
+
+.LeftBlock .MainMenuUl li.active .DirectionArrow {
+	color: #ff7a58;
+}
+
+.RightBlock {
+	float: left;
+	width: 85%;
+	height: 100%;
+	background: #e9e9e9;
+}
+
+.RightBlock .Header {
+	background: #575D60;
+	padding: 0;
+}
+
+.RightBlock .Header .HideMenuBlock {
+	padding: 0; 
+}
+
+.RightBlock .Header .HideMenuBlock .HideMenuButton {
+	background:#22C599;
+	color: #ffffff; border-radius: 0px; padding: 20px;
+}
+
+.RightBlock .Header .HideMenuBlock .HideMenuButton:hover {
+	color: #FFF;
+}
+
+.RightBlock .Header .SearchBlock {
+	margin-left: 300px;
+	margin-top: 14px;
+}
+
+.RightBlock .Header .SearchBlock .Search {
+	background: #ec9780;
+	border-radius: 20px;
+	padding: 0 10px;
+	width: 250px;
+}
+
+.RightBlock .Header .SearchBlock .Search input {
+	font-size: 14px;
+	background: #ec9780;
+	border: solid 1px #ec9780;
+	color: #FFF;
+	box-shadow: none;
+	margin: 0;
+	padding: 0;
+	line-height: 28px;
+	width: 195px;
+}
+
+.RightBlock .Header .SearchBlock .Search input::-webkit-input-placeholder { /* WebKit browsers */
+    color: #FFF;
+}
+.RightBlock .Header .SearchBlock .Search input:-moz-placeholder { /* Mozilla Firefox 4 to 18 */
+    color: #FFF;
+}
+.RightBlock .Header .SearchBlock .Search input::-moz-placeholder { /* Mozilla Firefox 19+ */
+    color: #FFF;
+}
+.RightBlock .Header .SearchBlock .Search input:-ms-input-placeholder { /* Internet Explorer 10+ */
+    color: #FFF;
+}
+
+.RightBlock .Header .SearchBlock .Search input:focus {
+	border: solid 1px #ec9780;
+	box-shadow: none;
+}
+
+.RightBlock .Header .SearchBlock .Search button {
+	height: 28px;
+	width: 28px;
+	color: #FFF;
+	background: none;
+	text-align: center;
+	padding: 0;
+	margin: 0;
+}
+
+.RightBlock .Header .SearchBlock .Search button .fa {
+	padding: 0;
+	margin: 0;
+}
+
+.RightBlock .Header .MessageBlock {
+	position: relative;
+}
+
+.RightBlock .Header .MessageBlock span {
+	position: absolute;
+	top: 12px;
+	right: 10px;
+	width: 15px;
+	height: 15px;
+	font-size: 8px;
+	color: #FFF;
+	text-align: center;
+	line-height: 15px;
+	background: #28b779;
+	border-radius: 50%;
+}
+
+.RightBlock .Header .MessageBlock .MessageButton {
+	color: #FFF;
+	width: 60px;
+	height: 60px;
+	background: transparent;
+	border: none;
+}
+
+.RightBlock .Header .MessageBlock .MessageButton:hover {
+	background: #c65b3f;
+}
+
+.RightBlock .Header .ExitBlock .ExitButton {
+	color: #FFF;
+	width: 62px;
+	height: 62px;
+	background: transparent;
+	border: none;
+}
+
+.RightBlock .Header .ExitBlock .ExitButton:hover {
+	background: #c65b3f;
+}
+
+.RightBlock .Header .PwdBlock .PwdButton {
+	color: #FFF;
+	width: 62px;
+	height: 62px;
+	background: transparent;
+	border: none;
+}
+
+.RightBlock .Header .PwdBlock .PwdButton:hover {
+	background: #c65b3f;
+}
+.RightBlock .Header>.row {
+	margin-right: 0;
+}
+
+.RightBlock .NavBarBlock {
+	background: none;
+	margin:8px 0 0 15px;
+	padding: 5px;
+	width:77%;
+}
+
+.RightBlock .NavBarBlock .NavBarTabs {
+	list-style: none;
+	margin: 0;
+	padding: 0;
+	height: 35px;
+	overflow-y: auto;
+	overflow-x: none;
+}
+
+.RightBlock .NavBarBlock .NavBarTabs>li[tags="tab_index"] .fa {
+	display: none !important;
+}
+
+.RightBlock .NavBarBlock .NavBarTabs li {
+	display: block;
+	float: left;
+	background: #ebedef;
+	padding: 0 26px;
+	border-radius: 5px;
+	margin-right: 5px;
+}
+
+.RightBlock .NavBarBlock .NavBarTabs li:hover {
+	background: #1abc9c;
+	color: #FFF;
+	padding: 0 18px;
+}
+
+.RightBlock .NavBarBlock .NavBarTabs li[tags="tab_index"]:hover {
+	padding: 0 26px;
+}
+
+.RightBlock .NavBarBlock .NavBarTabs li[tags="tab_index"].active {
+	padding: 0 26px;
+}
+
+.RightBlock .NavBarBlock .NavBarTabs li.active {
+	background: #16a085;
+	color: #FFF;
+	padding: 0 18px;
+}
+
+.RightBlock .NavBarBlock .NavBarTabs li.active a {
+	color: #FFF;
+}
+
+.RightBlock .NavBarBlock .NavBarTabs li.active .fa {
+	display: inline-block;
+}
+
+.RightBlock .NavBarBlock .NavBarTabs li:hover a {
+	color: #FFF;
+}
+
+.RightBlock .NavBarBlock .NavBarTabs li:hover .fa {
+	display: inline-block;
+}
+
+.RightBlock .NavBarBlock .NavBarTabs li a {
+	display: inline-block;
+	font-size: 15px;
+	line-height: 35px;
+}
+
+.RightBlock .NavBarBlock .NavBarTabs li .fa {
+	display: none;
+	cursor: pointer;
+	margin-left: 5px;
+}
+
+.RightBlock .ContentBlock {
+	margin: 10px;
+}
+
+.RightBlock .ContentBlock>div.tab-pane>div.row {
+	margin-bottom: 10px;
+}
+
+.RightBlock .ContentBlock .HomeButton a {
+	position: relative;
+	display: block;
+	color: #FFF;
+	padding: 10px;
+	height: 100px;
+	cursor: pointer;
+}
+
+.RightBlock .ContentBlock .HomeButton>div {
+	padding-left: 5px;
+	padding-right: 5px;
+}
+
+.RightBlock .ContentBlock .HomeButton a.ShouyeButton {
+	background: #F04D68;
+	margin-left: 10px;
+}
+
+.RightBlock .ContentBlock .HomeButton a.ShezhiButton {
+	background: #EF6B2D;
+}
+
+.RightBlock .ContentBlock .HomeButton a.CaiwuButton {
+	background: #ECB638;
+}
+
+.RightBlock .ContentBlock .HomeButton a.ShujuButton {
+	background: #4B6CDF;
+	margin-right: 10px;
+}
+
+.RightBlock .ContentBlock .HomeButton a h3 {
+	position: absolute;
+	right: 10px;
+	top: 10px;
+	margin: 0;
+	padding: 0;
+}
+
+.RightBlock .ContentBlock .HomeButton a p {
+	position: absolute;
+	bottom: 0;
+	left: 0;
+	width: 100%;
+	font-size: 14px;
+	line-height: 26px;
+	padding: 0 10px;
+	color: #FFF;
+	background: rgba(0,0,0,0.1);
+	margin-bottom: 0;
+}
+
+.RightBlock .ContentBlock .HomeButton a p .fa {
+	line-height: 26px;
+}
+
+.RightBlock .ContentBlock .HomeButton a.CaiwuButton .fa-stack .fa-usd {
+	color: #852b99;
+}
+
+.RightBlock #home {
+	margin: 10px;
+	overflow-y: auto;
+	overflow-x: hidden;
+}
+
+.RightBlock #home .TubiaoBlock div[class^="col-"] {
+	/*padding-left: 5px;
+	padding-right: 5px;*/
+}
+
+.RightBlock #home .TubiaoBlock .Border {
+	border: solid 1px #CCC;
+	background: #FFF;
+}
+
+.RightBlock #home .TubiaoBlock .Border .Caption {
+	font-size: 16px;
+	line-height: 30px;
+	background: #1abc9c;
+	color: #FFF;
+	text-indent: 10px;
+}
+
+.RightBlock #home .YunyingBlock table {
+	margin: 0;
+}
+
+.RightBlock #home .YunyingBlock table th, .RightBlock #home .YunyingBlock table td {
+	text-align: center;
+}
+
+.RightBlock #home .ShujuBlock .TubiaoContent {
+	height: 217px;
+}
+
+.RightBlock #home .ShujuBlock .TubiaoContent .LoadingImg {
+	padding-top: 60px;
+}
+
+.RightBlock #home .GaikuangBlock table {
+	margin: 0;
+}
+
+.RightBlock #home .GaikuangBlock th, .RightBlock #home .GaikuangBlock td {
+	vertical-align: baseline;
+}
+
+.RightBlock #home .GaikuangBlock .fa {
+	width: 30px;
+	color: #4eb7f3;
+}
+
+.RightBlock #home .GaikuangBlock a {
+	display: inline-block;
+	margin: 0 3px;
+	font-weight: bold;
+	font-size: 18px;
+	cursor: pointer;
+}
+
+.RightBlock #home .GaikuangBlock a.blue {
+	color: #265CFF;
+}
+
+.RightBlock #home .GaikuangBlock a.red {
+	color: #ff0000;
+}
+
+
+.RightBlock #home .QicheSearch>div[class^="col-"] {
+	padding-left: 5px;
+	padding-right: 5px;
+}
+
+.RightBlock #home .QicheSearch .Border {
+	background: #FFF;
+	padding: 5px;
+}
+
+.RightBlock #home .QicheSearch label {
+	color: #525151;
+	font-weight: normal;
+}
+
+.RightBlock #home .QicheSearch input[type="text"] {
+	width: 130px;
+}
+
+.RightBlock #home .QicheSearch .form-group {
+	margin-right: 20px;
+}
+
+.RightBlock #home .QicheSearch .form-control {
+	padding: 0 5px; font-size:12px;
+}
+
+.SubmitButton {
+	background: #e86d4d;
+	color: #FFF;
+}
+
+.SubmitButton:hover {
+	background: #fa7653;
+	color: #FFF;
+}
+
+.RightBlock .ContentBlock .tab-pane iframe {
+	width: 100%;
+	border: none;
+	height: 640px;
+}
+
+.RightBlock .ContentBlock .SubLeftBlock {
+	width: 20%;
+	float: left;
+	background: #3d3d3d;
+	height: 650px;
+	margin-left: -10px;
+	border-left: solid 1px #333;
+}
+
+.RightBlock .ContentBlock .SubLeftBlock .SubMenuUl {
+	padding: 10px;
+	margin: 0;
+	padding-top: 50px;
+	list-style: none;
+}
+
+.RightBlock .ContentBlock .SubLeftBlock .SubMenuUl li {
+	margin: 0;
+	padding: 0;
+	list-style: none;
+	border-bottom: solid 1px #5c5c5c;
+}
+
+.RightBlock .ContentBlock .SubLeftBlock .SubMenuUl li a {
+	display: block;
+	font-size: 16px;
+	line-height: 40px;
+	color: #FFF;
+	padding-left: 50px;
+}
+
+.RightBlock .ContentBlock .SubLeftBlock .SubMenuUl li a:hover {
+	color: #e86d4d;
+}
+
+.RightBlock .ContentBlock .SubLeftBlock .SubMenuUl li a:hover .fa {
+	color: #FFF;
+}
+
+.RightBlock .ContentBlock .SubLeftBlock .SubMenuUl li a .fa {
+	margin-right: 5px;
+}
+
+.RightBlock .ContentBlock .SubLeftBlock .SubMenuUl li.active a {
+	color: #e86d4d;
+}
+
+.RightBlock .ContentBlock .SubLeftBlock .SubMenuUl li.active a .fa {
+	color: #FFF;
+}
+
+.RightBlock .ContentBlock .SubRightBlock {
+	background: #0CF;
+	float: left;
+	width: 100%;
+}
+
+.SubPage {
+	background: transparent;
+	overflow-y: auto;
+}
+
+.SubPage .SelectBlock {
+	border-bottom: solid 1px #e2e1e1;
+}
+
+.SubPage .SubmitButtonBlock .btn {
+	color: #FFF;
+}
+
+.SubPage .SubmitButtonBlock .btn .fa {
+	margin-right: 5px;
+}
+
+.SubPage .SubmitButtonBlock .btn:hover {
+	color: #FFF;
+}
+
+.SubPage .SubmitButtonBlock .Button1 {
+	background: #22C599;
+}
+
+.SubPage .SubmitButtonBlock .Button2 {
+	background: #4b8df8;
+}
+
+.SubPage .SubmitButtonBlock .Button3 {
+	background: #0036D9;
+}
+
+.SubPage .ControlBlock {
+	background: #FFF;
+	padding-top: 10px;
+	margin-bottom: 20px;
+}
+
+.SubPage .row {
+	margin-left: 0;
+	margin-right: 0;
+}
+
+.SubPage .SubmitButtonBlock {
+	padding-top: 20px;
+	padding-bottom: 20px;
+}
+
+.SubPage .TableBlock table td {
+	text-align: center;
+	vertical-align: middle;
+}
+
+.SubPage .TableBlock table td a {
+	color: #ea6d72;
+	    font-weight: bold;
+	text-decoration: none;
+}
+
+.SubPage .TableBlock table td a:hover {
+	text-decoration: underline;
+}
+
+.SubPage .TableBlock table .ths td a {
+	color: #FFF ;
+	text-decoration: none;
+}
+
+.SubPage .TableBlock table .ths td a:hover {
+	text-decoration: underline;
+}
+
+.SubPage .TableBlock table .ths td {
+	font-weight: bold;
+	
+	font-size: 14px;
+	line-height: 30px;
+}
+
+.SubPage .TableBlock table td .pan_btn1 {
+	display: inline-block; color:#22C599;
+	background:none;
+}
+
+.SubPage .TableBlock table td .pan_btn2 {
+	display: inline-block; color:#22C599;
+	background:none;
+}
+
+.SubPage .TableBlock table td .pan_btn3 {
+	display: inline-block; color:#22C599;
+	background: none;
+}
+
+.SubPage .TableBlock table td .pan_btn4 {
+	display: inline-block;color:#22C599;
+	background:none;
+}
+
+.SubPage .TableBlock table td .btn_center {
+	display: inline-block;
+	background: #4b8df8;
+}
+
+.pan_btn5 {
+	display: inline-block;
+	background: #e86d4d;
+	text-align: center;
+}
+
+.pan_btn5:hover {
+	color: #FFF;
+}
+
+.pan_btn7 {
+	display: inline-block;
+	text-align: center;
+	cursor:default; 
+	background-color:#b2b2b2;
+	color: #FFF;
+	padding: 2px 5px;
+	border-radius: 2px;
+ }
+ 
+.pan_btnDisabled {
+  	cursor: default !important; 
+	display: inline-block;
+	text-align: center;
+ 	background-color: #666;
+ }
+
+.SubPage .TableBlock table td .pan_btn1, .SubPage .TableBlock table td .pan_btn2, .SubPage .TableBlock table td .pan_btn3, .SubPage .TableBlock table td .pan_btn4, .pan_btn5, .SubPage .TableBlock table td .btn_center, .pan_btnDisabled {
+	                                      
+	padding: 2px 5px;
+	border-radius: 2px;
+	cursor: pointer;
+}
+
+.SubPage .a_style {
+	margin-top: 10px;
+	float: right;
+}
+
+.SubPage .a_style li {
+	display: inline-block;
+	list-style: none;
+	padding: 0;
+	 margin: 0;
+}
+
+.SubPage .a_style a {
+	background: #FFF;
+	padding: 2px 5px;
+	color: #e86d4d;
+	text-align: center;
+	border-radius: 2px;
+	border: solid 1px #CCC;
+	margin-right: 2px;
+}
+
+.SubPage .a_style input {
+	width: 24px;
+}
+
+.tc, .table_con {
+	margin-top: 20px;
+	margin-left: 20px;
+}
+
+.tc .table>tbody>tr>td, .tc .table>tbody>tr>th, .tc .table>tfoot>tr>td, .tc .table>tfoot>tr>th, .tc .table>thead>tr>td, .tc .table>thead>tr>th {
+	border-top: none;
+}
+
+.table_con .table>tbody>tr>td, .table_con .table>tbody>tr>th, .table_con .table>tfoot>tr>td, .table_con .table>tfoot>tr>th, .table_con .table>thead>tr>td, .tc .table>thead>tr>th {
+	border-top: none;
+}
+
+.xxgl>tbody>tr>td, .xxgl>tbody>tr>th, .xxgl>tfoot>tr>td, .xxgl>tfoot>tr>th, .xxgl>thead>tr>td, .xxgl>thead>tr>th {
+	border-top: none;
+}
+
+.tc .zuo, .tc .zuo1 {
+	font-size: 12px;
+	line-height: 30px;
+	width: 25%;
+}
+
+.xxgl .zuo, .xxgl .zuo1 {
+	font-size: 12px;
+	line-height: 30px;
+	width: 150px;
+}
+
+.xxgl .zuo span, .xxgl .zuo1 span {
+	font-size: 12px;
+	line-height: 30px;
+}
+
+.xxgl .zuo .red, .xxgl .zuo1 .red {
+	color: #F00;
+	margin-right: 3px;
+}
+
+.tc .zuo span, .tc .zuo1 span {
+	font-size: 12px;
+	line-height: 30px;
+}
+
+.tc .zuo .red, .tc .zuo1 .red {
+	color: #F00;
+	margin-right: 3px;
+}
+
+.tc .you label {
+	font-size: 12px;
+	line-height: 30px;
+}
+
+.tc input {
+	width: 60%;
+}
+
+.tc textarea {
+	width: 60% !important;
+}
+
+.tc select {
+	width: 60%;
+}
+
+.xxgl select {
+	width: 60%;
+}
+
+.table_con span {
+	font-size: 12px;
+	line-height: 30px;
+	font-weight: normal;
+}
+
+.table_con table tr th {
+	width: 100px;
+}
+
+.table_con input {
+	display: inline-block;
+	width: 60%;
+}
+
+.table_con input[type="checkbox"] {
+	display: inline;
+	width: auto;
+}
+
+.table_con .tcCheckBox {
+	height: 13px;
+}
+
+.table_con .tcImg {
+	display: inline-block;
+}
+
+.table_con table .trr .red {
+	color: #F00;
+	margin-left: 3px;
+}
+
+.btt {
+	margin-top: 50px;
+	text-align: center;
+}
+
+.btt .fl {
+	display: inline-block;
+	margin: 0 10px;
+	cursor: pointer;
+	padding: 6px 40px;
+	font-size: 12px;
+	background: #e86d4d;
+	color: #FFF;
+	border-radius: 3px;
+}
+
+.btt .qzbtn {
+	background: #a0a0a0;
+}
+
+.tc .text-danger {
+	font-size: 12px !important;
+}
+
+.tc .searchinputbut {
+	display: inline-block;
+	width: 20%;
+}
+
+.wdglPage {
+	padding: 10px;
+}
+
+.wdglPage .searchinputbut {
+	display: inline-block;
+	width: 20%;
+}
+
+.tc #vehiclePlateId {
+	display: inline-block;
+	width: 30%;
+}
+
+.tc #setNum {
+	display: inline-block;
+	width: 30%;
+}
+
+.tc #orderCode {
+	display: inline-block;
+	width: 30%;
+}
+
+.tc #parkingPatrolCode {
+	display: inline-block;
+	width: 30%;
+}
+
+.sgglPage input[type="file"] {
+	display: inline-block;
+	width: auto;
+}
+
+.sgglPage input[type="button"] {
+	display: inline-block;
+	width: auto;
+}
+
+.sgglPage #addAccidentPhotoDiv>div {
+	margin-bottom: 10px;
+}
+
+.sgglPage .xxgl .you {
+	width: 300px;
+}
+
+.sgglPage .xxgl .you, .sgglPage .xxgl .you1 {
+	font-size: 12px;
+	line-height: 30px;
+}
+
+.sgglPage .xxgl .Border {
+	border-bottom: solid 1px #CCC;
+}
+
+.sgglPage .SubTable {
+	border-radius: 5px;
+}
+
+.sgglPage .CaptionTd {
+	width: 100px;
+}
+
+.sgglPage .ContentTd {
+	width: 40%;
+}
+
+.bxglPage input[type="checkbox"] {
+	width: auto;
+	height: 20px;
+}
+
+.bxglPage .InlineInput {
+	display: inline-block;
+}
+
+.hyldglPage label.text-danger {
+	display: block;
+}
+
+
+.tc #memberName {
+	display: inline-block;
+	width: 30%;
+}
+
+.tc #parkingName {
+	display: inline-block;
+	width: 30%;
+}
+
+.tc #userName {
+	display: inline-block;
+	width: 30%;
+}
+
+.wdglPage .wdglhcwd {
+	display: inline-block;
+	width: 50%;
+}
+
+.tc #callPhoneNo {
+	display: inline-block;
+	width: 30%;
+}
+
+.tc #callOrderNo {
+	display: inline-block;
+	width: 30%;
+}
+
+.tc #callName {
+	display: inline-block;
+	width: 30%;
+}
+
+.clzglPage {
+	margin-top: 20px;
+}
+
+.clzglPage .MiddleButtonBlock {
+	margin-top: 100px;
+}
+
+.clzglPage .MiddleButtonBlock>.row {
+	margin-bottom: 10px;
+}
+
+.clzglPage .SubmitButtonBlock {
+	margin-top: 50px;
+}
+
+.clzglPage .SubmitButtonBlock .fa {
+	margin-right: 5px;
+}
+
+.jfgzglPage #discountBeginDate, .jfgzglPage #discountEndDate {
+	display: inline-block;
+	width: 40%;
+}
+
+.ddqcjkptPage .InfoTable {
+	margin-bottom: 5px;
+}
+
+.ddqcjkptPage .InfoTable tr, .ddqcjkptPage .InfoTable td, .ddqcjkptPage .InfoTable tr, .ddqcjkptPage .InfoTable th {
+	border-top: none;
+}
+
+.ddqcjkptPage .InfoTable th {
+	width: 100px;
+}
+
+.ddqcjkptPage .InfoTable .dc_img {
+	margin-left: 10px;
+}
+
+.ddqcjkptPage #carDetailBaseInfoDiv .biaoge .thbg {
+	text-align: center;
+	width: 80px;
+}
+
+.ddqcjkptPage #carDetailInfoDiv {
+	padding: 10px;
+}
+
+.ddqcjkptPage #carDetailBaseInfoDiv .biaoge td {
+	width: 150px;
+}
+
+.ddqcjkptPage #carDetailBaseInfoDiv .biaoge {
+	margin-top: 20px;
+}
+
+.ddqcjkptPage #carTrajectoryMapDiv {
+	padding-top: 10px;
+}
+
+.ddqcjkptPage #carTrajectoryMapDiv input.form-control {
+	display: inline-block; font-size:12px;
+	width: 160px;
+}
+
+.ddqcjkptPage .panel {
+	border: none;
+	box-shadow: none;
+	-webkit-box-shadow: none;
+}
+
+.ddqcjkptPage #tools {
+	position: absolute;
+	top: 80px;
+	right: 30px;
+	width: 200px;
+}
+
+.ddqcjkptPage #tools .badge {
+	margin-top: 5px;
+}
+
+.ddqcjkptPage #tools .list-group-item {
+	cursor: pointer;
+	padding: 5px 10px;
+}
+
+.ddqcjkptPage #tools img {
+	margin-right: 5px;
+}
+
+.ddqcjkptPage .XingchengInfo {
+	margin-top: 5px;
+}
+
+.ddqcjkptPage .XingchengInfo th, .ddqcjkptPage .XingchengInfo td {
+	text-align: center;
+}
+
+.ddqcjkptPage #carTrajectoryMapDiv .pan_btn5, .ddqcjkptPage #carTrajectoryMapDiv .pan_btn7 {
+	margin-right: 5px;
+}
+	
+
+.hyglbjPage .HalfSelect {
+	display: inline-block;
+	width: 100px;
+}
+
+.hyglbjPage .IDImg {
+	width: 200px;
+}
+.hyshPage .IDImg {
+	width: 200px;
+}
+
+
+.xtczkPage .CheckBoxGroup input[type="checkbox"] {
+	margin-top: 8px;
+	width: 16px;
+	height: 16px;
+}
+
+.dcPage {
+	margin-top: 20px;
+}
+
+.dcPage .CheckBoxGroup input[type="checkbox"] {
+	margin-top: 8px;
+	width: 16px;
+	height: 16px;
+}
+.dcPage  table td a:hover {
+	text-decoration: underline;
+}
+
+.dcPage  table .ths td a {
+	color: #333;
+	text-decoration: none;
+}
+
+.dcPage  table .ths td a:hover {
+	text-decoration: underline;
+}
+
+.dcPage textarea {
+	width: 60%;
+}
+
+.czrzglPage .table {
+	width: 100%;
+	table-layout: fixed;
+}
+
+.czrzglPage .table tbody tr td.xh {
+	width: 40px;
+}
+
+.czrzglPage .table tbody tr td.czr {
+	width: 80px;
+}
+
+.czrzglPage .table tbody tr td.czsj {
+	width: 150px;
+}
+
+.czrzglPage .table tbody tr td.czmk {
+	width: 100px;
+}
+
+.czrzglPage .table tbody tr td.czlx {
+	width: 80px;
+}
+
+.czrzglPage .table tbody tr td.cznr {
+	text-align: left;
+	word-break: keep-all;             /* 不换行 */
+	white-space: nowrap;            /* 不换行 */
+	overflow: hidden;                  /* 内容超出宽度时隐藏超出部分的内容 */
+	text-overflow: ellipsis;
+}
+
+.czrzglPage .table tbody tr td.cznr span {
+	word-break: keep-all;             /* 不换行 */
+	white-space: nowrap;            /* 不换行 */
+	overflow: hidden;                  /* 内容超出宽度时隐藏超出部分的内容 */
+	text-overflow: ellipsis;
+	text-align: left;
+	margin: 0;
+}
+
+.czjlPage .table tbody tr th {
+	width: 80px;
+}
+
+.BMap_bubble_content .xinxi {
+	float: right;
+	color: #FFF;
+	background: #5bc0de;
+	padding: 2px 5px;
+	border-radius: 2px;
+	cursor: pointer;
+	margin-top: 20px;
+}
+
+.BMap_bubble_content .xinxi img {
+	display: none;
+}
+
+.BMap_bubble_content img.aa {
+	display: none;
+}
+
+.BMap_bubble_content p {
+	margin-bottom: 0;
+	line-height: 24px;
+}
+
+.BMap_bubble_content .MonitorDetail .table {
+	margin: 10px 0;
+}
+
+.BMap_bubble_content .MonitorDetail .table tr td, .BMap_bubble_content .MonitorDetail .table tr th {
+	text-align: center;
+}
+
+.BMap_bubble_content .MonitorDetail .table tr td, .BMap_bubble_content .MonitorDetail .btn-group {
+	margin-left: 50px;
+	margin-top: 10px;
+}
+
+.BMap_bubble_content .MonitorDetail .table tr td, .BMap_bubble_content .MonitorDetail .GuijiButton {
+	margin-right: 30px;
+}
+
+
+.BMap_bubble_content .CDZDetail .table {
+	margin: 10px 0;
+}
+
+.BMap_bubble_content .CDZDetail .table tr td, .BMap_bubble_content .CDZDetail .table tr th {
+	text-align: center;
+}
+
+.BMap_bubble_content .CDZDetail .cdztable {
+	height: 166px;
+	overflow:auto;
+}
+
+.BMap_bubble_content .CDZDetail .dzzt {
+	color: #6e9914;
+}
+
+.ta .tab-content {
+	margin-top: 5px;
+}
+
+.ta .tab-pane .table {
+	border: none;
+}
+
+.ta .a_style li {
+	list-style: none;
+	display: inline-block;
+	padding: 0;
+	margin: 0;
+}
+
+.ta .a_style li input {
+	width: 20px;
+}
+
+.ta .a_style li a {
+	display: inline-block;
+	padding: 2px 5px;
+	border: solid 1px #ddd;
+	border-radius: 2px;
+	text-align: center;
+}
+
+.ta .tab-pane .table {
+	margin-bottom: 0;
+}
+
+.ta .tab-pane .table tbody tr.ths td, .ta .tab-pane .table tbody tr.ths th {
+	text-align: center;
+	font-weight: bold;
+}
+
+.ClzysbdBlock {
+	margin-top: 20px;
+}
+
+.ClzysbdBlock .TableBlock {
+	height: 400px;
+	overflow-y: auto;
+}
+
+.ClzysbdBlock .TableBlock .table {
+	font-size: 12px;
+}
+
+.ClzysbdBlock .TableBlock .table>tbody>tr>td, .ClzysbdBlock .TableBlock .table>tbody>tr>th, .ClzysbdBlock .TableBlock .table>tfoot>tr>td, .ClzysbdBlock .TableBlock .table>tfoot>tr>th, .ClzysbdBlock .TableBlock .table>thead>tr>td, .ClzysbdBlock .TableBlock .table>thead>tr>th {
+	line-height: 14px;
+    padding: 2px 5px;
+	vertical-align: middle;
+}
+
+.ClzysbdBlock .TableBlock .table thead tr th:first-of-type {
+	width: 24px;
+}
+
+.ClzysbdBlock .TableBlock .table tbody tr:hover {
+	cursor: pointer;
+}
+
+.ClzysbdBlock .TableBlock .table tbody tr.selecttr td {
+	background-color: #eeeeee;
+}
+
+.ClzysbdBlock .ButtonGroup {
+	margin-top: 50px;
+}
+
+.ClzysbdBlock .ButtonGroup .btn {
+	background: #FFF;
+	color: #333;
+	border: solid 1px #999;
+}
+
+.ClzysbdBlock .ButtonGroup .btn:hover {
+	background: #F60;
+	color: #FFF;
+	border-color: #F00;
+}
+
+.ClzysbdBlock .ButtonGroup .btn .fa {
+	width: 20px;
+	color: #F60;
+}
+
+.ClzysbdBlock .ButtonGroup .btn:hover .fa {
+	color: #FFF;
+}
+
+.ClzysbdBlock .ControlBlock {
+	margin-top: 40px;
+	margin-bottom: 20px;
+}
+
+.WelcomePage {
+	background: #515151;
+	margin: 0 !important;
+	position: relative;
+}
+
+.WelcomePage .LabelBlock {
+	position: absolute;
+	right: 0px;
+	bottom: 60px;
+	display: block;
+	width: 40%;
+	padding: 20px;
+	text-align: center;
+	z-index: 1;
+}
+
+.WelcomePage .LabelBlock h3 {
+	font-weight: bold;
+	font-size: 40px;
+	margin: 0;
+	color: #FFF;
+	font-family: Arial;
+}
+
+.WelcomePage .LabelBlock p {
+	font-size: 18px;
+	line-height: 30px;
+	margin: 0;
+	color: #b4b1b1;
+}
+
+.WelcomePage .LabelBlock small {
+	color: #b4b1b1;
+}
+
+.WelcomePage .BackgroundBlock {
+	z-index: 0;
+	position: absolute;
+	bottom: 0;
+	left: 0;
+	width: 70%;
+	border-right: solid 1200px transparent;
+	border-bottom: solid 150px #464646;
+}
+
+@media (max-width: 1200px){
+.LeftBlock .MainMenuUl li a {
+	font-size: 14px;
+	line-height: 20px;
+}
+
+.LeftBlock .MainMenuUl>li>ul>li a {
+	font-size: 12px;
+}
+
+.RightBlock .Header .SearchBlock {
+	margin-left: 200px;
+}
+}
+/* table公共样式 */
+.label-success {
+    background:none;
+    color: #006600;
+}
+.label-primary {
+    background:none;
+    color:#ffbf00;
+}
+.label-default {
+    background:none;
+    color:#94140e;
+}
+.label-warning {
+    background:none;
+    color: #007FFF;
+}
+
+#tab_bg_cl {background:#22C599; color:#ffffff; font-size: 14px;}
+#tab_bg_cl td a {color:#ffffff;}

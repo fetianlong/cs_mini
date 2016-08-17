@@ -1,0 +1,259 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE xwork PUBLIC "-//Apache Struts//XWork 1.1.1//EN" 
+"http://struts.apache.org/dtds/xwork-1.1.1.dtd">
+<xwork>
+	<package name="car" extends="webwork-default" namespace="/car">
+		<default-interceptor-ref name="defaultStack"/>
+		
+		<global-results>
+			<result name="timeout" type="dispatcher">
+                <param name="location">error.jsp</param>
+            </result>
+            <result name="illegal" type="dispatcher">
+                <param name="location">error.jsp</param>
+            </result>
+		</global-results>
+		<action name="carSearch" class="carSearchAction">
+			<result name="success" type="dispatcher">
+				<param name="location">/pages/car/car/carList.jsp</param>
+			</result>
+			<result name="search" type="dispatcher">
+				<param name="location">/pages/car/car/carPage.jsp</param>
+			</result>
+			<result name="group" type="dispatcher">
+				<param name="location">/pages/car/car/carBinding.jsp</param>
+			</result>
+		</action>
+		<action name="carGet" class="carGetAction">
+			<result name="add" type="dispatcher">
+				<param name="location">/pages/car/car/carAdd.jsp</param>
+			</result>
+			<result name="update" type="dispatcher">
+				<param name="location">/pages/car/car/carAdd.jsp</param>
+			</result>
+			<result name="bind" type="dispatcher">
+				<param name="location">/pages/car/car/carBind.jsp</param>
+			</result>
+			<result name="dialog" type="dispatcher">
+				<param name="location">/pages/car/car/carDetailDialog.jsp</param>
+			</result>
+		</action>
+		<action name="carAdd" class="carAddAction">
+			<result name="success" type="dispatcher">
+				<param name="location">/resultjson.jsp</param>
+			</result>
+			<result name="error" type="dispatcher">
+				<param name="location">/resultjson.jsp</param>
+			</result>
+		</action>
+		
+		<action name="carDelete" class="carDeleteAction">
+			<result name="success" type="dispatcher">
+				<param name="location">/resultjson.jsp</param>
+			</result>
+			<result name="error" type="dispatcher">
+				<param name="location">/resultjson.jsp</param>
+			</result>
+		</action>
+		<action name="carUpdate" class="carUpdateAction">
+			<result name="success" type="dispatcher">
+				<param name="location">/resultjson.jsp</param>
+			</result>
+			<result name="error" type="dispatcher">
+				<param name="location">/resultjson.jsp</param>
+			</result>
+		</action>
+		
+		<action name="carOnlineManageSearch" class="carOnlineManageAction" method="search">
+			<result name="success" type="dispatcher">
+				<param name="location">/pages/car/caronline/list.jsp</param>
+			</result>
+		</action>
+		
+		<action name="carOnline" class="carOnlineManageAction" method="carOnline">
+			<result name="success" type="dispatcher">
+				<param name="location">/resultjson.jsp</param>
+			</result>
+		</action>
+		<action name="carUnOnline" class="carOnlineManageAction" method="carUnOnline">
+			<result name="success" type="dispatcher">
+				<param name="location">/resultjson.jsp</param>
+			</result>
+		</action>
+
+		
+		
+	</package>
+	
+	<package name="carVehicleModel" extends="webwork-default" namespace="/carVehicleModel">
+		<default-interceptor-ref name="defaultStack"/>
+		
+		<global-results>
+			<result name="timeout" type="dispatcher">
+                <param name="location">error.jsp</param>
+            </result>
+            <result name="illegal" type="dispatcher">
+                <param name="location">error.jsp</param>
+            </result>
+		</global-results>
+		
+		<action name="carVehicleModelSearch" class="carVehicleModelSearchAction">
+			<result name="success" type="dispatcher">
+				<param name="location">/pages/car/carVehicleModel/carVehicleModelList.jsp</param>
+			</result>
+		</action>
+		<action name="carVehicleModelGet" class="carVehicleModelGetAction">
+			<result name="success" type="dispatcher">
+				<param name="location">/pages/car/carVehicleModel/carVehicleModelGet.jsp</param>
+			</result>
+		</action>
+		<action name="carVehicleModelAdd" class="carVehicleModelAddAction">
+			<result name="success" type="dispatcher">
+				<param name="location">/resultjson.jsp</param>
+			</result>
+			<result name="error" type="dispatcher">
+				<param name="location">/resultjson.jsp</param>
+			</result>
+			<interceptor-ref name="uploadStack"/>
+		</action>
+		<action name="carVehicleModelUpdate" class="carVehicleModelUpdateAction">
+			<result name="success" type="dispatcher">
+				<param name="location">/resultjson.jsp</param>
+			</result>
+			<result name="error" type="dispatcher">
+				<param name="location">/resultjson.jsp</param>
+			</result>
+			<interceptor-ref name="uploadStack"/>
+			
+		</action>
+		<action name="carVehicleModelDelete" class="carVehicleModelDeleteAction">
+			<result name="success" type="dispatcher">
+				<param name="location">/resultjson.jsp</param>
+			</result>
+			<result name="error" type="dispatcher">
+				<param name="location">/resultjson.jsp</param>
+			</result>
+		</action>
+	</package>
+	
+	<package name="device" extends="webwork-default" namespace="/device">
+		<default-interceptor-ref name="defaultStack"/>
+		
+		<global-results>
+			<result name="timeout" type="dispatcher">
+                <param name="location">error.jsp</param>
+            </result>
+            <result name="illegal" type="dispatcher">
+                <param name="location">error.jsp</param>
+            </result>
+		</global-results>
+		<action name="deviceSearch" class="deviceSearchAction">
+			<result name="success" type="dispatcher">
+				<param name="location">/pages/device/device/deviceList.jsp</param>
+			</result>
+			<result name="search" type="dispatcher">
+				<param name="location">/pages/device/device/devicePage.jsp</param>
+			</result>
+		</action>
+		<action name="deviceGet" class="deviceGetAction">
+			<result name="add" type="dispatcher">
+				<param name="location">/pages/device/device/deviceAdd.jsp</param>
+			</result>
+			<result name="update" type="dispatcher">
+				<param name="location">/pages/device/device/deviceAdd.jsp</param>
+			</result>
+		</action>
+		<action name="deviceAdd" class="deviceAddAction">
+			<result name="success" type="dispatcher">
+				<param name="location">/resultjson.jsp</param>
+			</result>
+			<result name="error" type="dispatcher">
+				<param name="location">/resultjson.jsp</param>
+			</result>
+		</action>
+		<action name="deviceDelete" class="deviceDeleteAction">
+			<result name="success" type="dispatcher">
+				<param name="location">/resultjson.jsp</param>
+			</result>
+			<result name="error" type="dispatcher">
+				<param name="location">/resultjson.jsp</param>
+			</result>
+		</action>
+		
+		<action name="deviceUpdate" class="deviceUpdateAction">
+			<result name="success" type="dispatcher">
+				<param name="location">/resultjson.jsp</param>
+			</result>
+			<result name="error" type="dispatcher">
+				<param name="location">/resultjson.jsp</param>
+			</result>
+		</action>
+		
+		<action name="deviceSocket" class="deviceSocketAction">
+			<result name="success" type="dispatcher">
+				<param name="location">/resultjson.jsp</param>
+			</result>
+		</action>
+		<action name="deviceChangeIpPort" class="deviceChangeIpPortAction">
+			<result name="success" type="dispatcher">
+				<param name="location">/resultjson.jsp</param>
+			</result>
+		</action>
+		
+	</package>
+	
+	<package name="deviceBinding" extends="webwork-default" namespace="/deviceBinding">
+		<default-interceptor-ref name="defaultStack"/>
+		
+		<global-results>
+			<result name="timeout" type="dispatcher">
+                <param name="location">error.jsp</param>
+            </result>
+            <result name="illegal" type="dispatcher">
+                <param name="location">error.jsp</param>
+            </result>
+		</global-results>
+		<action name="deviceBindingAdd" class="deviceBindingAddAction">
+			<result name="success" type="dispatcher">
+				<param name="location">/resultjson.jsp</param>
+			</result>
+			<result name="error" type="dispatcher">
+				<param name="location">/resultjson.jsp</param>
+			</result>
+		</action>
+		<action name="deviceBindingSearch" class="deviceBindingSearchAction">
+			<result name="success" type="dispatcher">
+				<param name="location">/pages/device/deviceBinding/deviceBindingList.jsp</param>
+			</result>
+		</action>
+		<action name="deviceBindingGet" class="deviceBindingGetAction">
+			<result name="success" type="dispatcher">
+				<param name="location">/pages/device/deviceBinding/deviceBinding.jsp</param>
+			</result>
+		</action>
+		<action name="deviceBindingUpdate" class="deviceBindingUpdateAction">
+			<result name="success" type="dispatcher">
+				<param name="location">/resultjson.jsp</param>
+			</result>
+			<result name="error" type="dispatcher">
+				<param name="location">/resultjson.jsp</param>
+			</result>
+		</action>
+		<action name="deviceBindingDelete" class="deviceBindingDeleteAction">
+			<result name="success" type="dispatcher">
+				<param name="location">/resultjson.jsp</param>
+			</result>
+			<result name="error" type="dispatcher">
+				<param name="location">/resultjson.jsp</param>
+			</result>
+		</action>
+		<action name="deviceBindingUnbind" class="deviceBindingUnbindAction">
+			<result name="success" type="dispatcher">
+				<param name="location">/resultjson.jsp</param>
+			</result>
+			<result name="error" type="dispatcher">
+				<param name="location">/resultjson.jsp</param>
+			</result>
+		</action>
+	</package>
+</xwork>

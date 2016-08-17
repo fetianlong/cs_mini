@@ -1,0 +1,44 @@
+@charset "utf-8";
+/* CSS Document */
+
+.ShowRule {
+	font-size: 14px;
+	margin-bottom: 10px;
+	margin-top: 10px;
+}
+
+form .fa {
+	color: #263142;
+}
+
+form .form-group {
+	margin-bottom: 10px;
+}
+
+.Location .fa {
+	color: #cfcfcf;
+}
+
+.Destination .fa {
+	color: #6dc6aa;
+}
+
+.ShowPriceBlock {
+	margin-top: 40px;
+}
+
+.ShowPriceBlock h4 {
+	color: #36ce9a;
+}
+
+.ShowPriceBlock h4 .fa {
+	color: #36ce9a;
+}
+
+.ShowPriceBlock h4 span {
+	margin: 0 5px;
+}
+
+.CelveTable th, .CelveTable td {
+	font-size: 12px;
+}

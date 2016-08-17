@@ -1,0 +1,96 @@
+<!doctype html>
+<html lang="zh-CN">
+<head>
+<meta charset="utf-8">
+<title>正在补电</title>
+
+<link rel=stylesheet href="../common/js/bootstrap/css/bootstrap.min.css">
+<link rel=stylesheet href="../common/js/fontawesome/css/font-awesome.min.css">
+<link rel=stylesheet href="../common/js/flatui/dist/css/flat-ui.min.css">
+<script src="../common/js/jquery.min.js"></script>
+<script src="../common/js/bootstrap/js/bootstrap.min.js"></script>
+<script src="../common/js/flatui/dist/js/flat-ui.min.js"></script>
+<script src="../common/js/main.js"></script>
+<link rel=stylesheet href="../common/css/main.css">
+<meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1, user-scalable=no">
+<meta http-equiv="X-UA-Compatible" content="IE=edge">
+<meta name="renderer" content="webkit">
+
+
+
+<link rel=stylesheet href="../common/css/charging.css">
+
+</head>
+
+<body>
+<div class="OneBlock ShowStateBlock">
+	<p class="ShowTime">
+		<img class="img-responsive center-block" src="../common/images/charing/battery.png">
+		<span>78</span><span class="Unit">%</span>
+	</p>
+	<!--下面这个img显示的是仪表盘，每5一张图，通过修改src里的文件名来更改显示刻度-->
+	<img class="img-responsive center-block" src="../common/images/times/70.jpg" >
+	<p class="text-center Caption"><i class="fa fa-circle"></i>预计续航<span>100</span><span class="Unit">KM</span></p>
+</div>
+	
+<div class="OneBlock CdzBlock">
+	<p class="pull-left">力宝广场充电站</p>
+	<p class="pull-right"><span>202</span>号交流机<br>当前电桩编号<span>1234567890</span></p>
+	<div class="clearfix"></div>
+</div>
+
+<div class="OneBlock InfoBlock">
+	<div class="row">
+		<div class="col-xs-8 col-xs-offset-2">
+			<table class="table table-condensed table-responsive">
+				<tbody>
+					<tr>
+						<td>已充时间</td>
+						<td><span>00</span>小时<span>50</span>分</td>
+					</tr>
+					<tr>
+						<td>已充电量</td>
+						<td><span>1.30</span>度</td>
+					</tr>
+				</tbody>
+			</table>
+		</div>
+	</div>
+	<div class="row">
+		<div class="col-xs-12">
+			<table class="table table-condensed table-responsive">
+				<tbody>
+					<tr>
+						<td>电费</td>
+						<td><span>1.13</span>元</td>
+						<td>当前电压</td>
+						<td><span>229.31</span>伏</td>
+					</tr>
+					<tr>
+						<td>服务费</td>
+						<td><span>1.14</span>元</td>
+						<td>当前电流</td>
+						<td><span>11.53</span>安</td>
+					</tr>
+					<tr>
+						<td>总费用</td>
+						<td><span>2.27</span>元</td>
+						<td>当前功率</td>
+						<td><span>2637.00</span>瓦</td>
+					</tr>
+				</tbody>
+			</table>
+		</div>
+	</div>
+</div>
+<div class="ControlBlock">
+	<ul>
+		<li><button class="btn"><i class="fa fa-bell"></i>鸣笛</button></li>
+		<li><button class="btn"><i class="fa fa-car"></i>开门</button></li>
+		<li><button class="btn"><i class="fa fa-lock"></i>锁车</button></li>
+		<li><button class="btn"><i class="fa fa-stop"></i>断电</button></li>
+		<div class="clearfix"></div>
+	</ul>
+</div>
+</body>
+</html>

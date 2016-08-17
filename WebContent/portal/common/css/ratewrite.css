@@ -1,0 +1,11 @@
+@charset "utf-8";
+/* CSS Document */
+
+#star {
+	display: inline-block;
+	margin-left: 100px;
+}
+
+.ContentBlock .SubmitButton {
+	margin-top: 30px;
+}

@@ -1,0 +1,41 @@
+<!DOCTYPE hibernate-mapping PUBLIC 
+    "-//Hibernate/Hibernate Mapping DTD 3.0//EN"
+    "http://hibernate.sourceforge.net/hibernate-mapping-3.0.dtd">
+ 
+<hibernate-mapping>
+	<class name="com.dearho.cs.place.pojo.CarDotBinding" table="c_car_dot">
+		<id name="id" type="java.lang.String">
+            <column name="ID" length="32" />
+            <generator class="uuid.hex" />
+        </id>
+        <property name="dotId" type="string">
+       		<column name="dot_id" />
+       	</property>
+       	<property name="carId" type="string">
+       		<column name="car_id" />
+       	</property>
+    	<property name="floorNo" type="string">
+       		<column name="floor_no" >
+       			<comment>当前汽车停放的楼层</comment>
+       		</column>
+       	</property>
+        <property name="parkingNo" type="string">
+       		<column name="parking_no" >
+       			<comment>当前汽车停放的楼层</comment>
+       		</column>
+       	</property>
+        
+        <property name="isUsed" type="integer">
+       		<column name="is_used" />
+       	</property>
+        <property name="creator" type="string">
+        	<column name="creator" length="32" />
+        </property>
+        <property name="createTime" type="java.util.Date">
+        	<column name="create_time" />
+        </property>
+        <property name="updateTime" type="java.util.Date">
+        	<column name="update_time" />
+        </property>
+	</class>
+</hibernate-mapping>

@@ -1,0 +1,160 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<web-app xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" 
+		xmlns="http://java.sun.com/xml/ns/javaee" 
+		xmlns:web="http://java.sun.com/xml/ns/javaee/web-app_2_5.xsd" 
+		xsi:schemaLocation="http://java.sun.com/xml/ns/javaee http://java.sun.com/xml/ns/javaee/web-app_2_5.xsd" 
+		id="WebApp_ID" 
+		version="2.5">
+	<display-name>cs_mini</display-name>
+	<context-param> 
+		<param-name>contextConfigLocation</param-name> 
+		<param-value> 
+			/WEB-INF/applicationContext.xml,/WEB-INF/webservice.xml
+		</param-value> 
+	</context-param> 
+ 
+   <servlet>
+    <servlet-name>wechatCoreServlet</servlet-name>
+    <servlet-class>com.dearho.cs.wechat.servlet.WechatCoreServlet</servlet-class>
+  </servlet>
+  
+  <servlet-mapping>
+    <servlet-name>wechatCoreServlet</servlet-name>
+    <url-pattern>/wechatCoreServlet</url-pattern>
+  </servlet-mapping>
+  
+   <servlet>
+    <servlet-name>rechargePrepareServlet</servlet-name>
+    <servlet-class>com.dearho.cs.wechat.servlet.RechargePrepareServlet</servlet-class>
+  </servlet>
+  <servlet-mapping>
+    <servlet-name>rechargePrepareServlet</servlet-name>
+    <url-pattern>/rechargePrepareServlet</url-pattern>
+  </servlet-mapping>
+  
+  <servlet>
+    <servlet-name>refundPrepareServlet</servlet-name>
+    <servlet-class>com.dearho.cs.wechat.servlet.RefundPrepareServlet</servlet-class>
+  </servlet>
+  <servlet-mapping>
+    <servlet-name>refundPrepareServlet</servlet-name>
+    <url-pattern>/refundPrepareServlet</url-pattern>
+  </servlet-mapping>
+  
+  <servlet>
+		<servlet-name>oauthServlet</servlet-name>
+		<servlet-class>
+			com.dearho.cs.wechat.servlet.OAuthServlet
+		</servlet-class>
+	</servlet>
+	<servlet-mapping>
+		<servlet-name>oauthServlet</servlet-name>
+		<url-pattern>/oauthServlet</url-pattern>
+	</servlet-mapping>
+  
+    <servlet>
+		<servlet-name>baseOAuthServlet</servlet-name>
+		<servlet-class>
+			com.dearho.cs.wechat.servlet.BaseOAuthServlet
+		</servlet-class>
+	</servlet>
+	<servlet-mapping>
+		<servlet-name>baseOAuthServlet</servlet-name>
+		<url-pattern>/baseOAuthServlet</url-pattern>
+	</servlet-mapping>
+	
+	<listener> 
+		<listener-class>org.springframework.web.context.ContextLoaderListener</listener-class> 
+	</listener>
+	<listener>
+		<listener-class>com.opensymphony.xwork.spring.SpringObjectFactoryListener</listener-class>
+	</listener>
+	
+	<listener>
+		<listener-class>org.springframework.web.util.IntrospectorCleanupListener</listener-class>
+	</listener>
+	<servlet>
+		<servlet-name>webwork</servlet-name>
+		<servlet-class>com.opensymphony.webwork.dispatcher.ServletDispatcher</servlet-class>
+	</servlet>
+	
+	<servlet>  
+    	<servlet-name>CXFServlet</servlet-name>  
+    	<servlet-class>org.apache.cxf.transport.servlet.CXFServlet</servlet-class>  
+    	<load-on-startup>1</load-on-startup>  
+  	</servlet>  
+    
+      <filter> 
+	    <filter-name>loginFilter</filter-name>
+	    <filter-class>
+				com.dearho.cs.core.filter.LoginFilter
+			</filter-class>
+	  </filter>
+	  
+	  <filter-mapping>
+	    <filter-name>loginFilter</filter-name>
+	    <url-pattern>/*</url-pattern>
+	  </filter-mapping>  
+	 
+	 <filter> 
+	    <filter-name>appParamFilter</filter-name>
+	    <filter-class>
+				com.dearho.cs.core.filter.AppParamFilter
+			</filter-class>
+	  </filter>
+	  
+	  <filter-mapping>
+	    <filter-name>appParamFilter</filter-name>
+	    <url-pattern>/app/*</url-pattern>
+	  </filter-mapping>
+	 
+	<servlet-mapping>  
+	    <servlet-name>CXFServlet</servlet-name>  
+	    <url-pattern>/ws/*</url-pattern>  
+	</servlet-mapping>
+	
+	<servlet-mapping>
+		<servlet-name>webwork</servlet-name>
+		<url-pattern>*.action</url-pattern>
+	</servlet-mapping>
+	
+	<!-- 生成验证码 -->
+	<servlet>
+		<servlet-name>yzmimg</servlet-name>
+		<servlet-class>com.dearho.cs.sys.action.user.YzmimgAction</servlet-class>
+	</servlet>
+	<servlet-mapping>
+		<servlet-name>yzmimg</servlet-name>
+		<url-pattern>/yzmimg</url-pattern>
+	</servlet-mapping>
+	
+	<welcome-file-list>
+		<welcome-file>index.jsp</welcome-file>
+		<welcome-file>default.html</welcome-file>
+		<welcome-file>default.htm</welcome-file>
+		<welcome-file>default.jsp</welcome-file>
+	</welcome-file-list>
+	<error-page>
+		<error-code>404</error-code>
+		<location>/404error.jsp</location>
+	</error-page>
+	<error-page>
+		<error-code>500</error-code>
+		<location>/500error.jsp</location>
+	</error-page>
+	<error-page>
+		<error-code>502</error-code>
+		<location>/502error.jsp</location>
+	</error-page>
+	<error-page>
+		<error-code>505</error-code>
+		<location>/505error.jsp</location>
+	</error-page>
+	
+	<jsp-config>
+		<taglib>
+		<taglib-uri>webwork</taglib-uri> 
+		<taglib-location>/WEB-INF/webwork.tld</taglib-location> 
+		</taglib>
+	</jsp-config>
+</web-app>

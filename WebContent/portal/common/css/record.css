@@ -1,0 +1,203 @@
+@charset "utf-8";
+/* CSS Document */
+
+.ContentBlock .Border {
+	border: solid 1px #4bd3a5;
+}
+
+.ContentBlock>div.row {
+	margin-bottom: 30px;
+}
+
+.CenterInfo .Border {
+	background: #f2f1f1;
+	padding-top: 20px;
+	padding-bottom: 20px;
+	border: none;
+}
+
+.CenterInfo .HeadImg {
+	position: relative;
+	width: 150px;
+	height: 150px;
+	border: solid 2px #8d8c8c;
+	border-radius: 50%;
+	overflow: hidden;
+	margin: 0 auto;
+	cursor: pointer;
+}
+
+.CenterInfo .HeadImg:hover p {
+	display: block;
+}
+
+.CenterInfo .HeadImg p {
+	display: none;
+	position: absolute;
+	bottom: 0;
+	left: 0;
+	width: 100%;
+	background: #333;
+	background: rgba(0,0,0,0.8);
+	color: #FFF;
+	font-size: 16px;
+	line-height: 36px;
+	text-align: center;
+	margin-bottom: 0;
+}
+
+.CenterInfo h3 {
+	color: #666666;
+}
+
+.CenterInfo h3 span {
+	color: #fd3636;
+	margin: 0 5px;
+}
+
+.CenterInfo .SubmitButton {
+	padding: 10px 40px;
+	font-size: 16px;
+}
+
+.CenterInfo .SubmitButton.disabled {
+	background: #CCC;
+}
+
+.CenterInfo label {
+	font-size: 14px;
+	color: #8d8c8c;
+}
+
+.CenterInfo .form-control-static {
+	color: #8d8c8c;
+}
+
+.OrderList .nav-tabs {
+	border-bottom-color: #4bd3a5;
+}
+
+.OrderList .nav-tabs>li.active>a, .OrderList .nav-tabs>li.active>a:focus, .OrderList .nav-tabs>li.active>a:hover {
+	border-color: #4bd3a5;
+	border-bottom-color: transparent;
+}
+
+.OrderList .nav-tabs>li>a {
+	border-radius: 0;
+	cursor: pointer;
+	font-size: 16px;
+}
+
+.ContentBlock .Caption {
+	color: #8d8c8c;
+	text-indent: 1em;
+	line-height: 40px;
+	margin-top: 0;
+	border-bottom: solid 1px #4bd3a5;
+}
+
+.OrderInfo .EmptyOrder {
+	border: dashed 2px #d2d3d3;
+	margin: 20px;
+}
+
+.OrderInfo .EmptyOrder p {
+	margin: 50px auto;
+	font-size: 20px;
+	color: #8d8c8c;
+}
+
+.OrderInfo .EmptyOrder p a {
+	color: #4bd3a5;
+	margin-left: 10px;
+	font-size: 24px;
+}
+
+.OrderInfo .EmptyOrder p a .fa {
+	margin-left: 5px;
+}
+
+.OrderList table {
+	text-align: center;
+	margin-top: 10px;
+}
+
+.OrderList table thead {
+	background: #f2f1f1;
+}
+
+.OrderList table thead th {
+	border-right: solid 1px #d2d2d2;
+	text-align: center;
+	border-bottom: none;
+	font-size: 16px;
+	font-weight: normal;
+}
+
+.OrderList table tbody td a:first-of-type {
+	color: #4bd3a5;
+	text-decoration: none;
+}
+
+.OrderList table tbody td a:nth-of-type(2) {
+	color: #ff6900;
+	text-decoration: none;
+}
+
+.OrderList .ChangePage {
+	margin-bottom: 20px;
+}
+
+.Balance .Border {
+	background: #f2f1f1;
+	padding: 20px;
+	border: none;
+}
+
+.Balance h3 {
+	margin: 0;
+	color: #666666;
+}
+
+.Balance h3 span {
+	color: #fd3636;
+	margin: 0 2px;
+}
+
+.Balance h3 .btn {
+	margin-left: 50px;
+}
+
+.RecordExplain {
+	margin-top: 50px;
+}
+
+.RecordExplain p {
+	font-size: 14px;
+	color: #8d8c8c;
+	margin-bottom: 0;
+	line-height: 24px;
+}
+
+.RecordExplain p span {
+	color: #4bd3a5;
+	margin: 0 3px;
+}
+
+#Detail .modal-body table tbody tr th {
+	width: 80px;
+	color: #666;
+}
+
+#Detail .modal-body table tbody tr th, #Detail .modal-body table tbody tr td {
+	font-size: 16px;
+	line-height: 24px;
+}
+
+#Detail .modal-body table tbody tr td {
+	color: #999;
+}
+
+#Detail .modal-body table tbody tr td .fa {
+	margin-right: 3px;
+}

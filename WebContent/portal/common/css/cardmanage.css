@@ -1,0 +1,90 @@
+@charset "utf-8";
+/* CSS Document */
+
+.ContentBlock .Tips {
+	font-size: 18px;
+	color: #858585;
+}
+
+.CardList {
+	border-top: solid 1px #e5e5e5;
+	border-bottom: solid 1px #e5e5e5;
+	margin-bottom: 100px;
+}
+
+.CardList .nav-tabs {
+	border-bottom-color: #4bd3a5;
+}
+
+.CardList .nav-tabs>li.active>a, .CardList .nav-tabs>li.active>a:focus, .CardList .nav-tabs>li.active>a:hover {
+	border-color: #4bd3a5;
+	border-bottom-color: transparent;
+}
+
+.CardList .nav-tabs>li>a {
+	border-radius: 0;
+	cursor: pointer;
+	font-size: 16px;
+}
+
+.CardList table {
+	text-align: center;
+	margin-top: 10px;
+}
+
+.CardList table thead {
+	background: #f2f1f1;
+}
+
+.CardList table thead th {
+	border-right: solid 1px #d2d2d2;
+	text-align: center;
+	border-bottom: none;
+	font-size: 16px;
+	font-weight: normal;
+}
+
+.CardList table tbody td {
+	vertical-align: middle;
+}
+
+.CardList table tbody td a {
+	color: #468ff3;
+	text-decoration: none;
+}
+
+.CardList .EmptyCard {
+	font-size: 16px;
+	color: #858585;
+	margin: 20px 0;
+}
+
+.CardList .EmptyCard a {
+	color: #4bd3a5;
+	font-size: 18px;
+	margin: 0 3px;
+}
+
+.QABlock {
+	color: #807d7d;
+	font-size: 15px;
+}
+
+.QABlock h4 {
+	margin-bottom: 30px;
+}
+
+.QABlock ul {
+	padding: 0;
+	margin: 0;
+	list-style: none;
+}
+
+.QABlock ul li {
+	margin-bottom: 20px;
+}
+
+.QABlock ul li p {
+	margin-bottom: 0;
+	line-height: 24px;
+}

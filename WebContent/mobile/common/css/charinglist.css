@@ -1,0 +1,150 @@
+@charset "utf-8";
+/* CSS Document */
+
+body {
+	background: #eeeeee;
+}
+
+.NameBlock {
+	padding: 10px;
+	margin-bottom: 10px;
+	border-top: none;
+}
+
+.NameBlock .Name {
+	color: #4bd3a5;
+	font-size: 18px;
+	font-weight: normal;
+	margin-top: 10px;
+}
+
+.NameBlock .Address {
+	font-size: 12px;
+	color: #a1a1a1;
+	margin-bottom: 0;
+}
+
+.NameBlock .Address .Distance {
+	color: #4bd3a5;
+	margin-left: 10px;
+}
+
+.Button {
+	font-size: 14px;
+	line-height: 14px;
+	padding: 8px 12px;
+}
+
+.Button .fa {
+	display: block;
+	margin-bottom: 5px;
+}
+	
+.InfoBlock table {
+	border: none;
+	margin: 0;
+}
+
+.InfoBlock .table>tbody>tr>td, .InfoBlock .table>tbody>tr>th, .InfoBlock .table>tfoot>tr>td, .InfoBlock .table>tfoot>tr>th, .InfoBlock .table>thead>tr>td, .InfoBlock .table>thead>tr>th {
+	border-top: none;
+	padding: 0;
+	color: #a1a1a1;
+	vertical-align: middle;
+}
+
+.InfoBlock .ChargeNum {
+	font-size: 16px;
+	color: #606060 !important;
+}
+
+.InfoBlock span {
+	margin: 0 3px;
+}
+
+.InfoBlock span.label {
+	margin-right: 10px;
+}
+
+.InfoBlock .FilterButton {
+	background: #FFF;
+	color: #4bd3a5;
+	border: solid 1px #4bd3a5;
+}
+
+.ListBlock {
+	background: #FFF;
+	margin-bottom: 20px;
+}
+
+.ListBlock .ListUl {
+	margin: 0;
+	padding: 0;
+	list-style: none;
+}
+
+.ListBlock .ListUl li {
+	margin: 0;
+	padding: 0;
+	list-style: none;
+}
+
+.ListBlock .ListUl li a {
+	display: block;
+	font-size: 12px;
+	color: #606060;
+	background: #f1f1f1;
+}
+
+.ListBlock .ListUl li:nth-of-type(2n) a {
+	background: #FFF;
+}
+
+.ListBlock .ListUl li:nth-of-type(2n) a .ListNo {
+	background: #FFF;
+	color: #4bd3a5;
+}
+
+.ListBlock table {
+	width: 100%;
+	border: none;
+	margin: 0;
+	padding: 0;
+}
+
+.ListBlock table .ListNo {
+	width: 26px;
+	height: 40px;
+	text-align: center;
+	font-size: 14px;
+	background: #4bd3a5;
+	color: #FFF;
+}
+
+.ListBlock table .ListInfo {
+	text-indent: 10px;
+}
+
+.ListBlock table span.label {
+	padding: 1px 5px;
+}
+
+.ListBlock table .UpInfo {
+	padding-top: 5px;
+}
+	
+.ListBlock table .DownInfo {
+	padding-bottom: 5px;
+}
+
+.ListBlock table .ListState {
+	text-align: right;
+}
+	
+.ListBlock table .Arrow {
+	text-align: center;
+	width: 30px;
+}
+
+.ListBlock table .Arrow .fa {
+	color: #4bd3a5;
+}

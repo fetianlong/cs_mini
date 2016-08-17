@@ -1,0 +1,175 @@
+<!DOCTYPE hibernate-mapping PUBLIC 
+    "-//Hibernate/Hibernate Mapping DTD 3.0//EN"
+    "http://hibernate.sourceforge.net/hibernate-mapping-3.0.dtd">
+ 
+<hibernate-mapping>
+	<class name="com.dearho.cs.carservice.pojo.CarInsurance" table="c_vehicle_insurance">
+		<id name="id" type="string">
+            <column name="id" length="32" />
+            <generator class="uuid.hex" />
+        </id>
+        <property name="code" type="string">
+        	<column name="code"  />
+        </property>
+        <property name="city" type="string">
+        	<column name="city"  />
+        </property>
+        <property name="carId" type="string">
+        	<column name="car_id"  />
+        </property>
+        
+        <property name="vehicleModel" type="string">
+        	<column name="vehicle_Model"  />
+        </property>
+        <property name="carColor" type="string">
+        	<column name="car_Color"  />
+        </property>
+        <property name="carVin" type="string">
+        	<column name="car_Vin"  />
+        </property>
+        
+        <property name="policyHolder" type="string">
+        	<column name="policy_holder"  />
+        </property>
+        <property name="phTel" type="string">
+        	<column name="ph_tel"  />
+        </property>
+        <property name="phPhone" type="string">
+        	<column name="ph_phone"  />
+        </property>
+        <property name="ipName" type="string">
+        	<column name="ip_name"  />
+        </property>
+        <property name="insuredPersonDeptType" type="string">
+        	<column name="insured_Person_Dept_Type"  />
+        </property>
+        <property name="ipTel" type="string">
+        	<column name="ip_tel"  />
+        </property>
+        <property name="ipPhone" type="string">
+        	<column name="ip_phone"  />
+        </property>
+        <property name="ipAddress" type="string">
+        	<column name="ip_address"  />
+        </property>
+        <property name="firstRegTime" type="java.util.Date">
+        	<column name="first_reg_time"  />
+        </property>
+        <property name="usedYear" type="integer">
+        	<column name="used_year"  />
+        </property>
+        <property name="carUseType" type="string">
+        	<column name="car_Use_Type"  />
+        </property>
+        <property name="carLose" type="string">
+        	<column name="car_Lose"  />
+        </property>
+        <property name="newCarPrice" type="double">
+        	<column name="new_Car_Price"  />
+        </property>
+        <property name="thirdPerson" type="string">
+        	<column name="third_Person"  />
+        </property>
+        <property name="peopleIncar" type="string">
+        	<column name="people_Incar"  />
+        </property>
+        <property name="personCount" type="integer">
+        	<column name="person_Count"  />
+        </property>
+        <property name="goodsIncar" type="string">
+        	<column name="goods_Incar"  />
+        </property>
+        <property name="stolenRescue" type="string">
+        	<column name="stolen_Rescue"  />
+        </property>
+        <property name="glassBroken" type="string">
+        	<column name="glass_Broken"  />
+        </property>
+        <property name="glassType" type="string">
+        	<column name="glass_Type"  />
+        </property>
+        <property name="stopLose" type="string">
+        	<column name="stop_Lose"  />
+        </property>
+        <property name="slMdFee" type="double">
+        	<column name="sl_Md_Fee"  />
+        </property>
+        <property name="slMdDay" type="integer">
+        	<column name="sl_Md_Day"  />
+        </property>
+        <property name="spontLoss" type="string">
+        	<column name="spont_Loss"  />
+        </property>
+        <property name="scratch" type="string">
+        	<column name="scratch"  />
+        </property>
+        <property name="fbs" type="string">
+        	<column name="f_b_s"  />
+        </property>
+        <property name="noFaultResp" type="string">
+        	<column name="no_Fault_Resp"  />
+        </property>
+        <property name="addEquLoss" type="string">
+        	<column name="add_Equ_Loss"  />
+        </property>
+        <property name="exclDeducSpecial" type="string">
+        	<column name="excl_Deduc_Special"  />
+        </property>
+        <property name="freeOddsSpecial" type="string">
+        	<column name="free_Odds_Special"  />
+        </property>
+        <property name="fosCar" type="string">
+        	<column name="fos_Car"  />
+        </property>
+        <property name="fosThird" type="string">
+        	<column name="fos_Third"  />
+        </property>
+        <property name="rescueSpecial" type="string">
+        	<column name="rescue_Special"  />
+        </property>
+        <property name="remark" type="string">
+        	<column name="remark"  />
+        </property>
+        <property name="isDiscard" type="integer">
+        	<column name="is_discard"  />
+        </property>
+        <property name="creatorId" type="string">
+        	<column name="creator_id" length="32" />
+        </property>
+        <property name="createTime" type="java.util.Date">
+        	<column name="create_time" />
+        </property>
+        <property name="updateTime" type="java.util.Date">
+        	<column name="update_time" />
+        </property>
+        <property name="ts" type="java.util.Date">
+        	<column name="ts" />
+        </property>
+        <property name="trfInsStartDate" type="java.util.Date">
+        	<column name="trf_Ins_Start_Date" />
+        </property>
+        <property name="trfInsEndDate" type="java.util.Date">
+        	<column name="trf_Ins_End_Date" />
+        </property>
+        <property name="commInsStartDate" type="java.util.Date">
+        	<column name="comm_Ins_Start_Date" />
+        </property>
+        <property name="commInsEndDate" type="java.util.Date">
+        	<column name="comm_Ins_End_Date" />
+        </property>
+        
+        <property name="insuranceTime" type="java.util.Date">
+        	<column name="insurance_Time" />
+        </property>
+        <property name="engineWater" type="string">
+        	<column name="engine_Water" />
+        </property>
+        <property name="billCreator" type="string">
+        	<column name="bill_Creator" />
+        </property>
+        <property name="billCreatorPhone" type="string">
+        	<column name="bill_Creator_Phone" />
+        </property>
+        
+	</class>
+</hibernate-mapping>

@@ -1,0 +1,268 @@
+@charset "utf-8";
+/* CSS Document */
+
+.MainContent {
+	padding: 150px 0;
+	background: #f2f1f1;
+}
+
+.MainContent>.container {
+	background: #FFF;
+	padding-top: 0;
+	padding-bottom: 50px;
+	position: relative;
+}
+
+.CarImgBlock {
+	margin-top: -130px;
+}
+
+.CarImgBlock .Border {
+	border: solid 1px #aeaeae;
+	border-radius: 0;
+	padding: 5px;
+	position: relative;
+	height: 200px;
+}
+
+.CarImgBlock .Border p {
+	background: #397a9f;
+	background: rgba(57,122,159,0.8);
+	color: #FFF;
+	position: absolute;
+	bottom: 0;
+	left: 0;
+	width: 100%;
+	margin: 0;
+	font-size: 18px;
+	line-height: 30px;
+	text-align: center;
+}
+
+.CarImgBlock .Border .BackgroundBlock {
+	background: #FFF;
+}
+
+.CarNameBlock {
+	border-right: dotted 1px #c1c1c1;
+}
+
+.CarNameBlock h1 {
+	margin: 0;
+	margin-bottom: 5px;
+	color: #727271;
+}
+
+.CarNameBlock h4 {
+	margin: 0;
+	color: #91918f;
+}
+
+.CarInfo>.row:first-of-type {
+	margin-top: 10px;
+	margin-bottom: 10px;
+}
+
+.CarInfo img {
+	margin-right: 5px;
+}
+
+.CarInfo {
+	color: #757575;
+}
+
+.CarPropertyBlock ul {
+	margin: 0;
+	padding: 0;
+	list-style: none;
+	float: right;
+	text-align: center;
+}
+
+.CarPropertyBlock ul li {
+	display: inline-block;
+	list-style: none;
+	color: #757575;
+	width: 100px;
+	vertical-align: bottom;
+}
+
+.CarPropertyBlock ul li img {
+	margin-right: 3px;
+}
+
+.CarPointBlock {
+	background: #f2f2f2;
+	color: #5a5a5a;
+	margin-top: 20px;
+}
+
+.CarPointBlock img {
+	margin-top: 5px;
+	margin-bottom: 5px;
+}
+
+.CarPointBlock h4 {
+	margin: 2px auto;
+}
+
+.CarPointBlock p {
+	margin-bottom: 5px;
+}
+
+.TitleBlock {
+	padding-bottom: 50px;
+	margin-bottom: 50px;
+	margin-top: 50px;
+	border-bottom: dotted 1px #4bd3a5;
+}
+
+.TimeBlock label {
+	font-size: 16px;
+	color: #757575;
+}
+
+.ZuqiBlock {
+	font-size: 16px;
+	margin-bottom: 50px;
+	margin-top: 50px;
+}
+
+.ZuqiBlock .fa {
+	margin-right: 5px;
+}
+
+.ZuqiBlock .form-control-static {
+	color: #757575;
+}
+
+.ZuqiBlock .form-group {
+	margin-bottom: 0;
+	border-bottom: solid 1px #9d9d9d;
+}
+
+.TimeMapBlock .help-block {
+	color: #F00;
+}
+
+.TimeMapBlock .help-block .fa {
+	margin-right: 3px;
+}
+
+.FapiaoBlock .switch {
+	margin-top: 5px;
+}
+
+.FapiaoInfo {
+	border: solid 1px #a7a9a8;
+	margin-bottom: 20px;
+}
+
+.MapBlock h4 {
+	margin-top: 0;
+}
+
+.MapBlock .Map {
+	border: solid 1px #CCC;
+	height: 400px;
+}
+
+.SubmitButton {
+	background: #4bd3a5;
+	color: #FFF !important;
+	border-radius: 0;
+}
+
+.SubmitButton:hover {
+	background: #4bd3a5;
+	color: #FFF;
+}
+
+.SubmitBlock {
+	margin-top: 50px;
+}
+
+.SubmitBlock button {
+	margin-bottom: 10px;
+}
+
+.SelectTimeBlock .Tips {
+	padding: 20px;
+	font-size: 16px;
+	border: solid 1px #a94442;
+	border-radius: 5px;
+	margin-bottom: 30px;
+}
+
+.SelectTimeBlock .Tips b {
+	margin: 0 3px;
+}
+
+.HuancheButton {
+	background: #4bd3a5;
+	color: #FFF !important;
+	text-decoration: none;
+	border-radius: 0;
+}
+
+.OtherButton {
+	background: #4bd3a5;
+	color: #FFF !important;
+	text-decoration: none;
+	border-radius: 50%;
+}
+
+.OtherBlock {
+	margin-top: 50px;
+}
+
+#Yugu .form-control-static {
+	color: #707070;
+	font-size: 20px;
+}
+
+#Yugu .form-control-static span {
+	color: #4bd3a5;
+	font-size: 24px;
+	font-weight: bold;
+	margin: 0 3px;
+}
+
+.ShichangBlock .SelectTime {
+	margin: 0;
+}
+
+.ShichangBlock .SelectTime .input-group-addon {
+	cursor: pointer;
+}
+
+.ShichangBlock .SelectTime input {
+	text-align: center;
+}
+
+.SelectTypeBlock .btn.Selected {
+	background: #4bd3a5;
+	color: #FFF;
+	border-color: #4bd3a5;
+}
+
+.FapiaoBlock {
+	margin-bottom: 20px;
+}
+
+.FapiaoSwitch {
+	margin-top: 5px;
+}
+
+@media (max-width: 1200px) {
+.CarPropertyBlock ul li {
+	width: auto;
+	margin-left: 10px;
+}
+}
+
+@media (max-width: 768px) {
+.CarPropertyBlock ul {
+	float: none;
+}
+}

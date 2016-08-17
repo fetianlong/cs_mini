@@ -1,0 +1,25 @@
+@charset "utf-8";
+/* CSS Document */
+
+h2 {
+	font-size: 16px;
+	color: #1abc9c;
+}
+
+p {
+	font-size: 14px;
+}
+
+.ReturnButton {
+	text-decoration: none;
+	margin-bottom: 20px;
+	margin-top: 50px;
+}
+
+.title1 {
+	font-weight: bold;
+}
+
+.title2 p {
+	margin-left: 1em;
+}

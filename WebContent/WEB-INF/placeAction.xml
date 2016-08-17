@@ -1,0 +1,45 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<beans xmlns="http://www.springframework.org/schema/beans"
+	xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+	xsi:schemaLocation="http://www.springframework.org/schema/beans http://www.springframework.org/schema/beans/spring-beans-2.0.xsd">
+	
+	<bean id="branchDotSearchAction" class="com.dearho.cs.place.action.BranchDotSearchAction" scope="prototype">
+		<property name="branchDotService" ref="branchDotService"  />
+		<property name="areaService" ref="areaService" />
+		<property name="carDotBindingService" ref="carDotBindingService" />
+		<property name="carService" ref="carService" />
+	</bean>
+	<bean id="branchDotGetAction" class="com.dearho.cs.place.action.BranchDotGetAction" scope="prototype">
+		<property name="branchDotService" ref="branchDotService" />
+		<property name="areaService" ref="areaService" />
+	</bean>
+	<bean id="branchDotAddAction" class="com.dearho.cs.place.action.BranchDotAddAction" scope="prototype">
+		<property name="branchDotService" ref="branchDotService" />
+	</bean>
+	
+	<bean id="branchDotDeleteAction" class="com.dearho.cs.place.action.BranchDotDeleteAction" scope="prototype">
+		<property name="branchDotService" ref="branchDotService" />
+	</bean>
+	
+	<bean id="branchDotUpdateAction" class="com.dearho.cs.place.action.BranchDotUpdateAction" scope="prototype">
+		<property name="branchDotService" ref="branchDotService" />
+	</bean>
+	<bean id="dotInfoSearchAction" class="com.dearho.cs.place.action.DotInfoSearchAction" scope="prototype">
+		<property name="branchDotService" ref="branchDotService"  />
+		<property name="chargeStationService" ref="chargeStationService" />
+		<property name="carDotBindingService" ref="carDotBindingService" />
+		<property name="carService" ref="carService" />
+		<property name="carRealtimeStateService" ref="carRealtimeStateService" />
+	</bean>
+	
+	<bean id="carDotBindingAction" class="com.dearho.cs.place.action.CarDotBindingAction" scope="prototype">
+		<property name="branchDotService" ref="branchDotService"  />
+		<property name="carDotBindingService" ref="carDotBindingService" />
+		<property name="carService" ref="carService" />
+		<property name="operateLogService" ref="operateLogService" />
+	</bean>
+
+	
+	
+	
+</beans>

@@ -1,0 +1,101 @@
+@charset "utf-8";
+/* CSS Document */
+
+.LogoImg {
+	margin-top: 50px;
+	border-radius: 50%;
+	border: solid 1px #CCC;
+	box-shadow: 0 2px 5px #666;
+	margin-bottom: 30px;
+}
+
+.Tips {
+	color: #6dc6a9;
+	margin-top: 10px;
+	font-size: 14px;
+}
+
+.Tips .fa {
+	color: #6dc6a9;
+	margin-left: 5px;
+}
+
+.SelectButtonUl {
+	padding: 0;
+	margin: 0;
+	list-style: none;
+}
+
+.SelectButtonUl li {
+	display: block;
+	list-style: none;
+	float: left;
+	margin-right: 10px;
+	margin-bottom: 5px;
+}
+
+.SelectButtonUl li .btn {
+	background: #FFF;
+	border: solid 1px #ffab18;
+	color: #ffab18;
+	font-size: 18px;
+}
+
+.SelectButtonUl li .btn .fa {
+	font-size: 14px;
+	margin-right: 3px;
+}
+
+form label {
+	font-weight: bold;
+}
+
+.SelectZhifu li .btn {
+	background: none;
+	width: 130px;
+	height: 52px;
+	background-repeat: no-repeat;
+	background-position: center center;
+	border: none;
+}
+
+.SelectZhifu li .Zhifubao {
+	background-image: url(../images/recharge/bank_zfb.jpg);
+}
+
+.SelectZhifu li .Yinlian {
+	background-image: url(../images/recharge/bank_zgyl.jpg);
+}
+
+.SelectZhifu li .Weixin {
+	background-image: url(../images/recharge/bank_wx.jpg);
+}
+
+.SelectZhifu li .Zhifubao.Selected {
+	background-image: url(../images/recharge/bank_zfb_select.jpg);
+}
+
+.SelectZhifu li .Yinlian.Selected {
+	background-image: url(../images/recharge/bank_zgyl_select.jpg);
+}
+
+.SelectZhifu li .Weixin.Selected {
+	background-image: url(../images/recharge/bank_wx_select.jpg);
+}
+
+.PayButton .btn.Selected {
+	background: #ffab18;
+	color: #FFF;
+}
+
+.ZidingyiInput, .ZidingyiInput:focus {
+	border: none;
+	border-radius: 0;
+	border-bottom: solid 1px #ffab18;
+}
+
+.ZidingyiInput::-webkit-outer-spin-button,
+.ZidingyiInput::-webkit-inner-spin-button {
+    -webkit-appearance: none !important;
+    margin: 0;
+}

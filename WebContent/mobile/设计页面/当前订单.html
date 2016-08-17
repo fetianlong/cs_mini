@@ -1,0 +1,80 @@
+<!doctype html>
+<html lang="zh-CN">
+<head>
+<meta charset="utf-8">
+<title>当前订单</title>
+
+<link rel=stylesheet href="../common/js/bootstrap/css/bootstrap.min.css">
+<link rel=stylesheet href="../common/js/fontawesome/css/font-awesome.min.css">
+<link rel=stylesheet href="../common/js/flatui/dist/css/flat-ui.min.css">
+<script src="../common/js/jquery.min.js"></script>
+<script src="../common/js/bootstrap/js/bootstrap.min.js"></script>
+<script src="../common/js/flatui/dist/js/flat-ui.min.js"></script>
+<script src="../common/js/main.js"></script>
+<link rel=stylesheet href="../common/css/main.css">
+<meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1, user-scalable=no">
+<meta http-equiv="X-UA-Compatible" content="IE=edge">
+<meta name="renderer" content="webkit">
+
+
+
+<link rel=stylesheet href="../common/css/ordernow.css">
+
+</head>
+
+<body>
+<a class="CarInfoLink" href="#"><i class="fa fa-exclamation-circle"></i></a>
+<div class="container">
+	<div class="row TabsBlock">
+		<div class="col-xs-8 col-xs-offset-2">
+			<ul class="TabUl" role="tablist">
+				<li role="presentation" class="active"><a href="#dianliang" aria-controls="dianliang" role="tab" data-toggle="tab">剩余电量</a></li>
+				<li role="presentation"><a href="#licheng" aria-controls="licheng" role="tab" data-toggle="tab">预计续航里程</a></li>
+			</ul>
+		</div>
+	</div>
+	
+	<div class="row ShowStateBlock">
+		<div class="col-xs-10 col-xs-offset-1">
+			<div class="Border">
+				<div class="tab-content">
+					<!--剩余电量-->
+					<div role="tabpanel" class="tab-pane active fade in" id="dianliang">
+						<p class="ShowTime DianliangShow"><span>78</span><span class="Unit">%</span></p>
+						<!--下面这个img显示的是仪表盘，每5一张图，通过修改src里的文件名来更改显示刻度-->
+						<img class="img-responsive center-block" src="../common/images/times/70.jpg" >
+						<p class="text-center Caption">剩余电量</p>
+					</div>
+					
+					<!--剩余续航里程-->
+					<div role="tabpanel" class="tab-pane fade" id="licheng">
+						<p class="ShowTime LichengShow"><span>78</span><span class="Unit">km</span></p>
+						<!--下面这个img显示的是仪表盘，每5一张图，通过修改src里的文件名来更改显示刻度-->
+						<img class="img-responsive center-block" src="../common/images/times/50.jpg" >
+						<p class="text-center Caption">预计续航里程</p>
+					</div>
+				</div>
+			</div>
+		</div>
+	</div>
+	
+	<div class="row ControlBlock">
+		<ul>
+			<li><button class="btn"><i class="fa fa-bell"></i>鸣笛</button></li>
+			<li><button class="btn"><i class="fa fa-car"></i>开门</button></li>
+			<li><button class="btn"><i class="fa fa-lock"></i>锁车</button></li>
+			<li><button class="btn"><i class="fa fa-exclamation-triangle"></i>紧急救援</button></li>
+			<div class="clearfix"></div>
+		</ul>
+	</div>
+</div>
+<div class="BottomButton">
+	<div class="col-xs-6">
+		<a class="btn btn-embossed btn-primary btn-block BudianButton">补电</a>
+	</div>
+	<div class="col-xs-6">
+		<a class="btn btn-embossed btn-block HuancheButton">还车</a>
+	</div>
+</div>
+</body>
+</html>

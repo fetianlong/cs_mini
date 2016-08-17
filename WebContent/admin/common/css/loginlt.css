@@ -1,0 +1,114 @@
+@charset "utf-8";
+/* CSS Document */
+
+body {
+	font-family: "Segoe UI", "Lucida Grande", Helvetica, Arial, "微软雅黑", "Microsoft YaHei", FreeSans, Arimo, "Droid Sans","wenquanyi micro hei","Hiragino Sans GB", "Hiragino Sans GB W3", Arial, sans-serif; font-size:12px; background:#10AC8D url(../images/login/img_letu/login_bj.jpg) top center no-repeat; background-size:100%; width:100%; height:100%; 
+}
+
+.MainContent { width:100%; margin:50px 0;}
+.sign_left { padding:20px;}
+.sign_box { border:1px solid #6DDBC5; -moz-border-radius: 10px;
+    -webkit-border-radius:10px;
+    border-radius:10px; margin:100px 0;
+	background:#27C5A6; padding:20px; }
+.top_tex { width:100%; text-align:center; margin:auto}
+img {display:block; margin:0 auto;}
+.LoginBlock {
+	padding: 40px 30px 0px 30px ;
+}
+
+.LoginBlock .form-control-feedback {
+	display: none;
+}
+.LoginBlock input[type="text"], .LoginBlock input[type="password"] {
+	height: 36px;
+	border-radius: 0;  border: 0;
+	border-color: #ffffff; background-color: #fff;
+}
+.LoginBlock .input-group-addon {
+	border-color: #fff;
+	 -moz-border-top-left-radius: 5px;
+    -webkit-border-top-left-radius:5px;
+	-moz-border-bottom-left-radius: 5px;
+    -webkit-border-bottom-left-radius:5px;
+    border-top-left-radius:5px;
+	border-bottom-left-radius:5px; padding:0px 10px;background-color: #fff;border-color: #ffffff;
+	color: #FFF; 
+}
+input[type="checkbox" i] {
+    margin: 4px 4px 4px 4px;
+}
+.has-error .input-group-addon {
+    color:#666;
+    background-color: #fff;
+    border-color: #fff;
+	 -moz-border-top-left-radius: 5px;
+    -webkit-border-top-left-radius:5px;
+	-moz-border-bottom-left-radius: 5px;
+    -webkit-border-bottom-left-radius:5px;
+    border-top-left-radius:5px;
+	border-bottom-left-radius:5px; padding:0px 10px;
+}
+.input-group .form-control:not(:first-child):not(:last-child), .input-group-addon:not(:first-child):not(:last-child), .input-group-btn:not(:first-child):not(:last-child) {border-radius:5px;
+    -moz-border-top-left-radius: 0px;
+    -webkit-border-top-left-radius:0px;
+	-moz-border-bottom-left-radius: 0px;
+    -webkit-border-bottom-left-radius:0px;
+    border-top-left-radius:0px;
+	border-bottom-left-radius:0px;
+}
+.has-error .form-control, .has-error .select2-search input[type=text] {
+    color: #666666;
+    border-color: #fff;background-color: #fff;
+    box-shadow: none;
+	-moz-border-top-right-radius: 5px;
+    -webkit-border-top-right-radius:5px;
+	-moz-border-bottom-right-radius: 5px;
+    -webkit-border-bottom-right-radius:5px;
+    border-top-right-radius:5px;
+	border-bottom-right-radius:5px;  padding:0px 10px;
+}
+.input-group .form-control:last-child {
+	-moz-border-top-right-radius: 5px;
+    -webkit-border-top-right-radius:5px;
+	-moz-border-bottom-right-radius: 5px;
+    -webkit-border-bottom-right-radius:5px;
+    border-top-right-radius:5px;
+	border-bottom-right-radius:5px;
+}
+.Tips {
+	color: #f43535; font-size:12px;
+	background: #fbe2e2;
+	border: solid 1px #666666;
+	padding: 0 5px;
+}
+.LoginBlock .SubmitButton {
+	background:#099E81;
+	color: #FFF;
+	border-radius: 5px;
+	font-weight:bold;
+	border:0
+}
+.LoginBlock .SubmitButton:active,.LoginBlock .SubmitButton:hover,.LoginBlock .SubmitButton.active,.LoginBlock .SubmitButton.hover {
+	background:#099E81;
+	color: #FFF;
+	border-radius: 5px;
+	font-weight:bold;
+	border:#099E81;
+}
+ 
+
+.LoginBlock .SavePassword {
+	color: #fff; background:none;
+	margin-bottom: 0;
+}
+input[type=checkbox], input[type=radio] {
+    margin: 4px 0 0;
+    margin-top: 1px\9;
+    line-height: normal;
+}
+
+
+label {
+    font-size: 14px;
+    font-weight: 400; margin-left:20px;}

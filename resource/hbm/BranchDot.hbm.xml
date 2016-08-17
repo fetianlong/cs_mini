@@ -1,0 +1,56 @@
+<!DOCTYPE hibernate-mapping PUBLIC 
+    "-//Hibernate/Hibernate Mapping DTD 3.0//EN"
+    "http://hibernate.sourceforge.net/hibernate-mapping-3.0.dtd">
+ 
+<hibernate-mapping>
+	<class name="com.dearho.cs.place.pojo.BranchDot" table="c_branch_dot">
+		<id name="id" type="java.lang.String">
+            <column name="ID" length="32" />
+            <generator class="uuid.hex" />
+        </id>
+        <property name="code" type="string">
+       		<column name="code" />
+       	</property>
+       	<property name="name" type="string">
+       		<column name="name" />
+       	</property>
+       	<property name="areaId" type="string">
+       		<column name="area_id" />
+       	</property>
+       	<property name="address" type="string">
+       		<column name="address" />
+       	</property>
+       	
+       	<property name="lat" type="double">
+       		<column name="lat" />
+       	</property>
+       	<property name="lng" type="double">
+       		<column name="lng" />
+       	</property>
+       	
+       	<property name="isActive" type="integer">
+       		<column name="is_active" />
+       	</property>
+       	
+       	<property name="creatorId" type="string">
+       		<column name="creator_id" length="32" />
+       	</property>
+       	<property name="createTime" type="java.util.Date">
+       		<column name="create_time" />
+       	</property>
+       	<property name="updateTime" type="java.util.Date">
+       		<column name="update_time" />
+       	</property>
+       	<property name="ts" type="java.util.Date">
+       		<column name="ts"/>
+       	</property>
+       	
+       	<property name="returnbackDot" type="string">
+       		<column name="returnback_dot"  />
+       	</property>
+       	<property name="totalParkingPlace" type="integer">
+       		<column name="total_Parking_Place" />
+       	</property>
+       	
+	</class>
+</hibernate-mapping>

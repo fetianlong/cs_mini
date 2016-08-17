@@ -1,0 +1,97 @@
+<!DOCTYPE hibernate-mapping PUBLIC 
+    "-//Hibernate/Hibernate Mapping DTD 3.0//EN"
+    "http://hibernate.sourceforge.net/hibernate-mapping-3.0.dtd">
+
+<hibernate-mapping>
+	<class name="com.dearho.cs.orders.pojo.OrdersDetail" table="ORD_ORDERS_DETAIL">
+		<id name="id" type="java.lang.String">
+			<column name="ID" length="32" />
+			<generator class="uuid.hex" />
+		</id>
+		<property name="ordersNo" type="java.lang.String">
+			<column name="orders_no" length="64" />
+		</property>
+		<property name="payType" type="java.lang.Integer">
+			<column name="pay_type"  />
+		</property>
+		 <property name="totalFee" type="java.math.BigDecimal">
+            <column name="total_fee" />
+        </property>
+		<property name="actualFee" type="java.math.BigDecimal">
+			<column name="actual_fee" />
+		</property>
+		<property name="createTime" type="java.util.Date">
+			<column name="create_time" />
+		</property>
+		<property name="beginTime" type="java.util.Date">
+			<column name="begin_time" />
+		</property>
+		<property name="endTime" type="java.util.Date">
+			<column name="end_time" />
+		</property>
+		<property name="strategyId" type="java.lang.String">
+			<column name="strategy_id" length="32" />
+		</property>
+		<property name="strategyTitle" type="java.lang.String">
+			<column name="strategy_title" length="32" />
+		</property>
+		<property name="tradeRecordId" type="java.lang.String">
+			<column name="trade_record_id" length="32" />
+		</property>
+		<property name="isTimeout" type="java.lang.String">
+			<column name="is_timeout" length="32" />
+		</property>
+		<property name="ticketsId" type="java.lang.String">
+			<column name="tickets_id" length="32" />
+		</property>
+		<property name="isRunning" type="java.lang.String">
+			<column name="is_running" length="32" />
+		</property>
+		<property name="preOrders" type="java.lang.String">
+			<column name="pre_orders" length="32" />
+		</property>
+		<property name="nextOrders" type="java.lang.String">
+			<column name="next_orders" length="32" />
+		</property>
+		<property name="isPrePay" type="java.lang.String">
+			<column name="is_pre_pay" length="32" />
+		</property>
+		<property name="ordersDetailNo" type="java.lang.String">
+			<column name="orders_detail_no" length="32" />
+		</property>
+		<property name="timeoutStrategyid" type="java.lang.String">
+			<column name="timeout_strategyid" length="32" />
+		</property>
+		<property name="isPaid" type="java.lang.String">
+			<column name="is_paid" length="32" />
+		</property>
+		<property name="regDiscountId" type="java.lang.String">
+			<column name="reg_discount_id" length="32" />
+		</property>
+		<property name="typeId" type="java.lang.String">
+			<column name="type_id" length="32" />
+		</property>
+		<property name="typeName" type="java.lang.String">
+			<column name="type_name" length="32" />
+		</property>
+		<property name="timeoutRemark" type="java.lang.String">
+			<column name="timeout_remark" length="32" />
+		</property>
+		<property name="isOver" type="java.lang.String">
+			<column name="is_over" length="32" />
+		</property>
+		<property name="ticketsFee" type="java.math.BigDecimal">
+			<column name="tickets_fee" length="32" />
+		</property>
+		<property name="isException" type="java.lang.String">
+			<column name="is_exception" length="32" />
+		</property>
+		<property name="ordersId" type="java.lang.String">
+			<column name="orders_id" length="32" />
+		</property>
+		<property name="subscriberId" type="java.lang.String">
+			<column name="subscriber_id" length="32" />
+		</property>
+		
+	</class>
+</hibernate-mapping>

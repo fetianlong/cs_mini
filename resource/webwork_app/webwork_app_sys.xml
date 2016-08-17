@@ -1,0 +1,43 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE xwork PUBLIC "-//Apache Struts//XWork 1.1.1//EN" 
+"http://struts.apache.org/dtds/xwork-1.1.1.dtd">
+<xwork>
+	<package name="/app/sys" extends="webwork-default" namespace="/app/sys">
+		<default-interceptor-ref name="defaultStack"/>
+		
+		<global-results>
+			<result name="timeout" type="dispatcher">
+                <param name="location">/error.jsp</param>
+            </result>
+            <result name="illegal" type="dispatcher">
+                <param name="location">/error.jsp</param>
+            </result>
+            <result name="error" type="dispatcher">
+                <param name="location">/resultjson.jsp</param>
+            </result>
+		</global-results>
+		<!-- 获取登录验证码-->
+		<action name="appLoginMessage" class="appShortMessage" method="appLoginMessage" >
+			<result name="success" >
+                <param name="location">/resultjson.jsp</param>
+            </result>
+		</action>
+		
+		<!-- 登录 -->
+		<action name="appLogin" class="appLoginAction" method="appLogin" >
+			<result name="success" >
+                <param name="location">/resultjson.jsp</param>
+            </result>
+		</action>
+		<!-- 令牌无效 -->
+		<action name="invalidToken" class="appLoginAction" method="invalidToken" >
+			<result name="success" >
+                <param name="location">/resultjson.jsp</param>
+            </result>
+		</action>
+		
+		
+	</package>
+	
+	
+</xwork>

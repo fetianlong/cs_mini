@@ -1,0 +1,134 @@
+<!doctype html>
+<html lang="zh-CN">
+<head>
+<meta charset="utf-8">
+<title>电站详情</title>
+
+<link rel=stylesheet href="../common/js/bootstrap/css/bootstrap.min.css">
+<link rel=stylesheet href="../common/js/fontawesome/css/font-awesome.min.css">
+<link rel=stylesheet href="../common/js/flatui/dist/css/flat-ui.min.css">
+<script src="../common/js/jquery.min.js"></script>
+<script src="../common/js/bootstrap/js/bootstrap.min.js"></script>
+<script src="../common/js/flatui/dist/js/flat-ui.min.js"></script>
+<script src="../common/js/main.js"></script>
+<link rel=stylesheet href="../common/css/main.css">
+<meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1, user-scalable=no">
+<meta http-equiv="X-UA-Compatible" content="IE=edge">
+<meta name="renderer" content="webkit">
+
+
+
+<link rel=stylesheet href="../common/css/charinglist.css">
+
+</head>
+
+<body>
+<div class="OneBlock NameBlock">
+		<h4 class="Name">北京市力宝广场网点充电站<button class="btn btn-embossed btn-primary pull-right Button" type="submit"><i class="fa fa-map-marker"></i>地图</button></h4>
+		<p class="Address"><span>北京市大兴区亦庄科技园万源街2号力宝广场</span><span class="Distance"><span>5.4</span>KM</span></p>
+</div>
+
+<div class="OneBlock InfoBlock">
+	<table class="table table-condensed table-responsive">
+		<tbody>
+			<tr>
+				<td rowspan="2" class="ChargeNum">充电终端(<span>22</span>)</td><!--显示此网点充电桩总数-->
+				<td>
+					<!--快充用label-danger-->
+					<span class="label label-danger">快充</span>空闲<span>3</span>/总数<span>3</span>
+				</td>
+				<td rowspan="2">
+					<!--筛选按钮筛出当前可用的不管是快充还是慢充所有充电桩-->
+					<button class="btn btn-embossed pull-right Button FilterButton" type="submit"><i class="fa fa-filter"></i>筛选</button>
+				</td>
+			</tr>
+			<tr>
+				<td>
+					<!--慢充用label-success-->
+					<span class="label label-success">慢充</span>空闲<span>16</span>/总数<span>19</span>
+				</td>
+			</tr>
+		</tbody>
+	</table>
+</div>
+
+<div class="ListBlock">
+	<ul class="ListUl">
+		<!--无脑死循环li即可，但ListNo里的编号得手动更改-->
+		<li>
+			<a href="#">
+				<table class="table-responsive">
+					<tbody>
+						<tr>
+							<td rowspan="2" class="ListNo"><span>1</span></td>
+							<td class="ListInfo UpInfo">编号：<span>BC110115225324</span></td>
+							<td class="ListState UpInfo"><span class="label label-success">慢充</span></td>
+							<td rowspan="2" class="Arrow"><i class="fa fa-chevron-right"></i></td>
+						</tr>
+						<tr>
+							<td class="ListInfo DownInfo">名称：<span>102号交流机</span></td>
+							<td class="ListState DownInfo"><span>空闲</span></td>
+						</tr>
+					</tbody>
+				</table>
+			</a>
+		</li>
+		<!--以下li为示例-->
+		<li>
+			<a href="#">
+				<table class="table-responsive">
+					<tbody>
+						<tr>
+							<td rowspan="2" class="ListNo"><span>2</span></td>
+							<td class="ListInfo UpInfo">编号：<span>BC110115225324</span></td>
+							<td class="ListState UpInfo"><span class="label label-danger">快充</span></td>
+							<td rowspan="2" class="Arrow"><i class="fa fa-chevron-right"></i></td>
+						</tr>
+						<tr>
+							<td class="ListInfo DownInfo">名称：<span>102号交流机</span></td>
+							<td class="ListState DownInfo"><span>空闲</span></td>
+						</tr>
+					</tbody>
+				</table>
+			</a>
+		</li>
+		<li>
+			<a href="#">
+				<table class="table-responsive">
+					<tbody>
+						<tr>
+							<td rowspan="2" class="ListNo"><span>3</span></td>
+							<td class="ListInfo UpInfo">编号：<span>BC110115225324</span></td>
+							<td class="ListState UpInfo"><span class="label label-success">慢充</span></td>
+							<td rowspan="2" class="Arrow"><i class="fa fa-chevron-right"></i></td>
+						</tr>
+						<tr>
+							<td class="ListInfo DownInfo">名称：<span>102号交流机</span></td>
+							<td class="ListState DownInfo"><span>空闲</span></td>
+						</tr>
+					</tbody>
+				</table>
+			</a>
+		</li>
+		<li>
+			<a href="#">
+				<table class="table-responsive">
+					<tbody>
+						<tr>
+							<td rowspan="2" class="ListNo"><span>4</span></td>
+							<td class="ListInfo UpInfo">编号：<span>BC110115225324</span></td>
+							<td class="ListState UpInfo"><span class="label label-success">慢充</span></td>
+							<td rowspan="2" class="Arrow"><i class="fa fa-chevron-right"></i></td>
+						</tr>
+						<tr>
+							<td class="ListInfo DownInfo">名称：<span>102号交流机</span></td>
+							<td class="ListState DownInfo"><span>空闲</span></td>
+						</tr>
+					</tbody>
+				</table>
+			</a>
+		</li>
+	</ul>
+</div>
+</body>
+</html>

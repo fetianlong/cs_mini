@@ -1,0 +1,35 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<something-else-entirely>
+	<proxool>
+		<alias>cs_mini</alias>
+		
+		<!-- 测试数据库连接 -->
+		<!-- --> 
+		<!-- <driver-url>jdbc:mysql://192.168.200.204:3306/carsharing_mini</driver-url>
+		<driver-class>com.mysql.jdbc.Driver</driver-class>
+		<driver-properties>
+			<property name="user" value="root" />
+		    <property name="password" value="root" />
+		</driver-properties> -->
+		
+		
+		<!--生产数据库连接 -->
+		<driver-url>jdbc:mysql://192.168.200.204:3306/carsharing_mini?useUnicode=true&amp;characterEncoding=utf8&amp;allowMultiQueries=true</driver-url>
+		<driver-class>com.mysql.jdbc.Driver</driver-class>
+		<driver-properties>
+			<property name="user" value="root" />
+		    <property name="password" value="root" />
+		</driver-properties>
+		
+
+		<maximum-connection-count>20</maximum-connection-count>
+		<minimum-connection-count>10</minimum-connection-count>
+		<proxool.simultaneousBuildThrottle>200</proxool.simultaneousBuildThrottle>
+		<house-keeping-test-sql>select CURRENT_DATE</house-keeping-test-sql>
+		<house-keeping-sleep-time>90000</house-keeping-sleep-time>
+		<prototype-count>5</prototype-count>
+		<maximum-active-time>1800000</maximum-active-time>
+		<maximum-connection-lifetime>18000000</maximum-connection-lifetime>
+		<test-before-use>true</test-before-use>
+	</proxool>
+</something-else-entirely>

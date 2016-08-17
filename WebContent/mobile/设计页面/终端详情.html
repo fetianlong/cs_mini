@@ -1,0 +1,50 @@
+<!doctype html>
+<html lang="zh-CN">
+<head>
+<meta charset="utf-8">
+<title>终端详情</title>
+
+<link rel=stylesheet href="../common/js/bootstrap/css/bootstrap.min.css">
+<link rel=stylesheet href="../common/js/fontawesome/css/font-awesome.min.css">
+<link rel=stylesheet href="../common/js/flatui/dist/css/flat-ui.min.css">
+<script src="../common/js/jquery.min.js"></script>
+<script src="../common/js/bootstrap/js/bootstrap.min.js"></script>
+<script src="../common/js/flatui/dist/js/flat-ui.min.js"></script>
+<script src="../common/js/main.js"></script>
+<link rel=stylesheet href="../common/css/main.css">
+<meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1, user-scalable=no">
+<meta http-equiv="X-UA-Compatible" content="IE=edge">
+<meta name="renderer" content="webkit">
+
+
+
+<link rel=stylesheet href="../common/css/charinginfo.css">
+
+</head>
+
+<body>
+<div class="NameBlock">
+	<h4>北京力宝广场充电站</h4>
+</div>
+
+<div class="InfoBlock">
+	<p class="State"><span class="label label-danger">快充</span><span>离网</span></p>
+	<p>终端编号：<span>12345678901</span></p>
+	<p>终端名称：<span>102号交流机</span></p>
+	<p>车位名称：<span>无</span></p>
+</div>
+
+<div class="TipsBlock text-center">
+	<!--当离网时才显示-->
+	<p class="text-center text-danger">终端离网，请选择其它终端充电</p>
+</div>
+
+<div class="BottomButton">
+	<div class="col-xs-8 col-xs-offset-2">
+		<!--当离网时请置为disabled-->
+		<a href="#" class="btn btn-embossed btn-primary btn-block disabled">扫描二维码开始充电</a>
+	</div>
+</div>
+
+</body>
+</html>

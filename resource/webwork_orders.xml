@@ -1,0 +1,121 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE xwork PUBLIC "-//Apache Struts//XWork 1.1.1//EN" 
+"http://struts.apache.org/dtds/xwork-1.1.1.dtd">
+<xwork>
+	<package name="orders" extends="webwork-default" namespace="/orders">
+		<default-interceptor-ref name="defaultStack"/>
+		<global-results>
+			<result name="timeout" type="dispatcher">
+                <param name="location">error.jsp</param>
+            </result>
+            <result name="illegal" type="dispatcher">
+                <param name="location">error.jsp</param>
+            </result>
+		</global-results>
+		
+		
+		
+		<action name="ordersSearch" class="ordersSearchAction">
+			<result name="success" type="dispatcher">
+				<param name="location">/pages/orders/orderslist.jsp</param>
+			</result>
+			<result name="search" type="dispatcher">
+				<param name="location">/pages/orders/orderspage.jsp</param>
+			</result>
+		</action>
+		
+		<action name="invoiceList" class="ordersBillSearchAction">
+			<result name="success" type="dispatcher">
+				<param name="location">/pages/orders/invoicelist.jsp</param>
+			</result>
+		</action>
+		
+		<action name="updateOrderBillState" class="ordersBillSearchAction" method="updateOrderBillState">
+			<result name="success" type="dispatcher">
+				<param name="location">/resultjson.jsp</param>
+			</result>
+			<result name="error" type="dispatcher">
+				<param name="location">/resultjson.jsp</param>
+			</result>
+		</action>
+		
+		<action name="queryOrdersBillDetail" class="ordersBillSearchAction" method="queryOrdersBillDetail">
+			<result name="success" type="dispatcher">
+				<param name="location">/pages/orders/invoice_detail.jsp</param>
+			</result>
+		</action>
+		
+		<action name="deleteOrdersBill" class="ordersBillSearchAction" method="deleteOrdersBill">
+			<result name="success" type="dispatcher">
+				<param name="location">/resultjson.jsp</param>
+			</result>
+		</action>
+		
+		<action name="updateOrdersBill" class="ordersBillSearchAction" method="updateOrdersBill">
+			<result name="success" type="dispatcher">
+				<param name="location">/resultjson.jsp</param>
+			</result>
+		</action>
+		
+		<action name="exportOrdersBill" class="ordersBillSearchAction" method="exportOrdersBill">
+			<result name="success" type="dispatcher">
+				<param name="location">/resultjson.jsp</param>
+			</result>
+		</action>
+		
+		<action name="ordersSearchForDialog" class="ordersSearchAction">
+			<result name="success" type="dispatcher">
+				<param name="location">/pages/orders/ordersListMiniDialog.jsp</param>
+			</result>
+		</action>
+		
+		<action name="ordersCancel" class="ordersCancelAction">
+			<result name="success" type="dispatcher">
+				<param name="location">/resultjson.jsp</param>
+			</result>
+			<result name="error" type="dispatcher">
+				<param name="location">/resultjson.jsp</param>
+			</result>
+		</action>
+		<action name="ordersDetail" class="ordersSearchAction" method="ordersDetail">
+			<result name="success" type="dispatcher">
+				<param name="location">/pages/orders/ordersdetail.jsp</param>
+			</result>
+		</action>
+		<action name="ordersDetailForDialog" class="ordersSearchAction" method="ordersDetail">
+			<result name="success" type="dispatcher">
+				<param name="location">/pages/orders/order_detail_dialog.jsp</param>
+			</result>
+		</action>
+		<action name="ordersDetailByNoForDialog" class="ordersSearchAction" method="ordersDetailByNo">
+			<result name="success" type="dispatcher">
+				<param name="location">/pages/orders/order_detail_dialog.jsp</param>
+			</result>
+		</action>
+		
+		<action name="ordersCommentSearch" class="ordersCommentSearchAction">
+			<result name="success" type="dispatcher">
+				<param name="location">/pages/orders/commentlist.jsp</param>
+			</result>
+		</action>
+		
+		<action name="ordersCommentDelete" class="ordersCommentDeleteAction">
+			<result name="success" type="dispatcher">
+				<param name="location">/resultjson.jsp</param>
+			</result>
+			<result name="error" type="dispatcher">
+				<param name="location">/resultjson.jsp</param>
+			</result>
+		</action>
+		<action name="ordersCommentAudit" class="ordersCommentAuditAction">
+			<result name="success" type="dispatcher">
+				<param name="location">/resultjson.jsp</param>
+			</result>
+			<result name="error" type="dispatcher">
+				<param name="location">/resultjson.jsp</param>
+			</result>
+		</action>
+		
+	</package>
+
+</xwork>

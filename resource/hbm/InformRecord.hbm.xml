@@ -1,0 +1,32 @@
+<!DOCTYPE hibernate-mapping PUBLIC 
+    "-//Hibernate/Hibernate Mapping DTD 3.0//EN"
+    "http://hibernate.sourceforge.net/hibernate-mapping-3.0.dtd">
+<hibernate-mapping>
+	<class name="com.dearho.cs.advice.pojo.InformRecord" table="c_inform_record">
+		<id name="id" type="string">
+            <column name="ID" length="32" />
+            <generator class="uuid.hex" />
+        </id>
+        <property name="informId" type="java.lang.String">
+            <column name="inform_id" length="32" >
+            	<comment>消息ID</comment>
+            </column>
+        </property>
+		<property name="subscriberId" type="java.lang.String">
+            <column name="subscriber_id" length="32" >
+            	<comment>会员ID</comment>
+            </column>
+        </property>
+        <property name="isRead" type="java.lang.Integer">
+            <column name="isread" >
+            	<comment>0未读1已读</comment>
+            </column>
+       </property>
+        <property name="ts" type="java.util.Date">
+            <column name="ts" >
+            	<comment>创建时间</comment>
+            </column>
+        </property>
+	</class>
+	
+</hibernate-mapping>

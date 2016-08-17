@@ -1,0 +1,58 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE xwork PUBLIC "-//Apache Struts//XWork 1.1.1//EN" 
+"http://struts.apache.org/dtds/xwork-1.1.1.dtd">
+<xwork>
+	<package name="subscriberConfirm" extends="webwork-default" namespace="/subscriberConfirm">
+		<default-interceptor-ref name="defaultStack"/>
+		
+		<global-results>
+			<result name="timeout" type="dispatcher">
+                <param name="location">/error.jsp</param>
+            </result>
+            <result name="illegal" type="dispatcher">
+                <param name="location">/error.jsp</param>
+            </result>
+            <result name="error" type="dispatcher">
+                <param name="location">/resultjson.jsp</param>
+            </result>
+            
+		</global-results>
+	
+	
+		<!-- 审核客户资料列表 -->
+		<action name="checkList" class="subscriberConfirmSearchAction"   >
+			<result name="success" >
+                <param name="location">/pages/subscriber/confirm/subscriber_confirm_list.jsp</param>
+            </result>
+		</action>
+		
+		<action name="showCheckDetail" class="subscriberConfirmGetAction"   >
+			<result name="success" >
+                <param name="location">/pages/subscriber/confirm/subscriber_confirm_detail.jsp</param>
+            </result>
+		</action>
+		
+		<action name="showCheckDetailHandle" class="subscriberConfirmGetAction"   >
+			<result name="success" >
+                <param name="location">/pages/subscriber/confirm/subscriber_confirm_detail.jsp</param>
+            </result>
+		</action>
+		
+		<!-- 审核成功 -->
+		<action name="doCheck" class="subscriberConfirmAction"   >
+			<result name="success" >
+                <param name="location">/resultjson.jsp</param>
+            </result>
+		</action>
+		
+		<!-- 查看原图 -->
+		<action name="showOriginalImage" class="subscriberConfirmGetAction"  method="showOriginalImage" >
+			<result name="success" >
+                <param name="location">/pages/subscriber/confirm/show_original_image.jsp</param>
+            </result>
+		</action>
+		
+		
+		
+	</package>
+</xwork>
